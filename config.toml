@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://dasher-web.firebaseapp.com/"
 languageCode = "en-us"
 title = "Dasher"
 theme = "ananke"
