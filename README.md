@@ -13,8 +13,8 @@ These instructions will get you a copy of the project up and running on your loc
 ### Installing
 
 ```
-git clone git://github.com/foo/bar.git
-cd bar
+git clone git://github.com/dasher-project/website.git
+cd website
 git submodule update --init --recursive
 ```
 
