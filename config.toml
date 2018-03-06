@@ -1,4 +1,4 @@
-baseURL = "https://dasher-web.firebaseapp.com/"
+baseURL = "https:/dasher-site.netlify.com/"
 languageCode = "en-us"
 title = "Dasher"
 theme = "ananke"
@@ -28,6 +28,6 @@ background_color_class = "bg-light-green"
   linkedin = ""
   # choose a background color from any on this page: http://tachyons.io/docs/themes/skins/ and preface it with "bg-"
   background_color_class = "bg-light-green"
-  body_classes = "avenir bg-near-white"
+  
   featured_image = "/dasher-banner.png"
   recent_posts_number = 2
