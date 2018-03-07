@@ -1,0 +1,44 @@
+    Making Dasher 'talk on stop'
+
+I've been testing Dasher for a few days with different speech 
+programs.  When I downloaded version 3.0 I realized it had copy on 
+stop.  I remembered Readplease plus had the option to automatically 
+read anything copied to the clipboard, effectively giving 
+Dasher 'talk on stop.' If you have Readplease plus that works.  
+(I don't have the plus version, too expensive for my taste) With that 
+in mind I searched for a free program that simply reads from the 
+clipboard on copy.  Here's what I came up with; 
+
+Talking clipboard; automatically reads anything copied to the 
+clipboard using Microsoft Agent.  No frills, no extras.  Freeware.  
+
+Talking box pro; automatically reads anything copied to the clipboard 
+using Microsoft Agent. Same as above with more features, calendar, 
+talking clock, more controls.  (Beta freeware) both are on this 
+page.  (if you don't have Microsoft Agent installed you can get it 
+here) 
+http://www.4talking.com/agent.shtml
+
+Speak lite; automatically reads anything copied to the clipboard 
+using Microsoft Agent. Very similar to talking box pro, calendar, 
+talking clock, more controls.  Microsoft Agent included.   (shareware 
+fully functional with nag reminder to register)  cheap though $13.99 
+http://www.shadisoft.com/speaklite/
+
+Microsoft agent website; 
+http://www.microsoft.com/msagent/
+
+I did find a few more but wasn't happy with the trial versions.  If 
+anyone knows of a simple freeware program that just sends copied text 
+automatically from the clipboard to a speech engine please let me 
+know.  Maybe someone can write a simple control similar to talking 
+clipboard and share it?  
+
+Until then you can get Dasher talking on stop with no delay by using 
+these.  By the way, for those in the ALS group if you use 'Chip's 
+speaking' you already have Microsoft Agent installed.  
+
+Take care 
+Ronnie Love (PALS)
+http://members.aol.com/rlove607/rons.html
+

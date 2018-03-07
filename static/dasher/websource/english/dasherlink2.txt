@@ -1,0 +1,33 @@
+&lt;table style="background-color:#669999"  cellpadding=2 cellspacing=2 border=0&gt;
+ &lt;tr&gt;&lt;td style="background-color:#ffffee"&gt;
+  &lt;table cellpadding=1 cellspacing=1 border=0&gt;&lt;tr&gt;&lt;td&gt;
+  &lt;a href="http://www.inference.phy.cam.ac.uk/dasher/"&gt;&lt;img
+     style="border:0" src=
+"http://www.inference.phy.cam.ac.uk/dasher/images/logo50.png"
+ width="50" height="50" alt="Dasher logo"&gt;&lt;/a&gt;
+  &lt;/td&gt;&lt;td&gt;&lt;big&gt;&lt;b&gt;Dasher&lt;/b&gt;&lt;/big&gt;&lt;br&gt;
+  Information-efficient Text Entry
+  &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style="background-color:#ffffee" valign=top&gt;
+  &lt;p&gt;&lt;b&gt;Dasher&lt;/b&gt; is a truly innovative free software package that
+  allows the user to write efficiently, without a keyboard, by simple
+  steering gestures.  &lt;a 
+  href="http://www.inference.phy.cam.ac.uk/dasher/"&gt;&lt;img alt="Writing
+  hello with Dasher" align=right width="96" height="82" border=0
+  src=
+"http://www.inference.phy.cam.ac.uk/dasher/images/mouse96.gif"
+ &gt;&lt;/a&gt;
+  Steering with an ordinary mouse, beginners can write at 25 words per
+  minute after an hour of practice. Dasher can be used equally easily
+  with touchscreens, head-mice, or eyetrackers.  It's useful for
+  people with special needs, for children, and for anyone who wants an
+  alternative to a keyboard.  With Dasher, you can write in almost any
+  language. Dasher is available for all the major personal
+  computer platforms: GNU/Linux, Windows, and MacOS-X.  It's free
+  software, and will always be free.  &lt;/p&gt;&lt;p&gt; Dasher is fast,
+  efficient, easy to learn, and fun to use.  &lt;/p&gt;&lt;p&gt; To try it out,
+  visit &lt;a href="http://www.inference.phy.cam.ac.uk/dasher/"&gt;
+  www.inference.phy.cam.ac.uk/dasher/&lt;/a&gt;.  Read the tips for
+  beginners, download Dasher, and steer away!&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;

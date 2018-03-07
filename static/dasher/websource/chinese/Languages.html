@@ -1,0 +1,66 @@
+SectionPage 语言
+<img align=right src="/dasher/images/logo35.png" alt="logo" width="35" height="35">
+ <p>
+ Dasher的概念几乎和任何语言兼容.
+ 现在它支持几种欧洲语种以及日语.
+ 为了在一个非英语的欧洲语种里使用Dasher,你需要有一个用你的语种自然写作而成的文本文件来训练Dasher - 把这个文件放在下面的地址
+  <b>input/source</b>
+ 或 <b>input/source.txt</b>.  确保 "Word" 选项是关闭的,
+ 或者把 <b>input/dict</b> 文件用你们语种的字典代替.
+ </p>
+ <p>
+	当version 3 发布后,我们打算在Open Source community的帮助下,致力提高Dasher能处理的语种的数目, 
+	 
+	[Version 3 将使用Unicode.]
+         通过version 3, 和通过 version 1.6一样,每个语种需要一个自然写作的文本文件 (大约 300K 或更大).
+ </p>
+<p>
+<a href=Training.html>更多建议有关建立一个训练集合</a>
+</p>
+
+<!------ Translators -- there is probably no need to translate the following material--->
+<!------                unless you are very enthusiastic!                            --->
+ <hr noshade size=1>
+<img align=right border=0 src="/dasher/images/jdasher2.gif" alt="JDasher" width="95" height="91">
+ <h2><img align=middle src="/dasher/images/daishoyaK2.gif" alt="daishoya" width="53" height="20"> - JDasher - Japanese Dasher - DAISHOYA</h2>
+
+ <p>
+	The Japanese name for Dasher is
+	Daishoya (<img align=middle border=0 src="/dasher/images/daishoyaH2.gif" alt="daishoya" width="86" height="17">),
+	 which means `scribe'.
+
+ </p>
+  <table align=right width=200 border=0 cellpadding=5 bgcolor="#ffff77"><tr><td bgcolor="#ffffcc">
+ <large><b>Demonstration</b></large>
+ </td></tr><tr><td bgcolor="#ffffcc">
+ <a href=/dasher/japanese/script.html>A movie describing Daishoya in Japanese</a>.
+ </td></tr><tr><td bgcolor="#ffffee">
+  <img align=left src="/dasher/images/howareyouH.gif" alt="howareyouH" width="109" height="17"> 
+ </td></tr></table>
+<p>
+ As a first step towards a
+  full Japanese version of Dasher handling both Kana and Kanji,
+   David Ward has written a Hiragana version,
+ <a href=Download.html>available in version 1.6.3 of Dasher</a>.
+ (NB: later versions of windows-Dasher, such as 1.6.8, do not
+ support Hiragana, because of Tcl font problems; the linux version
+ of 1.6.8 works fine in Hiragana.)
+ </p>
+ <p>  The conversion of Dasher to Daishoya is simple: we replace the English alphabet
+  a..z by the Hiragana alphabet, <img src="/dasher/images/aiueo.gif" alt="aiueo..." width="235" height="18">
+  (a,i,u,e,o, ka,ki,ku,ke,ko,...); and
+   we replace the English training text by a Hiragana document. [Unfortunately,
+  we have not been able to find a large pure-Hiragana  document, so
+  our language model is not as well-trained as we would like.]
+ </p><p> 
+ Two orderings of the Hiragana alphabet are available (options "japan1"
+ and "japan2"). In "japan2" the diacritical marks (",o) are
+ included as separate characters; in "japan1" they are integrated
+ by including the characters <img align=middle src="/dasher/images/paba.gif" alt="pa,ba" width="48" height="20">, etc.  in the  alphabet ("pa", "ba").
+ </p><p>
+ We would welcome collaborators to help
+ test Daishoya and introduce it to a large population of users.
+ </p><p>
+  We also need Hiragana data, in text form, for training the
+  language model.
+ </p>

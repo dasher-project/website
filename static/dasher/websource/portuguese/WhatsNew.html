@@ -1,0 +1,595 @@
+ [<a href=/dasher/download/JOB>Further details</a>]
+
+FoldingPage What's new
+<img align=right src="/dasher/images/logo35.png" alt="dasher" width="35" height="35">
+
+
+<h1>What's new</h1>
+<p>
+<a href=http://www.inference.phy.cam.ac.uk/dasher/download/alphabets/colour.euroasian2.xml>New colour scheme
+intended for red/green colour blind people</a>
+</p>
+<p bgcolor="#ffeeff">
+Sat 16/7/05: <a href=http://www.inference.phy.cam.ac.uk/dasher/presentations/Korean/>Dasher working in Korean</a> -
+ for this to work, you need a font that understands how to <em>combine</em> the elementary
+ vowels and consonants of Korean into the syllable characters.
+ This works in Dasher 3.2 under linux (Ubuntu operating system) if you select one of the
+ korean fonts. 
+ For this version of Korean you need
+<a href=http://www.inference.phy.cam.ac.uk/dasher/download/alphabets/alphabet.korean.xml>this alphabet file</a>
+ and a training text that is
+in DECOMPOSED form
+<a href=http://www.inference.phy.cam.ac.uk/dasher/download/training/training_korean_KR.txt>like this one</a>. [We need a bigger training text!] 
+ You can decompose
+ a regular "combined" korean text 
+<a href=http://www.inference.phy.cam.ac.uk/dasher/download/training/training_korean2350_KR.txt>such
+as this</a>
+ by using (eg)<br>
+<tt><a href=http://www.inference.phy.cam.ac.uk/mackay/perl/decompose.pl>decompose.pl</a> korean.txt training_korean_KR.txt</tt>
+<br>
+
+ Thanks to Son Yeoyoung and Matthew Parker for help.
+ We plan another version of Korean, using
+<a href=http://www.inference.phy.cam.ac.uk/dasher/download/alphabets/alphabet.koreanNested.xml>the
+nested alphabet</a>
+when Dasher 4.0 is released (October 2005).
+</p>
+<p>
+<a href=http://schoolforge.org.uk/index.php/FLOSSIE_2005_Report>Simon Judge demonstrated Dasher
+at the Schoolforge-UK FLOSSIE conference and it was very
+well received.
+</a>
+</p>
+<p>
+Sat 16/7/05: <a href=http://mces.blogspot.com/2005/07/persian-dasher.html>Dasher working in Persian</a>
+</p>
+<p>
+New project idea, suggested by
+a visitor from the <a href=http://nlmfoundation.org/>the NLM foundation</a> --
+could Dasher be useful for hyperlexic people who do not communicate verbally?
+</p>
+<div style="color:black;background-color:#f7fff1">
+<p>
+<a href=Advertisement.html>Job advertisement for Dasher developer</a>
+</p>
+</div>
+<p>
+ Iain Murray pointed out this video game
+<a href=http://www.sfcave.com/javaCave.php>SF Cave (which works in your
+browser)</a>; 
+a lot like one-button mode of Dasher.  In fact what it's most like
+is the now-abandoned metronome mode. (The button in SF cave determines
+the acceleration, rather than the velocity.)
+</p>
+<p>
+<a href=http://www.inference.phy.cam.ac.uk/dasher/download/alphabets/alphabet.runic.xml>Anyone for Runic?</a>
+</p>
+<div style="color:black;background-color:#f7eff1">
+<p>
+<b>Tue 5/7/05</b>
+ Would you like it to be easier to distinguish between
+ the apostrophe (') and comma (,) in Dasher?
+ In the
+<a href=http://www.inference.phy.cam.ac.uk/dasher/download/alphabets/alphabet.english.xml>latest alphabet for English</a>, we have introduced two
+ modifications:
+(1) 
+ we render the apostrophe in the dasher display using &#x2358; (an underlined
+ apostrophe) by specifying this
+alphabet symbol: <center>
+<tt>
+&lt;s b="105" d="&amp;#x2358;" t="&amp;apos;" note=" apostrophe"/&gt;
+</tt>
+</center>
+(2) we have coloured all the parenthesis and quote-like characters
+(including apostrophe)
+ in shades of magenta, and all the 
+  comma and full-stop like characters in shades of slate blue. 
+</p>
+</div>
+<div style="color:black;background-color:#f7fef3">
+<p>
+At the same time, we have added a TAB character, shown by a diamond (&#x25CA;),
+ to the English alphabet.
+We've coloured its square white/grey, like the other space-like characters.
+Here is the alphabet entry.<br>
+<tt>
+&lt;s b="9"  d="&amp;#x25CA;" t="&amp;#x9;" note="TAB (represented by a diamond)"/&gt;
+</tt>
+</p>
+<p>
+ We have made the same changes in the following alphabets:<br>
+ <b><a href=http://www.inference.phy.cam.ac.uk/dasher/download/alphabets/alphabet.danish.xml>Danish</a></b>
+ <b><a href=http://www.inference.phy.cam.ac.uk/dasher/download/alphabets/alphabet.french.xml>French</a></b>
+ <b><a href=http://www.inference.phy.cam.ac.uk/dasher/download/alphabets/alphabet.german.xml>German</a></b>
+ <b><a href=http://www.inference.phy.cam.ac.uk/dasher/download/alphabets/alphabet.frenchC.xml>French with combining characters</a></b>
+ It would be great if users could let us know if these enhanced alphabets give any
+problems.
+</p>
+</div>
+<div style="color:black;background-color:#f7eff1">
+<p>
+ Alphabets and training texts for
+<ul>
+  <li>
+<a href=http://www.inference.phy.cam.ac.uk/dasher/download/alphabets/alphabet.german2.xml>lower-case-only German</a>
+     </li>
+  <li>
+<a href=http://www.inference.phy.cam.ac.uk/dasher/download/alphabets/alphabet.danish2.xml>lower-case-only Danish</a>
+     </li>
+  <li>
+<a href=http://www.inference.phy.cam.ac.uk/dasher/download/alphabets/alphabet.finnish2.xml>lower-case-only Finnish</a>
+     </li>
+       </ul>
+</p>
+       </div>
+<div style="color:black;background-color:#fedff1">
+<p>
+<b>Mon 13/6/05</b>
+<a href=http://www.inference.phy.cam.ac.uk/cjb/dasher-triangles.png>DasherViewTriangle screenshot 1</a>
+|
+<a href=http://www.inference.phy.cam.ac.uk/cjb/dasher-triangles2.png>Screenshot 2</a>
+
+
+</p>
+       </div>
+<p>
+<a href=http://www.inference.phy.cam.ac.uk/dasher/download/alphabets/alphabet.koreanNested.xml>New Korean nested alphabet for 2350 syllables</a>
+</p>
+<p>
+<a href=http://www.inference.phy.cam.ac.uk/iaj21/>Two-button Menu Dasher and three-button Direct Dasher: User Trials</a> by Ingrid
+</p>
+       <p>
+       <a href=http://siva.cc.hirosaki-u.ac.jp/usr/koyama/ppm/arith6.htm>koyama has implemented a javascript version of button dasher (with no language model)</a>
+       </p>
+
+<div style="color:black;background-color:#f7eff1">
+<a href=http://www.kernelthread.com/software/ams2hid/>
+Mac Powerbook users can
+drive Dasher using its tilt sensors. (Can a Dasher user write a webpage giving details
+and evaluating this option, and let us know?)
+</a>
+</div>
+
+
+<div style="color:black;background-color:#faf7f1">
+<b>January 2005</b>: Breath Dasher paper finished:
+ <a href=http://www.inference.phy.cam.ac.uk/mackay/abstracts/dasherBreath.html>
+	Efficient  communication by breathing</a>.
+
+<br>
+ Button Dasher paper published:
+<a href=http://www.inference.phy.cam.ac.uk/mackay/abstracts/dasherButtons.html>
+	Efficient  communication through one or two buttons
+</a>
+
+</div>
+
+<div style="color:black;background-color:#f7eff1">
+<a href=http://www.isaac2004.fee.unicamp.br/THE_END4.htm>Mick Donegan's presentation
+ at ISAAC2004 - `The Dasher Eye Control Optimisation Project (DECO)' wins award</a>
+</div>
+
+<div style="color:black;background-color:#f7fef1">
+<b>December 2004</b>
+Dasher now working fine in Arabic.
+See <a href=http://www.inference.phy.cam.ac.uk/dasher/images/arabic.png>screenshot</a>.
+</div>
+<div style="color:black;background-color:#faf4f1">
+<h2>Dasher Wikis</h2>
+<b>Sun 7/11/04</b> - 
+<a href=http://www.inference.phy.cam.ac.uk/wiki/>The inference group wiki</a>
+ includes several 
+pages for
+<a href=http://www.inference.phy.cam.ac.uk/cgi-bin/wiki/wiki.pl/DasherProject>Dasher</a>
+</div>
+<div style="color:black;background-color:#f4f4f9">
+<a href=http://www.ace-centre.org.uk/html/research/DECO/deco.html>DECO project</a>, ACE Centre
+</div>
+<div style="color:black;background-color:#f4f4f9">
+<h2>Colour file style sheet</h2>
+<a href=http://www.inference.phy.cam.ac.uk/dasher/download/alphabets/colour.euroasian.xml>You can now see your colour.xml file visualized via XSL</a>
+</div>
+<div style="color:black;background-color:#e4fcfa">
+ New Dasher alphabet for French, using separate combining accents.
+ See <a href=FrenchCombining.html>here for screenshot</a>.
+</div>
+<div style="color:black;background-color:#e4ffee">
+<h2>Enhanced eyetracking mode</h2>
+<b>Fri 3/9/04</b>
+ In the latest windows release,  enhanced eyetracking mode
+ offers
+<ol><li>
+     improved dynamics for easier un-zooming;
+     </li>
+     <li>
+	  automatic calibration of the eyetracker, correcting systematic
+	  errors in the <tt>y</tt>-coordinate.
+	  </li>
+   </ol>
+   Movies demonstrating this enhancement are going on the
+   <a href=http://www.inference.phy.cam.ac.uk/dasher/Demonstrations.html>movie page</a> today.
+</div>
+
+<div  style="color:black;background-color:#ddffee">
+<h2>Tablet PCs</h2>
+<p><b>Fri 3/9/04</b> - report by David Ward</p>
+<p>
+ The windows version of   Dasher works quite nicely  on a MS Tablet
+ PC, with no modifications to Dasher.
+</p><p> 
+ The pen glides across the screen very nicely and still works with the pen
+ lifted up to 1cm from the screen. I found that my pen frequently lifted
+ from the tablet when using Dasher (unlike PocketPC where it is easier to
+ maintain pressure) so I switched off 'start on tap' and went for 'start on
+ space' instread.
+</p><p> 
+ Also, I had to make Dasher no larger than about 12x12cm because of the
+ distance that my hand had to travel.
+</p><p>
+ Typing text into applications works fine -- identically to plain Windows.
+</p><p> 
+ Finally, TabletPC has a special input panel (containing character,
+ handwriting recognition and on-screen keyboard) but as far as I can tell,
+ there's no way to add Dasher to the panel.
+</p>
+</div>
+
+<div style="color:black;background-color:#eeffee">
+<h2>Languages</h2>
+<b>July 2004</b>:
+<a href=http://www.inference.phy.cam.ac.uk/dasher/download/alphabets/>Lots of new alphabets added</a>
+ - Dasher now supports
+ 80 languages, from Azeri to Zulu.
+
+Please see this <a href=http://www.inference.phy.cam.ac.uk/dasher/download/alphabets/ALPHABETS.html>table of Alphabets supported by Dasher</a> to see what help we need.
+</div>
+<div style="color:black;background-color:#ddffee">
+<h2>Speech-Dasher prototype</h2>
+ Keith Vertanen has made nice videos of his prototype 
+ speech-recognition/Dasher hybrid.
+
+ <a href=http://www.inference.phy.cam.ac.uk/kv227/videos/>www.inference.phy.cam.ac.uk/kv227/videos/</a>
+
+</div>
+
+<div style="color:black;background-color:#e4ffee">
+<h2>PPM wrapper</h2>
+<p> For people who want to play with Dasher's PPM module:
+</p><p>
+Here is a link to an example program which uses PPM without the rest of
+Dasher.  You'll need to get the Dasher source tree from CVS and put the
+files from the zip in a subdirectory below the 'Src' directory.
+<a href=http://www.inference.phy.cam.ac.uk/kv227/PPMTester.zip>PPMTester.zip</a>
+</p><p>
+
+(by Keith Vertanen)
+</p><p>
+Tue 10/8/04:
+</p><p>
+
+Dasher's PPM model is now available in convenient COM packaging.  The DLL,
+test harness, and source code is available at
+<a href=http://www.inference.phy.cam.ac.uk/kv227/>
+http://www.inference.phy.cam.ac.uk/kv227/</a>
+
+</p><p>
+
+The COM object's API is documented in ProbModel_API.txt.  Let me know if you
+find any problems.
+
+
+</p></div>
+
+<h2>Version 3.2</h2>
+Mon 27/10/03. Version 3.2 is ready.
+<a href=Version3.2.html>This page has information</a>
+
+<h2>Breath Dasher</h2>
+<b>Fri 15/8/03</b>.
+<a href=http://www.inference.phy.cam.ac.uk/dasher/development/breath/>A new way
+of using Dasher has been created: a breath mouse moves the mouse up
+and down the screen as your breath is in and out respectively.</a>
+ In the first trials, an expert Dasher user achieved ten words per minute
+by breath alone. 
+
+<h2>More control mode development (Fri 25/7/03)</h2>
+
+Application control mode is now fully integrated into the Unix code,
+and is almost complete in the Windows version. We hope to make a new
+release including this code shortly, but you can check out the CVS
+version to try it now.
+
+<h2>International Phonetic Alphabet (Sat 12/7/03)</h2>
+ With an appropriate XML file, Dasher works
+ in the International Phonetic Alphabet  (<a href="/dasher/images/IPA.gif" alt="IPA">screenshot</a>).
+ If anyone can advise us on how to make this feature useful
+ to users of phonetics, please let us know.
+
+
+<h2>Gnome application control (Sun 22/6/03)</h2>
+
+The current CVS version contains code that allows applications to be
+controlled from within Dasher. Take a look at <a
+href="/dasher/images/DasherAppControl.png">this screenshot</a> in
+order to see Dasher being used to enter text into a word processor -
+the bold mode was switched on and off entirely within Dasher. Code to
+add the same functionality to the Windows version is currently being
+worked on.
+
+<h2>Beta version of Dasher for MacOS X (Tue 10/6/03)</h2>
+
+A beta release of Dasher for MacOS X has been made. This version is
+still under development and so may behave unpredictably, crash, eat
+your files or be generally miserable. Download it from the <a
+href="Download.html">download page</a>. Thanks to Doug Dickinson and
+Iain Murray for their work on this port! Click <a
+href="/dasher/images/new/DasherMacOSX.png">here</a> for a
+screenshot.
+
+<h2>Dasher support IRC channel (Fri 2/5/03)</h2>
+
+There is now an IRC channel for Dasher support and development issues. Simply
+connect to irc.freenode.org and join #dasher.
+
+<h2>Palm developer volunteers wanted (Thu 1/5/03)</h2>
+
+A port of Dasher to the Palm has been impractical up until fairly recently due to the low refresh rate of the screens and relatively slow processor More recent hardware solves both of these problems, so we're looking for volunteers to look at porting Dasher to PalmOS. If you're interested, please contact Matthew Garrett at dasher[AT]mrao.cam.ac.uk
+
+<h2>Anonymous CVS access now available (Thu 1/5/03)</h2>
+
+Anonymous CVS access to the Dasher development tree is now available. To 
+download the current source, run
+<p>
+<pre>
+cvs -d :pserver:anonymous@coll.ra.phy.cam.ac.uk:/home/cvsroot/dasher login
+</pre>
+<p>
+and press enter at the prompt. Now run
+<p>
+<pre>
+cvs -z3 -d :pserver:anonymous@coll.ra.phy.cam.ac.uk:/home/cvsroot/dasher \
+                    co -r stable30 dasher3
+</pre>
+<p>
+and the CVS tree will be downloaded.
+
+<h2>MacOS X port in progress  (Thu 1/5/03)</h2>
+<p>
+Thanks to Doug Dickinson and Iain Murray, an experimental version of Dasher
+is now running under MacOS X.
+
+<h2>Dasher 3.0.2 released (Tue 8/4/03)</h2>
+
+Dasher 3.0.2 has been released. This version includes the following changes:
+<ul>
+<li>Fixed bug regarding acceleration at edges of the window</li>
+<li>Introduced keyboard control mode (intended for switch use)</li>
+<li>GTK2 interface for the Unix version</li>
+</ul>
+
+Get it now from the <a href="Download.html">download page</a>
+
+<h2>Dasher 3.0.1 released (Tue 18/3/03)</h2>
+
+ Dasher 3.0.1 has been released. This version includes the following changes:
+<ul>
+<li>Improved prediction</li>
+<li>One dimensional input mode</li>
+<li>Increasable font size</li>
+<li>Various other bug fixes and feature enhancements</li>
+</ul>
+<p>
+Get it now from the <a href="Download.html">download page</a>
+
+<h2>API documentation</h2>
+
+Documentation to help developers porting Dasher to other platforms is now
+available from <a href=api.html>here</a>
+
+<h2>Dasher 3.0.0 released</h2>
+ The final version of Dasher 3.0.0 has been released. Get it now from
+ the <a href=Download.html>download page</a>
+
+<h2>New project manager</h2>
+ Thanks to funding from the Gatsby foundation,
+ the Dasher project now has a new software development manager
+ and researcher, <a href=mailto:mjg59@cam.ac.uk>Matthew Garrett</a>.
+ Matthew will coordinate contributions to the source code
+ and feedback from users. Please see <a href=Develop.html>the development page</a>
+ for the recommended feedback methods.
+
+<h2>VERSION 3!!</h2>
+<p>
+<b> Wed 27/11/02</b>:
+ <b>Version 3 is now released for
+ Windows and Linux</b>. You can
+ download it from <a href=Download.html>the Dasher download page</a>.
+ Windows versions for
+ (windows NT, windows 2000, windows XP) and (windows 95-98) are
+ available.
+</p>
+<p>
+ Version 3 is a complete rewrite of Dasher. It should
+ have all the key features of version 1.6.8, and is intended
+ to be far more development-friendly.
+ One of  its new  features, which we expect many users will
+ appreciate, is the "automatic copy" option, which
+ has the effect of copying the written text into
+ the cut'n'paste buffer whenever dasher is stopped. (Enable this option using the menus.)
+</p>
+<p>
+ Version 3.0.0 prerelease 2 supports several English alphabets.
+ Support for other languages will follow soon. Portuguese is the
+ first language in the queue.
+</p>
+<p>
+<b> <a href=WhatsNew3.html>Further information about Dasher version 3</a> </b>
+</p>
+<p>
+ A port to ipaq-running-linux is also being made by Hanna Wallach.
+</p>
+
+
+<p>
+ Version 3 was written by David Ward, Iain Murray, Phil Cowans,
+ and Matthew Garrett. 
+</p>
+<p>
+ Feedback on version 3 should be sent via the
+ <a href="http://www.metafaq.com/faq/dasher/">metafaq system</a>
+ please, or else by email to dasher-at-mrao.cam.ac.uk.
+</p>
+
+ <p><b>Tue 1/10/02</b>:
+cliffn has written a <b>front end for dasher v1.6.8</b> in VB5 which allows to run 
+Dasher, allows one click to save the text into a file,  and
+allows the file to be read aloud.  With a shortcut to the text file 
+on your desktop it is easy to edit and copy and paste to another app.
+<br>
+Tested only on Win 2000 but available for download with a right click 
+on the file name (StartDasherFS.exe) from:
+<a href=http://www.datasolutions.co.nz/Download>www.datasolutions.co.nz/Download</a>;
+<em>this exe file should be put in the dasher folder alongside dasher.exe</em>.
+ </p>
+
+ <p>
+<b>9/02</b>:
+ <a href=/dasher/websource/english/TalkMacro.txt>This text file</a> gives Margaret Cotts's
+ instructions for
+ using  Macro Express  to connect Dasher 1.6.8 to
+<a href=http://www.etriloquist.com/>etriloquist</a>, and further information
+ submitted by other users.
+ </p>
+
+EndPage
+Alias FrenchCombining.html
+HiddenPage Combining accents
+<h3>Combining-accents in French</h3>
+ For many European languages, we feel it might be most
+ natural to write using the 26 latin characters (a-z), plus 
+ accents that are added afterwards. 
+ [This  is how Unicode's designers encourage us to 
+ represent accents also.]
+ Using 
+ this new alphabet,
+ and 
+ setting the Dasher edit-box font to <b>ClearlyU</b>, 
+ I got this idea working nicely.
+ In this first prototype, the new accent group is contained in an 
+ <b>orange</b> box, and the accents themselves appear in yellow boxes. 
+ All the accents (acute, circumflex, cedilla, grave) 
+ were written in this way in the screenshot shown.
+
+<center>
+<img src="images/FrenchCombining.png" alt="images/FrenchCombining" width="496" height="567">
+</center>
+
+ This approach makes European languages much more alike 
+ in Dasher. 
+ We can use a single alphabet file and train it in any language, 
+ as long as the training text is appropriately <a href=/mackay/perl/decompose.pl>decomposed</a>.
+
+EndPage
+
+Alias WhatsNew3.html
+HiddenPage What's new - Dasher version 3 latest
+<img align=right src="/dasher/images/logo35.png" alt="logo" width="35" height="35">
+
+<h1>Latest information about VERSION 3</h1>
+<h4>Known bugs</h4>
+<p>
+ If you have previously installed another release of version 3,
+ then 
+ The windows 2000 version starts and shows nothing but a green
+ square. To fix this, Click options->alphabet, and select any alphabet except "?", then click OK.
+</p>
+
+<h2>Alphabet handling</h2>
+<p> Proper documentation about alphabets will be provided in the future.
+ Meanwhile, here are some notes from Iain, and from a user
+who has figured it out!
+</p>
+<h3>Alphabet handling in Windows</h3>
+<p>
+ Dasher stores
+new alphabets and looks for user training files in:
+<tt>
+Documents and Settings\<username>\Application Data\dasher.rc
+</tt>
+<b>for versions of Windows that have such a folder</b>. The system settings in
+system.rc are not changed. This is the equivalent of a ~/.dasher.rc
+directory on a Unix system for user settings.
+</p><p>
+[Earlier versions of
+windows simply put dasher.rc in the
+<tt>\Program Files\Dasher</tt> directory -
+giving all users the same settings.]
+</p><p>
+
+This makes <b>cleaning out test versions of Dasher</b> and hacking the alphabet file
+directory hard, as it may not be an obvious place to look. However, it is how
+Windows apps are supposed to behave. Dasher makes an API call to ask where to
+save this data; it isn't just making this path up.
+</p>
+People wanting to hack the alphabet file directly will probably find it fairly
+obvious (once they've found the file!).
+</p>
+<p>
+
+They'll need a text editor that can deal with UNIX text file format. (Not
+notepad, but anything decent should do.) Otherwise the file will lose its line
+breaks and be hard to read.
+</p>
+<p>
+
+XML purists might want to consult <tt>alphabets.dtd</tt> for the formal specification.
+</p>
+<p>
+
+Others may need to be reminded to use UTF-8 encoding if they use anything
+outside ASCII.
+</p>
+<p>
+
+I am not sure all international issues have yet been fixed - so people
+creating alphabets may still run into problems.
+ 
+</p>
+<h4>How to make your own alphabet - examples</h4>
+<p>
+<em>"I want numerals!"</em> -
+You can use numbers right now. AFAIK, you can edit the file
+alphabet.xml to include any of the basic 7 Bit ASCII characters.
+
+<p>
+</p>
+If you want to, you can download <a href=http://www.bilderverbot.com/alphabet.zip>a modified alphabet definition</a>. It
+provides an additional alphabet named "mixed limited +nums". This does
+two things in addition to the standard "english/limited" alphabet:
+<p>
+</p>
+
+- it provides numbers
+<p>
+</p>
+- it arranges small/capital letters beneath each other, which was
+optional in dasher 1.68.
+<p>
+The location to put this will depend on your OS.
+
+</p>
+
+
+<p>
+</p>
+
+<p>
+
+
+
+
+
+
+
+
+

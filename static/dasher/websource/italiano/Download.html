@@ -1,0 +1,92 @@
+SectionPage Scaricare
+<h2>Scaricare Dasher</h2>
+<p>
+Dasher (versione 3 e precedenti) &egrave disponibile per utilizzo generico sotto condizioni 
+dell  <a href="gpl.html">licenza pubblica GNU </a>. 
+&Egrave possibile guardare i termini e le condizioni di questo tipo di licenza che &egrave
+contenuta nella distribuzione stessa.
+<p> Per favore riempire i campi del questionario prima di scaricare Dasher. Non &egrave
+obbligatorio ma vi saremmo grati se lo faceste. Queste informazioni sono solo per
+nostra conoscenza, verranno utilizzate solo per usi legati a Dasher e non verranno
+distribuite a terze parti. In generale non manderemo mail a nessun indirizzo dato in 
+questa fase. Se ti vuoi tenere informato sullo stato di avanzamento di Dasher dopo 
+averlo scaricato guarda <a href="Develop.html"> questa pagina per le informazioni 
+relative alle mailing list</a>.</p>
+
+<br><form method="GET" action="/cgi-bin/dasher-form.cgi" name="form1">
+<input type="hidden" name="websitelanguage" value="\thislanguage">
+<!-- ----------------- PERSONAL DETAILS --------------------- -->
+
+<table BORDER=0 CELLSPACING=0 CELLPADDING=3 WIDTH="100%" BGCOLOR="\lightgreycolor" >
+<tr BGCOLOR="\greycolor">
+<td COLSPAN="4" WIDTH="73%"><b><font face="Arial"><font color="#FFFFFF">Scaricamento di Dasher - passo 1 di 2</font></font></b></td>
+</tr>
+<tr>
+<td ALIGN=RIGHT WIDTH="70%"><b>Nome e cognome:</b></td>
+<td ALIGN=RIGHT WIDTH="1%">&nbsp;</td>
+<td COLSPAN="2"><input type="text" name="name" size="28"></td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT WIDTH="70%"><b>Indirizzo email:</b></td>
+<td></td>
+<td COLSPAN="2"><input type="text" name="email" size="20"></td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT WIDTH="70%"><b>Paese:</b></td>
+<td></td>
+<td COLSPAN="2"><input type="text" name="country" size="20"></td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT WIDTH="70%"><b>Prima lingua:</b></td>
+<td></td>
+<td COLSPAN="2"><input type="text" name="language" size="20"></td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT WIDTH="70%"><b>Hai una disabilit&agrave che pu&ograve interessare Dasher?</b></td>
+<td></td>
+<td COLSPAN="2"><input type="text" name="disability" size="20"></td>
+</tr>
+<tr><td align=right>
+ <b>Et&agrave :</b></td><td></td>
+<td colspan=2>
+ <select name="age">
+ <option> <em>...</em>
+ <option>1-10
+ <option>11-20
+ <option>21-30
+ <option>31-40
+ <option>41-50
+ <option>51-60
+ <option>61-70
+ <option>71-80
+ <option>81+
+ </select>
+</td></tr>
+<tr><td align=right>
+ <b>In che modo hai sentito parlare di Dasher?</b></td><td></td>
+<td colspan=2>
+ <select name="where">
+ <option> <em>...</em>
+ <option>giornale/rivista
+ <option>su internet
+ <option>da un amico
+ <option>alla radio
+ <option>all TV
+ <option>press release
+<option>altro
+ </select>
+</td></tr>
+</table>
+
+<!-- ----------------- PACKAGE DETAILS --------------------- -->
+
+<table BORDER=0 CELLSPACING=0 CELLPADDING=3 WIDTH="100%" BGCOLOR="\lightgreycolor" >
+<tr BGCOLOR="\greycolor">
+<td COLSPAN="4" WIDTH="43%"><b><font face="Arial"><font color="#FFFFFF">select the packages you require</font></font></b></td>
+</tr>
+
+<!---- form from db here ----->

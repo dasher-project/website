@@ -1,0 +1,89 @@
+tar:
+	make english.tar
+%.tar:
+	tar cf ../$*/web.tar \
+020520text.html \
+DasherSummary.html \
+DasherSummary2.html \
+Demonstrations.html \
+Develop.html \
+Directions.html \
+Download.html \
+Download2.html \
+Downloadstep2.html \
+Downloadstep2t.html \
+Fonts.html \
+History.html \
+Images.html \
+Languages.html \
+MoreScreen.html \
+MoreTips.html \
+NS.html \
+News.html \
+Novice.html \
+Novice2.html \
+OldDownload.html \
+Others.html \
+Press.html \
+Publications.html \
+SpecialNeeds.html \
+Translate.html \
+Training.html \
+gpl.html \
+_index.html \
+ipaqtips.html \
+peano.html \
+tips.html \
+users.html \
+-C ../$* thislanguage 
+
+
+%.zip:
+	zip -q -2 -j ../$*/web.zip \
+020520text.html \
+DasherSummary.html \
+DasherSummary2.html \
+Demonstrations.html \
+Develop.html \
+Directions.html \
+Download.html \
+Download2.html \
+Downloadstep2.html \
+Downloadstep2t.html \
+Fonts.html \
+History.html \
+Images.html \
+Languages.html \
+MoreScreen.html \
+MoreTips.html \
+NS.html \
+News.html \
+Novice.html \
+Novice2.html \
+OldDownload.html \
+Others.html \
+Press.html \
+Publications.html \
+SpecialNeeds.html \
+Translate.html \
+Training.html \
+gpl.html \
+_index.html \
+ipaqtips.html \
+peano.html \
+tips.html \
+users.html \
+../$*/thislanguage 
+
+
+#zip:    -@     Take the list of input files from standard input. Only one filename per line.
+
+dasherlink1.txt:	dasherlink1.html html2txt.pl 
+	./html2txt.pl dasherlink1.html > dasherlink1.txt
+dasherlink2.txt:	dasherlink2.html html2txt.pl 
+	./html2txt.pl dasherlink2.html > dasherlink2.txt
+dasherlink3.txt:	dasherlink3.html html2txt.pl 
+	./html2txt.pl dasherlink3.html > dasherlink3.txt
+
+INSTRUCTIONS: ALWAYS
+	echo " ( cd ~/website/dasher/english ; make dasherlink1.txt ; make dasherlink2.txt ; make dasherlink3.txt ) ; ( cd ~/website ; make dasherenglish ) "

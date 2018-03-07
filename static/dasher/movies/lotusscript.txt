@@ -1,0 +1,85 @@
+Script of Demonstration of Dasher (using Lotus Screen Cam)
+- by David Ward and David MacKay
+ 
+	http://www.inference.phy.cam.ac.uk/dasher/movies/dasherlotusdemo.zip
+	http://www.inference.phy.cam.ac.uk/dasher/Demonstrations.html
+	
+	1. Dasher is a text-entry interface that uses continuous
+	gestures to select sequences of letters from a language model.
+
+	The user drives the interface using a two-dimensional pointer.
+	Here we use the mouse.
+
+	2. Before we describe the interface in detail, we will show
+	you what it looks like when the user slowly enters the phrase
+	"introduction to dasher".
+
+	3. <no commentary>
+		<introduction_to_dasher_>
+
+	4. We will now describe the two ideas behind Dasher -
+	first, what the objects in this two-dimensional world are, and
+	how their sizes are determined;
+	and second, how the pointer is used to navigate in the world.
+
+What the objects in this two-dimensional world are, and	how their sizes are determined
+======================================================================================
+
+	5. When the user starts writing, all possible starting letters
+	are displayed in boxes at the right-hand side of the screen.
+	Here, the letters have been arranged in alphabetical order
+	from a to z, and space is represented by the underscore
+	character "_".
+
+	6. The size of each box is proportional to the probability of
+	that letter according to a language model.  At the start of a
+	document, all letters are roughly equally probable, but "q",
+	"x", and "z" are slightly less probable than the others.
+
+	7. Within each of the starting letter's boxes are smaller boxes, one
+	for each of the possible second letters.
+
+	8. The size of each of these second-letter boxes is again determined
+	by the language model. If the first letter is "h" then the vowels
+	a, e, i, o, and u are the most probable second letters. The other letters
+	are less probable, so they are not yet visible at this resolution.
+
+	9. If the first letter is "i", the consonants d, f, l, m, n,
+	and so forth are the most probable letters. By making the size
+	of a letter's box proportional to its probability, we make it
+	easier for the user to find and select the more probable
+	letters.
+
+	10. The user selects a sequence of letters by moving the
+	point of view into the box of the first letter then into the
+	sub-box of the second letter, and so forth. Let's write "introduction
+	to dasher" again.
+
+	11. Because "n" is a probable letter after "i", it is easy to
+	select "in".  After "in", the most probable letters are "t",
+	"s", and the space character "_".  We move into the
+	"t". Notice how the language model is now offering words like "interest"
+	and "into". We want the word "introduction" so we hunt for the "r" box.
+	Once we have got close to the "r" box, the words "introduce" and
+	"introduction" both appear. It takes only a very small gesture to select the word
+	"introduction".
+
+	12. Because the language model has been trained on correctly spelled English,
+	it is very hard to mis-spell words. If we do want to write a string that
+	is relatively improbable according to the language model, we can write it,
+	but it will takes us longer to select the improbable letters.
+	For example, let's write "kournikova_".
+
+How the pointer is used to navigate in the world
+================================================
+	
+	13. The intuitive idea behind Dasher is that the user should
+	simply point where they want to go.  The vertical dimension of
+	the pointer controls where on the right hand side we are
+	zooming in on.  The horizontal dimension controls the speed at
+	which we zoom in.  Note that the dynamics of the interface are
+	independent of the letters and the language model.
+
+	14. Now I shall write some text at a faster speed.
+
+	<hello_how_are_you_feeling_today__i_am_fine__>

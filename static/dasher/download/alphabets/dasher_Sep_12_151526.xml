@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<UserLog>
+	<Application>
+		<Elapsed>1067.937</Elapsed>
+		<Date>Sep 12 2006</Date>
+		<Start>15:15:26.575</Start>
+		<End>15:33:14.512</End>
+	</Application>
+	<Params>
+		<AlphabetID>English with numerals and lots of punctuation</AlphabetID>
+		<ColourID>European/Asian Revised</ColourID>
+		<ControlMode>0</ControlMode>
+		<LMAlpha>100</LMAlpha>
+		<LMBeta>100</LMBeta>
+		<LMExclusion>0</LMExclusion>
+		<LMMaxOrder>5</LMMaxOrder>
+		<LMMixture>50</LMMixture>
+		<LMUpdateExclusion>1</LMUpdateExclusion>
+		<LanguageModelID>0</LanguageModelID>
+		<MaxBitRateTimes100>
+			<Value>430</Value>
+			<Time>15:15:26.575</Time>
+		</MaxBitRateTimes100>
+		<UniformTimes1000>50</UniformTimes1000>
+		<WordAlpha>50</WordAlpha>
+		<YScaling>139</YScaling>
+	</Params>
+	<Trials>
+	</Trials>
+</UserLog>

@@ -1,0 +1,41 @@
+SectionPage  Hoe werkt Dasher?
+
+<img align="right" src="http://www.inference.phy.cam.ac.uk/djw30/dasher/dasher.gif" height=248 width=288 alt="hit escape to halt animation">
+
+<center>
+<em>Dasher is like an arcade game: `Attack of the killer alphabets', perhaps.</em>
+<br>
+<small><a href=/is/press/ft0202.gif>Financial Times,  5th February 2002</a></small>.
+</center>
+
+<h1>Dasher</h1>
+
+<p>
+Dasher is een zoomende interface. Je wijst naar waar je naartoe wilt gaan, en het scherm zoomt in naar waar je naartoe wijst.
+De wereld waarin je inzoomt is beschilderd met letters, op zo'n manier dat elk punt waar je naartoe zoomt correspondeerd
+met een stuk tekst.
+Hoe meer je inzoomt, hoe langer het stuk tekst dat je hebt geschreven. 
+Je kiest wat je schrijft door te kiezen waar je naartoe zoomt.
+</p>
+
+<p>
+In het voorbeeld hier rechts, schrijft de gebruiker "hello_how_are_you".
+</p>
+
+<p>
+Om de interface efficïent te maken, gebruiken we de voorspellingen van een taalmodel om te bepalen hoeveel van de wereld
+is toebedeeld aan elk stuk tekst.
+Waarschijnlijke stukken tekst krijgen meer ruimte toebedeeld, zodat ze makkelijker te selecteren zijn.
+Onwaarschijnlijke stukken tekst (bijvoorbeeld, tekst met spelfouten) krijgen minder ruimte, dus zijn ze moeilijker te schrijven.
+Het taalmodel leert constant bij: als je een ongebruikelijk woord een keer gebruikt, is het de volgende keer makkelijker te schrijven.
+</p>
+<p>
+Een groot voordeel dat Dasher heeft over andere voorspellende tekst invoer methodes, is dat het
+geen <b>modus</b> heeft: de gebruiker hoeft niet te switchen van een schrijf mode
+naar een "accepteer model voorspelling" mode.
+</p>
+<p>
+Een ander voordeel is dat het simpel is om het model te trainen in een willekeurige schrijfstijl:
+Laadt simpelweg een voorbeeld bestand in, en schrijven maar!
+</p>
+
