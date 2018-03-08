@@ -5,11 +5,31 @@ theme = "ananke"
 
 MetaDataFormat = "yaml"
 DefaultContentLanguage = "en"
-SectionPagesMenu = "main"
 Paginate = 3 # this is set low for demonstrating with dummy content. Set to a higher number
 googleAnalytics = ""
 enableRobotsTXT = true
 background_color_class = "bg-light-green"
+
+[[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = -110
+[[menu.main]]
+    name = "How to use"
+    url = "/how-to/"
+    weight = -100
+[[menu.main]]
+    name = "Users"
+    url = "/users/"
+    weight = -90
+[[menu.main]]
+    name = "Developers"
+    url = "/developers/"
+    weight = -80
+[[menu.main]]
+    name = "Research"
+    url = "/research/"
+	weight = -70
 
 
 [sitemap]
