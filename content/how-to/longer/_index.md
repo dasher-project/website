@@ -26,17 +26,10 @@ This is exactly how Dasher works, except for one crucial point ...
 
 Here is the corresponding sequence of pictures of the library in Dasher. (The character "_" denotes the space character.)
 
-![The user-friendly library of Babel - a-z](/dasher/images/a-z.m.gif.50.gif)
+| ![The user-friendly library of Babel - a-z](/dasher/images/a-z.m.gif.50.gif) | ![The user-friendly library of Babel - aa-az](/dasher/images/aa-az.m.gif.50.gif) | ![The user-friendly library of Babel - ala-alz](/dasher/images/ala-alz.m.gif.50.gif) |
+|-----|-------|-------|
+| (i) | (iii) | (iii) |
 
-![The user-friendly library of Babel - aa-az](/dasher/images/aa-az.m.gif.50.gif)
-
-![The user-friendly library of Babel - ala-alz](/dasher/images/ala-alz.m.gif.50.gif)
-
-(i)
-
-(ii)
-
-(iii)
 
 Dasher can be trained on examples of any writing style, and it learns all the time, picking up your personal turns of phrase.
 
