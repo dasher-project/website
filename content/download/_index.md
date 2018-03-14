@@ -4,3 +4,13 @@ description: "Dasher is an information-efficient text-entry interface, driven by
 weight: -100
 ---
 
+There are different versions for differnt platforms
+
+|         | Feature 1 | Feature 2 | Feature 3 | Feature 4 | Feature 4 | Feature 5 | Feature 5 | Feature 6 | Feature 7 |
+|---------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|
+| Windows | x         | x         | x         | x         | x         | x         | x         | x         | x         |
+| Mac     |           |           |           |           |           |           |           |           |           |
+| Linux   |           |           |           |           |           |           |           |           |           |
+| Java    |           |           |           |           |           |           |           |           |           |
+| iOS     |           |           |           |           |           |           |           |           |           |
+| Android |           |           |           |           |           |           |           |           |           |
