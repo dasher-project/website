@@ -1,8 +1,3 @@
----
-title: "Dasher: The fastest continuous text entry system"
-description: "The novel and best system. "
----
-
 Dasher is an information-efficient text-entry interface, driven by natural continuous pointing gestures. Dasher is a competitive text-entry system wherever a full-size keyboard cannot be used - for example,
 
 * when operating a computer one-handed, by joystick, touchscreen, trackball, or mouse;

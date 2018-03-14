@@ -1,8 +1,7 @@
 ---
 title: "Users"
 description: "Dasher is used by a number of users with a range of disabilities. Find below a few examples."
-featured_image: '/users-banner.png'
-
+weight: -80
 ---
 
 ## Steve Saling 

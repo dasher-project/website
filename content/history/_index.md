@@ -1,8 +1,10 @@
 ---
 title: "History"
 description: "Dasher is an information-efficient text-entry interface, driven by natural continuous pointing gestures. Dasher is a competitive text-entry system wherever a full-size keyboard cannot be used."
-featured_image: '/david-eye1.jpg'
+weight: -20
+
 ---
+
 *   Dasher is brought to you by the [Inference Group](/is/), led by **[David MacKay](/mackay/)**, who is a Professor in the Department of Physics and cofounder of the information technology company, [Transversal](http://www.transversal.com/). David MacKay created the [first Dasher prototype](/dasher/images/dasherversion0.png) in 1997.
 *   **[David Ward](/djw30/)** developed the research version of Dasher from 1998 to 2002; for his PhD, David turned Dasher into a working software system, created numerous enhancements to it, and conducted experiments to quantify how well it works. David now works for Spiral Software, Cambridge.
 *   **[Alan Blackwell](http://www.cl.cam.ac.uk/~afb21/)**, a lecturer in the Computer Laboratory, helped us design the experiments.

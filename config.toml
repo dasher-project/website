@@ -1,53 +1,70 @@
-baseURL = "https://dasher-site.netlify.com/"
-languageCode = "en-us"
+baseURL = "localhost:1313"
+languageCode = "en-US"
+defaultContentLanguage = "en"
+
 title = "Dasher"
-theme = "ananke"
-
-MetaDataFormat = "yaml"
-DefaultContentLanguage = "en"
-Paginate = 3 # this is set low for demonstrating with dummy content. Set to a higher number
-googleAnalytics = ""
-enableRobotsTXT = true
-background_color_class = "bg-light-green"
-
-[[menu.main]]
-    name = "About"
-    url = "/about/"
-    weight = -110
-[[menu.main]]
-    name = "How to use"
-    url = "/how-to/"
-    weight = -100
-[[menu.main]]
-    name = "Users"
-    url = "/users/"
-    weight = -90
-[[menu.main]]
-    name = "Developers"
-    url = "/developers/"
-    weight = -80
-[[menu.main]]
-    name = "Research"
-    url = "/research/"
-	weight = -70
-
-
-[sitemap]
-  changefreq = "monthly"
-  priority = 0.5
-  filename = "sitemap.xml"
+theme = "hugo-theme-learn"
+metaDataFormat = "yaml"
+defaultContentLanguageInSubdir= true
 
 [params]
-  favicon = ""
-  description = "The last theme you'll ever need. Maybe."
-  facebook = ""
-  twitter = ""
-  instagram = ""
-  youtube = ""
-  github = ""
-  linkedin = ""
-  # choose a background color from any on this page: http://tachyons.io/docs/themes/skins/ and preface it with "bg-"
-  background_color_class = "bg-light-green"
+  editURL = "https://github.com/dasher-project/website/edit/master/content/"
+  description = "Dasher"
+  author = "dasher-project"
+  showVisitedLinks = false
+  themeVariant = "dasher"
+  disableBreadcrumb = true
+  disableNextPrev = true
+  ordersectionsby = 'weight'
   
-  featured_image = "/dasher-banner.png"
-  recent_posts_number = 2
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+
+
+[Languages]
+[Languages.en]
+title = "Dasher (English)"
+weight = 1
+languageName = "English"
+
+[[Languages.en.menu.shortcuts]] 
+name = "<i class='fa fa-fw fa-github'></i> Github repo"
+identifier = "ds"
+url = "https://github.com/dasher-project/dasher"
+weight = 10
+
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fa fa-fw fa-bookmark'></i> Developer Documentation"
+identifier = "hugodoc"
+url = "https://developer.dasher.zone/"
+weight = 20
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fa fa-fw fa-bullhorn'></i> Credits"
+url = "/credits"
+weight = 30
+
+[Languages.fr]
+title = "Documentation du thème Hugo Learn"
+weight = 2
+languageName = "Français"
+
+[[Languages.fr.menu.shortcuts]]
+name = "<i class='fa fa-fw fa-github'></i> Repo Github"
+identifier = "ds"
+url = "https://github.com/dasher-project/dasher"
+weight = 10
+
+
+[[Languages.fr.menu.shortcuts]]
+name = "<i class='fa fa-fw fa-bookmark'></i> Developer Hugo"
+identifier = "hugodoc"
+url = "https://developer.dasher.zone/"
+weight = 20
+
+[[Languages.fr.menu.shortcuts]]
+name = "<i class='fa fa-fw fa-bullhorn'></i> Crédits"
+url = "/credits"
+weight = 30

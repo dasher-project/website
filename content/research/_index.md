@@ -1,7 +1,7 @@
 ---
-title: "Research"
+title: "Research & Press"
 description: "Dasher is an information-efficient text-entry interface, driven by natural continuous pointing gestures. Dasher is a competitive text-entry system wherever a full-size keyboard cannot be used."
-featured_image: '/research-banner.png'
+weight: -70
 ---
 *   \[**Mouse-driven Dasher**\] [Dasher - a Data Entry Interface Using Continuous Gestures and Language Models.](/djw30/papers/uist2000.html)  
     by David J Ward, Alan F Blackwell and David J C MacKay  
