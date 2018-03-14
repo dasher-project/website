@@ -1,4 +1,4 @@
-baseURL = "localhost:1313"
+baseURL = "http://dasher-site.netlify.com"
 languageCode = "en-US"
 defaultContentLanguage = "en"
 
