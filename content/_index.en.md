@@ -11,3 +11,7 @@ Dasher can be used to write efficiently in any language.
 Dasher is fast and fun to learn. (If you don't believe us, see what users round the world say.)
 
 Dasher is free software.
+
+{{% notice warning %}}
+THIS SITE IS UNDER DEVELOPMENT! Things are likely to change. 
+{{% /notice %}}
