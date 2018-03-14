@@ -7,17 +7,10 @@ weight: -20
 
 Imagine **a library containing all possible books**, ordered alphabetically on a single shelf. Books in which the first letter is "a" are at the left hand side. Books in which the first letter is "z" are at the right. In picture (i) below, the shelf is shown vertically with "left" (a) at the top and "right" (z) at the bottom. The first book in the "a" section reads "aaaaaaaaaaaa..."; somewhere to its right are books that start "all good things must come to an end..."; a tiny bit further to the right are books that start "all good things must come to an enema...".
 
-![The library of Babel - a-z.](/dasher/images/a-z.gif.50.gif)
 
-![The library of Babel - aa-az.](/dasher/images/aa-az.gif.50.gif)
-
-![The library of Babel - ala-alz.](/dasher/images/ala-alz.gif.50.gif)
-
-(i)
-
-(ii)
-
-(iii)
+| ![The library of Babel - a-z.](/dasher/images/a-z.gif.50.gif) | ![The library of Babel - aa-az. ](/dasher/images/aa-az.gif.50.gif) | ![The library of Babel - ala-alz.](/dasher/images/ala-alz.gif.50.gif) |
+|-----|-------|-------|
+| (i) | (iii) | (iii) |
 
 When someone writes a piece of text, their choice of the text string can be viewed as a choice of a book from this library of all books - the book that contains exactly the chosen text. How do they choose that book? Let's imagine they want to write "all good things..."
 
