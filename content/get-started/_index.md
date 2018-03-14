@@ -1,5 +1,5 @@
 ---
-title: "Download"
+title: "Get started"
 description: "Dasher is an information-efficient text-entry interface, driven by natural continuous pointing gestures. Dasher is a competitive text-entry system wherever a full-size keyboard cannot be used."
 weight: -100
 ---
@@ -14,3 +14,11 @@ There are different versions for differnt platforms
 | Java    |           |           |           |           |           |           |           |           |           |
 | iOS     |           |           |           |           |           |           |           |           |           |
 | Android |           |           |           |           |           |           |           |           |           |
+
+
+* Windows: https://github.com/dasher-project/dasher/releases/tag/DASHER_5_0_0_beta
+* Mac: 
+* Linux: 
+* iOS:
+* Android:
+* Java: 
