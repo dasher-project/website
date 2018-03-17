@@ -86,12 +86,12 @@ In a truly single-button version of this mode, the steady zooming-in of Dasher r
 
 The first table summarises the planned versions of button-Dasher and suggests a radio-button menu layout.
 
-![alt text](https://github.com/uukurt/website/tree/master/content/get-started/images/image8.png)
+![alt text](https://raw.githubusercontent.com/uukurt/website/manual/content/get-started/Manual/images/image8.png)
 
-![alt text](https://github.com/uukurt/website/tree/master/content/get-started/images/image9.png)
+![alt text](https://raw.githubusercontent.com/uukurt/website/manual/content/get-started/Manual/images/image9.png)
 
 The 13-option radio-button menu could be included in the current Control menu. All the buttons options are mutually exclusive alternatives to Normal Mouse Mode, One-dimensional Mode, and Eyetracker Mode. Alternatively, we could have a single option, ‘Button mode’ sitting in a four-way radio button: Normal Mouse Mode, One-dimensional Mode, Eyetracker Mode, or Button mode; then a separate 13-choice radio-menu (at the bottom of the Control menu) would be used to specify which of the button modes the user wants. The other options could all go in Advanced, in principle, but it won’t be big enough to hold them all. So I think we need to replace Advanced by, or divide Advanced into, **Miscellaneous, Buttons,** and **Model.** Model is where we put the radio-button to choose between various language models, and the Smoothing slider. Miscellaneous gets Timestamp, the OneDimensionalMode slider, and the Start-on-mouse-position slider. Buttons gets everything in this document. While we do this, I think we should put the “Control Mode” switch into the “Control” menu, under Starting and Stopping.
 
 Here is an alternative orientation for the button menu.
 
-![alt text](https://github.com/uukurt/website/tree/master/content/get-started/images/image10.png)
+![alt text](https://raw.githubusercontent.com/uukurt/website/manual/content/get-started/Manual/images/image10.png)

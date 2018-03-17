@@ -66,19 +66,19 @@ When someone writes a piece of text, their choice of the text string can be view
 of a book from this library of all books - the book that contains exactly the chosen text. How
 do they choose that book? Let’s imagine they want to write **“all good things... ”**
 
-![alt text](https://github.com/uukurt/website/tree/master/content/get-started/images/image1.png)
+![alt text](https://raw.githubusercontent.com/uukurt/website/manual/content/get-started/Manual/images/image1.png)
 
 First, they walk into the “a” section of the library. There, they are confronted by books starting “aa”, “ab”, “ac”, . . . “az” [Picture (ii)]. Looking more closely at the “al” section, they can find books starting “ala”, “alb”, . . . “alz” [Picture (iii)].
 By looking ever more closely at the shelf, the writer can find the book containing the text he wishes to write. Thus writing can be described as **zooming in on an alphabetical library, steering as you go.**
 This is exactly how Dasher works, except for one crucial point: *we alter the SIZE of the shelf space devoted to each book in proportion to the probability of the corresponding text.* For example, not very many books start with an **“x”**, so we devote less space to **“x. . . ”** books, and more to the more plausible books, thus making it easier to find books that contain probable text.
 Here is the corresponding sequence of pictures of the library in Dasher. (The character ” ” denotes the space character.)
 
-![alt text](https://github.com/uukurt/website/tree/master/content/get-started/images/image2.png)
+![alt text](https://raw.githubusercontent.com/uukurt/website/manual/content/get-started/Manual/images/image2.png)
 
 Dasher can be trained on examples of any writing style, and it learns all the time, picking up your personal turns of phrase.
 The image below shows the state of the Dasher interface while the user is writing the word ‘objection’; alternative words that could easily be written at this point include ‘objective’, ‘objects ’, and ‘object oriented’.
 
-![alt text](https://github.com/uukurt/website/tree/master/content/get-started/images/image3.png)
+![alt text](https://raw.githubusercontent.com/uukurt/website/manual/content/get-started/Manual/images/image3.png)
 
 
 If you find Dasher hard to imagine based on these static pictures, please take a look at the movies on **www.dasher.org.uk**.
@@ -109,19 +109,19 @@ If you ever leave that blue box (as we did in figure 3) then we lose the letter 
 
 In the English-language desktop version 3 of Dasher,
 
-![alt text](https://github.com/uukurt/website/tree/master/content/get-started/images/image4.png)
+![alt text](https://raw.githubusercontent.com/uukurt/website/manual/content/get-started/Manual/images/image4.png)
 
 Figure 1: Writing **‘I once had a whim’**. Where should the user steer now?
 
-![alt text](https://github.com/uukurt/website/tree/master/content/get-started/images/image5.png)
+![alt text](https://raw.githubusercontent.com/uukurt/website/manual/content/get-started/Manual/images/image5.png)
 
 Figure 2: Some alternative letter ds, with a beginner’s error highlighted.
 
-![alt text](https://github.com/uukurt/website/tree/master/content/get-started/images/image6.png)
+![alt text](https://raw.githubusercontent.com/uukurt/website/manual/content/get-started/Manual/images/image6.png)
 
 Figure 3: What happens when you select the wrong **d**.
 
-![alt text](https://github.com/uukurt/website/tree/master/content/get-started/images/image7.png)
+![alt text](https://raw.githubusercontent.com/uukurt/website/manual/content/get-started/Manual/images/image7.png)
 
 Figure 4: The correct letter d is the one marked by the green arrow. This example illustrates the rule “always keep going inside the box that you want” – in this case, the blue box associated with the letter a of the word ‘had’.
 
