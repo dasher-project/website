@@ -1,3 +1,6 @@
+---
+title: "3. Personalizing Dasher"
+---
 ## 3 Personalizing Dasher
 
 There are three classes of files you can tweak in order to make Dasher work better for you: **alphabet** files, **colour** files, and **training** files.

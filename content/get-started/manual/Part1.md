@@ -1,3 +1,6 @@
+---
+title: "1. Introduction"
+---
 # Dasher Manual
 
 ### David J.C. MacKay

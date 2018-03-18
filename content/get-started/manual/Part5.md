@@ -1,3 +1,7 @@
+---
+title: "5. What’s new in Version 4.0"
+---
+
 ## 5 What’s new in Version 4.0
 
 A preview version, 3.99, was released in October 2004.

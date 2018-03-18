@@ -1,3 +1,7 @@
+---
+title: "6. Continuous gestures"
+---
+
 ## 6   Continuous gestures
 
 Dasher’s normal mode (**mouse mode**) is driven by a two-dimensional continuous steering ges- ture. Dasher also has a **one-dimensional** mode, for users who can control only one dimension.

@@ -1,3 +1,6 @@
+---
+title: "7. Modes"
+---
 ## 7 I can’t use mouse mode or one-dimensional mode
 
 OK, we have several versions of **button Dasher**, which will be available in Dasher Version 4

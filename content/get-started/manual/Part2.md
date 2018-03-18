@@ -1,3 +1,6 @@
+---
+title: "2. How to use Dasher in real life"
+---
 ## 2 How to use Dasher in real life
 
 Dasher can be used to communicate through your computer, and (to some degree) to control your computer. Obviously, the simplest way to communicate with Dasher is to have the person you’re talking to watch the screen as you write. But there are lots of other ways to communicate through Dasher.
