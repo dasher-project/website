@@ -59,3 +59,5 @@ October 2003: [Linux User (German)](http://www.linux-user.de/ausgabe/2003/10/)
 
 #### New Scientist, 9/5/2002 
 Managed  creatively to modify dasher's display so that the letters are no longer in alphabetical order.
+
+![alt text](https://raw.githubusercontent.com/bilgesubuk/website/master/content/research/images/image1.jpg)
