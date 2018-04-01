@@ -3,49 +3,49 @@ title: "FAQ"
 weight: -90
 ---
 
+  
 ##### Some frequently asked questions
-
-*   [Why did you invent Dasher?](#q01)
-*   [Who is Dasher aimed at?](#q02)
-*   [What gave you the idea for the inverse-arithmetic-coding interface?](#q10)
-*   [How does the text entry method work?](#q11)
-*   [How does arithmetic coding work?](#q12)
-*   [How does the model adapt to the writer's language?](#q13)
-*   [How tiring is the method for the writer's eyes?](#q14)
-*   [How fast is the method compared to other text-entry methods?](#q15)
-*   [How long does it take to learn to write English with Dasher?](#q15a)
-*   [Can you describe a person writing a couple sentences using your method compared with existing methods?](#q16)
-*   [What were the technical challenges you had to address in order to make Dasher work?](#q17)
-*   [Was there anything surprising about the results?](#q18)
-*   [You say Dasher produced less spelling errors than standard methods. But were those errors evaluated in terms of seriousness?](#q18b)
-*   [Twenty-five words per minute is not as fast as talking. Why would anyone use Dasher when they could use speech recognition instead?](#q18c)
-*   [How much computing power does Dasher require?](#q18a)
-*   [How does your work fit into the body of work on text compression, on text entry, and on human-computer interaction in general, and what is different about it?](#q19)
-*   [How could this research eventually be applied practically?](#q20)
-*   [Where is this type of input going in the long-term?](#q21)
-*   [You said that Dasher can work in most languages. How do you think it might be used in Japanese?](#q21a)
-*   [How many people have used Dasher?](#q22a)
-*   [What are the next steps in your research? What are you ultimately aiming for?](#q22)
-*   [When could the research be ready to be applied practically?](#q23)
-*   [When will a consumer version of Dasher be ready?](#q23b)
-*   [Why make Dasher Open Source?](#q23a)
-*   [Who funded the research?](#q24)
-*   [What is your job title?](#q25)
-*   [Is there anything else you'd like to say?](#q26)
-
-* * *
+*   <a href = "#q01" > Why did you invent Dasher? </a>
+*   <a href = "#q02" > Who is Dasher aimed at? </a>
+*   <a href = "#q10" > What gave you the idea for the inverse-arithmetic-coding interface? </a>
+*   <a href = "#q11" > How does the text entry method work? </a>
+*   <a href = "#q12" > How does arithmetic coding work? </a>
+*   <a href = "#q13" > How does the model adapt to the writer's language? </a>
+*   <a href = "#q14" > How tiring is the method for the writer's eyes? </a>
+*   <a href = "#q15" > How fast is the method compared to other text-entry methods? </a>
+*   <a href = "#q15a" > How long does it take to learn to write English with Dasher? </a>
+*  <a href = "#q16" > Can you describe a person writing a couple sentences using your method compared with existing methods? </a>
+*   <a href = "#q17" > What were the technical challenges you had to address in order to make Dasher work? </a>
+*   <a href = "#q18" > Was there anything surprising about the results? </a>
+*   <a href = "#q18a" > How much computing power does Dasher require? </a>
+*   <a href = "#q18b" > You say Dasher produced less spelling errors than standard methods. But were those errors evaluated in terms of seriousness?</a>
+*   <a href = "#q18c" > Twenty-five words per minute is not as fast as talking. Why would anyone use Dasher when they could use speech recognition instead? </a>
+*   <a href = "#q19" > How does your work fit into the body of work on text compression, on text entry, and on human-computer interaction in general, and what is different about it? </a>
+*   <a href = "#q20" > How could this research eventually be applied practically? </a>
+*   <a href = "#q21" > Where is this type of input going in the long-term? </a>
+*   <a href = "#q21a" > You said that Dasher can work in most languages. How do you think it might be used in Japanese? </a>
+*   <a href = "#q22a" > How many people have used Dasher? </a>
+*   <a href = "#q22" > What are the next steps in your research? What are you ultimately aiming for? </a>
+*   <a href = "#q23" > When could the research be ready to be applied practically? </a>
+*   <a href = "#q23b" > When will a consumer version of Dasher be ready? </a>
+*   <a href = "#q23a" > Why make Dasher Open Source? </a>
+*   <a href = "#q24" > Who funded the research? </a>
+*   <a href = "#q25" > What is your job title? </a>
+*   <a href = "#q26" > Is there anything else you'd like to say? </a>
 
 * * *
 
-**Why did you invent Dasher?**
+* * *
+<a name ="q01" > **Why did you invent Dasher?** </a>
 
 I (David MacKay) was convinced that standard text-entry systems (such as ten-finger keyboards) are very inefficient - they don't make use of the predictability of natural language, and they waste our capabilities of making high-precision gestures.
 
 I believed that by starting from a principled foundation - namely information theory - we could make completely new writing systems that could have hardware much smaller than keyboards, and yet work nearly as fast, and that could be integrated with pointing systems such as eyetrackers.
 
 * * *
+*  
 
-**Who is Dasher aimed at?**
+<a name = "q02" > **Who is Dasher aimed at?** </a>
 
 There are several different groups of people who will find Dasher useful. What they all have in common is that they want an alternative to the regular ten-finger keyboard.
 
@@ -59,8 +59,8 @@ There are several different groups of people who will find Dasher useful. What t
     
 
 * * *
-
-**What gave you the idea for the inverse-arithmetic-coding interface?**
+*  
+<a name = "q10" > What gave you the idea for the inverse-arithmetic-coding interface? </a>
 
 I (David MacKay) was on a bus to Denver airport with Mike Lewicki on December 7th 1997. I was entering something in my PDA (a Psion 3a, which has a small qwerty keyboard), and Mike commented \`gee, that thing is so big!' And this set us thinking, \`how could we make a smaller PDA, given that the limiting thing is the keyboard?' We brainstormed about how to make a device with a tiny display mounted on a pair of glasses and with an input device no bigger than 2cm by 2cm, which could be attached to the lapel of your jacket. You'd drive it with your finger.
 
@@ -80,7 +80,7 @@ I had an additional motivation for making this prototype of Dasher: since Dasher
 
 * * *
 
-**How does the text entry method work? Can you describe it so I can picture it?**
+*   <a name = "q11" > How does the text entry method work? </a>
 
 It's hard to explain in words. Even with pictures, it's hard to explain! ([An online explanation with pictures can be found here](Novice.html)) It's easiest to explain by a live demonstration. Anyway, here goes.
 
@@ -100,7 +100,7 @@ The user steers by pointing where he wants to go. The display zooms in towards w
 
 * * *
 
-**How does arithmetic coding work? Can you describe this so I can picture it?**
+*   <a name = "q12" > How does arithmetic coding work? </a>
 
 Arithmetic coding is a beautiful text compression method. It normally takes me a one-hour lecture to explain it.
 
@@ -118,13 +118,13 @@ In this way, every possible string of characters is associated with a little fra
 
 * * *
 
-**How does the model adapt to the writer's language?**
+*   <a name = "q13" > How does the model adapt to the writer's language? </a>
 
 We use a language model called PPM (prediction by partial match). This language model makes its predictions by counting how often each letter occurred in similar contexts in the training text. The model can easily be adapted by adding whatever the user writes to the training-text database. It works with almost any language.
 
 * * *
 
-**How tiring is the method for the writer's eyes?**
+*   <a name = "q14" > How tiring is the method for the writer's eyes? </a>
 
 We can't imagine a more user-friendly method for writing with one's eyes. It's similar to driving a car. When you drive a car, your eyes spend much of the time looking at the point that you want to drive towards. So in principle, you could imagine getting rid of the steering wheel and simply having the car steer towards wherever your eyes are looking. This hands-free driving system would not be any harder on the driver's eyes than regular driving.
 
@@ -134,7 +134,7 @@ Using simple and cheap eyetrackers, for any application, can be tiring because t
 
 * * *
 
-**How fast is the method compared to other text-entry methods?**
+*   <a name = "q15" > How fast is the method compared to other text-entry methods? </a>
 
 Our paper, [Fast Hands-free Writing by Gaze Direction](/mackay/abstracts/eyeshortpaper.html), published in _Nature_ on August 22 2002, describes a comparison of Dasher-driven-by-an-eyetracker with an on-screen keyboard, with word-completion, driven by an eyetracker. Dasher users could write at up to **25 words per minute** after an hour of practice. On-screen keyboard users could write at only _15 words per minute_ after the same time. Moreover, the **error rate** when using the on-screen keyboard was about _five times_ that of Dasher. It's hard to make spelling mistakes with Dasher, because the language model makes it easy to select correct spellings.
 
@@ -146,7 +146,7 @@ We have also compared Dasher, **driven by a mouse**, with other pointer-based te
 
 * * *
 
-**How long does it take to learn to write English with Dasher?**
+*   <a name = "q15a" > How long does it take to learn to write English with Dasher? </a>
 
 We can tell you results for the mouse-driven version of Dasher, and for the eye-tracking version.
 
@@ -155,7 +155,7 @@ We can tell you results for the mouse-driven version of Dasher, and for the eye-
 
 * * *
 
-**Can you describe a person writing a couple sentences using your method vs. using the standard on-screen keyboard?**
+*  <a name = "q16" > Can you describe a person writing a couple sentences using your method compared with existing methods? </a>
 
 When you use a standard on-screen keyboard, you have to stare at the first character you want for a specified dwell time (half a second, say), then stare at the next character, and so forth. This feels terribly slow and tiring. Eyes did not evolve to press buttons! If you reduce the dwell time, it still feels slow and tiring, though not quite so slow as before; but the reduced dwell time leads to errors, because you accidentally `dwell' on incorrect keys. To speed up your writing, you have the option of looking at a small number of extra keys at the top of the keyboard in which word-completions are offered. Because you can only read what you are looking at, the only way to find out what word-completions are on offer is to make the decision to go and look in this word-completion area. You then have to scan around, trying not to dwell for too long on any displayed word, and either select the right word, if you find it, by staring at it, or give up and revert to typing. If you revert to typing, you had better remember what letter you just got to! You can remind yourself what letter you got to only by looking in another area of the screen. It's hard to know if you have made errors when typing, so the value of word-completion is reduced. It's likely you'll spell a number of words wrong in your sentence.
 
@@ -163,7 +163,7 @@ When you write the same sentence using Dasher, the initial display shows all cha
 
 * * *
 
-**What were the technical challenges you had to address in order to make Dasher work?**
+*   <a name = "q17" > What were the technical challenges you had to address in order to make Dasher work? </a>
 
 David Ward did the hard work of turning the prototype into a fast, useable, effective, and beautiful piece of software, and testing it. Important issues were
 
@@ -174,13 +174,14 @@ The limiting factor in the eyetracking version of Dasher is the resolution of th
 
 * * *
 
-**Was there anything surprising about the results?**
+*   <a name = "q18" > Was there anything surprising about the results? </a>
 
 We were delighted with how much faster we can write with Dasher and an eyetracker than the writing speeds many disabled computer users report. We know of one user who can write at only 6-9 words per minute. We hope that he'll give Dasher a try, because it can probably triple his writing speed.
 
 * * *
 
-**You say Dasher produced less spelling errors than standard methods. But were those errors evaluated in terms of seriousness? I mean, a mispelling is easily detected by a reader. A different word acidentally chosen can change the whole meaning. Have you evaluated this qualitative aspect?**
+** <a name = "q18b" > You say Dasher produced less spelling errors than standard methods. But were those errors evaluated in terms of seriousness?</a>
+I mean, a mispelling is easily detected by a reader. A different word acidentally chosen can change the whole meaning. Have you evaluated this qualitative aspect?**
 
 That's a very good question. We haven't formally investigated this issue, but I can give you some raw data, and an informal impression. I think most of the misspellings were minor, and many of them were caused by uncertainty about how to spell Jane Austen's prose!  
 Here is what I wrote in my 9th eyetracking session, in which I made 5 errors, according to the graph. \[Punctuation and upper case characters were not required, except that ends of sentences were meant to be marked with '__'.\]
@@ -232,7 +233,7 @@ Again, in this example, I can only find two errors (the two omitted words). I ho
 
 * * *
 
-**Twenty-five words per minute is not as fast as talking. Why would anyone use Dasher when they could use speech recognition instead?**
+* <a name = "q18c" > Twenty-five words per minute is not as fast as talking. Why would anyone use Dasher when they could use speech recognition instead? </a>
 
 Dasher can be used with any ordinary mouse, with a touch-screen, or with an eyetracker. The vast majority of Dasher users use it with a regular mouse or with a touch screen. With a mouse or touch screen, speeds up to 35 words per minute can be attained with practice. 25 words per minute is quite typical after an hour of practice.
 
@@ -250,13 +251,13 @@ However, many people like Dasher because
 
 * * *
 
-**How much computing power does Dasher require?**
+*   <a name = "q18a" > How much computing power does Dasher require? </a>
 
 Dasher can easily be run on any standard PC (running Windows or GNU/Linux). It also runs fine on the more-powerful palmtop computers such as the pocket PC. The eyetracking version of Dasher has only been used with standard PCs thus far, as we haven't come across a palmtop with an eyetracker :-)
 
 * * *
 
-**How does your work fit into the body of work on text compression, on text entry, and on human-computer interaction in general, and what is different about it?**
+<a name = "q19" > How does your work fit into the body of work on text compression, on text entry, and on human-computer interaction in general, and what is different about it? </a>
 
 Dasher is distinctive because it uses human body's natural continuous gestures, rather than forcing the human to emit binary gestures (as in typing) or discrete symbols (as in handwriting or `graffiti'). Eyes are good at navigation and search, and those are the skills that the eyetracking version of Dasher uses.
 
@@ -272,7 +273,8 @@ Dasher works instantly in any language: simply train the language model with exa
 
 * * *
 
-**How could this research eventually be applied practically? What other types of uses might the efficient method for text compression eventually lead to?**
+***   <a name = "q20" > How could this research eventually be applied practically? </a>
+ What other types of uses might the efficient method for text compression eventually lead to?**
 
 We think that Dasher could be used in at least three communities, and that the software that David Ward has created is almost ready for use in at least one of them.
 
@@ -298,13 +300,13 @@ Assume we have a poor translation system that translates badly from French to En
 
 * * *
 
-**Where is this type of input going in the long-term?**
+*   <a name = "q21" > Where is this type of input going in the long-term? </a>
 
 I think the long term is already here. Right now, one of our disabled friends is using Dasher to write documents. We are ready now for product development, shrink-wrapping, and promotion.
 
 * * *
 
-**You said that Dasher can work in most languages. How do you think it might be used in Japanese?**
+*   <a name = "q21a" > You said that Dasher can work in most languages. How do you think it might be used in Japanese? </a>
 
 As a first step towards a full Japanese version of Dasher handling both Kana and Kanji, David Ward has written a Hiragana version, "Daishoya", available in Windows version 1.6.3 of Dasher and GNU/Linux versions 1.6.3-1.6.8.  
 A demonstration of "Daishoya" being used to write ![howareyouH](/dasher/images/howareyouH.gif) (hajime mashite) can be reached from [www.inference.phy.cam.ac.uk/dasher/Languages.html](http://www.inference.phy.cam.ac.uk/dasher/Languages.html).  
@@ -317,13 +319,13 @@ In the long term, we can imagine two ways of using Daishoya to write Kanji:
 
 * * *
 
-**How many people have used Dasher?**
+*   <a name = "q22a" > How many people have used Dasher? </a>
 
 It's hard to keep count. As of August 2002, we estimate that about 50,000 users have downloaded Dasher.
 
 * * *
 
-**What are the next steps in your research? What are you ultimately aiming for?**
+*   <a name = "q22" > What are the next steps in your research? What are you ultimately aiming for? </a>
 
 The first, and most important aim has already been achieved -- we aimed to make a system that would allow people to write, without a keyboard, faster than they could write before. This dream has been realised.
 
@@ -338,15 +340,14 @@ As of October 2002, the Dasher project is being supported by the Gatsby charitab
 
 * * *
 
-**When could the research be ready to be applied practically?  
-When will a consumer version of Dasher be ready?**
+*   <a name = "q23" > When could the research be ready to be applied practically? </a>
+*   <a name = "q23b" > When will a consumer version of Dasher be ready? </a>
 
 _Product development and promotion_ is going to be handled as an Open Source project. The research version of Dasher, available now, is already useful to some disabled computer users, and we expect the open source community to deliver something close to a shrink-wrapped consumer version within 12 months. The source code will be released under the GNU public license late this Summer 2002. We hope that the version released by the end of September 2002 will be found useful by many consumers. Anyone wishing to support this project, please contact [David MacKay](mailto:mackay@mrao.cam.ac.uk).
 
 * * *
 
-**Why make Dasher open source?**
-
+<a name = "q23a" > Why make Dasher Open Source? </a>
 Our work benefits immensely from the use of free software.
 
 *   We use the **GNU/Linux** operating system, provided free by Linus Torvalds and others.
@@ -378,7 +379,7 @@ Third, I think it is pretty rare that the deserving inventor actually gets anyth
 
 * * *
 
-**Who funded the research?**
+*   <a name = "q24" > Who funded the research? </a>
 
 The blue-skies research of the Inference group is supported by the Gatsby Charitable Foundation and by a partnership award from IBM Zurich Research Laboratory.
 
@@ -388,7 +389,7 @@ _Support for further development of Dasher would be welcome!_
 
 * * *
 
-**What is your job title, and how should you be referred to?**
+*   <a name = "q25" > What is your job title? </a>
 
 **David MacKay** is _Reader* in Natural Philosophy_ in the Department of Physics at the University of Cambridge. He is also cofounder of the information technology company, [Transversal](http://www.transversal.com/).  
 \[(*) A `Reader' would be a Professor on the U.S. academic job scale.\]
@@ -399,8 +400,7 @@ We are happy to be referred to as David Ward and David MacKay, or Dr. David Ward
 
 * * *
 
-**Is there anything else you'd like to say?**
-
+<a name = "q26" > Is there anything else you'd like to say? </a>
 Executable copies of the Dasher software can be downloaded for free from the Dasher project website, [http://www.inference.phy.cam.ac.uk/dasher/](http://www.inference.phy.cam.ac.uk/dasher/). There are tips for new users on the website too. Don't give up if it takes you a minute or two to get started - within ten minutes, you'll be dashing along.  
 Please try it out!  
   
