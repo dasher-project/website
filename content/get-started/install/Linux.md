@@ -3,73 +3,95 @@ title: "Linux"
 weight: -100
 ---
 
-Linux
--------
+Installation
+==================
 
-The Contributor’s Guide to Dasher’s Ubuntu Version
+Dasher makes use of the GNU autotools system (automake, autoconf
+etc.), which are described in the 'INSTALL' file.  The following is
+specific to building and installing Dasher on Linux.  The Dasher
+maintainer documentation is at http://live.gnome.org/Dasher.
 
 1) Fork the project from github.
 
 2) Clone the repo to your machine
-<br />$ git clone https://github.com/<your account>/dasher.git
-<br />$ cd dasher
+```
+ $ git clone https://github.com/<your account>/dasher.git
+ $ cd dasher
+```
+3) Install dependencies
+If you are building sources from the Git repository then you must
+first install all the packages required to build Dasher.  On Debian
+based distributions the following can be used.
+```
+ $ packages="g++
+            gnome-common
+            gnome-doc-utils
+            libatspi2.0-dev
+            libgtk-3-dev
+            libspeechd-dev"
 
-3) Add the forked repo as the upstream repo
-<br />$ git remote add upstream https://github.com/GNOME/dasher.git
+ $ sudo apt-get install $packages
+```
+4) Configuration and Install
+autogen:
+```
+ $ ./autogen.sh
+ $ make
+ $ sudo make instal
+```
+If the speech support is desired then
+```
+ $ ./autogen.sh --enable-speech=yes
+ $ make
+ $ sudo make install
+```
+5) Run dasher
+```
+ $/usr/local/bin/dasher
+```
 
-4) Install dependencies
-<br />$ packages="g++
-<br />            gnome-common
-<br />            gnome-doc-utils
-<br />            libatspi2.0-dev
-<br />            libgtk-3-dev
-<br />            libspeechd-dev"
-<br />$ sudo apt-get install $packages
+Options
+=======
 
-5) Execute the commands one after another
-<br />$ ./autogen.sh --enable-speech=yes
-<br />$ ./configure
-<br />$ make
-<br />$ sudo make install
+   --disable-speech    Disable speech support (speech dispatcher).
 
-6) Run dasher
+   --disable-a11y      Disable support for GNOME 2 accessibility features
+<br />                       (enabled by default).
 
-/usr/local/bin/dasher
-
-7) [Optional] Create desktop shortcuts
-
-cd dasher
-./create-linux-desktop-shortcuts.sh
-
-
-Syncing your fork
-Reference: https://help.github.com/articles/syncing-a-fork/
-Fetching latest changes:
-git fetch upstream
-Merge latest changes to your local fork repo's master
-git merge upstream/master
-Push latest changes to your remote fork repo
-git push origin master
-
-
-Linux source code location
-cat Src/README_directory_structure.txt
-DasherCore      - The Dasher Engine
-Win32               - The MS Windows GUI, coded using the Windows API (not MFC).
-Gtk2		  - The Unix GUI, coded using GTK2. Also includes GPE code.
-MacOSX	  - The MacOS X GUI, coded using Cocoa.
-Qt		  - The QTopia GUI, aimed at QT-based palmtops
-Your platform here:
-XXX                  - GUI, coded for the XXX platform.
-
-Common          - This code may be used by DasherCore and/or platform specific
-		  ports. It contains generally useful code, some by the Dasher
-		  team, some by 3rd parties.
+   --disable-atspi     Disable support for GNOME 3 accessibility features
+<br />                       (enabled by default). 
+<br />This flag is just useful
+                       for debugging, as accessibility is now built-in
+                       and doesn't bring in more dependencies.
 
 
-Therefore, Ubuntu GUI code is at the following location:
-dasher/Src/Gtk2/
+   --with-gpe          Build binaries for the GPE palmtop environment.
 
-The main dasher engine is at the following location:
-dasher/Src/DasherCore
+   --with-qte          Build binaries using the QTE environment.
+
+GSettings
+=========
+
+Note that in the GNOME 3 world, GSettings, part of glib, replace
+GConf.  By default, dasher's "configure" will use GSettings if
+found.  If not it will use GConf if found.  This can be influenced
+by the --with-gsettings flag to configure.  If on running dasher,
+you see
+
+  GLib-GIO-ERROR **: Settings schema 'org.gnome.Dasher' is not installed
+  aborting...
+
+try adding the directory which contains "dasher.gschema.xml",
+<br />usually ${prefix}/share/glib-2.0/schemas, to the environment variable
+<br />GSETTINGS_SCHEMA_DIR.
+
+Desktop Shortcuts
+=================
+After the installation is done, for Ubuntu and derivatives
+(e.g., Goobuntu), you can create desktop shortcuts starting Dasher in
+different profiles by running:
+```
+ $ cd dasher
+ $ ./create-linux-desktop-shortcuts.sh
+```
 
