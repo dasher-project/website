@@ -13,8 +13,6 @@ defaultContentLanguageInSubdir= true
   author = "dasher-project"
   showVisitedLinks = false
   themeVariant = "dasher"
-  disableBreadcrumb = true
-  disableNextPrev = true
   ordersectionsby = 'weight'
   
 [outputs]
@@ -27,6 +25,14 @@ home = [ "HTML", "RSS", "JSON"]
 title = "Dasher (English)"
 weight = 1
 languageName = "English"
+
+
+
+[[Languages.en.menu.shortcuts]] 
+name = "<i class='fa fa-fw fa-archive'></i> Original Inference Group site"
+url = "/dasher/"
+weight = 0
+
 
 [[Languages.en.menu.shortcuts]] 
 name = "<i class='fa fa-fw fa-github'></i> Github repo"
