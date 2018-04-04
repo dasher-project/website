@@ -1,5 +1,6 @@
 ---
 title: "2. Create a Training text"
+weight: -400
 ---
 
 Making the Training Text

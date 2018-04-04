@@ -1,5 +1,6 @@
 ---
 title: "1. Install"
+weight: -400
 ---
 
 There are different versions for differnt platforms

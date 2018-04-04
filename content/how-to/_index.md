@@ -1,7 +1,7 @@
 ---
 title: "How to use"
 description: "Download it. Install it. Run it. Full details below"
-weight: -90
+weight: 0
 ---
 
 Dasher is a zooming interface. You point where you want to go, and the display zooms in wherever you point. The world into which you are zooming is painted with letters, so that any point you zoom in on corresponds to a piece of text. The more you zoom in, the longer the piece of text you have written. You choose what you write by choosing where to zoom.

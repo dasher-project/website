@@ -1,7 +1,7 @@
 ---
 title: "Tips"
 description: "Download it. Install it. Run it. Full details below"
-weight: -10
+weight: 200
 ---
 
 Don't give up if it takes you a minute or two to get started - within ten minutes, you'll be blazing along. It's a lot like driving a car. You should **start by driving cautiously**. If you can't tell where you are going, **_stop going_**. Indeed, you will probably learn Dasher faster if you come to it with car-driving analogies in mind, rather than standard computer analogies. For example, the way navigation works is not by DRAGGING but by STEERING: if cars worked like windows computers, you would have to "grab" the piece of road you want, then "drag" it towards you; but in a car, when you wish to drive right, you POINT RIGHT with your steering wheel. Dasher does not work by dragging either. **Do not try to grab things and drag them. Just decide where you want to go, and point there.**
