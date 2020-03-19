@@ -1,6 +1,0 @@
-[submodule "themes/hugo-theme-learn"]
-	path = themes/hugo-theme-learn
-	url = https://github.com/willwade/hugo-theme-learn.git
-[submodule "themes/docsy"]
-	path = themes/docsy
-	url = git@github.com:google/docsy.git
