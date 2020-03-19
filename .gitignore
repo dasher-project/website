@@ -1,3 +1,6 @@
 public
 public/*
 .firebaserc
+node_modules/*
+.DS_Store
+
