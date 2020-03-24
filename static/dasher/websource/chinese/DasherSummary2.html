@@ -1,0 +1,38 @@
+SectionPage  Dasher的工作机理
+
+<img align="right" src="http://www.inference.phy.cam.ac.uk/djw30/dasher/dasher.gif" height=248 width=288 alt="hit escape to halt animation">
+
+<center>
+<em>Dasher可能有点像一个方块游戏: `字母杀手的攻击(Attack of the killer alphabets)'.</em>
+<br>
+<small><a href=/is/press/ft0202.gif>金融时报(Financial Times),  2002-2-5</a></small>.
+</center>
+
+<h1>Dasher</h1>
+
+<p>
+ Dasher是一个快速缩放的界面 .你指向你希望的地方 
+ , 那里的显示就会扩大.
+ 你放大的地方是充满了字母的,所以你放大的任何一点都对应于输入文本的一部分. 
+ 你放大的越多, 输入的也越多. 
+ 你通过选择缩放的地方来选择输入的内容.
+</p>
+
+<p>
+在右面的示例中,使用者正在输入 "hello_how_are_you".
+</p>
+
+<p>
+	为了使界面更加有效,我们使用了一个语言模型预测的方法来决定如何分配界面大小给不同的输入内容.
+	可能性大的内容占的面积也较大,所以很容易被选中.
+	不太可能的文本内容(例如:拼写错误)占的空间也较小,选择输入也相对困难.
+	语言模型能一直学习:如果你输入了一个新的单词,下次输入就会简单许多.
+</p>
+<p>
+ Dasher相比较其他预测式文本输入界面的一个优点是它是
+  <b>无模式的(mode-free)</b>: 使用者不需要从一个写作模式(writing mode)切换到一个"可接受模型预测"模式(accept-model-predictions).
+</p>
+<p>
+	另一个优点是它很容易训练出符合各种写作风格的模型: 
+	仅仅加载(load up)一个示例文件,然后开写!
+</p>

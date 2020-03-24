@@ -1,0 +1,2244 @@
+Alias Development2008.html
+FoldingPage Development 2008
+<h2>Development 2008</h2>
+Here are some notes on the development of Dasher in 2008.
+<br>
+<h4>List of packages required to build Dasher for Gnome (From Peter Conlon.) </h4>
+<pre>
+Before building, I thought I had installed everything
+listed in README in the dasher folder.
+
+The first error was fixed by installing
+libgconf2-dev
+
+The following were then needed as I got a little further down automake:
+libgtk2.0-dev   (perhaps I didn't have the -dev package initially)
+libxtst-dev      (don't know what this is)
+libgnome2-dev    (needed dev package)
+libgnomeui-dev   (needed dev package)
+libatspi-dev
+
+It also complained about my version of gnome-doc-utils, 0.6.1 on
+Debian/etch. Consequently, I had to upgrade to something bigger than 0.9,
+
+So it seems I just didn't have the right -dev packages.
+</pre>
+
+<h3>Work-arounds for annoying Dasher features</h3>
+<pre>
+ 1. Solution to the nagging confirmation pop-up. We have a very talented
+ amateur-programmer here on the Dasher Group. Himself being handicapped
+ (although probably in a somewhat lesser degree) he's very resourceful
+ and can customize his communication with the computer, so that it would
+ require much less effort. I hope he gets in touch with you, because he
+ could probably help you quite a bit more than I. His name is Andre Luiz
+ dos Santos. You might have seen his postings to the group. Anyway, he
+ works little miracles with a scripting language that is the key element
+ of a little task-automating application called AutoHotKey. The miracle
+ he worked for me is a tiny script that watches the system for the
+ occurence of that particular pop-up and just auto-negates it for me. It
+ works brilliant and saves me a bunch of totally useless, unnecessary
+ clicks that really got on my nerves. You'll find the the script in the
+ attachment. I believe the script should work for any Dasher version.
+ Obviously, for the script to work you've got to install the AutoHotKey
+ application first (here is the link:
+ http://www.autohotkey.com/download/ ) After that all you need to do is
+ to start the script (by double-clicking) -- once you install the
+ application, the scripts' file extension "ahk" will be associated with
+ it and double-clicking a script file will automatically start the
+ AutoHotKey application and load the script into it. As far as I'm
+ concerned I created a shortcut for the no-more-confirmation script and
+ placed it in the AutoStart folder (to be found in menu Start->Programs).
+ That way the script starts together with the system and I can cross the
+ confirmation pop-up's problem from my mind for good.
+
+See also
+ http://www.nabble.com/forum/ViewPost.jtp?post=10330255&framed=y
+
+
+
+ </pre>
+
+<h4>Overview of Dasher status (email by DJCM)</h4>
+[recap of some of Chris's main points:]
+>> For the past few months, my frustration with recent versions of Dasher
+>> had grown to the point where I was seriously considering trying to
+>> rewrite large portions of it.
+>> Many projects that are initiated by companies and
+universities have difficulty working with outside developers.
+>> I'd like to see a public mailing list for developers.
+>> I'd like discussions about the
+plans for Dasher to have a means for outside input.  Patches should be
+posted to a list so they can be commented on, and improved.  Using git
+for the version control would be nice.  Someone needs to go through
+the bugs in Gnome's bugzilla.  New commits to the version control
+should be well-described in the commit message, and should be small
+and focused.  We need tests, and tests should pass before changes are
+committed.  Normal, good development practices.  You know what I'm
+talking about.  It's time to bring the development into the open.
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+When we made Dasher open-source, our hope was that
+many outside developers would get involved, and that by
+now Dasher would be out of our hands, being looked after
+by other people.
+
+When I raised money to support a full-time Dasher developer
+(a position which was funded for 5 years here in Cambridge),
+the job description was very much along the lines suggested by Chris:
+Normal, good development practices; involve users; do tests and make
+sure all releases pass all tests; get other developers involved;
+document everything.
+I always wanted the development to be in the open and to have a tight
+feedback loop with users and testers.  That's always been the
+dream, but many of these desires haven't been realised.
+
+The situation now is, having employed three Dasher developers
+over those 5 years, we have now lost Phil Cowans to .com-land,
+and the money has run out (at least until September 2008).
+
+So Dasher is a drifting tanker with no engine, except for
+us volunteers.  (The local volunteers in Cambridge Physics dept are
+Keith Vertanen and David MacKay, and we still have occasional help from Phil
+Cowans.)
+
+Maybe in Sept 2008 we'll get a new engine fitted, and perhaps we
+can do a better job of satisfying Chris's list. Until then, we
+need a volunteer plan to handle the most urgent issues.
+
+I suggest that a wiki and an email list will be the best way to
+handle things.  One option is to simply use _this_ email list as the
+forum for the volunteer crew to discuss things.
+If there are any strong feelings that that would be a bad idea,
+please email me so and I will sort out another email list.
+
+I will send another email shortly with wiki coordinates.
+
+thanks all, and sorry that there's not better service from Dasher Central
+at present!
+
+<h4>and From Phil Cowans</h4>
+<pre>
+Dear Chris and others,
+
+Thanks for yor recent comments on Dasher. As you maybe know, I am no
+longer able to devote more than a few hours a week to Dasher as it is no
+longer part of my job. However, it does look like there may be enough
+momentum here to keep the project alive as a community effort, so we
+should try to make that happen and I should try to set things up so that
+this can happen as easily as possible.
+
+In terms of tools, we do have the standard set up (version control, bug
+tracking etc.), but as development was largely done by me they weren't
+generally used by the wider communty. If anyone does want to have access
+to these then let me know and it can be arranged. I'll also try to take
+stock of the various lists we have lying around and either repurpose one
+as a development list or set up a new one so that people interested in
+development have a place to talk. Please drop me a line if you'd like to
+be on this list and let me know which email address to use.
+
+Aside from that, there are a couple of points to be considered. Firstly,
+someone needs to manage the release process - I can try to do that
+myself, but I can't guarantee that I'll not run into problems due to my
+time constraints, so if anyone is willing to take this on let me know
+and I'll explain exactly what's involved.
+
+Secondly, Chris is right that we need to focus on code quality rather
+than new features. There is quite a long list of bugs in the database
+(http://bugzilla.gnome.org/) which need to be confirmed, prioritised and
+eventually fixed, and the code base does need to be thoroughly tested.
+Basically there is a role for people who aren't in a position to
+contribute code to help with testing and bug checking, so let me know if
+you fall into that category.
+
+Finally, if you are interested on working directly on the codebase, drop
+me a line with a brief summary of what you expect to be able to
+contribute and how much time you can spare, just so I have an idea of
+where we stand in terms of resources.
+
+---
+
+[This message is being sent to the dasherteam Yahoo! group, but being
+copied to dasher-text-entry as well. If you are not on the former yet,
+but would like to be involved with the development process, let me know
+and I'll add you to the list.]
+
+As you may know Dasher does not currently have anyone working full time
+on development. However, there is clearly a lot of demand from the user
+community for bugfixes and new features, so it would be fantastic to
+open the development process up to more community involvement. The
+intention is to use this list (dasherteam@yahoogroups.com) to coordinate
+development activities, so if anyone has any ideas for features, or is
+interested in working on any particular aspect of Dasher then send a
+message to the list. I have also created a wiki page on the GNOME Live!
+site at http://live.gnome.org/Dasher, which might be useful for
+prioritising work, keeping shared developer documentation and so on.
+
+The source code for Dasher is in the GNOME Subversion repository, which
+is located at http://svn.gnome.org/. The site includes instructions on
+how to use Subversion for anyone who's not familiar with the system. To
+have write access to the repository you need a GNOME account, but anyone
+can check out the latest version of the code. I'd ideally like to get
+people committing their changes directly as soon as possible, but to
+start of with please submit patches either through the bug tracking
+system or by email.
+
+Bugs are tracked through the GNOME Bugzilla system, at
+http://bugzilla.gnome.org/, under the product 'dasher'. I've just spent
+some time cleaning up the bug listing, so things should be fairly up to
+date and have the correct severities. I'd be very happy for anyone to
+claim any of the bugs marked as new or unconfirmed - let me know if you
+need your Bugzilla account permissions changed to be able to do this. If
+you do take over any of the bugs, please assign them to yourself so that
+others know that the issue is being worked on.
+
+In terms of priorities, I think it would be good to first check the
+unconfirmed bugs. These are mainly from the crash reporting system, so
+there are probably a lot of duplicates. Having done that we should work
+down the list in order of severity, and then start with the
+enhancements. Something you may be interested in is that the GNOME
+outreach programme is offering cash for people to fix accessibility
+bugs, including several in Dasher - see
+http://www.gnome.org/projects/outreach/a11y/ for details.
+
+One other issue is the roadmap and release process. It might be a good
+idea to use the wiki to try and plan future development, including
+target release dates and what's going to be included in each release.
+
+Finally, if anyone has any ideas on how to encourage community
+participation, I'd be very interested.
+
+</pre>
+
+
+
+ 
+
+EndPage
+Alias CVSbranches2005.html
+FoldingPage CVS branches 2005
+<h2>CVS branches 2005</h2>
+<pre>
+Gnome is going into feature freeze for its 2.12 release cycle from  
+today; the release of Gnome 2.12.0 will be on September 7th.  This
+means that we need to start preparing a CVS branch for that release,
+and that string or UI changes to that branch will first need to be
+announced, and later (after July 25th) need permission from the Gnome
+release team.
+
+Since we have some new release targets of our own, we'll be making
+several CVS branches immediately:
+
+dasher_3_2:  This branch will be for the 3.2 release that coincides
+with DJCM's July 13th deadline and subsequent releases of 3.2.  (In
+practise, we don't expect many more of those.  See below on HEAD.)
+
+gnome-2-12:  This branch will be for the 3.2 release that freezes
+immediately and is released with Gnome 2.12.0.  Bug fixes will be
+applied, but not DJCM's eight proposed new features, and preferably
+not string or UI changes unless necessary.  If they *are* necessary,
+please let me know before committing them and I'll let the release
+team know.
+
+HEAD:  This branch will be for Dasher 4.0.0, which will contain a
+heavily rewritten core, as proposed by Phil and Brian.
+
+So.  Please commit the bugfixes that turn (what was until today)
+"current HEAD" into a stable Dasher release to the gnome-2-12 and
+dasher_3_2 branches, committing bugfixes to gnome-2-12 and bugfixes
+plus new features to dasher_3_2.
+
+</pre>
+EndPage
+
+Alias Documentation05.html
+FoldingPage Documentation
+<h2>Documentation</h2>
+
+<h3>Documentation for developers</h3>
+<a href=http://www.inference.phy.cam.ac.uk/pjc51/geometry.ps>Dasher Geometry and Dynamics</a>
+
+<h3>Documentation for users who want to
+    fiddle with the alphabets, colours, or training texts</h3>
+    <h4>training text</h4>
+    <p>
+    We strongly encourage users to optimize the training text
+    for their personal use.
+    Dasher learns all the time as you write, and
+    saves what it learns in a file
+    (for example, all the writing of a linux user using English
+     will be stored in a file  called
+    <tt>~/.dasher/training_english_GB.txt</tt>).
+ It is a great idea to take a load of text that is <em>like
+  what you are going to write in the future</em>
+  and put it into this file, or into
+  the equivalent system-wide file
+  (for example, <tt>/usr/local/share/dasher/training_english_GB.txt</tt>
+  on a linux system).
+  Next time Dasher is started, or next time you switch alphabet,
+  both these files will be read so as to
+  train the language model to make appropriate predictions.
+  </p>
+    <h4>colours</h4>
+<p>    Users can configure the colours used by Dasher.
+    Dasher uses 242 colours at any one time.
+    How those colours are defined and used
+    is specified by two files,
+    the alphabet file
+    <a href=http://www.inference.phy.cam.ac.uk/dasher/download/alphabets/alphabet.englishC.xml>(Example)</a>
+    and
+    the colour file
+    <a href=http://www.inference.phy.cam.ac.uk/dasher/download/alphabets/colour.euroasian.xml>(example)</a>.
+    Both these XML files are plain text files that you can edit.
+    The alphabet file specifies by numbers between 1 and 242
+    which colours each letter and group in the alphabet should have.
+    The colour file defines what those 242 colours actually are. 
+</p><p>
+ Version 4 of Dasher offers several colour schemes to choose among.
+ Many of our alphabets use a colour scheme (a 'palette') called <tt>European/Asian</tt>.
+    Here's how the default colours work for European languages.
+ The     GROUPS are coloured like this:
+ <ul>
+ <li>
+  accents and marks - ORANGE (colour number 51)
+ </li>
+ <li>lower case characters - this group is not coloured
+ </li>
+ <li>upper case characters - YELLOW (colour number 111)
+ </li>
+  <li>numerals - RED (colour 113)
+ </li>
+ <li>punctuation - DARK GREEN (colour 112)
+ </li>
+ <li>space character and newline - WHITE (not actually a group)
+ </li>
+
+ </ul>
+</p>
+EndPage
+
+Alias Experiments.html
+FoldingPage Experiments
+<h2>Dictation experiments</h2>
+ In our experiments comparing Dasher with other writing methods, we
+ personalize the system by using fragments of a training text, Jane Austen's Emma.
+ Then we give dictation from the remaining parts of Emma.
+ Here are 
+<a href=http://www.inference.phy.cam.ac.uk/dasher/download/english/emmaExperiments.zip>Emma training text
+and test texts for dictation</a>. 
+EndPage
+
+Alias Schools.html
+FoldingPage Schools
+<h2>Dasher in Schools</h2>
+<p>
+ This page describes uses of Dasher in educational settings,
+  especially in mainstream schools.
+</p>
+<hr>
+<p>
+Dasher is a component in a project
+by
+<pre>
+Ian Usher
+E-Learning Co-ordinator, Research & Development
+School Improvement Service, Buckinghamshire County Council
+[e] iusher[AT]buckscc.gov.uk   [skype] iusher   
+[t] 01296 382038               [m] 07747 757868
+</pre>
+This project is being developed as a `Nesta Futurelab
+design challenge'.
+</p>
+<hr>
+<p>
+Neil Dennison [Neil[AT]THEi.info], in a City Learning Centre in Bristol,
+has conducted pilot projects where young children are plonked in front of
+ Dasher and asked to write.
+</p>
+<hr>
+<p>
+ Dr. Mark Winterbottom [mw244[AT]cam.ac.uk] is also interested in research projects
+  investigating Dasher in schools.
+<pre>
+ Dr. Mark Winterbottom [mw244[AT]cam.ac.uk]
+ Lecturer in Education
+ Faculty of Education
+ University of Cambridge
+</pre>
+
+<p>
+ If you know of other educational work with Dasher, please
+ let David MacKay know.
+</p>
+
+
+
+EndPage
+
+Alias DrivingDasher.html
+FoldingPage Driving methods
+<h2>Development of unusual ways of driving Dasher</h2>
+<div style="color:black;background-color:#f7eff1">
+<a href=http://www.kernelthread.com/software/ams2hid/>
+Mac Powerbook users can
+drive Dasher using its tilt sensors. (Can a Dasher user write a webpage giving details
+and evaluating this option, and let us know?)
+</a>
+ (As of  Thu 24/3/05, ams2hid is not open source.)
+</div>
+
+<h4>Suggestion by Seb Wills 24/3/2005</h4>
+<div style="color:black;background-color:#f7fef1">
+Something similar could be done with PDAs/phones which don't have tilt
+sensors but do have cameras, by using the change in view from the camera
+to detect tilting.<br>
+
+<b>Cool idea!</b>
+
+ <em>Can someone implement this image-based approach
+ in an open source solution?</em>
+</div>
+
+<h2>See also</h2>
+<a href=buttonDasher.html>Button Dasher page</a>
+
+
+EndPage
+
+Alias NewAlphabets.html
+FoldingPage Alphabets
+<h2>Alphabet developments</h2>
+<b>Wed 11/8/04</b>
+<p> I have put a lot of effort into making alphabet files.
+ Helped by
+ <a href=http://www.omniglot.com/writing/>omniglot</a>,
+ <a href=http://developer.mimer.com/collations/charts/>mimer</a>,
+ and <a href=http://www.theodora.com/country_digraphs.html>theodora</a>.
+</p>
+ <p>
+All the alphabets can be found
+<a href=http://www.inference.phy.cam.ac.uk/dasher/download/alphabets/>here</a>.
+And <a href=http://www.inference.phy.cam.ac.uk/dasher/download/alphabets/ALPHABETS.html>this table has them all sorted by region</a>.
+</p>
+<p>
+ Recent additions for which I need help or advice are
+ <dl>
+ <dt>
+ <a href=http://www.inference.phy.cam.ac.uk/dasher/download/alphabets/alphabet.pinyin.xml>Pinyin</a> 
+ </dt>
+ <dd>
+ Is this Chinese alphabet useful to anyone? (It consists of the roman letters
+ with vowel accents.) Please let me know;
+ and tell me whether the
+ "combining diacritics" and "tone marks" are needed; I am guessing not.
+ We have got a training text for Pinyin, and it seems to work --
+ see  <a href=http://www.inference.phy.cam.ac.uk/dasher/images/pinyin.png>this screen shot</a>.
+ Thanks to Zhang Yunong for his help!
+ </dd>
+<dt>
+ <a href=http://www.inference.phy.cam.ac.uk/dasher/download/alphabets/alphabet.bopomofo.xml>Bopomofo</a>
+ </dt>
+ <dd>
+ Another Chinese alphabet. Is this useful? Is it complete?
+ </dd>
+<dt>
+ <a href=http://www.inference.phy.cam.ac.uk/dasher/download/alphabets/alphabet.bengali.xml>Bengali</a>
+ </dt>
+ <dd>This alphabet crashes my Dasher. No fonts are displayed. Can anyone help?
+ </dd>
+<dt>
+ <a href=http://www.inference.phy.cam.ac.uk/dasher/download/alphabets/alphabet.thaana.xml>Dhivehi (thaana) </a>
+ </dt>
+ <dd>I think this Dhivehi  alphabet is ready to go.
+ All we need is a <a href=http://www.inference.phy.cam.ac.uk/dasher/download/training/training_thaana_MV.txt>training text</a>.
+ One of the characters does not display in my Dasher. Can anyone help enhance this alphabet? 
+ </dd>
+<dt>
+ <a href=http://www.inference.phy.cam.ac.uk/dasher/download/alphabets/alphabet.Bulgarian.xml>Bulgarian</a>
+ </dt>
+ <dd>
+ Ready to go?
+ All we need is a 
+  <a href=http://www.inference.phy.cam.ac.uk/dasher/download/training/training_Bulgarian_BG.txt>training text</a>.
+ </dd>
+<dt>
+ <a href=http://www.inference.phy.cam.ac.uk/dasher/download/alphabets/alphabet.arabic.xml>Arabic</a>
+ </dt>
+ <dd> Arabic is believed to be working correctly now.  On some linux platforms
+ the fonts join up all cursively, very beautiful!
+ </dd>
+<dt>
+ <a href=http://www.inference.phy.cam.ac.uk/dasher/download/alphabets/alphabet.persian.xml>Persian</a>
+ </dt>
+ <dd> Nearly ready to go?
+ </dd>
+</dl> 
+ </p>
+
+EndPage
+
+Alias buttonDasher.html
+FoldingPage Button Dasher Notes
+<h2>Button Dasher</h2>
+<ul><li>
+ Paper describing four new ways of using Dasher with buttons.
+<dl><dt>
+        <a href="http://www.inference.phy.cam.ac.uk/mackay/dasherButtons.ps.gz">dasherButtons.ps.gz</a>.
+        <a href="http://www.inference.phy.cam.ac.uk/mackay/dasherButtons.pdf">dasherButtons.pdf</a>.
+        <a href="http://www.inference.phy.cam.ac.uk/mackay/abstracts/dasherButtons.html">abstract</a>. | <- UK | Canada -> | <a href="http://www.cs.toronto.edu/~mackay/dasherButtons.ps.gz">dasherButtons.ps.gz</a>.
+        <a href="http://www.cs.toronto.edu/~mackay/dasherButtons.pdf">dasherButtons.pdf</a>.
+        <a href="http://www.cs.toronto.edu/~mackay/abstracts/dasherButtons.html">abstract</a>.
+
+</dt><dd>       `<b>    Efficient  communication through one or two buttons
+        </b>'. <br>
+	 by David MacKay, Chris Ball, and Mick Donegan.
+</dd></dl>
+
+</li>
+
+<li> 
+   <a href="/dasher/download/papers/Menu.pdf">Sketch of the menus for
+   selecting among these control modes</a>
+   <li>
+   </ul>
+<h3>Notes on the new subroutines added to Dasher for button mode</h3>
+Mon 9/8/04
+ <p>
+ The core zooming function of regular Dasher
+ involves the following sequence of subroutines[in files shown]
+ <pre>
+ TapOn[DasherInterface]
+   -> TapOnDisplay [DasherViewSquare]
+      -> Tap_on_display[DasherModel]
+   -> Render
+	DrawMouse
+	Display
+   -> NewFrame 
+ </pre>
+ With the new button modes, we mimic the above sequence by calling
+ <pre>
+ GoTo[DasherInterface]
+                                 which calls
+ MultiStepGoTo[DasherInterface]
+   -> PlanGoTo [DasherViewSquare]
+       -> PlanGoTo [DasherModel]
+   Loop through iSteps{
+   -> StepGoTo [DasherViewSquare]
+       -> NewGoTo [DasherModel]
+   -> Render
+   -> Display
+   }
+   -> FinalGoTo [DasherViewSquare]
+       -> NewGoTo [DasherModel]
+   -> Render
+   -> Display
+ </pre>
+ 
+ </p>
+ <h3>More notes on static one-button mode</h3>
+<p>
+ It is important that we exploit the full accuracy
+of the user's click timing. It is very likely that
+their accuracy is similar to, or possibly even smaller
+than, the time between successive renderings of the
+falling pointer.
+It's thus essential, I think, that we keep track of the
+actual TIME of the click event, relative to the last
+rendering time, in order to get SUPERRESOLUTION of
+the mousey coordinate.
+</p><p>
+So the code should look something like this:
+<pre>
+set pointer coordinate
+render the pointer at y1
+note the time t1
+decide where the next pointer will be rendered y2, and
+estimate the time t2 at which that will happen
+
+IF ( click event happens )
+        Note time t at which click event happened
+        Define
+                y = (t-t1) * y2 + (t2-t) * y1
+                    -------------------------
+                            t2-t1
+			    
+        Initiate zoom in on location y.
+
+
+                (Special case event handling:
+                if t>t2, declare t=t2, before doing the y formula;
+                and if a click occurs before we have rendered the first
+                pointer at y1=CANVAS_TOP, declare y=CANVAS_TOP)
+</pre>
+
+</p>
+<p>
+<b> During a zoom:</b>
+  When the above computation of "y" has occurred, I think it will
+ be very helpful to the user to see visualized on the screen a
+ splat mark that shows WHERE Y WAS. That way, they will learn
+ whether they clicked earlier or later than they intended.
+ I think a good way to do this will be to create a new routine
+ called  draw_splat_at_dasher_coordinate_y(dashery) .
+</p><p>
+ The way this will work is:
+        when the zoom is initiated, my GoTo routine, which
+ receives dashery (which has been put through screen2dasher)
+ remembers that dashery value, and, every time it does a Render
+ and Display, it will also Draw a splat object (which should
+be an object that looks just like the pointer arrow object, except
+maybe it could have a different colour, like red) at that
+dashery coordinate (appropriately mapped through dasher2screen).
+Because a zoom is busy happening, the
+splat object won't be rendered at the same canvas y coordinate
+as the click happened - indeed, during the zoom, it will be
+rendered at a sequency of positions that drift to the CENTRE
+of the screen, because of the zoom being a zoom-in-on y.
+</p><p>
+
+I'd like there to be two objects, a splat object
+that GoTo knows about and renders, and the regular bouncing pointer, which
+is not rendered during the zoom event (or else is rendered at
+CANVAS_TOP during every frame of the zoom), and which is another piece
+of code's responsiblity.
+The regular bouncing pointer should be reset to CANVAS_TOP
+when the zoom event is started.
+
+</p>
+<h3>Wed 11/8/04</h3>
+<p>
+<a href=/mackay/notes/dasher/>Some handwritten notes on Dasher code are here</a>
+</p>
+EndPage
+
+Alias ChineseDevelopment.html
+FoldingPage Chinese
+<p>
+<a href=http://www.inference.phy.cam.ac.uk/cgi-bin/wiki/wiki.pl/ChineseDasher>Chinese Dasher wiki</a>
+</p>
+<h2>Chinese "Ruby" Corpus</h2>
+<p>
+ I have found a Chinese corpus which gives both pinyin and Chinese Character strings
+ together.  I  used this corpus to  make our pinyin corpus
+<a href=http://www.inference.phy.cam.ac.uk/dasher/download/training/training_pinyin_CN.txt>
+download/training/training_pinyin_CN.txt
+</a>
+ and
+ a "Ruby" corpus
+<a href=http://www.inference.phy.cam.ac.uk/dasher/download/training/training_chineseRuby_CN.txt>
+ download/training/training_chineseRuby_CN.txt
+ </a>. [Ruby is our name for mixed phonetic text and chinese or Japanese characters;
+  in Japanese, we call Ruby <em>furigana</em>.]
+</p>
+<p>
+ The original corpus is in 
+ <tt>/home/mackay/dasher/incoming/chinese/pinyin</tt>
+ and 
+ <tt>/home/mackay/dasher/incoming/chinese/character</tt>.
+</p>
+<p>
+ My perl program that creates the Ruby output is
+ <a href=file:///home/mackay/dasher/incoming/chinese/pinyin/CONVERTP.p>
+    /home/mackay/dasher/incoming/chinese/pinyin/CONVERTP.p
+  </a>.
+
+  The associated alphabet file is
+  <a href=http://www.inference.phy.cam.ac.uk/dasher/download/alphabets/alphabet.chineseRuby.xml>
+alphabet.chineseRuby.xml
+  </a>
+  </p><p>
+ My perl program that creates the pure pinyin output is
+ <a href=file:///home/mackay/dasher/incoming/chinese/pinyin/CONVERT3.p>
+  /home/mackay/dasher/incoming/chinese/pinyin/CONVERT3.p
+  </a>
+  .
+  The associated alphabet file is
+  <a href=http://www.inference.phy.cam.ac.uk/dasher/download/alphabets/alphabet.pinyin.xml>
+  alphabet.pinyin.xml
+  </a>.
+</p>
+<p>
+ On <b>Fri 5/8/05</b> I fixed an error in my conversion program, with the help of Chunlin Ji.
+ Here are his notes.
+ </p><div width=80%>
+ <p>
+Rules to mark the tone for Pinyin:
+<ol><li>
+ if there are more than
+one vowels and the first one is 'i', 'u' or '&#252;', then the second vowel
+takes the mark;
+</li><li>
+ Otherwise,the first vowel takes the mark. (the vowels in
+Pinyin: 'a', 'e', 'i', 'o', 'u', '&#252;' )
+</li></ol>
+
+By the way, there are several small tricks in writing Pinyin, e.g. "Hanyu
+Pinyin" simplifies the spellings of syllables with '&#252;' by using the 'u' form
+instead in cases where no ambiguity could result, for example when '&#252;'
+comes after 'j', 'q', 'x' or 'y' . This is merely a spelling convention;
+the 'u's here are still pronounced '&#252;'".
+</p><p>
+For a detailed guide to the rules of Pinyin,please refer to the following
+webpages (in English) Combinations of initials and finals
+(http://www.pinyin.info/rules/initials_finals.html) Where do the tone marks
+go? (http://www.pinyin.info/rules/where.html) Basic Rules of Hanyu Pinyin
+Orthography (http://www.pinyin.info/readings/zyg/rules.html)
+</p><p>
+
+Software: Here are some free and popular input methods in Linux. I guess
+they may contain the source codes to convert Pinyin to Chinese characters.
+1.SICM: http://www.scim-im.org/ (Input methods include
+(Simplified/Traditional) Chinese, Japanese, Korean and many European
+languages) 2.Fcitx: http://www.fcitx.org/main/ (In English:
+http://www.fcitx.org/main/?q=node/10) 3.XCIN:
+http://xcin.linux.org.tw/intro.En.html (widely used in Taiwan) 4.Chinput:
+http://www.opencjk.org/~yumj/project-chinput-e.html 5.XSIM:
+http://developer.berlios.de/projects/xsim/
+</p>
+<p>
+<a href=http://www.newhua.com.cn/soft/16989.htm>a software which can translate Chinese character 
+ to Pinyin is useful to create training data? If so, the following 
+ software may help.  (Webpage is in Chinese)</a> 
+</p>
+</div>
+
+</p>
+<p>
+ The bopomofo alphabet is 
+ <a href=http://www.inference.phy.cam.ac.uk/dasher/download/alphabets/alphabet.bopomofo.xml>here</a>.
+</p>
+
+
+
+EndPage
+
+Alias meeting0407.html
+FoldingPage Japanese alphabets
+<h2>Japanese alphabets</h2>
+Thu 22/7/04.
+<div align=right><a href=http://www.inference.phy.cam.ac.uk/dasher/images/japanese/Jouyou.html>New screen-shots</a></div>
+<p>
+ For the last two years, our only Japanese alphabets have been
+ <a href="/dasher/download/alphabets/alphabet.hiragana.xml>Hiragana60 and Hiragana83</a>.
+ </p><p>
+ With the help of Simon Cozens,
+ we have now added some more alphabets.
+ <ul>
+ <li>The first, 
+ <a href="/dasher/download/alphabets/alphabet.Japanese.xml>alphabet.Japanese.xml</a>,
+ includes 7000 Kanji sorted into an order recommended on an
+ alphabetization webpage.
+ We also have hiragana, katakana, and roman numerals.
+ 
+ </li><li>The second, 
+ <a href="http://www.inference.phy.cam.ac.uk/dasher/download/alphabets/alphabet.Joyo.xml">in alphabet.Joyo.xml</a>,
+ has about 1900 Kanji grouped into 9 levels, in the order that they
+ are taught at school.
+ </li><li>
+<a href= http://www.inference.phy.cam.ac.uk/dasher/download/alphabets/alphabet.Joyo.xml>in alphabet.Joyo.xml</a>
+ has the same Kanji grouped into 83 groups on the
+ basis of a possible `first Hiragana character'.
+ </li><li>
+ The final grouping
+ <a href= http://www.inference.phy.cam.ac.uk/dasher/download/alphabets/alphabet.Joyo.xml>in alphabet.Joyo.xml</a>
+ is based on the RADICALS. Every Kanji has a unique
+ radical (as used in Kanji dictionaries). The radicals are sorted
+ in dictionary order (by number of strokes).
+ Within a radical the Kanji are put in dictionary order; hopefully
+ few enough of them that the user can find the Kanji.
+ </li>
+ </ul>
+ 
+</p><p>
+On Tue 10/8/04 I added several more punctuation characters, including
+middle-dot and Japanese comma, 
+plus lower and upper case
+ romaji to the    <a href="http://www.inference.phy.cam.ac.uk/dasher/download/alphabets/alphabet.Joyo.xml">alphabet.Joyo.xml</a> alphabets.
+
+ A full list of  punctuation characters can be seen <a href=
+"http://www.inference.phy.cam.ac.uk/dasher/download/alphabets/punctuation.xml">in punctuation.xml</a>.
+ </p>
+<div align=right><a href=http://www.inference.phy.cam.ac.uk/dasher/images/japanese/Jouyou.html>Screen-shots</a></div>
+
+<p>
+<a href=http://www.inference.phy.cam.ac.uk/kaburagi/scripts/>Kaburagi
+ has implemented Furigana scripts.</a>
+</p>
+<p>
+ Further ideas about Japanese Dasher are in the
+<a href=http://www.inference.phy.cam.ac.uk/cgi-bin/wiki/wiki.pl/JapaneseDasher>Japanese Dasher wiki</a>
+</p>
+
+EndPage
+
+Alias meeting0503.html
+FoldingPage Notes from March 2005
+<h2>Dasher meeting Fri 25/3/05</h2>
+<h3>Progress reports</h3>
+<h4>Phil</h4>
+ Phil is implementing several new language models. At present
+ these are stand-alone models for evaluation, not yet integrated
+ into Dasher. No new model has yet been found that beats standard ppm by more than
+ 5%.
+ <br>
+ 
+ New models include models that use recent words as context, and
+ models that ignore context further back than the most recent word-boundary
+ (i.e. like Martin King's T9).
+ <br>
+ Phil has added bit-rate instrumentation. 
+
+ <h4>Keith</h4>
+ Speech Dasher is working with Dragon.
+ <br>
+  A new button allows the user to confirm the whole utterance best guess is correct. (Suggested
+  including a dwell-based solution to this task, for people who can't click.)
+ <br>
+ Code is instrumented and ready for user trials.
+
+ <h4>David M</h4>
+ Most Alphabet files are now believed to be correct.
+<a href=http://www.inference.phy.cam.ac.uk/dasher/images/arabic.png>
+ Arabic</a>
+  works nicely including cursive writing in text boxes.
+<br>
+ <img src=http://www.inference.phy.cam.ac.uk/dasher/download/alphabets/ClearlyU.gif align=right>
+  <a href=http://www.inference.phy.cam.ac.uk/mackay/unicode.html>Combining accents</a>
+  are  also working well in some linux fonts, but not all. (Which shows, I think,
+  that we have done it right; it's a font defect.)
+  For the time being all our european languages use the "composed" form (ie we do not
+  use combining accents), but from time to time we should revisit this
+  issue and ask europeans whether they would prefer to
+  use combining accents.
+  In anticipation, 
+  I have created a single 
+  <a href=http://www.inference.phy.cam.ac.uk/dasher/download/alphabets/alphabet.latin.xml>latin
+  ISO-8859 alphabet</a>
+ in   which <b>every</b> latin language can be written.
+
+ <h4>Chris</h4>
+ Groups and subgroups were completed in November 2004 but do not work
+ with Kaburagi's Japanese groups.
+ <br>
+ <h5>Button modes</h5>
+ There is a working  One button static mode (i.e. click when pointer is in correct location).
+ There are working N-button direct, and 2-button menu-modes. "Click mode" should be
+ ready too.
+ <br>
+ Bugs include
+ <ul>
+ <li>
+ problems when the user backs up rapidly
+ </li>
+ <li>
+ Static One Button mode not yet test-ready because we need <em>Interpolation</em>
+ and <em>time correction</em> (eg subtract 100ms).
+ </li>
+ <li>
+ these new modes do not yet all work in a single dasher executable.
+ </li>
+ </ul>
+ 
+ One-button dynamic mode (metronome mode) exists but is not currently integrated.
+ Chris has invented another one-button dynamic mode in which Dasher zooms
+ steadily and relatively slowly towards the point top right in the Canvas; this means
+ that the desired target will at some point fall off the bottom of the screen; the user
+ clicks when the desired target enters a red zone.
+ Clicking causes a (two-button-direct-like) zoom in on the red zone.
+ A second button is used to stop. That stop button could also be used to
+ back up (reverse).
+
+ <h5>Ingrid</h5>
+ Ingrid is testing  N-button direct, and 2-button menu-modes.
+
+<h3>Language model issues</h3>
+<ol><li>
+ Would be nice to include <b>recency</b>.
+ Possible way to handle this is to maintain two tries, one with the bulk of the corpus in
+ it and one with say the last 1000 characters.  Ideally a componential model or mixture model
+ would be used, which would identify which of the experts are contributing best to
+ the current predictions.
+ </li><li>
+  At what time should the ppm language model <em>learn</em>?
+  Should we bother making individual nodes have slightly different
+  language models from each other? (I think not, since it only
+  makes a big difference for completely untrained models.)
+ </li><li>
+ Idea: identify a special character that has the meaning "reset the
+ context at this point". This would be used in training texts
+ that include lists of unrelated phrases or unrelated words (eg dictionary lists).
+ </li><li>
+ Storage of the learned trie direct to file, and reading of trie instead of
+ reading and retraining. (The first two bytes in this stored structure could
+ define the language protocol, so that new language models can be added.)
+ </li><li>
+ A dictionary based T9 like language model: would it go faster if we changed
+ from storing the dictionary using hashes to using a trie?
+ </li><li>
+ Is user speed well predicted by "just bits"?
+ Experiment to test this:  log an expert user's x-coordinate.
+ </li><li>
+ Possible new parameters to replace "smoothing" (5%):
+ Maximum permitted character size (eg 90%), and Smoothing (eg 2%). (Mick Donegan's request)
+ </li>
+ </ol>
+
+<h3>Steering issues</h3>
+<ol><li>
+Automatic speed control.
+Hopefully a  student called Chris will work on this
+during the Summer.
+ </li><li>
+ TILT SENSOR. We have received a loan of a tilt-driven hand-held mouse.
+ The mouse does not work!
+ <b>Would make a grand summer project for a student</b>
+ </li><li>
+  Oliver Williams from CUED gave a great talk demonstrating
+  live, video-driven use of dasher by simple gestures (eg hand motion).
+  Should be easy for him to make a free nose tracker too.
+ </li><li>
+  Singing/humming as one-dimensional input: Keith will do.
+ </li><li>
+ Button experiments: direct and menu both under way (Ingrid).
+ Other button modes need to be tested too. What buttons should we use?
+ Pswitch? ACE centre switches? (Both have latency/delay problems for
+ fast users.)   Could make out own modified keyboard. 
+ </li><li>
+  Can we/Ryan/Oliver make video-based switch events (eg eyebrow raised)?
+ </li><li>
+  Add breath signal to breath dasher to ensure that the user is forced to breath.
+ </li><li>
+  Eyetracker: would be nice to have one that works in linux.
+  headmouse: ditto. (<b>possible project for expert programmer</b>)
+ </li><li>
+ Brain Computer Interface? DJCM might go to a meeting in June.
+</li>
+
+</ol>
+
+<h3>Platform issues, useability, integration</h3>
+<ol><li>
+ We need a meeting with DJW to discuss tablet pc, pocket pc, and .net
+ </li><li>
+ Palm pilot is a challenging platform to work on - difficult to find a volunteer
+ developer, but perhaps if money were available we could pay someone to
+ handle the port. Chris will send out an email.
+ </li><li>
+ Mac and Windows will in due course require a little bit of work to
+ add (1) button dasher dialogs; (2) language model dialogs.
+ </li><li>
+ We discussed the idea of generating the source code for the dialog windows automatically
+ from a single universal specification. 
+ </li><li>
+ We discussed whether using the gconf file of gnome and the registry of windows
+ is the best way to store the user's dasher settings.  Doing it ourselves with
+ values stored in a dasherrc file feels simpler; but it was agreed to continue
+ with the registry approach.
+ </li><li>
+ Integration of Dasher as an input mode.<br>
+  Difficult  in windows because the desired accessibility features
+  are not present.
+  <br>
+  Talk to GOK people about getting Dasher integrated as input mode in Gnome.
+  <b>A good task for an expert programmer to be dedicated to</b>
+  <br>
+  Windows (tablet pc) - is there  a problem with the (keyboard-shaped!) geometry of the area
+  allowed for an input method?
+ </li><li>
+  To discuss further:
+  <br> Dasher's control mode menus, speech production, and driving of other
+  computer functions, eg scripts, from within Dasher.
+</li>
+</ol>
+<h3>Japanese</h3>
+<ol>
+<li>
+  Possible idea is to get Kaburagi and Frederik (from Caltech)
+  to work together on making the new language model that's needed.
+ </li><li>
+ Hopefully we could get Martin King's colleague Cliff (Japanese T9 expert)
+ to advise us too.
+ </li><li>
+  We await the results of Itoh's gaze experiments with interest.
+</li>
+</ol>
+<h3>COGAIN</h3>
+<ol>
+<li>
+  We will go to the language modelling camp
+  on Sat 28 May or Sun 29th and come back on Friday 3rd June, evening.
+   We get to give about 3 hrs of presentations
+  about language models and Dasher.
+ </li><li>
+ Tobii eyetracking company are interested in integrating Dasher with their
+ system, but are they going to do the required work? (Seems like they would
+ like us to, but we are too busy at present.)
+ </li><li>
+ Cogain funding has been used to send Ryan to interact with Tobi Delbruck.
+</li>
+</ol>
+<h3>Future projects</h3>
+
+<ol>
+<li>Tasks for undergraduate projects:
+<ul>
+ <li> Automatic speed control - Chris
+ </li><li> Automatic eyetracker callibration (more than one scalar) - Chris 
+ </li><li> Button Dasher
+ </li><li> Tilt Dasher
+ </li>
+ </ul>
+ 
+ </li><li>
+  Tasks for professionals
+<ul>
+ <li>  Interface design, polishing. Get expert advice on enhancing useability.  
+ </li><li>
+<b> basher</b> (ie the shell in which writing of commands and filenames is all done in Dasher style)
+ [Luke is working on source-code-writing]
+ </li><li>
+<b>  Get Dasher working on Playstation 2</b>. With the aim being to get it
+ used on all those new handheld PS machines. Good for publicity. 
+ </li><li>
+  Make Dasher a fully-integrated input method for tablet pc; for pocket pc.
+ </li><li>
+<b>  Use of Dasher for non-writing tasks</b>.
+ searching for a string in a document, or in MANY documents. (eg in all your files 
+ (like <tt>glimpse</tt> or  <tt>Beagle</tt>))
+ <br>
+ The idea being that the interface would show you which strings are legal and allow you
+ to write them  quickly.  Requires google-like indexing of all the data.
+ <li> Peano Dasher
+ </li>
+ </ul>
+ 
+ </li><li>
+ Tasks for us to do:
+<ul>
+ <li> Get scripts built into the control mode menus
+ </li><li>
+<b>  Japanese project (as above) </b> - make special language model
+ </li><li>
+<b>Chinese project  </b>
+
+ We probably  need a similar special language model for Chinese; at present we have no
+ active developers or researchers helping us.
+ </li>
+ </ul>
+
+ </li>
+</ol>
+
+Bug list:
+<ul><li>
+ Should be able to back up as far as you want.
+ </li><li>
+ Visualize  Cursor in text box at all times.
+ </li><li>
+ Focus problem (need to get focus back to canvas).
+</li><li>
+From DJW: <br>
+The main thing making it difficult to integrate new langugage models into
+Dasher (or improving existing ones) is having all the control-node code  
+inside the current PPM model.  Another problem i recall is having the
+control-node characters added to the alphabet.
+
+I think a bit of re-design is necessary to decouple stuff like this.
+
+
+</li>
+</ul>
+ 
+EndPage
+
+Alias meeting0304.html
+FoldingPage Version 3.0.2 Release Notes
+<pre>
+I've just released version 3.0.2 of Dasher, which can be downloaded from
+<a href=http://www.inference.phy.cam.ac.uk/dasher/Download.html>
+http://www.inference.phy.cam.ac.uk/dasher/Download.html </a>
+
+This version should fix the bugs related to zooming at the top and
+bottom of the canvas, and also introduces a keyboard control method
+using the up, down and left cursor keys. This is intended for people
+using switch input, but may be useful for other purposes.
+
+Unix users have a new GTK2 interface, which will be compiled
+automatically if GTKMM is unavailable or if the --with-gtk2 option is
+passed to ./configure. There's an RPM of the GTK2 version, which should
+make life easier for people who've had problems satisfying GTKMM
+dependencies in the past.
+
+Developers should note the introduction of a (mostly) C layer that
+interfaces between the interface and the C++ core. At the moment this
+still contains some vestigal C++ code, but in future it should be
+possible to write Dasher interface code in C rather than C++ if desired.
+Thanks to Phil Cowens for contributing this code.
+
+-- 
+Matthew Garrett 
+</pre>
+<p>
+<a href=http://packages.debian.org/unstable/x11/dasher.html>Dasher is listed as a Debian unstable package</a>
+</p>
+EndPage
+
+Alias api.html
+FoldingPage API Notes
+\include{../english/api.html}
+EndPage
+
+Alias meeting0303.html
+FoldingPage Version 3.0.1 Release Notes
+Tue 18/3/03
+<h3>Version 3.0.1 Release Notes</h3>
+<p>
+The main aims in this release were to deal with obvious bugs and provide
+various features to support disabled users. The one dimensional input
+mode may also prove interesting to other users - it may take a small
+amount of time to get used to it, but you may also find it easier than
+the traditional two dimensional input.
+</p><p>
+This version should be considered a fairly good basis for porting to
+other platforms. I've added an experimental GTK2 interface to the source
+tree - it works, but most features aren't implemented yet. It's probably
+a better example for anyone who isn't familiar with GTKMM or Win32 code.
+</p><p>
+<pre>
+What's changed:
+
+General:
+Default alphabet reordered
+API documentation added
+Font size changeable
+Interfaces now use a crosshair within the Dasher canvas
+Flicker reduced
+One dimensional input mode introduced
+Logical position of the mouse pointer can be displayed  
+All settings should now be saved between runs
+Various fixes to improve prediction
+
+Windows:
+Windows version can be started and stopped using the space bar rather
+than themouse
+Fixed Windows file operations
+Import training file should now work
+Fix handling of rapid mouse clicks
+
+Unix:
+GTK version gettextised for ease of translation
+Added experimental GTK2 version
+</pre>
+</p>
+
+EndPage
+
+Alias meeting0212.html
+FoldingPage Notes from 12/02
+<h3>December 2002 - AGENDA</h3>
+
+<h5>Wish list</h5>
+<pre>
+1) The colour scheme and alphabet are pretty intimately related,
+   so a possible method would be to have the alphabet 
+        file be turned into an augmented file that 
+        specifies the alphabet and the colours too. 
+
+2) But that seems a bad idea because it means that every 
+        time a new english alphabet is made, four copies
+        of ti have to be made, one for each of the four standard
+        colour schemes (say).
+
+        And the way in which (alphabet1,colourscheme1)
+        differs from         (alphabet1,colourscheme2)
+        will probably have a lot in common with 
+        how                  (alphabet2,col1)
+        differs from         (alphabet2,col2)
+
+3) So we think that a componential scheme is desirable, 
+        consisting of three components.
+
+Component 1:     a list of the letters of the alphabet.
+
+Component 2:  an allocation of those letters to 
+                "colour integers".
+
+Component 3:  a mapping of those colour integers
+                to a PAIR of actual colours (one for each 
+                of the levels in the DJW alternation of two
+                colour sets)
+
+Colour integers could be anything from 0 to 127, 
+then the total number of colours used by Dasher would be at most 
+256. 
+
+Does this sound a sensible plan?
+
+The idea then is that component 2 could be constructed with 
+some logical categories in mind; then any component 3 can 
+respect those logical categories easily.  
+
+Examples of requested colour schemes include
+
+a) virtually monochrome
+b) very bleached colours
+c) reverse video:   white chars on blackish backgrounds
+d) blue on yellow 
+e) yellow on blue
+
+
+XML suggestion
+I suggest that the header in the XML file for 
+alphabets be made a bit more informative.
+
+instead of saying " This file was created by blah "
+
+it should also say
+
+"This file is read by Dasher version 3;
+it may be edited by the user to change the alphabet"
+
+or 
+
+"This file is read by Dasher version 3;
+it should not be edited directly; rather, you should edit
+the widg.blah file and then run foo to re-generqate this file"
+
+----
+
+The help file in Dasher 300 is out of date and has 
+a few minor errors in it.
+
+</pre>
+
+<h5>Notes arising from last meeting</h5>
+ At last dasher meeting we agreed to make a non-coll machine
+ be the CVS server - A devoted dasher machine.
+ However, at group meeting we decided to stick with coll
+ being the CVS server because:
+ 1) coll already set up for this role.
+ 2) we do not wish to allow non-group users to have access
+ to the dasher code for the next 3-6 months anyway,
+ so there is no additional security risk.
+
+ When the time comes to open up CVS access to anyone who
+ wants to tinker, the CVS tree should be moving to another
+ machine anyway.
+
+ 
+<h4>Thoughts for next meeting</h4>
+
+<h5>Management priorities</h5>
+<ol>
+<li> 
+ Establish management system to handle code contributions
+  for multiple platforms and multiple languages.
+</li>
+<li>
+ Establish management system to handle CORPUS contributions
+  for multiple languages.
+</li>
+<li>
+ Establish  system for making automated releases
+  for all platforms and languages. 
+</li>
+<li>
+ Establish system for testing new releases (multiple volunteers to be
+ notified and report back)
+</li>
+<li>
+ Get MacOS volunteer on the job of making the first Dasher for Mac.
+</li>
+<li>
+ Establish communication with lots of users.
+ Ensure metafaq and bugzilla working well for handling
+ feedback from different types of users.
+ Establish on-line wish-lists and on-line bug lists,
+ perhaps organised in part by user-category. Disabled users on all platforms;
+ windows lists; linux lists; ipaq lists;  and general?
+</li>
+<li>
+ Get a palmOS volunteer, playstation, etc.
+</li>
+<li>
+</li>
+<li>
+</li>
+</ol>
+
+
+
+<h5>Bug list</h5>
+
+<ol>
+<li> Win95 (rum): mouse flickers while dasher is going, so that
+	often one can't see where the mouse is. Desire mouse to
+	be continuously visible. Does this happen on other win95 systems?
+	 [Problem does not exist in win2k]
+</li>
+<li>
+  Win2000 version starts with a silly fourth alphabet called "?" which
+ contains no letters. (Is this true only on "polluted" systems?)
+</li>
+<li>
+</li>
+<li>
+</li>
+</ol>
+
+<h5>High-priority Feature request list</h5>
+<ol>
+<li>
+ NUMERALS! 0123456789.
+ <br>
+ Please could these be added to the "lots of punctuation" alphabet
+  in all platforms. For consistency with version 2, put numerals in a red box
+  and punctuation in a green box.
+</li>
+<li>
+	When insertion point is defined, have the language model
+	push right the way down to smallest square size, rather
+	 than only showing the first letters.
+</li>
+<li> Have option to make "space-bar" cause start'n'stop as well
+      as mouse button.
+       And have option to DISABLE the mouse button, so that it does NOT
+       start and stop. This is important, as many excited  users unthinkingly
+       click the button for no good reason.
+</li>
+<li> Allow user to change font size - imagine a special needs person
+ with bad eyesight!
+</li>
+<li>
+ Make reverseable history larger, so the user can
+ back up the last word or two.
+</li>
+<li> Make the two types of  nonlinearity
+      adjustable (by experts). [Call them the <b>screen
+       nonlinearity</b>, which controls the squishing of the
+       rendering at the top and the bottom, and the <b>mouse
+       nonlinearity</b>, which at present remaps the effective
+       mouse coordinate to be a little more vertically extreme than the
+       true mouse coordinate.]
+</li>
+<li>
+ Modify the default mouse nonlinearity to be the one suggested
+ by DJCM, which slightly slows the expansion when
+ the mouse is near the top or bottom. (See DJCM for details)
+</li>
+<li>
+ Develop a new mouse nonlinearity aimed at users with only
+ one dimension of control. Extreme input coordinates get mapped to
+ "zoom out and drift up" and 
+ "zoom out and drift down".
+</li>
+<li>
+ Investigate mild tweaks to the screen nonlinearity so that
+ better use is made of real-estate.  A more logarithmic transformation,
+ kicking in a little to the right of the cross-hair.
+</li>
+<li> Windows: should Dasher use the "registry"? Doing this means
+  that how Dasher version 3.1.4 behaves will depend on
+  what other versions of Dasher have been installed in the
+  past. This makes user support and bug reporting and
+  bug fixing more complicated.
+
+  Yes, it's wasteful to have a new installation create a
+  load of identical files. But I think it's the right way to do
+  things.  But what do I know?
+</li>
+</ol>
+
+<h5>Low-priority Feature request list</h5>
+
+<ol>
+<li>
+	Have checkbox "Save Dasher settings on exit",
+	so that you can lend Dasher to a friend, let them fool
+	around trying out portuguese, or whatever, and then just quit it.
+	Or alternatively have a dialog at exit time that says
+	"save settings? (y/n)".
+</li>
+<li>	Have a "revert settings to what they were at the beginning
+	of this session" option.
+</li>
+<li> Windows: show the insertion point at all times, so that
+ the user can tell where the text is going to appear when
+  they use Dasher.
+</li>
+ <li>
+ In addition to  the "copy all" option (f5), have a "cut all" option (f6?).
+ This would be useful to people who are using Dasher to talk.
+ They don't want the text to be there any more, once they have spoken.
+ "Cut all" should cut everything to the clipboard. 
+</li>
+<li> Colour scheme:
+	should we make it consistent with version 2:
+	there, the punctuation chars are in a green box and the numerals
+	are in a red box.
+</li>
+ <li> Alphabet with Pound and Euro symbol.
+ </li>
+<li> Win95 (rum): Font selection dialogue to have "Apply" button as
+ well as OK button, so that the user can interactively try alternative
+ fonts.
+</li>
+<li> Windows: font selection dialogue to clarify the (lack of) role for
+     the size option. (Or better, allow the size to be changed!)
+</li>
+<li> Windows: Alphabet dialogue box - the box is not very clear,
+ it seems to me. Should the user click on the alphabet they want?
+ Or should they click "New". Or both?  Is it possible to have
+ explanatory text hover next to each button?
+</li>
+<li> Win95 (rum): Alphabet  selection dialogue to have "Apply" button as
+ well as OK button, so that the user can interactively try alternative
+ alphabets.
+ </li>
+ <li>
+  Double-click in the alphabet selection should be equivalent
+  to selecting and clicking OK.
+ </li>
+</ol>
+
+<h5>Other items</h5>
+<ul>
+<li> Transfer from
+  http://sourceforge.net/tracker/?atid=481717&group_id=56761&func=browse
+  to bugzilla.
+  </li><li>
+
+ set up the web interface to CVS 
+(http://viewcvs.sourceforge.net/). DJW found it quite useful for browsing
+- checking out recent activity, etc. Its not mission-critical though.
+</li>
+
+<li> Would it be a good idea to have dasher-developers@mrao.cam.ac.uk 
+</li>
+</ul>
+
+
+EndPage
+Alias meeting0210.html
+FoldingPage Notes from 11/02
+<h3>27 November 2002</h3>
+<p>
+ Dasher  3.0.0 preview 2 is now ready for release on both windows
+ and linux. (Windows 2000 is fine, win 95 not checked yet.)
+  Releases are being bundled today and hopefully will
+ be linked to the website this week.
+ Default location for releases will be at
+ www.inference.phy.cam.ac.uk/dasher/platformname/versionnumber
+ 
+  </p>
+  <p>
+  Please send <abbr title="A URL is One of those internet addresses like http://www.inference.phy.cam.ac.uk">URL</abbr>s to DJCM when ready.
+  </p>
+  <p>
+  The character/square over-writing problem has been solved.
+  </p>
+  <p>
+Minor bugs remaining are:
+<ol>
+<li> Cut and paste buttons are missing from the windows version,
+	though cut and paste functionality is fine.
+</li>
+<li> When a selection is made in the text box of the windows version,
+	the language model is incorrectly initialized to the
+	right of the selection where it should always
+	be the LEFT of the selection. [Now fixed, Wed 27/11/02.]
+</li>
+</ol>
+  </p>
+  <p>
+  MJG will have more time for Dasher from Dec 9th 2002.
+  </p>
+  <p>
+
+  Regular Dasher meetings will happen Wednesdays at 10.15am.
+  </p>
+  <p>
+	MJG has got Dasher working (nearly) in WINElib so that
+windows	development is possible in a linux environment.
+  </p>
+  <p>
+   The Dasher job has been advertised and the closing date is this Friday.
+  </p>
+  <p> Demonstration
+   non-english languages are not yet in 3.0.0;
+   Phil will find out standard portuguese alphabetical order from a friend.
+<b>   lccollate</b> also offers information on alphabetical orders.
+  </p>
+  <p> The master CVS will be moved from sourceforge back to local machines
+  shortly.
+  </p>
+  <p> A dedicated old linux machine will be used to run dasher CVS
+  and bugzilla services. Hanna will set up Bugzilla. Phil will select the right machine.
+
+  Bugzilla should be laoded up with sourceforge bug lists
+  and with old bug lists from
+  /home/mackay/dasher/incoming/bugzilla
+  and with this:
+  http://sourceforge.net/tracker/?atid=481717&group_id=56761&func=browse
+
+  </p>
+  <p> Copyright: Code written by Phil is (c) Phil for the time being.
+  Donors outside the group are asked to transfer copyright to the (c) owner
+  of the file they modified, or transfer it to MJG.
+  </p>
+  <p> Hanna will have version 3 for linux ipaq packaged soon.
+  </p>
+  <p> MJG recommends buying dasher.org.uk for two years,
+  and having cvs.dasher.org.uk redirect to
+  mull.ra.phy.cam.ac.uk (or whatever the machine will be)
+  because cvs.dasher.org.uk is easier to type than
+  mull.ra.phy.cam.ac.uk.
+  </p>
+  <p>
+</p>
+<h3>19 November 2002</h3>
+<p>
+Good progress is being made on creating Dasher 3.0.0 pre-release
+for both GNU/linux and ipaq-running-linux.
+</p>
+<p>
+The procedure for installing linux 300 from sourceforge is
+</p>
+
+<pre>
+  cvs -d:pserver:anonymous@cvs.dasher.sourceforge.net:/cvsroot/dasher login
+  cvs -z3 -d:pserver:anonymous@cvs.dasher.sourceforge.net:/cvsroot/dasher co dasher3
+  cd dasher3
+  ls
+  aclocal
+  autoconf
+  automake
+  ./configure
+  make
+  make install
+</pre>
+
+<p>
+ Hanna is working on the port of Dasher 3 to the ipaq-running-linux
+  and is also planning to work on "dash", the dasher command shell.
+</p>
+EndPage
+
+FoldingPage Notes from 10/02
+<h3>
+Notes from Dasher Meeting held 19th Oct 2002 in Darwin College
+</h3>
+<pre>
+Present: David MacKay (djcm), Phil Cowans (pjc),
+	 Iain Murray (iam), Matthew Garrett (mjg)
+
+Priorities from the point of view of iam
+
+1. Standardise / stabilise core - review design first (mjg to do this)
+2. Desired release types:
+   (a) Windows - installer .exe
+   (b) Linux - GTK ok, but not necessarily gnome
+               Would like .deb, .rpm and .tar.gz at least, with
+	       minimal dependencies.
+3. Documentation, comments, explaining everything to mjg &c.
+4. Rearrange CVS structure to make internal/external interface
+   differentiation clear
+5. Need detailed specifcation for the core 
+6. Finalise splitting/combining rules etc. for unicode accent marks
+
+Possible functions to be included in future versions:
+
+(a) Dasher core 
+    (*) Control menu character - like esc in vi, appearing before 'a'
+    and containing things like 'oops', 'stop', other menu optons
+    (speak &c.)
+    (*) Core support for one-dimensional version (possibly just a
+    mapping to an effective cursor position)
+    (*) [Support for hiding passwords?]
+    (*) Piping to other apps (such as speech synthesizer) - should be
+    accessible through control character
+    (*) Embedding / better interaction with other apps (ActiveX,
+    Bonobo etc.)
+    (*) Capability to include foreign chracters in text
+    (*) Identify and reject stupid (eg pdf) training files (eg if more
+    than 10% of characters end up being ignored) (also, how should one
+    deal with the odd foreign character in the training file, eg an
+    umlaut on the word naive?)
+    (*) Multithreading to enable training in background
+    (*) Port for palm, psion etc.
+
+(b) UI tweaks
+
+    (*) Combining / unicde conversion etc. to be finalised - There are
+    three possible ways of doing this:
+
+      (i) Force minimal expansion (one char per glyph)
+      (ii) Allow standard expansions, to be handled by a standard 
+      library
+      (iii) Allow custom combination rules (hard to implement)
+
+    It was decided that implementing (i) and (ii) was a sensible
+    compromise.
+
+    (*) Support to guess alphabet from locale etc.
+    (*) Colours - user confgurations, also assigning specific colours
+    to specific symbols.
+
+Plan for the future:
+
+1. Get 3.0rc1 out the door for Win NT, Win 9x, Linux, Mac etc.
+   (a) WinNT right away
+   (b) Linux - need alphabet/settings etc., but possibly relatively soon
+   (c) 9x later 
+   (d) Give source to mac os person   
+   And then work towards full 3.0 release based on peoples comments,
+   maybe at the end of November.
+
+2. 3.1 has control mode (+ continue with bugfixes etc.), gtk v2.0 in Linux
+
+Languages can be added along the way
+
+--
+Further notes added by DJCM Mon 21/10/02
+
+The new eyetracker was installed on S's win98 machine by Phil today.
+Dasher works pretty well at 70cm. No recallibration was necessary
+between uses. The lens focal length is too short for
+satisfactory use at a range of 100cm. I have asked Eyetech whether
+we can get a longer focal-length lens. A first run with S may
+take place on Wednesday. An important issue is the creation of
+an appropriate button-driven control for starting and stopping Dasher.
+</pre>
+
+EndPage
+
+Alias plan0208.html
+FoldingPage Further notes 08/02
+
+<h4>Some links relevant to our project:</h4>
+<a href="http://developer.gnome.org/projects/gap/">http://developer.gnome.org/projects/gap/</a><br>
+<a href="http://ui.openoffice.org/accessibility/index.html">http://ui.openoffice.org/accessibility/index.html</a>
+
+<h4>New members of the development team </h4>
+<ul>
+<li>
+Kevin Holloway, Adelaide, aims to interface Dasher with a Text To Speech engine:
+<br>
+ "FreeTTS is a speech synthesis engine written entirely in the
+Java(tm) programming language. FreeTTS was written by the Sun Microsystems
+Laboratories Speech Team and is based on CMU's Flite engine."
+<br>
+ Kevin has plans to raise support from Rotary clubs and  promote the idea through Sun
+	(esp if there is a  Java connection) and IBM. 
+</li>
+</ul>
+<h4>Other Development info</h4>
+<a href=http://sourceforge.net/docman/index.php?group_id=56761>This sourceforge list</a>
+ allows developers/testers to add their own
+models of pocket PC on which Dasher works.
+
+<h4>From DJW 09 2002</h4>
+<pre>
+I've started uploading stuff to CVS on sourceforge.
+To save you some time, here is some info to get you started. Its all documented
+at sourceforge.
+
+You can browse CVS on the web here:
+http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/dasher/
+
+There seem to be 2 shell accounts - but I think they both map
+to the same home space. I think that only the second will allow access
+to the Dasher website.
+
+ssh username@shell.sourceforge.net
+ssh username@dasher.sourceforge.net
+
+To get passwordless access to the shell accounts, do the
+usual thing of uploding your .ssh public key to .ssh/authorised_keys on
+sourceforge.
+
+The CVS respository is here:
+cvs.dasher.sourceforge.net:/cvsroot/dasher
+
+You should be able to ssh to it to test it. To get passwordless
+ssh access to CVS, you have to upload your ssh public key via the
+web interface (go to account maintenance). It takes six hours for the public key to go live.
+
+I seem to have everything working smoothly now without passwords
+(with WinCVS 1.3.6 and ssh1.2.14 for Win32). Let me know if you
+have any questions.
+
+Only 'Developers/Admins' can check in stuff. That list is currenly
+me,IAM,PJC,DJCM,mrtgrady. 
+</pre>
+
+
+
+EndPage
+
+
+
+Alias plan0207.html
+FoldingPage Dasher Plan 07/02
+
+<h1>Dasher meeting 10/07/2002</h1>
+
+<em>These notes are based on discussions between David MacKay
+(DJCM), Phil Cowans (PJC) and Iain Murray (IAM).</em> 
+
+<h2>Management of the Project</h2>
+
+<h3>Quick Note on Development</h3>
+
+<p>IAM will be developing Dasher full time for the next ~2 months
+until mid-September 2002. DJCM is looking into support for the
+project beyond that. The commitment required will depend on the
+amount of help we can obtain from the Open Source community, though
+we probably want someone in the group to manage the project.</p>
+
+<h3>First Target</h3>
+
+<p>IAM will address the most pressing needs of Dasher 2.x. For
+example the zoom-rate of the Dasher interface needs to be
+controllable rather than a constant. Some other parts of the user
+interface needs attention, but it must be kept simple to use. Once
+DJCM is happy that the current source tree is usable and license
+issues are sorted out we can make our first release on Sourceforge.
+By this stage we have not necessarily finalised the class
+interfaces. Therefore we must emphasise that people should not rush
+into building ports around this version, but instead ask for
+comments and bug reports. DJCM will email people that have
+expressed interest in Dasher in the past about this release. The
+source to 1.6.8 could be released at the same time.</p>
+
+<h3>Sourceforge</h3>
+
+<p>The advantages of using <a href=
+"http://www.sourceforge.net">Sourceforge</a> are apparent:</p>
+
+<ul>
+<li>Well integrated project management with file distribution,
+bug-tracking, source-tree and other features.</li>
+
+<li>They know how to set up a read-only CVS server for use by all
+in a secure way better than we do.</li>
+
+<li>Bug tracking can move to there if it is as good as our current
+Bugzilla setup. <em>This needs investigating.</em></li>
+</ul>
+
+<p>However, for the moment Sourceforge is unfamiliar and IAM is not
+ready to interact with other contributers yet. We will continue to
+use CVS on coll. DJCM, PJC, IAM and DJW will have write access. The
+rest of the group will have read access. Until the CVS is moved to
+Sourceforge we will have to provide regular archives of the source
+so that any contributed diff's will be useful.</p>
+
+<h3>Second Target</h3>
+
+<p>After the initial release IAM will work through his TODO list
+(coll:~iam23/Dasher2do.txt), which is based largely on <a href=
+"http://sparkltd.com/bugs">Bugzilla</a> and the <a href=
+"http://www.inference.phy.cam.ac.uk/dasher/todo.html">Dasher
+site</a>. It is desirable to make the code completely Windows
+independent. Ideally a Dasher library could be used by any
+application on any system.</p>
+
+<p>We would like to publicise Dasher as widely as possible. Perhaps
+on <a href="http://www.slashdot.org">Slashdot</a> and <a href=
+"http://freshmeat.net/">FreshMeat</a>. We are likely to get the
+best response from these audiences if an up-to-date Linux version
+is available.</p>
+
+<h3>Cross-Platform Interface</h3>
+
+<p>IAM will look seriously at producing an interface to a Dasher
+library using <a href="http://www.wxwindows.org/">wxwindows</a>.
+This is a set of C++ libraries that could allow easy support for
+Windows, Mac and UNIX simultaneously. The Pocket PC version should
+be addressed too.</p>
+
+<h3>Adaption Rule</h3>
+
+<p>If IAM has time he will look into a new approach for updating
+the zoom-rate of the interface.</p>
+
+<hr>
+<h2>License Issues</h2>
+
+<p>Currently we have no plans to trademark the name Dasher. The
+license and copyright notices attached to the Dasher source-code
+are still undecided. Features of the required license include:</p>
+
+<ul>
+<li>Perpetual free use of Dasher and all "derived" versions for the
+group, all academics. Ideally individuals and commercial bodies
+would have these rights as well.</li>
+
+<li>Sale and resale should be allowed to enable (for example) use
+by companies providing a bundled computer package for the support
+of disabled people.</li>
+
+<li>It should be clear where the software has come from and a
+donation to the University of Cambridge suggested.</li>
+</ul>
+
+<p>Discussions so far have centred around the GNU General Public
+License, the <a href=
+"http://www.gnu.org/licenses/gpl.html">GPL</a>, and its Lesser
+variant, the <a href=
+"http://www.gnu.org/copyleft/lesser.html">LGPL</a>. A <a href=
+"http://www.opensource.org/licenses/bsd-license.php">BSD-style
+license</a> was rejected as it does not ensure derivatives make
+their way back to the group. At the moment we have not had a chance
+to look into <a href="http://www.opensource.org/licenses/">other
+open source licenses</a>.</p>
+
+<p>There is concern that a license with GNU in it may put of some
+potential backers of the project. In particular Microsoft's support
+may be important as the provider of the most popular desktop
+operating system. We need to find out if this will be an issue.
+Releasing the code under the <a href=
+"http://www.gnu.org/licenses/gpl.html">GPL</a> is irreversible, so
+we need to be <em>very</em> sure before we do so. Otherwise the <a
+href="http://www.gnu.org/licenses/gpl.html">GPL</a> could be
+appropriate for Dasher as a whole. It allows people to charge for
+distribution and anyone to use it. In addition it guarantees
+perpetual access to the source for all.</p>
+
+<p>It is possible that the core of Dasher, made available as a
+library, could carry different license terms to its graphical user
+interface (GUI). We <em>believe</em> that the <a href=
+"http://www.gnu.org/licenses/gpl.html">GPL</a> could also be
+appropriate for an application that can embed itself into other
+applications, for example using OLE under Windows, or Bonobo under
+GNOME. However, we will consider the <a href=
+"http://www.gnu.org/copyleft/lesser.html">LGPL</a> for a core
+library version of Dasher.</p>
+
+<p>Since the meeting IAM has noted Free Software Foundation (FSF) advice to
+include a sound copyright notice. Only the copyright holder of a work is able to
+take action if the <a href= "http://www.gnu.org/licenses/gpl.html">GPL</a> is
+violated. In fact the FSF insists that any contributions to its software are
+donated to them and <a href=
+"http://www.gnu.org/licenses/gpl-faq.html#AssignCopyright">advises others do the
+same</a> (The rest of the <a href=
+"http://www.gnu.org/licenses/gpl-faq.html">FAQ</a> is useful too). Also the <a
+href= "http://www.gnu.org/copyleft/lesser.html">LGPL</a>, although <a
+href="http://www.gnu.org/licenses/why-not-lgpl.html">not preferred by the
+FSF</a>, may be appropriate if our aim is to ensure widespread use:</p>
+
+<p><em>We call this license the "Lesser" General Public License
+because it does Less to protect the user's freedom than the
+ordinary General Public License. It also provides other free
+software developers Less of an advantage over competing non-free
+programs...<br>
+...on rare occasions, there may be a special need to encourage the
+widest possible use of a certain library, so that it becomes a
+de-facto standard.</em></p>
+
+<hr>
+<div align="right">Iain Murray 07/10/2002</div>
+<hr>
+<em>
+An instance of an LGPLed program can be converted into a GPLed
+one at any time.
+Once that happens, you can't convert that instance,
+or anything derived from it, back into an LGPLed program.
+</em>
+<div align=right>
+from p.183:
+Open Sources, ed by DiBona, Ockman and Stone
+</div>
+
+<hr>
+
+EndPage
+
+Alias discussion1.html
+FoldingPage  Discussion 07/02
+<h3>Ideas about a command-mode character (ESC)</h3>
+<pre>
+I have been thinking about dasher while reading a book about Open Source.
+
+I suggest the following plan for "control while dashing"
+
+1. Have an option to add an "ESC" character to the alphabet.
+	a) in all contexts
+	b) only in post-punctuation contexts
+
+	Option b means that the ESC character has very near zero
+	probability when the latest character is a..zA..Z
+	or any other letter in that class. 
+
+	In other contexts, the ESC character is given a probability
+	at least pESCmin (eg 1/100), and possibly larger, depending
+	on how strong the predns are in the current context. 
+	If the lang model makes a strong prediction (eg it knows what
+	word is coming next) then we don't want to spoil this
+	predn by filling the screen with ESC. But in a bland
+	context, maybe as much as 1/15 could be ESC.
+
+2. Show the ESC character by a special colour box,
+	located at the top of the alphabet before a.
+	Note, this will solve the aaaa problem, perhaps.
+
+3. Inside the ESC box, provide a set of equal probability boxes 
+	emulating a menu of control options.
+	If necessary have some options lead to sub options.
+	Have the control options be identical to the optins
+	available by clicking buttons off the dasher canvas.
+	For crucial actions such as "close dasher", "new file",
+	have a confirm dialog, "yes"/"no", all implemented
+	by regular dashing dynamics. 
+	For all appropriate menus, have the bottom item in the 
+	list be an "abort command mode" option, coloured a special
+	colour, which takes one back to writing in the 
+	current context.
+</pre>
+
+<h3>Discussion of when text is committed to the text box</h3>
+<pre>
+djcm to djw:
+ Iain was asking whether there is any particular reason for
+ the distinction between the two boundaries in pocketPC dasher - 
+ text that has fallen off the LHS goes into the text box when writing; 
+ when not writing, text to the left of halfway goes in the text box.  I
+am used to this and it doesn't bother me, but Iain was suggesting  an
+alternate procedure of putting stuff in the text box when it has passed 
+ halfway and corresponds to a box that contains the crosshair. 
+ My guess is that your rationale was to only put stuff in the text box
+when it 
+ has been definitely committed. (except when the user stops writing)
+This probably is a good rationale, since otherwise users will start to
+fret 
+ about thinking they have written something and trying to undo it when 
+ in fact they simply clipped a big box on the way to their  intended
+little box. 
+ It might be helpful if you told us your thinking on this. 
+ A possible problem with the LHS rule is that if the user wishes to 
+ use a large left-hand context on screen (as can be done in 168 with the
+log 
+ controls) then there is a big delay before stuff goes to the text box.
+
+djw to djcm:
+I intended that version 2 should always display the text upto the
+crosshair and not just dump it out when you lift the pen. See version
+168 for the behaviour I prefer.
+
+However, the LHS is significant for me because that's when I add
+characters to the language model (also where I prune the data structure
+but that's just implementation). If you add what ever appears under the
+cross-hair to the LM then you end up feeding part-gibberish into it.
+
+But my method of adding to the LM can also break if you are allowed to
+zoom out or edit text. Removing stuff from the LM would be very tedious.
+So there are some things to think about.
+
+How Dasher would operate as a conventinal keyboard is not
+straightforward. E.g. if you write 
+
+rm -rf\n 
+
+into your shell, when does it execute the command? What if I zoom out -
+can I undo my command!!! 
+
+David.
+
+djcm to djw:
+-------------
+I would suggest this:
+whenever there is a character which is the final character
+in a command of some sort (eg \n in  rm *\n )
+this character should contain within it a special coloured
+sub-square, of size (say) 1/3, padded on either side by 
+two alternate "abort" squares, so that the user is unlikely to 
+accidentally pass the special "do it!" subsquare, which is central,
+over the crosshair.
+
+The "abort" squares could be functionless squares that just
+act as padding, or they could have an appropriate function (equiv to C-C, say)
+
+</pre> 
+EndPage
+
+Alias todo2.html
+FoldingPage To Do List 07/02
+<h3>Thoughts on alphabetical order for punctuation</h3>
+<h5>David MacKay</h5>
+<pre>
+Punctuation ideas.
+
+I would like to suggest a minimal alphabet, a medium alphabet, and
+ a full alphabet.
+ The default would be the medium one.
+
+(1)
+
+MINIMAL = lower case only, and a tiny number of punc chars.
+No numbers. Good for writing conversation, email. Similar to dasher 168.
+
+   Space character always at end of list (displayed by underscore, by default,
+   but the character used to show the space should be adjustable by the
+   user, eventually).
+
+(I won't show the space char in the any of the following)
+
+	a..z'-?!,.
+
+ 
+(2) a MEDIUM punctuation list.
+
+	Let's build it up. Upper case included in the default. 
+
+   a..zA..Z0123456789$'-?!,.
+
+   or
+   
+   1234567890$'-?!,.
+
+   probably the latter is more standard, cf keyboard. (zero location)
+
+ - provide this punctuation set as standard in all languages.
+ Other punctuation to be optional.....? Or maybe....
+
+ (1a) Borderline punctuation chars that
+      could have a strong case for being in the minimal standard list:
+
+      /:@
+
+      I'll leave this decision up to you. I think I would tend towards
+      including them.
+
+      Where to include these if you do include them:
+      I don't have a strong opinion, but suggest this,
+      which preserves a distinction between "ordinary writing" ( $'-:?!,. )
+      and funny characters.
+
+                 VV   V  
+       1234567890/@$'-:?!,.
+
+       However an argument for this order:
+
+       1234567890/$@'-:?!,.
+
+       is that $ is associated with numbers more than is @.
+              
+	Another borderline character is the NEWLINE character, represented by P
+	here. I would put it here
+
+	(since it is a lot like white space)
+
+       1234567890/$@'-:?!,.P
+	
+ Note the grouping of all characters with status similar to full stop adjacent to
+ the space char. - The chars "/$@" are not similar to full stop. The others are.
+
+ The character "'" is not always like a full stop but you do tend
+ to find it at the end of words.
+
+	The characters ( and ) should perhaps be included in the
+	minimal alphabet too.
+
+	Where to put them?
+
+	Either straight after a..zA..Z
+
+       ()1234567890/$@'-:?!,.P
+
+	or else adjacent to the quote mark, since it is a similar delimiter:
+
+       1234567890/$@()'-:?!,.P
+
+       Another candidate for the minimal alphabet is the POUND sign, <pound>
+       or #, to be located next to the $. I will write it as # from now on.
+
+       In conclusion this is the largest "medium" list I would go for.
+
+              1234567890/#$@()'-:?!,.P
+
+
+(2) Here is a suggestion for the whole punctuation list
+
+What have we left out?
+
+	stop-like characters:              ;
+
+	quote-like:                        "`
+
+	paren-like:                        []{}<>    (in your choice of order)
+
+	strange characters, like @   |\~^_&          (in any order)
+
+	characters associated with numbers, like / and $:
+						%*+=      (in any order)
+
+	any others?                        YEN, Euro.
+
+
+	I would put these in the medium list along with their cousins.
+
+	So it looks like this:
+
+              1234567890%*+=/#$|\~^_&@[]{}<>()"`'-:;?!,.P
+
+	      That's my best stab, feel free to modify it.
+
+
+</pre>
+EndPage
+
+Alias todo.html
+FoldingPage To Do List 04/02
+<h5>Thu 4/4/02</h5>
+<h2>List of features required for the special needs release</h2>
+
+<ol>
+<li> When a user first uses, they should get the opportunity to
+choose among various corpuses?
+US spelling / British?
+Or be encouraged to upload their own files.
+<li>
+ Need to auto-detect CPU speed and set default
+  steps parameter appropriately.
+<li>Need to investigate whether automatic adaptation of device speed
+is working.
+<li> Characters pound, #, 0123-9
+<li> Characters     .,-'
+<li> Caps1 to be default.
+<li> Good README documentation to be
+	easily accessible - from menu bar?
+- key facts about
+<ul><li>
+		"If you want capitals"
+	<li>	"If you feel the speed is wrong for you"
+		<li> "If you want numbers"
+</ul>
+<li> Streamline the process of transferring text to Word.
+	Provide Word macros for postprocessing, or
+	inbuilt processors in Dasher output stream?
+<li>
+ 	 frustrating when  had written 25 paragraphs
+	and wanted to remember what  had written in paragraph 3.
+	There was no way to look back at what  had done.
+
+<ul><li>	Idea 1:  increase height of text box a bit.
+<li>	Idea 2:  make the height of the text box adjustable (by options
+			or by dragging it)
+<li>	Idea 3:  make the text box contents scrollable (quite easy to do
+			in tcl)
+<li>	Idea 4:  include a button which allows you temporarily to make
+			the text box much bigger (and cover the 
+			dasher canvas). (Clicking this button would
+			stop dasher from running, if it was running)
+			(clicking it again would shrink the text box back
+			down)
+
+<li>	Idea 5:  include a button which brings up a separate window 
+		that is huge and that contains all the text written so far, with a 
+		scroll bar so you can look at it.
+</ul>
+	This button could be placed in the bottom row of the window, 
+	in the bottom right hand corner. The words "Idle - press space bar
+	to start Dasher" could be reduced to "Press space bar
+        to start" and similarly "Press space bar to stop" (no Dasher running),
+	so as to increase the spare space on the screen.
+
+	I think Idea 5 should be very easy to implement. The extra window
+	would have a "Dismiss" button to get rid of it.
+<li>
+ Provide an introductory training environment?
+<li>  try dasher with a Headmouse.
+<li> Clarify what happens to  Dasher's useful "learning" --
+	on exit, offer the chance to APPEND the text
+	to the default training file for use next time.
+<br>
+	We should clarify this in the readme, and say (for the present
+	desktop version) that when you start Dasher, it will
+	train itself on whatever is in .... ;
+so you have two options if you want it to learn from session to session.
+Either you have to APPEND what you have written to that input file;
+(can we make a button to do that?!)
+Or you can start Dasher and use the .... menu to get the "read more stuff"
+dialog.
+<br>
+	Presumably the long term plan is to have the APPEND happen
+	automatically as in the ipaq.  This will lead to problems
+	however because (a) it will run out of space when used heavily;
+	(b) when your neice plays with it and writes erweieiwuediwencwnwieujn
+	it will never forget it.
+<br>
+	Need to think about this more.
+	I think prompting the user, on exit "? append ?" is the best way.
+	Or there could simply be two exit buttons - exit+append
+	and exit+discard.
+<li>
+ The SAVE-to-File menu is awkward for severely disabled people.
+	John had a good suggestion: the save-to-file should
+	automatically propose a filename (eg file1, file2, file3, ...)
+	so that the user can accept the proposal if they like it.
+<li> Clarify what the effect of SAVE to FILE 
+	would be.
+	
+	I think it would be a good idea for the save menu to 
+	have options:  APPEND / WRITE .
+
+<li>  would like his dasher writings to be AUTOSAVED
+	to a sensible filename every 30 seconds.
+
+<li> Provide "how fast you are writing" information
+	in a pop-uppable window?
+
+<li> Provide a way for disatisfaction with corpus to get back to
+	us.
+	(1) Any particular words or phrases that were
+	unreasonably difficult on a first occasion?
+	Any words that SHOULD be easy that are not?
+	(2)  Are there any cases where the model is bad
+	and even though the user writes for a long time,
+	the model is still bad?
+	
+<li>
+	Maybe we should try to make 3 or 4 corpuses in different
+	styles (Legal/Student/Yoof culture/Pompous novels)
+	and allow the beginning user to use checkboxes to select
+	which they want. 
+	On the other hand, maybe we should just start with a good
+	broad corpus and make sure that the thing does a good
+	job of learning and STORING what it has learned and retrieving it	
+	next time.
+<li>
+	order:	a..z'-,._
+
+ order:  a..z'()0123..9-,._
+
+<li>
+I have a minor suggestion for the main tcl window.
+
+The text that says "dasher running" etc
+
+- not only could it be shrunk abit,
+but another good thing would be to declare the size 
+of this object.
+
+At present, if the user wishes to shrink dasher down to
+take up less screen real estate, they can shrink the 
+canvas, but then the resulting 
+dasher window jumps about in size because the text box
+(which limits the smallest size possible)
+is changing in size. "The text box" here meaning the 
+box that contains the words "Dasher running" .
+
+I think it would be good to fix the size of the object
+so that the dasher window has a constant size independent
+of what that text does.
+
+Similarly the "initials" object, I think should have a fixed size of
+five characters, and the "no initials entered" string can 
+be replaced by "---".
+
+These changes will reduce the amount of text in the window,
+which is a good thing.
+</ol>
+
+EndPage

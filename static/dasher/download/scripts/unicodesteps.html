@@ -1,0 +1,16 @@
+How to install the Perl Unicode Normalize package:
+
+	 sudo perl -MCPAN -e 'install Unicode::Normalize'
+
+Converting SJIS to UTF8:
+
+- perl SJIStoUTF8.pl < sjistext
+    - creates ``utf8text'' in UTF8. 
+
+How to convert UTF8 files to the 60-character and 83-character formats.
+
+  perl tohiragana60.pl japan.utf8 training_hiragana60.txt 
+  perl tohiragana83.pl japan.utf8 training_hiragana83.txt
+  perl grepper.pl 2>/dev/null < training_hiragana60.txt 
+  perl grepper.pl 2>/dev/null < training_hiragana83.txt 
+

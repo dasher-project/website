@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE alphabets SYSTEM "alphabet.dtd">
+<?xml-stylesheet type="text/xsl" href="alphabet.xsl"?>
+<alphabets>
+ <alphabet name="Polski / Polish">
+    <!--Created by: Krzysiek grandysk@go2.pl-->
+    <orientation type="LR" />
+    <encoding type="CentralEurope" />
+
+    <train>training_polish_PL.txt</train>
+<palette>European/Asian</palette>
+<paragraph d="&#182;" b="9"/>
+<space d="&#x25a1;" t=" " b="9" note="box" />
+<control d="Control" t="" b="8"/>
+
+    <group name="Małe litery">
+      <s t="a" d="a" b="10"/>
+      <s t="ą" d="ą" b="11"/>
+      <s t="b" d="b" b="12"/>
+      <s t="c" d="c" b="13"/>
+      <s t="ć" d="ć" b="14"/>
+      <s t="d" d="d" b="15"/>
+      <s t="e" d="e" b="16"/>
+      <s t="ę" d="ę" b="17"/>
+      <s t="f" d="f" b="18"/>
+      <s t="g" d="g" b="19"/>
+      <s t="h" d="h" b="20"/>
+      <s t="i" d="i" b="21"/>
+      <s t="j" d="j" b="22"/>
+      <s t="k" d="k" b="23"/>
+      <s t="l" d="l" b="24"/>
+      <s t="ł" d="ł" b="25"/>
+      <s t="m" d="m" b="26"/>
+      <s t="n" d="n" b="27"/>
+      <s t="ń" d="ń" b="28"/>
+      <s t="o" d="o" b="29"/>
+      <s t="ó" d="ó" b="30"/>
+      <s t="p" d="p" b="31"/>
+      <s t="q" d="q" b="32"/>
+      <s t="r" d="r" b="33"/>
+      <s t="s" d="s" b="34"/>
+      <s t="ś" d="ś" b="35"/>
+      <s t="t" d="t" b="36"/>
+      <s t="u" d="u" b="37"/>
+      <s t="v" d="v" b="39"/>
+      <s t="w" d="w" b="38"/>
+      <s t="x" d="x" b="40"/>
+      <s t="y" d="y" b="41"/>
+      <s t="z" d="z" b="42"/>
+      <s t="ź" d="ź" b="43"/>
+      <s t="ż" d="ż" b="44"/>
+    </group>
+
+    <group name="Duże litery" b="111">
+      <s t="A" d="A" b="10"/>
+      <s t="Ą" d="Ą" b="11"/>
+      <s t="B" d="B" b="12"/>
+      <s t="C" d="C" b="13"/>
+      <s t="Ć" d="Ć" b="14"/>
+      <s t="D" d="D" b="15"/>
+      <s t="E" d="E" b="16"/>
+      <s t="Ę" d="Ę" b="17"/>
+      <s t="F" d="F" b="18"/>
+      <s t="G" d="G" b="19"/>
+      <s t="H" d="H" b="20"/>
+      <s t="I" d="I" b="21"/>
+      <s t="J" d="J" b="22"/>
+      <s t="K" d="K" b="23"/>
+      <s t="L" d="L" b="24"/>
+      <s t="Ł" d="Ł" b="25"/>
+      <s t="M" d="M" b="26"/>
+      <s t="N" d="N" b="27"/>
+      <s t="Ń" d="Ń" b="28"/>
+      <s t="O" d="O" b="29"/>
+      <s t="Ó" d="Ó" b="30"/>
+      <s t="P" d="P" b="31"/>
+      <s t="Q" d="Q" b="32"/>
+      <s t="R" d="R" b="33"/>
+      <s t="S" d="S" b="34"/>
+      <s t="Ś" d="Ś" b="35"/>
+      <s t="T" d="T" b="36"/>
+      <s t="U" d="U" b="37"/>
+      <s t="V" d="V" b="39"/>
+      <s t="W" d="W" b="38"/>
+      <s t="X" d="X" b="40"/>
+      <s t="Y" d="Y" b="41"/>
+      <s t="Z" d="Z" b="42"/>
+      <s t="Ź" d="Ź" b="43"/>
+      <s t="Ż" d="Ż" b="44"/>
+    </group>
+
+    <group name="Liczby"   b="113">
+<s d="1" t="1" b="90"/>
+<s d="2" t="2" b="91"/>
+<s d="3" t="3" b="92"/>
+<s d="4" t="4" b="93"/>
+<s d="5" t="5" b="94"/>
+<s d="6" t="6" b="90"/>
+<s d="7" t="7" b="91"/>
+<s d="8" t="8" b="92"/>
+<s d="9" t="9" b="93"/>
+<s d="0" t="0" b="94"/>
+    </group>
+
+    <group name="Interpunkcja"  b="112">
+<s b="90" d="%" t="%"/>
+<s b="91" d="*" t="*"/>
+<s b="92" d="+" t="+"/>
+<s b="93" d="=" t="="/>
+<s b="94" d="/" t="/"/>
+<s b="95" d="#" t="#"/>
+<s d="&#8364;" t="&#8364;" b="96" note="euro" />
+<s b="98" d="$" t="$"/>
+<s b="99" d="|" t="|"/>
+<s b="95" d="\" t="\"/>
+<s b="96" d="~" t="~"/>
+<s b="97" d="^" t="^"/>
+<s b="98" d="_" t="_"/>
+<s b="99" d="&amp;" t="&amp;"/> 
+<s b="95" d="@" t="@"/>
+<s b="105" d="[" t="["/>
+<s b="106" d="]" t="]"/>
+<s b="107" d="{" t="{"/>
+<s b="108" d="}" t="}"/>
+<s b="109" d="&lt;" t="&lt;"/>
+<s b="105" d="&gt;" t="&gt;"/>
+<s b="106" d="(" t="("/>
+<s b="107" d=")" t=")"/>
+<s b="108" d="&#x2039;" t="&#x2039;" note="French left single quotation mark" />
+<s b="109" d="&#x203A;" t="&#x203A;" note="French right single quotation mark" />
+<s b="106" d="&#x00AB;" t="&#x00AB;" note="French left double quotation mark" />
+<s b="107" d="&#x00BB;" t="&#x00BB;" note="French right double quotation mark" />
+<s b="109" d="&quot;" t="&quot;"/>
+<s b="105" d="`" t="`"/>
+<s b="106" d="&#x25cc;&#x0313;"  t="&apos;"/>
+<s  b="100" d="-" t="-"/>
+<s  b="101" d=":" t=":"/>
+<s  b="102" d=";" t=";"/>
+<s  b="103" d="?" t="?"/>
+<s  b="104" d="!" t="!"/>
+<s  b="100" d="," t=","/>
+<s d="&#183;" t="." b="104"/>
+    </group>
+
+  </alphabet>
+  <alphabet name="Polski / Polish (limited punctuation)">
+    <!-- added by: David MacKay -->
+    <orientation type="LR" />
+    <encoding type="CentralEurope" />
+    <train>training_polish_PL.txt</train>
+<palette>Bajo 1</palette>
+<paragraph d="&#182;" b="9"/>
+<space d="&#x25a1;" t=" " b="9" note="box" />
+<control d="Control" t="" b="8"/>
+    <group name="Małe litery">
+      <s t="a" d="a" b="10"/>
+      <s t="ą" d="ą" b="11"/>
+      <s t="b" d="b" b="12"/>
+      <s t="c" d="c" b="13"/>
+      <s t="ć" d="ć" b="14"/>
+      <s t="d" d="d" b="15"/>
+      <s t="e" d="e" b="16"/>
+      <s t="ę" d="ę" b="17"/>
+      <s t="f" d="f" b="18"/>
+      <s t="g" d="g" b="19"/>
+      <s t="h" d="h" b="20"/>
+      <s t="i" d="i" b="21"/>
+      <s t="j" d="j" b="22"/>
+      <s t="k" d="k" b="23"/>
+      <s t="l" d="l" b="24"/>
+      <s t="ł" d="ł" b="25"/>
+      <s t="m" d="m" b="26"/>
+      <s t="n" d="n" b="27"/>
+      <s t="ń" d="ń" b="28"/>
+      <s t="o" d="o" b="29"/>
+      <s t="ó" d="ó" b="30"/>
+      <s t="p" d="p" b="31"/>
+      <s t="q" d="q" b="32"/>
+      <s t="r" d="r" b="33"/>
+      <s t="s" d="s" b="34"/>
+      <s t="ś" d="ś" b="35"/>
+      <s t="t" d="t" b="36"/>
+      <s t="u" d="u" b="37"/>
+      <s t="v" d="v" b="39"/>
+      <s t="w" d="w" b="38"/>
+      <s t="x" d="x" b="40"/>
+      <s t="y" d="y" b="41"/>
+      <s t="z" d="z" b="42"/>
+      <s t="ź" d="ź" b="43"/>
+      <s t="ż" d="ż" b="44"/>
+    </group>
+
+    <group name="Duże litery" b="111">
+      <s t="A" d="A" b="10"/>
+      <s t="Ą" d="Ą" b="11"/>
+      <s t="B" d="B" b="12"/>
+      <s t="C" d="C" b="13"/>
+      <s t="Ć" d="Ć" b="14"/>
+      <s t="D" d="D" b="15"/>
+      <s t="E" d="E" b="16"/>
+      <s t="Ę" d="Ę" b="17"/>
+      <s t="F" d="F" b="18"/>
+      <s t="G" d="G" b="19"/>
+      <s t="H" d="H" b="20"/>
+      <s t="I" d="I" b="21"/>
+      <s t="J" d="J" b="22"/>
+      <s t="K" d="K" b="23"/>
+      <s t="L" d="L" b="24"/>
+      <s t="Ł" d="Ł" b="25"/>
+      <s t="M" d="M" b="26"/>
+      <s t="N" d="N" b="27"/>
+      <s t="Ń" d="Ń" b="28"/>
+      <s t="O" d="O" b="29"/>
+      <s t="Ó" d="Ó" b="30"/>
+      <s t="P" d="P" b="31"/>
+      <s t="Q" d="Q" b="32"/>
+      <s t="R" d="R" b="33"/>
+      <s t="S" d="S" b="34"/>
+      <s t="Ś" d="Ś" b="35"/>
+      <s t="T" d="T" b="36"/>
+      <s t="U" d="U" b="37"/>
+      <s t="V" d="V" b="39"/>
+      <s t="W" d="W" b="38"/>
+      <s t="X" d="X" b="40"/>
+      <s t="Y" d="Y" b="41"/>
+      <s t="Z" d="Z" b="42"/>
+      <s t="Ź" d="Ź" b="43"/>
+      <s t="Ż" d="Ż" b="44"/>
+    </group>
+
+    <group name="Liczby"   b="113">
+<s d="1" t="1" b="90"/>
+<s d="2" t="2" b="91"/>
+<s d="3" t="3" b="92"/>
+<s d="4" t="4" b="93"/>
+<s d="5" t="5" b="94"/>
+<s d="6" t="6" b="90"/>
+<s d="7" t="7" b="91"/>
+<s d="8" t="8" b="92"/>
+<s d="9" t="9" b="93"/>
+<s d="0" t="0" b="94"/>
+    </group>
+
+    <group name="Interpunkcja"  b="112">
+<s b="90" d="%" t="%"/>
+<s b="91" d="*" t="*"/>
+<s b="92" d="+" t="+"/>
+<s b="93" d="=" t="="/>
+<s b="94" d="/" t="/"/>
+<s b="99" d="&amp;" t="&amp;"/> 
+<s b="109" d="&lt;" t="&lt;"/>
+<s b="105" d="&gt;" t="&gt;"/>
+<s b="106" d="(" t="("/>
+<s b="107" d=")" t=")"/>
+<s b="109" d="&quot;" t="&quot;"/>
+<s b="105" d="`" t="`"/>
+<s b="106" d="&#x25cc;&#x0313;"  t="&apos;"/>
+<s  b="100" d="-" t="-"/>
+<s  b="101" d=":" t=":"/>
+<s  b="102" d=";" t=";"/>
+<s  b="103" d="?" t="?"/>
+<s  b="104" d="!" t="!"/>
+<s  b="100" d="," t=","/>
+<s d="&#183;" t="." b="104"/>
+    </group>
+
+  </alphabet>
+</alphabets>

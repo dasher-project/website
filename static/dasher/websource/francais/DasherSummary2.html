@@ -1,0 +1,48 @@
+SectionPage  Comment fonctionne Dasher?
+
+<img align="right" src="http://www.inference.phy.cam.ac.uk/djw30/dasher/dasher.gif" height=248 width=288 alt="Tapez échapement pour arrêter l' animation">
+
+<center>
+<em>Dasher est comme un jeu d'arcade: `L'attaque de l'alphabet meurtrier', peut-être.</em>
+<br>
+<small><a href=/is/press/ft0202.gif>Financial Times,  5th February 2002</a></small>.
+</center>
+
+<h1>Dasher</h1>
+
+<p>
+ Dasher est une interface d'agrandissement. Vous pointez
+  vers où voulez aller, et l'affichage agrandit l'endroit où vous pointez.
+ Le monde dans lequel vous agrandissez est fait de
+  lettres, donc n'importe quel point agrandit corresponds à
+   un morceau de texte. Au fur et à mesure que vous agrandissez vous complètez le texte écrit.
+   Vous choisissez ce que vous écrivez
+   en choisissant où agrandir.
+</p>
+
+<p>
+Dans l'exemple à droite, l'utilisateur écrit "hello_how_are_you".
+</p>
+
+<p>
+	Pour rendre l'interface efficace, nous utilisons
+	la prédiction d'un language modèle pour déterminer quelles
+	parties de mots  seraient acquises à chaques morceaux de texte déja écrit.
+	Les parties de mot probables sont données en ordre successif,
+	ils sont dés lors plus faciles et rapide à saisir. Les parties
+	de mot improbables (par exemple, un texte avec des fautes d'orthographe)
+	sont moins espacés, ils sont dés lors plus difficile à écrire.
+	Le language modèle aprend sans cesse: si vous utilisez un mot nouveau,
+	il sera plus facile de l'écrire la prochaine fois.
+</p>
+<p>
+ Un gros avantage de Dasher par rapport à d'autre interfaces de saisie de texte prédictif
+  c'est qu'il est <b>en mode libre</b>: l'utilisateur n'a pas besoin de
+  basculer d'un mode écriture vers un mode "acceptation du modèle de predictions".
+</p>
+<p>
+	Un autre avantage est que il est facile d'entraîner le modèle
+	sur n'importe quel style d'écriture: chargez simplement un fichier 
+	texte d'exemple, puis écrivez!
+</p>
+

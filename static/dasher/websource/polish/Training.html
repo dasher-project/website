@@ -1,0 +1,80 @@
+HiddenPage Making the Training Text
+<h2>Making the Training Text</h2>
+<p> The training text should be a plain text file containing
+ text `similar' to what you intend to write.
+ The larger the better.
+ We think that 300K is a good size to aim for.
+</p><p>
+ Example training texts that you could use are:
+<ul>
+  <li>Take all the documents you have written, and glue them
+       all together in one big document. 
+</li>
+  <li>Use novels - eg, we used Jane Austen's <em>Emma</em> from
+   <a href=http://promo.net/pg/>Project Gutenberg</a>. The problem with using
+       just one or two novels, however, is that particular words (like Emma or Alice)
+       occur very frequently; so novels are not ideal for a general-purpose training text.
+</li>
+       <li>Use all the email messages you have written, and glue them
+       all together in one big document..
+</li>
+     </ul>
+
+<h3>How to make a general-purpose training text</h3>     
+ Here's how I made the training text for the English version of
+ Dasher.
+<ol>
+  <li>
+       Get lots of English documents.  Get far more material than you think you need,
+       so that we can select a <em>well-balanced</em>
+       set of sentences in a sensible way, as follows.
+       </li>
+  <li>
+       Pre-process them all so that there is exactly one sentence per line.
+<br>       I did this using a perl program I wrote,
+       <a href=/mackay/perl/processbook.p>processbook.p</a>
+       with scripts like this
+       <pre>
+foreach f ( alice emma )
+  processbook.p  /books0/$f > /books/$f
+end
+</pre>       
+       </li>
+  <li><b>Now</b>, obtain a listing of the 2000 most frequent words in
+       the language. The idea is, since these words are common, it is important that we should
+       have them represented several times each in the final corpus, in a variety of
+       contexts. We will use these words to select which sentences are included
+       from our over-large corpus.
+       <br>
+       I obtained such a list from the internet and put it in a file called <tt>dict</tt>.
+       I removed from dict any absurdly common words that prevented the remaining steps from
+       working nicely.
+       </li>
+  <li>
+       Use another  program to select from each pre-processed book the sentences
+       that contain the 2000 required words. Go through the required words in order,
+       so that the resulting corpus is also ordered, with the top of the corpus containing
+       examples of use of the most common words; that way, the corpus can be shrunk by cutting
+       its tail off, and should still be an appropriate corpus for its size.
+       <br>
+       Glue the sentences together into plausible-sized paragraphs, so as to emulate
+       normal writing.
+       <br>
+       I did this step by using the linux utility <b>glimpse</b> and my perl
+       program <a href=/mackay/perl/corpus.p>corpus.p</a>
+       <pre>
+rm  /data/coll/mackay/books/*~
+glimpseindex -b  -B   -H ~/dasher/  /data/coll/mackay/books/
+corpus.p k=1 f=4 o=corpus4.txt
+       </pre>
+       That's how I made <a href=/dasher/download/english/corpus4.txt1>this corpus</a> (316K),
+       which is used in Dasher 1.6.8.
+       </li>
+</ol>
+
+</p><p>
+ If people make good corpuses in other languages and wish to share
+ them, I can put them on <a href=/dasher/download/>this site</a>.
+</p>
+     
+

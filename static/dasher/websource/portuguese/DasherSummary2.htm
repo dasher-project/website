@@ -1,0 +1,48 @@
+SectionPage  Como o Dasher funciona?
+
+<img align="right" src="http://www.inference.phy.cam.ac.uk/djw30/dasher/dasher.gif" height=248 width=288 alt="hit escape to halt animation">
+
+<center>
+<em>O Dasher é como um jogo de arcada: `Ataque dos alfabetos assassinos', talvez.</em>
+<br>
+<small><a href=/is/press/ft0202.gif>Financial Times,  05 de fevereiro de 2002</a></small>.
+</center>
+
+<h1>Dasher</h1>
+
+<p>
+ O Dasher é uma interface de zoom. Aponta-se
+ aonde se quer ir e o display faz o zoom na direção apontada.
+ O mundo para o qual se aponta é repleto de 
+  letras, de modo que todo ponto a que se aponte corresponde 
+ a um fragmento de texto. Quando maior a aproximação do zoom, mais extenso o
+  fragmento de texto que se escreve. Escolhe-se o que escrever
+ escolhendo para onde aproximar o zoom.
+</p>
+
+<p>
+No exemplo à direita, o usuário está escrevendo "hello_how_are_you".
+</p>
+
+<p>
+	Para tornar a interface eficaz, usamos as 
+	previsões de um modelo de linguagem para determinar quanto 
+	desse mundo é dedicado a cada fragmento de texto.
+	A fragmentos de texto prováveis dá-se um patrimônio maior,
+	para que sejam de seleção fácil e rápida. A fragmentos
+	de texto improváveis (por exemplo, texto com erros ortográficos)
+	dá-se menos espaço, para que sejam difíceis de ocorrer.
+	O modelo de linguagem está sempre aprendendo: se uma palavra nova
+	for usada, será fácil escrevê-la da próxima vez.
+</p>
+<p>
+ Uma grande vantagem do Dasher sobre outras interfaces de entrada de texto por previsibilidade
+  é que ele é <b>livre de modos</b>: o usuário não precisa 
+  alternar de um modo de escrita para um modo "aceitar-previsões-do-modelo".
+</p>
+<p>
+	Uma outra vantagem é que é fácil treinar o modelo
+	em qualquer estilo de escrita: basta carregar um arquivo de 
+	exemplo e sair escrevendo!
+</p>
+

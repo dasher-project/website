@@ -1,0 +1,1743 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE alphabets SYSTEM "alphabet.dtd">
+<?xml-stylesheet type="text/xsl" href="alphabet.xsl"?>
+<alphabets>
+<alphabet name="punctuation world">
+<orientation type="LR"/>
+<encoding type="Western"/>
+<palette>Default</palette>
+<train>training_english_GB.txt</train>
+<space d="&#x25a1;" t=" "/>
+<control d="Control" t=""/>
+<paragraph d="&#182;" b="9"/>
+<!-- http://www.japan-101.com/language/japanese_numerals.htm -->
+<!-- excellent website: http://www.alanwood.net/unicode/ -->
+<group name="Japanese numerals HEX" b="113">
+<s d="&#x96F6;" note="0"    t="&#x96F6;"/>
+<s d="&#x4E00;" note="1"    t="&#x4E00;"/>
+<s d="&#x4E8C;" note="2"    t="&#x4E8C;"/>
+<s d="&#x4E09;" note="3"    t="&#x4E09;"/>
+<s d="&#x56DB;" note="4"    t="&#x56DB;"/>
+<s d="&#x4E94;" note="5"    t="&#x4E94;"/>
+<s d="&#x516D;" note="6"    t="&#x516D;"/>
+<s d="&#x4E03;" note="7"    t="&#x4E03;"/>
+<s d="&#x516B;" note="8"    t="&#x516B;"/>
+<s d="&#x4E5D;" note="9"    t="&#x4E5D;"/>
+<s d="&#x5341;" note="10"   t="&#x5341;"/>
+<s d="&#x767E;" note="100"  t="&#x767E;"/>
+<s d="&#x5343;" note="1000" t="&#x5343;"/>
+</group>
+<group name="Japanese numerals" b="113">
+<s d="&#38646;" note="0"    t="&#38646;"/>
+<s d="&#19968;" note="1"    t="&#19968;"/>
+<s d="&#20108;" note="2"    t="&#20108;"/>
+<s d="&#19977;" note="3"    t="&#19977;"/>
+<s d="&#22235;" note="4"    t="&#22235;"/>
+<s d="&#20116;" note="5"    t="&#20116;"/>
+<s d="&#20845;" note="6"    t="&#20845;"/>
+<s d="&#19971;" note="7"    t="&#19971;"/>
+<s d="&#20843;" note="8"    t="&#20843;"/>
+<s d="&#20061;" note="9"    t="&#20061;"/>
+<s d="&#21313;" note="10"   t="&#21313;"/>
+<s d="&#30334;" note="100"  t="&#30334;"/>
+<s d="&#21315;" note="1000" t="&#21315;"/>
+</group>
+<group name="Numbers" b="113">
+<s d="1" t="1"/>
+<s d="2" t="2"/>
+<s d="3" t="3"/>
+<s d="4" t="4"/>
+<s d="5" t="5"/>
+<s d="6" t="6"/>
+<s d="7" t="7"/>
+<s d="8" t="8"/>
+<s d="9" t="9"/>
+<s d="0" t="0"/>
+</group>
+<group name="Chinese Wubihua (5 strokes); we should use these as group labels in due course" b="110">
+<s d="&#x4E00;" t="&#x4E00;" note="1, &#x6A6B; h&#xE9;ng, left to right" />
+<s d="&#x4E28;" t="&#x4E28;" note="2, &#x8C4E; sh&#xF9;, top to bottom" />
+<s d="&#x4E3F;" t="&#x4E3F;" note="3, &#x6487; pi&#x11B;, upper right to lower left" />
+<s d="&#x4E36;" t="&#x4E36;" note="4, &#x637A; n&#xE0;, upper left to lower right" />
+<s d="&#x4E59;" t="&#x4E59;" note="5, &#x62C6; ch&#x101;i, upper left turning down to lower right" />
+</group>
+<group name="Punctuation (maths)" b="112">
+<s d="%" t="%"/>
+<s d="*" t="*"/>
+<s d="+" t="+"/>
+<s d="=" t="="/>
+<s d="/" t="/"/>
+<s d="#" t="#"/>
+</group>
+<group name="Punctuation (currency)" b="112">
+<s d="$" t="$"/>
+<s d="&#8364;" t="&#8364;" b="34" note="euro" />
+<s d="&#x00A5;" t="&#x00A5;" b="34" note="yen" />
+<s d="&#163;" t="&#163;" note="Pound (and Irish Punt)" />
+<s d="&#3647;" t="&#3647;" note="Baht" />
+<s d="&#162;" t="&#162;" note="Cent ($.01)" />
+<s d="&#8353;" t="&#8353;" note="Colon" />
+<s d="&#8354;" t="&#8354;" note="Cruzeiro Real" />
+<s d="&#8363;" t="&#8363;" note="Dollar???" />
+<s d="&#8352;" t="&#8352;" note="ECU (replaced by the Euro)" />
+<s d="&#8364;" t="&#8364;" note="Euro (replacement for the ECU)" />
+<s d="&#402;" t="&#402;" note="Florin (also called Guilder and Gulden)" />
+<s d="&#8355;" t="&#8355;" note="French Franc" />
+<s d="&#164;" t="&#164;" note="Generic Currency Symbol" />
+<s d="&#8356;" t="&#8356;" note="Lira" />
+<s d="&#8357;" t="&#8357;" note="Mill ($.001)" />
+<s d="&#8358;" t="&#8358;" note="Naira" />
+<s d="&#8359;" t="&#8359;" note="Peseta" />
+<s d="&#163;" t="&#163;" note="Pound (and Irish Punt)" />
+<s d="&#2547;" t="&#2547;" note="Rupee Sign (Bengali)" />
+<s d="&#2546;" t="&#2546;" note="Rupee Mark (Bengali)" />
+<s d="&#8360;" t="&#8360;" note="Rupee" />
+<s d="&#8362;" t="&#8362;" note="Shekel" />
+<s d="&#8361;" t="&#8361;" note="Won" />
+<s d="&#165;" t="&#165;" note="Yen" />
+<s d="&#x00A2;"  t="&#x00A2;" note=" cent "/>
+</group>
+<group name="Punctuation (computer)" b="112">
+<s d="|" t="|"/>
+<s d="\" t="\"/>
+<s d="~" t="~"/>
+<s d="^" t="^"/>
+<s d="_" t="_"/>
+<s d="&amp;" t="&amp;"/>
+<s d="@" t="@"/>
+</group>
+<group name="Punctuation (brackets)" b="112">
+<s d="[" t="["/>
+<s d="]" t="]"/>
+<s d="{" t="{"/>
+<s d="}" t="}"/>
+<s d="&lt;" t="&lt;"/>
+<s d="&gt;" t="&gt;"/>
+<s d="(" t="("/>
+<s d=")" t=")"/>
+</group>
+<group name="other pointing objects and icons" b="114">
+<s d="&#x261A;" t="&#x261A;" note=" left pointing hand black" />
+<s d="&#x261B;" t="&#x261B;" note="right pointing hand black" />
+<s d="&#x261C;" t="&#x261C;" note=" left pointing hand white" />
+<s d="&#x261E;" t="&#x261E;" note="right pointing hand white" />
+<s d="&#x2620;" t="&#x2620;" note="skull and crossbones" />
+<s d="&#x2621;" t="&#x2621;" note="caution, slippery" />
+<s d="&#x260E;" t="&#x260E;" note="phone black" />
+<s d="&#x260F;" t="&#x260F;" note="phone white" />
+<s d="&#x231B;" t="&#x231B;" note="hourglass" />
+<s d="&#x2328;" t="&#x2328;" note="keyboard" />
+<s d="&#x2318;" t="&#x2318;" note="special function key" />
+<s d="&#x2190;" t="&#x2190;" note="left single arrow" />
+<s d="&#x2192;" t="&#x2192;" note="right single arrow" />
+<s d="&#x21D0;" t="&#x21D0;" note="left double arrow" />
+<s d="&#x21D2;" t="&#x21D2;" note="right double arrow" />
+<s d="&#x2669;" t="&#x2669;" note="quarter note" />
+<s d="&#x266A;" t="&#x266A;" note="eighth note" />
+<s d="&#x266B;" t="&#x266B;" note="eighth notes" />
+<s d="&#x2702;" t="&#x2702;" note="scissors" />
+<s d="&#x2704;" t="&#x2704;" note="scissors w" />
+<s d="&#x25A0;" t="&#x25A0;" note="black square" />
+<s d="&#x25B6;" t="&#x25B6;" note="black right triangle big" />
+<s d="&#x25B7;" t="&#x25B7;" note="white right triangle big" />
+<s d="&#x25B8;" t="&#x25B8;" note="small black right triangle" />
+<s d="&#x25B9;" t="&#x25B9;" note="small black right triangle" />
+<s d="&#x25BA;" t="&#x25BA;" note="small long skinny right pointing triangle black" />
+<s d="&#x25BB;" t="&#x25BB;" note="small long skinny right pointing triangle white" />
+<s d="&#x25C0;" t="&#x25C0;" note="black right triangle big" />
+<s d="&#x25C1;" t="&#x25C1;" note="white right triangle big" />
+<s d="&#x25C2;" t="&#x25C2;" note="small black right triangle" />
+<s d="&#x25C3;" t="&#x25C3;" note="small black right triangle" />
+<s d="&#x25C4;" t="&#x25C4;" note="small long skinny right pointing triangle black" />
+<s d="&#x25C5;" t="&#x25C5;" note="small long skinny right pointing triangle white" />
+<s d="&#x2326;" t="&#x2326;" note="erase to the right" />
+<s d="&#x232B;" t="&#x232B;" note="erase to the left" />
+<s d="&#x2343;" t="&#x2343;" note="left arrow in box" />
+<s d="&#x2344;" t="&#x2344;" note="right arrow in box" />
+<s d="&#x2345;" t="&#x2345;" note="move insertion point left" />
+<s d="&#x2346;" t="&#x2346;" note="move insertion point right" />
+<s d="&#x219A;" t="&#x219A;" note="move insertion point left" />
+<s d="&#x219B;" t="&#x219B;" note="move insertion point right" />
+<s d="&#x2397;" t="&#x2397;" note="previous page" />
+<s d="&#x2398;" t="&#x2398;" note="next page" />
+<s d="&#x226A;" t="&#x226A;" note=" two left angles " />
+<s d="&#x226B;" t="&#x226B;" note=" two right angles " />
+<s d="&#x22B2;" t="&#x22B2;" note="left triangle" />
+<s d="&#x22B3;" t="&#x22B3;" note="right triangle" />
+<s d="&#x22B4;" t="&#x22B4;" note="left triangle underlined" />
+<s d="&#x22B5;" t="&#x22B5;" note="right triangle underlined" />
+<s d="&#x22D6;" t="&#x22D6;" note="less than with dot" />
+<s d="&#x22D7;" t="&#x22D7;" note="greater than with dot" />
+<s d="&#x22D8;" t="&#x22D8;" note="THREE left angles" />
+<s d="&#x22D9;" t="&#x22D9;" note="THREE right angles" />
+<s d="&#x219E;" t="&#x219E;" note="left arrow with two heads" />
+<s d="&#x21A0;" t="&#x21A0;" note="right arrow with two heads" />
+<s d="&#x21A2;" t="&#x21A2;" note="left arrow with tail" />
+<s d="&#x21A3;" t="&#x21A3;" note="right arrow with tail" />
+<s d="&#x21A4;" t="&#x21A4;" note="left arrow from bar" />
+<s d="&#x21A6;" t="&#x21A6;" note="right arrow from bar" />
+<s d="&#x21BC;" t="&#x21BC;" note="left harpoon" />
+<s d="&#x21C0;" t="&#x21C0;" note="right harpoon" />
+<s d="&#x21C7;" t="&#x21C7;" note="paired left arrows" />
+<s d="&#x21C9;" t="&#x21C9;" note="paired right arrows" />
+<s d="&#x21DA;" t="&#x21DA;" note="left triple arrow" />
+<s d="&#x21DB;" t="&#x21DB;" note="right triple arrow" />
+<s d="&#x21E4;" t="&#x21E4;" note="left arrow to bar" />
+<s d="&#x21E5;" t="&#x21E5;" note="right arrow to bar" />
+<s d="&#x21F1;" t="&#x21F1;" note="to top left arrow" />
+<s d="&#x21F2;" t="&#x21F2;" note="to bottom right arrow" />
+<s d="&#x21FD;" t="&#x21FD;" note="left open arrow" />
+<s d="&#x21FE;" t="&#x21FE;" note="right open arrow" />
+</group>
+<group name="other angles" b="113">
+<s d="&#x3008;" t="&#x3008;" note=" left  angle bracket" />
+<s d="&#x3009;" t="&#x3009;" note=" right   angle bracket" />
+<s d="&#x2329;" t="&#x2329;" note=" left slim angle bracket" />
+<s d="&#x232A;" t="&#x232A;" note=" right  slim angle bracket" />
+<s d="&#x27E8;" t="&#x27E8;" note=" left angle bracket" />
+<s d="&#x27E9;" t="&#x27E9;" note=" right angle bracket" />
+<s d="&#x27EA;" t="&#x27EA;" note="double left angle bracket" />
+<s d="&#x27EB;" t="&#x27EB;" note="double right angle bracket" />
+</group>
+<group name="Punctuation (quotes)" b="112">
+<s d="&#x300C;" t="&#x300C;" note="Asian left single quotation mark" />
+<s d="&#x300D;" t="&#x300D;" note="Asian right single quotation mark" />
+<s d="&#x300E;" t="&#x300E;" note="Asian left double quotation mark" />
+<s d="&#x300F;" t="&#x300F;" note="Asian right double quotation mark" />
+<s d="&#x2039;" t="&#x2039;" note="French left single quotation mark" />
+<s d="&#x203A;" t="&#x203A;" note="French right single quotation mark" />
+<s d="&#x00AB;" t="&#x00AB;" note="French left double quotation mark" />
+<s d="&#x00BB;" t="&#x00BB;" note="French right double quotation mark" />
+<s d="&#x201E;" t="&#x201E;" note="German left double quotation mark; Albanian right" />
+<s d="&#x201C;" t="&#x201C;" note="left double quotation mark" />
+<s d="&#x0022;" t="&#x0022;" note="deprecated vertical double quotation mark" />
+<s d="&#x201D;" t="&#x201D;" note="right double quotation mark" />
+<s d="&#x2018;" t="&#x2018;" note="left single quotation mark" />
+<s d="&#x201A;" t="&#x201A;" note="German left single quotation mark; Albanian right" />
+<s d="&#x0027;" t="&#x0027;" note="vertical single quote" />
+<s d="&#x2019;" t="&#x2019;" note="right single quotation mark and apostrophe" />
+<s d="`" t="`" note="alternate left single quote" />
+<s d="&apos;" t="&apos;" note="alternate apostrophe" />
+</group>
+<group name="Punctuation (space-like)" b="112">
+<s d="-" t="-"/>
+<s d=":" t=":"/>
+<s d=";" t=";"/>
+<s d="&#x00BF;" t="&#x00BF;" note="inverted question mark" />
+<s d="?" t="?"/>00A1
+<s d="&#x00A1;" t="&#x00A1;" note="inverted exclamation mark" />
+<s d="!" t="!"/>
+<s d="&#8231;" t="&#8231;" b="34" note="Asian partition dot" />
+<s d="&#12539;" t="&#12539;" b="35" note="Square partition dot"/>
+<s d="&#65294;" t="&#65294;" b="36" note="middle dot"/>
+<s d="&#183;" t="&#183;" b="34" note="mid-dot"/>
+<s d="&#x00B7;" t="&#x00B7;" b="34" note="mid-dot greek ano teleia"/>
+<s d="&#65292;" t="&#65292;" b="35" note="Asian comma"/>
+<s d="&#x3001;" t="&#x3001;" b="35" note="Japanese comma, identical to chinese!"/>
+<s d="&#12289;" t="&#12289;" b="36" note="Chinese comma"/>
+<s d="," t=","/>
+<s d="&#12290;" t="&#12290;" b="17" note="Asian Period" />
+<s d="." t="."/>
+</group>
+<group name="Punctuation for Japanese"   b="9" >
+<s d="%" t="%" b="35"/>
+<s d="*" t="*" b="36"/>
+<s d="+" t="+" b="34"/>
+<s d="=" t="=" b="35"/>
+<s d="/" t="/" b="36"/>
+<s d="#" t="#" b="34"/>
+<s d="&#x00A5;" t="&#x00A5;" b="17" note="yen" />
+<s d="&lt;" t="&lt;" b="34"/>
+<s d="&gt;" t="&gt;" b="35"/>
+<s d="(" t="(" b="36"/>
+<s d=")" t=")" b="34"/>
+<s d="&amp;" t="&amp;" b="35"/>
+<s d="&quot;" t="&quot;" b="36"/>
+<s d="&apos;" t="&apos;" b="34"/>
+<s d="?" t="?" b="35"/>
+<s d="!" t="!" b="36"/>
+<s d="," t="," b="34"/>
+<s d="." t="." b="35"/>
+<s d="&#12540;" t="&#12540;" note="Japanese long dash" b="17" />
+<s d="&#65311;" t="&#65311;" note="Japanese question mark" b="17" />
+<s d="&#x300C;" t="&#x300C;" note="Asian left single quotation mark" b="17" />
+<s d="&#x300D;" t="&#x300D;" note="Asian right single quotation mark" b="20" />
+<s d="&#x300E;" t="&#x300E;" note="Asian left double quotation mark" b="17" />
+<s d="&#x300F;" t="&#x300F;" note="Asian right double quotation mark" b="20" />
+<s d="&#8231;" t="&#8231;" b="17" note="Asian partition dot" />
+<s d="&#12539;" t="&#12539;" b="20" note="Square partition dot"/>
+<s d="&#65294;" t="&#65294;" b="17" note="middle dot"/>
+<s d="&#183;" t="&#183;" b="20" note="mid-dot"/>
+<s d="&#65292;" t="&#65292;" b="17" note="Asian comma"/>
+<s d="&#12289;" t="&#12289;" b="20" note="Chinese comma"/>
+<s d="&#x3001;" t="&#x3001;" b="35" note="Japanese comma"/>
+<s d="&#12290;" t="&#12290;" b="17" note="Asian Period" />
+<!-- <s d="&#xff61;" t="&#xff61;" b="17"/> -->
+<!-- <s d="&#12290;" t="&#12290;" b="20" note="Pop diacritical" /> -->
+</group>
+<group name="Bengali numbers" b="113">
+<s d="&#x09E7;" t="&#x09E7;"  note="BENGALI DIGIT ONE"/>
+<s d="&#x09E8;" t="&#x09E8;"  note="BENGALI DIGIT TWO"/>
+<s d="&#x09E9;" t="&#x09E9;"  note="BENGALI DIGIT THREE"/>
+<s d="&#x09EA;" t="&#x09EA;"  note="BENGALI DIGIT FOUR"/>
+<s d="&#x09EB;" t="&#x09EB;"  note="BENGALI DIGIT FIVE"/>
+<s d="&#x09EC;" t="&#x09EC;"  note="BENGALI DIGIT SIX"/>
+<s d="&#x09ED;" t="&#x09ED;"  note="BENGALI DIGIT SEVEN"/>
+<s d="&#x09EE;" t="&#x09EE;"  note="BENGALI DIGIT EIGHT"/>
+<s d="&#x09EF;" t="&#x09EF;"  note="BENGALI DIGIT NINE"/>
+<s d="&#x09E6;" t="&#x09E6;"  note="BENGALI DIGIT ZERO"/>
+</group>
+<group name="Indic numbers" b="113">
+<s d="&#x0967;" t="&#x0967;"  note="ONE"/>
+<s d="&#x0968;" t="&#x0968;"  note="TWO"/>
+<s d="&#x0969;" t="&#x0969;"  note="THREE"/>
+<s d="&#x096A;" t="&#x096A;"  note="FOUR"/>
+<s d="&#x096B;" t="&#x096B;"  note="FIVE"/>
+<s d="&#x096C;" t="&#x096C;"  note="SIX"/>
+<s d="&#x096D;" t="&#x096D;"  note="SEVEN"/>
+<s d="&#x096E;" t="&#x096E;"  note="EIGHT"/>
+<s d="&#x096F;" t="&#x096F;"  note="NINE"/>
+<s d="&#x0966;" t="&#x0966;"  note="ZERO"/>
+</group>
+<group name="Eastern Arabic-Indic numbers" b="113">
+<s d="&#x06F1;" t="&#x06F1;"  note="ONE"/>
+<s d="&#x06F2;" t="&#x06F2;"  note="TWO"/>
+<s d="&#x06F3;" t="&#x06F3;"  note="THREE"/>
+<s d="&#x06F4;" t="&#x06F4;"  note="FOUR"/>
+<s d="&#x06F5;" t="&#x06F5;"  note="FIVE"/>
+<s d="&#x06F6;" t="&#x06F6;"  note="SIX"/>
+<s d="&#x06F7;" t="&#x06F7;"  note="SEVEN"/>
+<s d="&#x06F8;" t="&#x06F8;"  note="EIGHT"/>
+<s d="&#x06F9;" t="&#x06F9;"  note="NINE"/>
+<s d="&#x06F0;" t="&#x06F0;"  note="ZERO"/>
+</group>
+<group name="Arabic-Indic numbers" b="113">
+<s d="&#x0661;" t="&#x0661;"  note="ONE"/>
+<s d="&#x0662;" t="&#x0662;"  note="TWO"/>
+<s d="&#x0663;" t="&#x0663;"  note="THREE"/>
+<s d="&#x0664;" t="&#x0664;"  note="FOUR"/>
+<s d="&#x0665;" t="&#x0665;"  note="FIVE"/>
+<s d="&#x0666;" t="&#x0666;"  note="SIX"/>
+<s d="&#x0667;" t="&#x0667;"  note="SEVEN"/>
+<s d="&#x0668;" t="&#x0668;"  note="EIGHT"/>
+<s d="&#x0669;" t="&#x0669;"  note="NINE"/>
+<s d="&#x0660;" t="&#x0660;"  note="ZERO"/>
+</group>
+<group name="Hyphens" b="112">
+<s d="&#x002D;" t="&#x002D;"  note="hyphen minus"/>
+<s d="&#x00AD;" t="&#x00AD;"  note="soft hyphen "/>
+<s d="&#x058A;" t="&#x058A;"  note="armenian hyphen "/>
+<s d="&#x2012;" t="&#x2012;"  note="figure dash hyphen "/>
+<s d="&#x2015;" t="&#x2015;"  note="horiz bar hyphen "/>
+<s d="_" t=" " note="underscore"/>
+<s d="-" t="-" note="minus" />
+<s d="&#x2581;" t="&#x2581;"  note="lower 1/8 block "/>
+<s d="&#x2582;" t="&#x2582;"  note="lower 1/4 block "/>
+<s d="&#x207B;" t="&#x207B;"  note="superscript minus  "/>
+<s d="&#x301C;" t="&#x301C;"  note="wave dash "/>
+<s d="&#x3030;" t="&#x3030;"  note="wavy dash"/>
+<s d="&#x1806;" t="&#x1806;"  note="mongolian hyphen "/>
+<s d="&#x007E;" t="&#x007E;"  note=" wavy tilde "/>
+<s d="&#x2013;" t="&#x2013;" note="em dash"/>
+<s d="&#x2026;" t="&#x2026;" note="ellipsis"/>
+<s d="&#x25CA;" t="&#x9;" note="TAB (represented by a diamond)"/>
+</group>
+<group name="Enter keys" b="112">
+<s d="&#x21B4;" t="&#x000A;" note="Line feed / Paragraph separator"/>
+<s d="&#x21B5;" t="&#x000D;" note="Control character, known as Carriage return"/>
+<s d="&#x240D;" t="&#x008D;" note="Reverse line feed Control character"/>
+<s d="&#x21B4;" t="&#x21B4;" note="right and down arrow"/>
+<s d="&#x21B5;" t="&#x21B5;" note="down arrow corner left (good for 'enter')"/>
+<s d="&#x23CE;" t="&#x23CE;" note="down arrow corner left (hollow return symbol, good for 'enter')"/>
+<s d="&#x240D;" t="&#x240D;" note="Symbol for carriage return (CR)"/>
+<s d="&#x2510;" t="&#x2510;" note="box down and left"/>
+<s d="&#x2324;" t="&#x2324;" note="key, enter (-^-)"/>
+<s d="&#x2386;" t="&#x2386;" note="enter symbol (arrow into box)"/>
+<s d="&#x2409;" t="&#x2409;" note="Symbol for tab (HT)"/>
+<s d="&#x240A;" t="&#x240A;" note="Symbol for line feed (LF)"/>
+<s d="&#x2424;" t="&#x2424;" note="Symbol for new line (NL)"/>
+<s d="&#x3037;" t="&#x3037;" note="Line feed separator symbol, ideograph (XX)"/>
+<s d="&#x4dd7;" t="&#x4dd7;" note="HEXAGRAM FOR RETURN"/>
+<s d="&#8594;" t="&#8594;" note="r arrow" b="65"/>
+<s d="&#8592;" t="&#8592;" note="l arrow" b="65"/>
+<s d="&#8593;" t="&#8593;" note="u arrow" b="65"/>
+<s d="&#8595;" t="&#8595;" note="d arrow" b="65"/>
+</group>
+<group name="Characters with extra marks eg underline and surrounding box" b="112">
+<s d="&#x235E;" t="&apos;" note="quote mark apostrophe with box round it"/>
+<s b="105" d="&#x2358;" t="&apos;" note="underlined apostrophe - we used this until we found it was not supported by the fonts in ubuntu"/>
+<s d="&#x236E;" t=";" note="underlined semicolon"/>
+<s d="&#x236A;" t="," note="overlined comma"/>
+<s d="&#x235A;" t="_" note="underline with things above"/>
+<s d="&#x235B;" t="_" note="underline with things above"/>
+<s d="&#x235C;" t="_" note="underline with things above"/>
+<s d="&#x275B;" t="&#x2018;" note="exaggerated left quote"/>
+<s d="&#x275C;" t="&#x2019;" note="exaggerated right quote"/>
+<s d="&#x275D;" t="&#x201C;" note="exaggerated left quote"/>
+<s d="&#x275E;" t="&#x201D;" note="exaggerated right quote"/>
+</group>
+<group name="Fractions" b="112">
+<s d="&#x00BC;"  t="&#x00BC;" note=" fraction "/>
+<s d="&#x00BD;"  t="&#x00BD;" note=" fraction "/>
+<s d="&#x00BE;"  t="&#x00BE;" note=" fraction "/>
+<s d="&#x2153;" t="&#x2153;" note="1/3"/>
+<s d="&#x2154;" t="&#x2154;" note="2/3"/>
+<s d="&#x2155;" t="&#x2155;" note="1/5"/>
+<s d="&#x2156;" t="&#x2156;" note="2/5"/>
+<s d="&#x2157;" t="&#x2157;" note="3/5"/>
+<s d="&#x2158;" t="&#x2158;" note="4/5"/>
+<s d="&#x2159;" t="&#x2159;" note="1/6"/>
+<s d="&#x215A;" t="&#x215A;" note="5/6"/>
+<s d="&#x215B;" t="&#x215B;" note="1/8"/>
+<s d="&#x215C;" t="&#x215C;" note="3/8"/>
+<s d="&#x215D;" t="&#x215D;" note="5/8"/>
+<s d="&#x215E;" t="&#x215E;" note="7/8"/>
+<s d="&#x215F;" t="&#x215F;" note="1/"/>
+</group>
+<group name="Symbol Characters found in a korean text" b="112">
+<s d="&#x2299;" t="&#x2299;"  note="circle dot "/>
+<s d="&#x25A3;" t="&#x25A3;"  note="boxed boxdot "/>
+<s d="&#x25B6;" t="&#x25B6;"  note="right arrow filled"/>
+<s d="&#x25B2;" t="&#x25B2;"  note="up arrow filled "/>
+</group>
+<group name="Separators" b="112">
+<s d="&#x2395;" t="&#x2395;"  note="technical square "/>
+<s d="&#x2337;" t="&#x2337;"  note="thin technical square "/>
+<s d="&#x234A;" t="&#x234A;"  note="perp "/>
+<s d="&#x22A5;" t="&#x22A5;"  note="perp "/>
+<s d="&#x2294;" t="&#x2294;"  note="U box "/>
+<s d="&#x25A1;" t="&#x25A1;"  note=" box "/>
+<s d="&#x22C8;" t="&#x22C8;"  note=" bowtie "/>
+<s d="&#x2445;" t="&#x2445;"  note=" bowtie "/>
+<s d="&#x25CA;" t="&#x25CA;"  note=" diamond "/>
+<s d="&#x25C7;" t="&#x25C7;"  note=" diamond "/>
+<s d="&#x25AF;" t="&#x25AF;"  note=" rectgle "/>
+<s d="&#x25BB;" t="&#x25BB;"  note="hollow rectgle "/>
+<s d="&#x2322;" t="&#x2322;"  note="frown "/>
+<s d="&#x25BB;" t="&#x25BB;"  note="hollow rectgle "/>
+<s d="&#x25BB;" t="&#x25BB;"  note=" triangle" />
+<s d="&#x2319;" t="&#x2319;"  note=" negator"/>
+<s d="&#x2341;" t="&#x2341;" />
+<s d="&#x2015;" t="&#x2015;" />
+<s d="&#x2014;" t="&#x2014;" />
+<s d="&#x2013;" t="&#x2013;" />
+<s d="&#x2012;" t="&#x2012;" />
+<s d="&#x203F;" t="&#x203F;" note="under tie/slur (renders as line in dasher)" />
+<s d="&#x2040;" t="&#x2040;" note="over tie/slur (renders as tilde)"/>
+<s d="&#x2610;" t="&#x2610;" note=" square"/>
+<s d="&#x0df4;" t="&#x0df4;" note="sinhala space" />
+</group>     
+<group name="Arabic punctuation" b="113">
+<s d="&#x060C;" t="&#x060C;"  note="Arabic comma"/>
+<s d="&#x061B;" t="&#x061B;"  note="Arabic semicolon"/>
+<s d="&#x061F;" t="&#x061F;"  note="Arabic question mark"/>
+<s d="&#x066A;" t="&#x066A;"  note="Arabic percent"/>
+</group>
+<group name="Check! (OCR characters)" b="112">
+<s d="&#x2440;" t="&#x2440;" note=" OCR HOOK  "/>
+<s d="&#x2441;" t="&#x2441;" note=" OCR CHAIR  "/>
+<s d="&#x2442;" t="&#x2442;" note=" OCR FORK  "/>
+<s d="&#x2443;" t="&#x2443;" note=" OCR INVERTED FORK  "/>
+<s d="&#x2444;" t="&#x2444;" note=" OCR BELT BUCKLE  "/>
+<s d="&#x2445;" t="&#x2445;" note=" OCR BOW TIE  "/>
+<s d="&#x2446;" t="&#x2446;" note=" OCR BRANCH BANK IDENTIFICATION  "/>
+<s d="&#x2447;" t="&#x2447;" note=" OCR AMOUNT OF CHECK  "/>
+<s d="&#x2448;" t="&#x2448;" note=" OCR DASH  "/>
+<s d="&#x2449;" t="&#x2449;" note=" OCR CUSTOMER ACCOUNT NUMBER  "/>
+<s d="&#x244A;" t="&#x244A;" note=" OCR DOUBLE BACKSLASH "/>
+</group>
+<group name="Funny characters English speakers might want" b="112">
+<s d="&#x00BC;"  t="&#x00BC;" note=" fraction "/>
+<s d="&#x00BD;"  t="&#x00BD;" note=" fraction "/>
+<s d="&#x00BE;"  t="&#x00BE;" note=" fraction "/>
+<s d="&#x00B5;"  t="&#x00B5;" note=" micro (mu) "/>
+<s d="&#x00C6;"  t="&#x00C6;" note=" AE "/>
+<s d="&#x00E6;"  t="&#x00E6;" note=" ae "/>
+<s d="&#x0152;"  t="&#x0152;" note=" OE "/>
+<s d="&#x0153;"  t="&#x0153;" note=" oe"/>
+<s d="&#x00A2;"  t="&#x00A2;" note=" cent "/>
+<s d="&#x00A9;"  t="&#x00A9;" note=" copyright "/>
+<s d="&#x00AC;"  t="&#x00AC;" note=" NOT symbol "/>
+<s d="&#x00B1;"  t="&#x00B1;" note=" plus or minus "/>
+<s d="&#x25cc;"  t="&#x25cc;" note=" DOTTED CIRCLE "/>
+</group>
+<group name="Combining controls - useful in Arabic?" b="119">
+<s d="|"  t="&#x200C;" note="ZERO WIDTH NON-JOINER "/>
+<s d="-"  t="&#x200D;" note="ZERO WIDTH JOINER "/>
+</group>
+<group name="Combining accents that might be used in French, German, Spanish" b="115">
+<s d="&#x0060;"  t="&#x0300;" note="COMBINING GRAVE ACCENT  "/>
+<s d="&#x00B4;"  t="&#x0301;" note="COMBINING ACUTE ACCENT  "/>
+<s d="&#x005E;"  t="&#x0302;" note="COMBINING CIRCUMFLEX ACCENT  "/>
+<s d="&#x007E;"  t="&#x0303;" note="COMBINING TILDE  "/>
+<s d="&#x00AF;"  t="&#x0304;" note="COMBINING MACRON  "/>
+<s d="&#x00B8;"  t="&#x0326;" note="COMBINING COMMA BELOW (rather like CEDILLA)  "/>
+<s d="&#x00B8;"  t="&#x0327;" note="COMBINING CEDILLA  "/>
+<s d="&#x00A8;"  t="&#x0308;" note="COMBINING DIAERESIS or UMLAUT "/>
+</group>
+<group name="Things that look a bit like Combining accents" b="111">
+<s d="&#x0060;"  t="&#x02CB;" note="MODIFIER GRAVE ACCENT  "/>
+<s d="&#x005E;"  t="&#x02C6;" note="MODIFIER CIRCUMFLEX  "/>
+<s d="&#x005E;"  t="&#x02C4;" note="COMBINING CIRCUMFLEX ACCENT  "/>
+<s d="&#x005E;"  t="&#x2303;" note="COMBINING CIRCUMFLEX ACCENT  "/>
+</group>
+<group name="Combining accents" b="111">
+<s d="&#x25cc;&#x0300;" t="&#x0300;" note="&#x0060; COMBINING GRAVE ACCENT  "/>
+<s d="&#x25cc;&#x0301;" t="&#x0301;" note="&#x00B4; COMBINING ACUTE ACCENT  "/>
+<s d="&#x25cc;&#x0302;" t="&#x0302;" note="&#x005E; COMBINING CIRCUMFLEX ACCENT  "/>
+<s d="&#x25cc;&#x0303;" t="&#x0303;" note="&#x007E; COMBINING TILDE  "/>
+<s d="&#x25cc;&#x0304;" t="&#x0304;" note="&#x00AF; COMBINING MACRON  "/>
+<s d="&#x25cc;&#x0327;" t="&#x0327;" note="&#x00B8; COMBINING CEDILLA  "/>
+<s d="&#x25cc;&#x0305;" t="&#x0305;" note="COMBINING OVERLINE  "/>
+<s d="&#x25cc;&#x0306;" t="&#x0306;" note="COMBINING BREVE  "/>
+<s d="&#x25cc;&#x0307;" t="&#x0307;" note="COMBINING DOT ABOVE  "/>
+<s d="&#x25cc;&#x00A8;"  t="&#x0308;" note="COMBINING DIAERESIS  "/>
+<s d="&#x25cc;&#x0309;" t="&#x0309;" note="COMBINING HOOK ABOVE  "/>
+<s d="&#x25cc;&#x030A;" t="&#x030A;" note="COMBINING RING ABOVE  "/>
+<s d="&#x25cc;&#x030B;" t="&#x030B;" note="COMBINING DOUBLE ACUTE ACCENT  "/>
+<s d="&#x25cc;&#x030C;" t="&#x030C;" note="COMBINING CARON  "/>
+<s d="&#x25cc;&#x030D;" t="&#x030D;" note="COMBINING VERTICAL LINE ABOVE  "/>
+<s d="&#x25cc;&#x030E;" t="&#x030E;" note="COMBINING DOUBLE VERTICAL LINE ABOVE  "/>
+<s d="&#x25cc;&#x030F;" t="&#x030F;" note="COMBINING DOUBLE GRAVE ACCENT  "/>
+<s d="&#x25cc;&#x0310;" t="&#x0310;" note="COMBINING CANDRABINDU  "/>
+<s d="&#x25cc;&#x0311;" t="&#x0311;" note="COMBINING INVERTED BREVE  "/>
+<s d="&#x25cc;&#x0312;" t="&#x0312;" note="COMBINING TURNED COMMA ABOVE  "/>
+<s d="&#x25cc;&#x0313;" t="&#x0313;" note="COMBINING COMMA ABOVE  "/>
+<s d="&#x25cc;&#x0314;" t="&#x0314;" note="COMBINING REVERSED COMMA ABOVE  "/>
+<s d="&#x25cc;&#x0315;" t="&#x0315;" note="COMBINING COMMA ABOVE RIGHT  "/>
+<s d="&#x25cc;&#x0316;" t="&#x0316;" note="COMBINING GRAVE ACCENT BELOW  "/>
+<s d="&#x25cc;&#x0317;" t="&#x0317;" note="COMBINING ACUTE ACCENT BELOW  "/>
+<s d="&#x25cc;&#x0318;" t="&#x0318;" note="COMBINING LEFT TACK BELOW  "/>
+<s d="&#x25cc;&#x0319;" t="&#x0319;" note="COMBINING RIGHT TACK BELOW  "/>
+<s d="&#x25cc;&#x031A;" t="&#x031A;" note="COMBINING LEFT ANGLE ABOVE  "/>
+<s d="&#x25cc;&#x031B;" t="&#x031B;" note="COMBINING HORN  "/>
+<s d="&#x25cc;&#x031C;" t="&#x031C;" note="COMBINING LEFT HALF RING BELOW  "/>
+<s d="&#x25cc;&#x031D;" t="&#x031D;" note="COMBINING UP TACK BELOW  "/>
+<s d="&#x25cc;&#x031E;" t="&#x031E;" note="COMBINING DOWN TACK BELOW  "/>
+<s d="&#x25cc;&#x031F;" t="&#x031F;" note="COMBINING PLUS SIGN BELOW  "/>
+<s d="&#x25cc;&#x0320;" t="&#x0320;" note="COMBINING MINUS SIGN BELOW  "/>
+<s d="&#x25cc;&#x0321;" t="&#x0321;" note="COMBINING PALATALIZED HOOK BELOW  "/>
+<s d="&#x25cc;&#x0322;" t="&#x0322;" note="COMBINING RETROFLEX HOOK BELOW  "/>
+<s d="&#x25cc;&#x0323;" t="&#x0323;" note="COMBINING DOT BELOW  "/>
+<s d="&#x25cc;&#x0324;" t="&#x0324;" note="COMBINING DIAERESIS BELOW  "/>
+<s d="&#x25cc;&#x0325;" t="&#x0325;" note="COMBINING RING BELOW  "/>
+<s d="&#x25cc;&#x0326;" t="&#x0326;" note="COMBINING COMMA BELOW  "/>
+<s d="&#x25cc;&#x0328;" t="&#x0328;" note="COMBINING OGONEK  "/>
+<s d="&#x25cc;&#x0329;" t="&#x0329;" note="COMBINING VERTICAL LINE BELOW  "/>
+<s d="&#x25cc;&#x032A;" t="&#x032A;" note="COMBINING BRIDGE BELOW  "/>
+<s d="&#x25cc;&#x032B;" t="&#x032B;" note="COMBINING INVERTED DOUBLE ARCH BELOW  "/>
+<s d="&#x25cc;&#x032C;" t="&#x032C;" note="COMBINING CARON BELOW  "/>
+<s d="&#x25cc;&#x032D;" t="&#x032D;" note="COMBINING CIRCUMFLEX ACCENT BELOW  "/>
+<s d="&#x25cc;&#x032E;" t="&#x032E;" note="COMBINING BREVE BELOW  "/>
+<s d="&#x25cc;&#x032F;" t="&#x032F;" note="COMBINING INVERTED BREVE BELOW  "/>
+<s d="&#x25cc;&#x0330;" t="&#x0330;" note="COMBINING TILDE BELOW  "/>
+<s d="&#x25cc;&#x0331;" t="&#x0331;" note="COMBINING MACRON BELOW  "/>
+<s d="&#x25cc;&#x0332;" t="&#x0332;" note="COMBINING LOW LINE  "/>
+<s d="&#x25cc;&#x0333;" t="&#x0333;" note="COMBINING DOUBLE LOW LINE  "/>
+<s d="&#x25cc;&#x0334;" t="&#x0334;" note="COMBINING TILDE OVERLAY  "/>
+<s d="&#x25cc;&#x0335;" t="&#x0335;" note="COMBINING SHORT STROKE OVERLAY  "/>
+<s d="&#x25cc;&#x0336;" t="&#x0336;" note="COMBINING LONG STROKE OVERLAY  "/>
+<s d="&#x25cc;&#x0337;" t="&#x0337;" note="COMBINING SHORT SOLIDUS OVERLAY  "/>
+<s d="&#x25cc;&#x0338;" t="&#x0338;" note="COMBINING LONG SOLIDUS OVERLAY  "/>
+<s d="&#x25cc;&#x0339;" t="&#x0339;" note="COMBINING RIGHT HALF RING BELOW  "/>
+<s d="&#x25cc;&#x033A;" t="&#x033A;" note="COMBINING INVERTED BRIDGE BELOW  "/>
+<s d="&#x25cc;&#x033B;" t="&#x033B;" note="COMBINING SQUARE BELOW  "/>
+<s d="&#x25cc;&#x033C;" t="&#x033C;" note="COMBINING SEAGULL BELOW  "/>
+<s d="&#x25cc;&#x033D;" t="&#x033D;" note="COMBINING X ABOVE  "/>
+<s d="&#x25cc;&#x033E;" t="&#x033E;" note="COMBINING VERTICAL TILDE  "/>
+<s d="&#x25cc;&#x033F;" t="&#x033F;" note="COMBINING DOUBLE OVERLINE  "/>
+<s d="&#x25cc;&#x0340;" t="&#x0340;" note="COMBINING GRAVE TONE MARK  "/>
+<s d="&#x25cc;&#x0341;" t="&#x0341;" note="COMBINING ACUTE TONE MARK  "/>
+<s d="&#x25cc;&#x0342;" t="&#x0342;" note="COMBINING GREEK PERISPOMENI  "/>
+<s d="&#x25cc;&#x0343;" t="&#x0343;" note="COMBINING GREEK KORONIS  "/>
+<s d="&#x25cc;&#x0344;" t="&#x0344;" note="COMBINING GREEK DIALYTIKA TONOS  "/>
+<s d="&#x25cc;&#x0345;" t="&#x0345;" note="COMBINING GREEK YPOGEGRAMMENI  "/>
+<s d="&#x25cc;&#x0346;" t="&#x0346;" note="COMBINING BRIDGE ABOVE  "/>
+<s d="&#x25cc;&#x0347;" t="&#x0347;" note="COMBINING EQUALS SIGN BELOW  "/>
+<s d="&#x25cc;&#x0348;" t="&#x0348;" note="COMBINING DOUBLE VERTICAL LINE BELOW  "/>
+<s d="&#x25cc;&#x0349;" t="&#x0349;" note="COMBINING LEFT ANGLE BELOW  "/>
+<s d="&#x25cc;&#x034A;" t="&#x034A;" note="COMBINING NOT TILDE ABOVE  "/>
+<s d="&#x25cc;&#x034B;" t="&#x034B;" note="COMBINING HOMOTHETIC ABOVE  "/>
+<s d="&#x25cc;&#x034C;" t="&#x034C;" note="COMBINING ALMOST EQUAL TO ABOVE  "/>
+<s d="&#x25cc;&#x034D;" t="&#x034D;" note="COMBINING LEFT RIGHT ARROW BELOW  "/>
+<s d="&#x25cc;&#x034E;" t="&#x034E;" note="COMBINING UPWARDS ARROW BELOW  "/>
+<s d="&#x25cc;&#x034F;" t="&#x034F;" note="COMBINING GRAPHEME JOINER  "/>
+<s d="&#x25cc;&#x0350;" t="&#x0350;" note="COMBINING RIGHT ARROWHEAD ABOVE  "/>
+<s d="&#x25cc;&#x0351;" t="&#x0351;" note="COMBINING LEFT HALF RING ABOVE  "/>
+<s d="&#x25cc;&#x0352;" t="&#x0352;" note="COMBINING FERMATA  "/>
+<s d="&#x25cc;&#x0353;" t="&#x0353;" note="COMBINING X BELOW  "/>
+<s d="&#x25cc;&#x0354;" t="&#x0354;" note="COMBINING LEFT ARROWHEAD BELOW  "/>
+<s d="&#x25cc;&#x0355;" t="&#x0355;" note="COMBINING RIGHT ARROWHEAD BELOW  "/>
+<s d="&#x25cc;&#x0356;" t="&#x0356;" note="COMBINING RIGHT ARROWHEAD AND UP ARROWHEAD BELOW "/>
+<s d="&#x25cc;&#x0357;" t="&#x0357;" note="COMBINING RIGHT HALF RING ABOVE  "/>
+<s d="&#x25cc;&#x035D;" t="&#x035D;" note="COMBINING DOUBLE BREVE  "/>
+<s d="&#x25cc;&#x035E;" t="&#x035E;" note="COMBINING DOUBLE MACRON  "/>
+<s d="&#x25cc;&#x035F;" t="&#x035F;" note="COMBINING DOUBLE MACRON BELOW  "/>
+<s d="&#x25cc;&#x0360;" t="&#x0360;" note="COMBINING DOUBLE TILDE  "/>
+<s d="&#x25cc;&#x0361;" t="&#x0361;" note="COMBINING DOUBLE INVERTED BREVE "/>
+</group>
+<group name="Musical Symbols" >
+<s d="&#x1D100;" t="&#x1D100;" note=" MUSICAL SYMBOL SINGLE BARLINE  "/>
+<s d="&#x1D101;" t="&#x1D101;" note=" MUSICAL SYMBOL DOUBLE BARLINE  "/>
+<s d="&#x1D102;" t="&#x1D102;" note=" MUSICAL SYMBOL FINAL BARLINE  "/>
+<s d="&#x1D103;" t="&#x1D103;" note=" MUSICAL SYMBOL REVERSE FINAL BARLINE  "/>
+<s d="&#x1D104;" t="&#x1D104;" note=" MUSICAL SYMBOL DASHED BARLINE  "/>
+<s d="&#x1D105;" t="&#x1D105;" note=" MUSICAL SYMBOL SHORT BARLINE  "/>
+<s d="&#x1D106;" t="&#x1D106;" note=" MUSICAL SYMBOL LEFT REPEAT SIGN  "/>
+<s d="&#x1D107;" t="&#x1D107;" note=" MUSICAL SYMBOL RIGHT REPEAT SIGN  "/>
+<s d="&#x1D108;" t="&#x1D108;" note=" MUSICAL SYMBOL REPEAT DOTS  "/>
+<s d="&#x1D109;" t="&#x1D109;" note=" MUSICAL SYMBOL DAL SEGNO  "/>
+<s d="&#x1D10A;" t="&#x1D10A;" note=" MUSICAL SYMBOL DA CAPO  "/>
+<s d="&#x1D10B;" t="&#x1D10B;" note=" MUSICAL SYMBOL SEGNO  "/>
+<s d="&#x1D10C;" t="&#x1D10C;" note=" MUSICAL SYMBOL CODA  "/>
+<s d="&#x1D10D;" t="&#x1D10D;" note=" MUSICAL SYMBOL REPEATED FIGURE-1  "/>
+<s d="&#x1D10E;" t="&#x1D10E;" note=" MUSICAL SYMBOL REPEATED FIGURE-2  "/>
+<s d="&#x1D10F;" t="&#x1D10F;" note=" MUSICAL SYMBOL REPEATED FIGURE-3  "/>
+<s d="&#x1D110;" t="&#x1D110;" note=" MUSICAL SYMBOL FERMATA  "/>
+<s d="&#x1D111;" t="&#x1D111;" note=" MUSICAL SYMBOL FERMATA BELOW  "/>
+<s d="&#x1D112;" t="&#x1D112;" note=" MUSICAL SYMBOL BREATH MARK  "/>
+<s d="&#x1D113;" t="&#x1D113;" note=" MUSICAL SYMBOL CAESURA  "/>
+<s d="&#x1D114;" t="&#x1D114;" note=" MUSICAL SYMBOL BRACE  "/>
+<s d="&#x1D115;" t="&#x1D115;" note=" MUSICAL SYMBOL BRACKET  "/>
+<s d="&#x1D116;" t="&#x1D116;" note=" MUSICAL SYMBOL ONE-LINE STAFF  "/>
+<s d="&#x1D117;" t="&#x1D117;" note=" MUSICAL SYMBOL TWO-LINE STAFF  "/>
+<s d="&#x1D118;" t="&#x1D118;" note=" MUSICAL SYMBOL THREE-LINE STAFF  "/>
+<s d="&#x1D119;" t="&#x1D119;" note=" MUSICAL SYMBOL FOUR-LINE STAFF  "/>
+<s d="&#x1D11A;" t="&#x1D11A;" note=" MUSICAL SYMBOL FIVE-LINE STAFF  "/>
+<s d="&#x1D11B;" t="&#x1D11B;" note=" MUSICAL SYMBOL SIX-LINE STAFF  "/>
+<s d="&#x1D11C;" t="&#x1D11C;" note=" MUSICAL SYMBOL SIX-STRING FRETBOARD  "/>
+<s d="&#x1D11D;" t="&#x1D11D;" note=" MUSICAL SYMBOL FOUR-STRING FRETBOARD  "/>
+<s d="&#x1D11E;" t="&#x1D11E;" note=" MUSICAL SYMBOL G CLEF  "/>
+<s d="&#x1D11F;" t="&#x1D11F;" note=" MUSICAL SYMBOL G CLEF OTTAVA ALTA  "/>
+<s d="&#x1D120;" t="&#x1D120;" note=" MUSICAL SYMBOL G CLEF OTTAVA BASSA  "/>
+<s d="&#x1D121;" t="&#x1D121;" note=" MUSICAL SYMBOL C CLEF  "/>
+<s d="&#x1D122;" t="&#x1D122;" note=" MUSICAL SYMBOL F CLEF  "/>
+<s d="&#x1D123;" t="&#x1D123;" note=" MUSICAL SYMBOL F CLEF OTTAVA ALTA  "/>
+<s d="&#x1D124;" t="&#x1D124;" note=" MUSICAL SYMBOL F CLEF OTTAVA BASSA  "/>
+<s d="&#x1D125;" t="&#x1D125;" note=" MUSICAL SYMBOL DRUM CLEF-1  "/>
+<s d="&#x1D126;" t="&#x1D126;" note=" MUSICAL SYMBOL DRUM CLEF-2  "/>
+<s d="&#x1D12A;" t="&#x1D12A;" note=" MUSICAL SYMBOL DOUBLE SHARP  "/>
+<s d="&#x1D12B;" t="&#x1D12B;" note=" MUSICAL SYMBOL DOUBLE FLAT  "/>
+<s d="&#x1D12C;" t="&#x1D12C;" note=" MUSICAL SYMBOL FLAT UP  "/>
+<s d="&#x1D12D;" t="&#x1D12D;" note=" MUSICAL SYMBOL FLAT DOWN  "/>
+<s d="&#x1D12E;" t="&#x1D12E;" note=" MUSICAL SYMBOL NATURAL UP  "/>
+<s d="&#x1D12F;" t="&#x1D12F;" note=" MUSICAL SYMBOL NATURAL DOWN  "/>
+<s d="&#x1D130;" t="&#x1D130;" note=" MUSICAL SYMBOL SHARP UP  "/>
+<s d="&#x1D131;" t="&#x1D131;" note=" MUSICAL SYMBOL SHARP DOWN  "/>
+<s d="&#x1D132;" t="&#x1D132;" note=" MUSICAL SYMBOL QUARTER TONE SHARP  "/>
+<s d="&#x1D133;" t="&#x1D133;" note=" MUSICAL SYMBOL QUARTER TONE FLAT  "/>
+<s d="&#x1D134;" t="&#x1D134;" note=" MUSICAL SYMBOL COMMON TIME  "/>
+<s d="&#x1D135;" t="&#x1D135;" note=" MUSICAL SYMBOL CUT TIME  "/>
+<s d="&#x1D136;" t="&#x1D136;" note=" MUSICAL SYMBOL OTTAVA ALTA  "/>
+<s d="&#x1D137;" t="&#x1D137;" note=" MUSICAL SYMBOL OTTAVA BASSA  "/>
+<s d="&#x1D138;" t="&#x1D138;" note=" MUSICAL SYMBOL QUINDICESIMA ALTA  "/>
+<s d="&#x1D139;" t="&#x1D139;" note=" MUSICAL SYMBOL QUINDICESIMA BASSA  "/>
+<s d="&#x1D13A;" t="&#x1D13A;" note=" MUSICAL SYMBOL MULTI REST  "/>
+<s d="&#x1D13B;" t="&#x1D13B;" note=" MUSICAL SYMBOL WHOLE REST  "/>
+<s d="&#x1D13C;" t="&#x1D13C;" note=" MUSICAL SYMBOL HALF REST  "/>
+<s d="&#x1D13D;" t="&#x1D13D;" note=" MUSICAL SYMBOL QUARTER REST  "/>
+<s d="&#x1D13E;" t="&#x1D13E;" note=" MUSICAL SYMBOL EIGHTH REST  "/>
+<s d="&#x1D13F;" t="&#x1D13F;" note=" MUSICAL SYMBOL SIXTEENTH REST  "/>
+<s d="&#x1D140;" t="&#x1D140;" note=" MUSICAL SYMBOL THIRTY-SECOND REST  "/>
+<s d="&#x1D141;" t="&#x1D141;" note=" MUSICAL SYMBOL SIXTY-FOURTH REST  "/>
+<s d="&#x1D142;" t="&#x1D142;" note=" MUSICAL SYMBOL ONE HUNDRED TWENTY-EIGHTH REST  "/>
+<s d="&#x1D143;" t="&#x1D143;" note=" MUSICAL SYMBOL X NOTEHEAD  "/>
+<s d="&#x1D144;" t="&#x1D144;" note=" MUSICAL SYMBOL PLUS NOTEHEAD  "/>
+<s d="&#x1D145;" t="&#x1D145;" note=" MUSICAL SYMBOL CIRCLE X NOTEHEAD  "/>
+<s d="&#x1D146;" t="&#x1D146;" note=" MUSICAL SYMBOL SQUARE NOTEHEAD WHITE  "/>
+<s d="&#x1D147;" t="&#x1D147;" note=" MUSICAL SYMBOL SQUARE NOTEHEAD BLACK  "/>
+<s d="&#x1D148;" t="&#x1D148;" note=" MUSICAL SYMBOL TRIANGLE NOTEHEAD UP WHITE  "/>
+<s d="&#x1D149;" t="&#x1D149;" note=" MUSICAL SYMBOL TRIANGLE NOTEHEAD UP BLACK  "/>
+<s d="&#x1D14A;" t="&#x1D14A;" note=" MUSICAL SYMBOL TRIANGLE NOTEHEAD LEFT WHITE  "/>
+<s d="&#x1D14B;" t="&#x1D14B;" note=" MUSICAL SYMBOL TRIANGLE NOTEHEAD LEFT BLACK  "/>
+<s d="&#x1D14C;" t="&#x1D14C;" note=" MUSICAL SYMBOL TRIANGLE NOTEHEAD RIGHT WHITE  "/>
+<s d="&#x1D14D;" t="&#x1D14D;" note=" MUSICAL SYMBOL TRIANGLE NOTEHEAD RIGHT BLACK  "/>
+<s d="&#x1D14E;" t="&#x1D14E;" note=" MUSICAL SYMBOL TRIANGLE NOTEHEAD DOWN WHITE  "/>
+<s d="&#x1D14F;" t="&#x1D14F;" note=" MUSICAL SYMBOL TRIANGLE NOTEHEAD DOWN BLACK  "/>
+<s d="&#x1D150;" t="&#x1D150;" note=" MUSICAL SYMBOL TRIANGLE NOTEHEAD UP RIGHT WHITE  "/>
+<s d="&#x1D151;" t="&#x1D151;" note=" MUSICAL SYMBOL TRIANGLE NOTEHEAD UP RIGHT BLACK  "/>
+<s d="&#x1D152;" t="&#x1D152;" note=" MUSICAL SYMBOL MOON NOTEHEAD WHITE  "/>
+<s d="&#x1D153;" t="&#x1D153;" note=" MUSICAL SYMBOL MOON NOTEHEAD BLACK  "/>
+<s d="&#x1D154;" t="&#x1D154;" note=" MUSICAL SYMBOL TRIANGLE-ROUND NOTEHEAD DOWN WHITE  "/>
+<s d="&#x1D155;" t="&#x1D155;" note=" MUSICAL SYMBOL TRIANGLE-ROUND NOTEHEAD DOWN BLACK  "/>
+<s d="&#x1D156;" t="&#x1D156;" note=" MUSICAL SYMBOL PARENTHESIS NOTEHEAD  "/>
+<s d="&#x1D157;" t="&#x1D157;" note=" MUSICAL SYMBOL VOID NOTEHEAD  "/>
+<s d="&#x1D158;" t="&#x1D158;" note=" MUSICAL SYMBOL NOTEHEAD BLACK  "/>
+<s d="&#x1D159;" t="&#x1D159;" note=" MUSICAL SYMBOL NULL NOTEHEAD  "/>
+<s d="&#x1D15A;" t="&#x1D15A;" note=" MUSICAL SYMBOL CLUSTER NOTEHEAD WHITE  "/>
+<s d="&#x1D15B;" t="&#x1D15B;" note=" MUSICAL SYMBOL CLUSTER NOTEHEAD BLACK  "/>
+<s d="&#x1D15C;" t="&#x1D15C;" note=" MUSICAL SYMBOL BREVE  "/>
+<s d="&#x1D15D;" t="&#x1D15D;" note=" MUSICAL SYMBOL WHOLE NOTE  "/>
+<s d="&#x1D15E;" t="&#x1D15E;" note=" MUSICAL SYMBOL HALF NOTE  "/>
+<s d="&#x1D15F;" t="&#x1D15F;" note=" MUSICAL SYMBOL QUARTER NOTE  "/>
+<s d="&#x1D160;" t="&#x1D160;" note=" MUSICAL SYMBOL EIGHTH NOTE  "/>
+<s d="&#x1D161;" t="&#x1D161;" note=" MUSICAL SYMBOL SIXTEENTH NOTE  "/>
+<s d="&#x1D162;" t="&#x1D162;" note=" MUSICAL SYMBOL THIRTY-SECOND NOTE  "/>
+<s d="&#x1D163;" t="&#x1D163;" note=" MUSICAL SYMBOL SIXTY-FOURTH NOTE  "/>
+<s d="&#x1D164;" t="&#x1D164;" note=" MUSICAL SYMBOL ONE HUNDRED TWENTY-EIGHTH NOTE  "/>
+<s d="&#x1D165;" t="&#x1D165;" note=" MUSICAL SYMBOL COMBINING STEM  "/>
+<s d="&#x1D166;" t="&#x1D166;" note=" MUSICAL SYMBOL COMBINING SPRECHGESANG STEM  "/>
+<s d="&#x1D167;" t="&#x1D167;" note=" MUSICAL SYMBOL COMBINING TREMOLO-1  "/>
+<s d="&#x1D168;" t="&#x1D168;" note=" MUSICAL SYMBOL COMBINING TREMOLO-2  "/>
+<s d="&#x1D169;" t="&#x1D169;" note=" MUSICAL SYMBOL COMBINING TREMOLO-3  "/>
+<s d="&#x1D16A;" t="&#x1D16A;" note=" MUSICAL SYMBOL FINGERED TREMOLO-1  "/>
+<s d="&#x1D16B;" t="&#x1D16B;" note=" MUSICAL SYMBOL FINGERED TREMOLO-2  "/>
+<s d="&#x1D16C;" t="&#x1D16C;" note=" MUSICAL SYMBOL FINGERED TREMOLO-3  "/>
+<s d="&#x1D16D;" t="&#x1D16D;" note=" MUSICAL SYMBOL COMBINING AUGMENTATION DOT  "/>
+<s d="&#x1D16E;" t="&#x1D16E;" note=" MUSICAL SYMBOL COMBINING FLAG-1  "/>
+<s d="&#x1D16F;" t="&#x1D16F;" note=" MUSICAL SYMBOL COMBINING FLAG-2  "/>
+<s d="&#x1D170;" t="&#x1D170;" note=" MUSICAL SYMBOL COMBINING FLAG-3  "/>
+<s d="&#x1D171;" t="&#x1D171;" note=" MUSICAL SYMBOL COMBINING FLAG-4  "/>
+<s d="&#x1D172;" t="&#x1D172;" note=" MUSICAL SYMBOL COMBINING FLAG-5  "/>
+<s d="&#x1D173;" t="&#x1D173;" note=" MUSICAL SYMBOL BEGIN BEAM  "/>
+<s d="&#x1D174;" t="&#x1D174;" note=" MUSICAL SYMBOL END BEAM  "/>
+<s d="&#x1D175;" t="&#x1D175;" note=" MUSICAL SYMBOL BEGIN TIE  "/>
+<s d="&#x1D176;" t="&#x1D176;" note=" MUSICAL SYMBOL END TIE  "/>
+<s d="&#x1D177;" t="&#x1D177;" note=" MUSICAL SYMBOL BEGIN SLUR  "/>
+<s d="&#x1D178;" t="&#x1D178;" note=" MUSICAL SYMBOL END SLUR  "/>
+<s d="&#x1D179;" t="&#x1D179;" note=" MUSICAL SYMBOL BEGIN PHRASE  "/>
+<s d="&#x1D17A;" t="&#x1D17A;" note=" MUSICAL SYMBOL END PHRASE  "/>
+<s d="&#x1D17B;" t="&#x1D17B;" note=" MUSICAL SYMBOL COMBINING ACCENT  "/>
+<s d="&#x1D17C;" t="&#x1D17C;" note=" MUSICAL SYMBOL COMBINING STACCATO  "/>
+<s d="&#x1D17D;" t="&#x1D17D;" note=" MUSICAL SYMBOL COMBINING TENUTO  "/>
+<s d="&#x1D17E;" t="&#x1D17E;" note=" MUSICAL SYMBOL COMBINING STACCATISSIMO  "/>
+<s d="&#x1D17F;" t="&#x1D17F;" note=" MUSICAL SYMBOL COMBINING MARCATO  "/>
+<s d="&#x1D180;" t="&#x1D180;" note=" MUSICAL SYMBOL COMBINING MARCATO-STACCATO  "/>
+<s d="&#x1D181;" t="&#x1D181;" note=" MUSICAL SYMBOL COMBINING ACCENT-STACCATO  "/>
+<s d="&#x1D182;" t="&#x1D182;" note=" MUSICAL SYMBOL COMBINING LOURE  "/>
+<s d="&#x1D183;" t="&#x1D183;" note=" MUSICAL SYMBOL ARPEGGIATO UP  "/>
+<s d="&#x1D184;" t="&#x1D184;" note=" MUSICAL SYMBOL ARPEGGIATO DOWN  "/>
+<s d="&#x1D185;" t="&#x1D185;" note=" MUSICAL SYMBOL COMBINING DOIT  "/>
+<s d="&#x1D186;" t="&#x1D186;" note=" MUSICAL SYMBOL COMBINING RIP  "/>
+<s d="&#x1D187;" t="&#x1D187;" note=" MUSICAL SYMBOL COMBINING FLIP  "/>
+<s d="&#x1D188;" t="&#x1D188;" note=" MUSICAL SYMBOL COMBINING SMEAR  "/>
+<s d="&#x1D189;" t="&#x1D189;" note=" MUSICAL SYMBOL COMBINING BEND  "/>
+<s d="&#x1D18A;" t="&#x1D18A;" note=" MUSICAL SYMBOL COMBINING DOUBLE TONGUE  "/>
+<s d="&#x1D18B;" t="&#x1D18B;" note=" MUSICAL SYMBOL COMBINING TRIPLE TONGUE  "/>
+<s d="&#x1D18C;" t="&#x1D18C;" note=" MUSICAL SYMBOL RINFORZANDO  "/>
+<s d="&#x1D18D;" t="&#x1D18D;" note=" MUSICAL SYMBOL SUBITO  "/>
+<s d="&#x1D18E;" t="&#x1D18E;" note=" MUSICAL SYMBOL Z  "/>
+<s d="&#x1D18F;" t="&#x1D18F;" note=" MUSICAL SYMBOL PIANO  "/>
+<s d="&#x1D190;" t="&#x1D190;" note=" MUSICAL SYMBOL MEZZO  "/>
+<s d="&#x1D191;" t="&#x1D191;" note=" MUSICAL SYMBOL FORTE  "/>
+<s d="&#x1D192;" t="&#x1D192;" note=" MUSICAL SYMBOL CRESCENDO  "/>
+<s d="&#x1D193;" t="&#x1D193;" note=" MUSICAL SYMBOL DECRESCENDO  "/>
+<s d="&#x1D194;" t="&#x1D194;" note=" MUSICAL SYMBOL GRACE NOTE SLASH  "/>
+<s d="&#x1D195;" t="&#x1D195;" note=" MUSICAL SYMBOL GRACE NOTE NO SLASH  "/>
+<s d="&#x1D196;" t="&#x1D196;" note=" MUSICAL SYMBOL TR  "/>
+<s d="&#x1D197;" t="&#x1D197;" note=" MUSICAL SYMBOL TURN  "/>
+<s d="&#x1D198;" t="&#x1D198;" note=" MUSICAL SYMBOL INVERTED TURN  "/>
+<s d="&#x1D199;" t="&#x1D199;" note=" MUSICAL SYMBOL TURN SLASH  "/>
+<s d="&#x1D19A;" t="&#x1D19A;" note=" MUSICAL SYMBOL TURN UP  "/>
+<s d="&#x1D19B;" t="&#x1D19B;" note=" MUSICAL SYMBOL ORNAMENT STROKE-1  "/>
+<s d="&#x1D19C;" t="&#x1D19C;" note=" MUSICAL SYMBOL ORNAMENT STROKE-2  "/>
+<s d="&#x1D19D;" t="&#x1D19D;" note=" MUSICAL SYMBOL ORNAMENT STROKE-3  "/>
+<s d="&#x1D19E;" t="&#x1D19E;" note=" MUSICAL SYMBOL ORNAMENT STROKE-4  "/>
+<s d="&#x1D19F;" t="&#x1D19F;" note=" MUSICAL SYMBOL ORNAMENT STROKE-5  "/>
+<s d="&#x1D1A0;" t="&#x1D1A0;" note=" MUSICAL SYMBOL ORNAMENT STROKE-6  "/>
+<s d="&#x1D1A1;" t="&#x1D1A1;" note=" MUSICAL SYMBOL ORNAMENT STROKE-7  "/>
+<s d="&#x1D1A2;" t="&#x1D1A2;" note=" MUSICAL SYMBOL ORNAMENT STROKE-8  "/>
+<s d="&#x1D1A3;" t="&#x1D1A3;" note=" MUSICAL SYMBOL ORNAMENT STROKE-9  "/>
+<s d="&#x1D1A4;" t="&#x1D1A4;" note=" MUSICAL SYMBOL ORNAMENT STROKE-10  "/>
+<s d="&#x1D1A5;" t="&#x1D1A5;" note=" MUSICAL SYMBOL ORNAMENT STROKE-11  "/>
+<s d="&#x1D1A6;" t="&#x1D1A6;" note=" MUSICAL SYMBOL HAUPTSTIMME  "/>
+<s d="&#x1D1A7;" t="&#x1D1A7;" note=" MUSICAL SYMBOL NEBENSTIMME  "/>
+<s d="&#x1D1A8;" t="&#x1D1A8;" note=" MUSICAL SYMBOL END OF STIMME  "/>
+<s d="&#x1D1A9;" t="&#x1D1A9;" note=" MUSICAL SYMBOL DEGREE SLASH  "/>
+<s d="&#x1D1AA;" t="&#x1D1AA;" note=" MUSICAL SYMBOL COMBINING DOWN BOW  "/>
+<s d="&#x1D1AB;" t="&#x1D1AB;" note=" MUSICAL SYMBOL COMBINING UP BOW  "/>
+<s d="&#x1D1AC;" t="&#x1D1AC;" note=" MUSICAL SYMBOL COMBINING HARMONIC  "/>
+<s d="&#x1D1AD;" t="&#x1D1AD;" note=" MUSICAL SYMBOL COMBINING SNAP PIZZICATO  "/>
+<s d="&#x1D1AE;" t="&#x1D1AE;" note=" MUSICAL SYMBOL PEDAL MARK  "/>
+<s d="&#x1D1AF;" t="&#x1D1AF;" note=" MUSICAL SYMBOL PEDAL UP MARK  "/>
+<s d="&#x1D1B0;" t="&#x1D1B0;" note=" MUSICAL SYMBOL HALF PEDAL MARK  "/>
+<s d="&#x1D1B1;" t="&#x1D1B1;" note=" MUSICAL SYMBOL GLISSANDO UP  "/>
+<s d="&#x1D1B2;" t="&#x1D1B2;" note=" MUSICAL SYMBOL GLISSANDO DOWN  "/>
+<s d="&#x1D1B3;" t="&#x1D1B3;" note=" MUSICAL SYMBOL WITH FINGERNAILS  "/>
+<s d="&#x1D1B4;" t="&#x1D1B4;" note=" MUSICAL SYMBOL DAMP  "/>
+<s d="&#x1D1B5;" t="&#x1D1B5;" note=" MUSICAL SYMBOL DAMP ALL  "/>
+<s d="&#x1D1B6;" t="&#x1D1B6;" note=" MUSICAL SYMBOL MAXIMA  "/>
+<s d="&#x1D1B7;" t="&#x1D1B7;" note=" MUSICAL SYMBOL LONGA  "/>
+<s d="&#x1D1B8;" t="&#x1D1B8;" note=" MUSICAL SYMBOL BREVIS  "/>
+<s d="&#x1D1B9;" t="&#x1D1B9;" note=" MUSICAL SYMBOL SEMIBREVIS WHITE  "/>
+<s d="&#x1D1BA;" t="&#x1D1BA;" note=" MUSICAL SYMBOL SEMIBREVIS BLACK  "/>
+<s d="&#x1D1BB;" t="&#x1D1BB;" note=" MUSICAL SYMBOL MINIMA  "/>
+<s d="&#x1D1BC;" t="&#x1D1BC;" note=" MUSICAL SYMBOL MINIMA BLACK  "/>
+<s d="&#x1D1BD;" t="&#x1D1BD;" note=" MUSICAL SYMBOL SEMIMINIMA WHITE  "/>
+<s d="&#x1D1BE;" t="&#x1D1BE;" note=" MUSICAL SYMBOL SEMIMINIMA BLACK  "/>
+<s d="&#x1D1BF;" t="&#x1D1BF;" note=" MUSICAL SYMBOL FUSA WHITE  "/>
+<s d="&#x1D1C0;" t="&#x1D1C0;" note=" MUSICAL SYMBOL FUSA BLACK  "/>
+<s d="&#x1D1C1;" t="&#x1D1C1;" note=" MUSICAL SYMBOL LONGA PERFECTA REST  "/>
+<s d="&#x1D1C2;" t="&#x1D1C2;" note=" MUSICAL SYMBOL LONGA IMPERFECTA REST  "/>
+<s d="&#x1D1C3;" t="&#x1D1C3;" note=" MUSICAL SYMBOL BREVIS REST  "/>
+<s d="&#x1D1C4;" t="&#x1D1C4;" note=" MUSICAL SYMBOL SEMIBREVIS REST  "/>
+<s d="&#x1D1C5;" t="&#x1D1C5;" note=" MUSICAL SYMBOL MINIMA REST  "/>
+<s d="&#x1D1C6;" t="&#x1D1C6;" note=" MUSICAL SYMBOL SEMIMINIMA REST  "/>
+<s d="&#x1D1C7;" t="&#x1D1C7;" note=" MUSICAL SYMBOL TEMPUS PERFECTUM CUM PROLATIONE PERFECTA  "/>
+<s d="&#x1D1C8;" t="&#x1D1C8;" note=" MUSICAL SYMBOL TEMPUS PERFECTUM CUM PROLATIONE IMPERFECTA  "/>
+<s d="&#x1D1C9;" t="&#x1D1C9;" note=" MUSICAL SYMBOL TEMPUS PERFECTUM CUM PROLATIONE PERFECTA DIMINUTION-1  "/>
+<s d="&#x1D1CA;" t="&#x1D1CA;" note=" MUSICAL SYMBOL TEMPUS IMPERFECTUM CUM PROLATIONE PERFECTA  "/>
+<s d="&#x1D1CB;" t="&#x1D1CB;" note=" MUSICAL SYMBOL TEMPUS IMPERFECTUM CUM PROLATIONE IMPERFECTA  "/>
+<s d="&#x1D1CC;" t="&#x1D1CC;" note=" MUSICAL SYMBOL TEMPUS IMPERFECTUM CUM PROLATIONE IMPERFECTA DIMINUTION-1  "/>
+<s d="&#x1D1CD;" t="&#x1D1CD;" note=" MUSICAL SYMBOL TEMPUS IMPERFECTUM CUM PROLATIONE IMPERFECTA DIMINUTION-2  "/>
+<s d="&#x1D1CE;" t="&#x1D1CE;" note=" MUSICAL SYMBOL TEMPUS IMPERFECTUM CUM PROLATIONE IMPERFECTA DIMINUTION-3  "/>
+<s d="&#x1D1CF;" t="&#x1D1CF;" note=" MUSICAL SYMBOL CROIX  "/>
+<s d="&#x1D1D0;" t="&#x1D1D0;" note=" MUSICAL SYMBOL GREGORIAN C CLEF  "/>
+<s d="&#x1D1D1;" t="&#x1D1D1;" note=" MUSICAL SYMBOL GREGORIAN F CLEF  "/>
+<s d="&#x1D1D2;" t="&#x1D1D2;" note=" MUSICAL SYMBOL SQUARE B  "/>
+<s d="&#x1D1D3;" t="&#x1D1D3;" note=" MUSICAL SYMBOL VIRGA  "/>
+<s d="&#x1D1D4;" t="&#x1D1D4;" note=" MUSICAL SYMBOL PODATUS  "/>
+<s d="&#x1D1D5;" t="&#x1D1D5;" note=" MUSICAL SYMBOL CLIVIS  "/>
+<s d="&#x1D1D6;" t="&#x1D1D6;" note=" MUSICAL SYMBOL SCANDICUS  "/>
+<s d="&#x1D1D7;" t="&#x1D1D7;" note=" MUSICAL SYMBOL CLIMACUS  "/>
+<s d="&#x1D1D8;" t="&#x1D1D8;" note=" MUSICAL SYMBOL TORCULUS  "/>
+<s d="&#x1D1D9;" t="&#x1D1D9;" note=" MUSICAL SYMBOL PORRECTUS  "/>
+<s d="&#x1D1DA;" t="&#x1D1DA;" note=" MUSICAL SYMBOL PORRECTUS FLEXUS  "/>
+<s d="&#x1D1DB;" t="&#x1D1DB;" note=" MUSICAL SYMBOL SCANDICUS FLEXUS  "/>
+<s d="&#x1D1DC;" t="&#x1D1DC;" note=" MUSICAL SYMBOL TORCULUS RESUPINUS  "/>
+<s d="&#x1D1DD;" t="&#x1D1DD;" note=" MUSICAL SYMBOL PES SUBPUNCTIS "/>
+</group>
+<group name="DINGBATS">
+<s d="&#x2701;" t="&#x2701;" note=" UPPER BLADE SCISSORS  "/>
+<s d="&#x2702;" t="&#x2702;" note=" BLACK SCISSORS  "/>
+<s d="&#x2703;" t="&#x2703;" note=" LOWER BLADE SCISSORS  "/>
+<s d="&#x2704;" t="&#x2704;" note=" WHITE SCISSORS  "/>
+<s d="&#x2706;" t="&#x2706;" note=" TELEPHONE LOCATION SIGN  "/>
+<s d="&#x2707;" t="&#x2707;" note=" TAPE DRIVE  "/>
+<s d="&#x2708;" t="&#x2708;" note=" AIRPLANE  "/>
+<s d="&#x2709;" t="&#x2709;" note=" ENVELOPE  "/>
+<s d="&#x270C;" t="&#x270C;" note=" VICTORY HAND  "/>
+<s d="&#x270D;" t="&#x270D;" note=" WRITING HAND  "/>
+<s d="&#x270E;" t="&#x270E;" note=" LOWER RIGHT PENCIL  "/>
+<s d="&#x270F;" t="&#x270F;" note=" PENCIL  "/>
+<s d="&#x2710;" t="&#x2710;" note=" UPPER RIGHT PENCIL  "/>
+<s d="&#x2711;" t="&#x2711;" note=" WHITE NIB  "/>
+<s d="&#x2712;" t="&#x2712;" note=" BLACK NIB  "/>
+<s d="&#x2713;" t="&#x2713;" note=" CHECK MARK  "/>
+<s d="&#x2714;" t="&#x2714;" note=" HEAVY CHECK MARK  "/>
+<s d="&#x2715;" t="&#x2715;" note=" MULTIPLICATION X  "/>
+<s d="&#x2716;" t="&#x2716;" note=" HEAVY MULTIPLICATION X  "/>
+<s d="&#x2717;" t="&#x2717;" note=" BALLOT X  "/>
+<s d="&#x2718;" t="&#x2718;" note=" HEAVY BALLOT X  "/>
+<s d="&#x2719;" t="&#x2719;" note=" OUTLINED GREEK CROSS  "/>
+<s d="&#x271A;" t="&#x271A;" note=" HEAVY GREEK CROSS  "/>
+<s d="&#x271B;" t="&#x271B;" note=" OPEN CENTRE CROSS  "/>
+<s d="&#x271C;" t="&#x271C;" note=" HEAVY OPEN CENTRE CROSS  "/>
+<s d="&#x271D;" t="&#x271D;" note=" LATIN CROSS  "/>
+<s d="&#x271E;" t="&#x271E;" note=" SHADOWED WHITE LATIN CROSS  "/>
+<s d="&#x271F;" t="&#x271F;" note=" OUTLINED LATIN CROSS  "/>
+<s d="&#x2720;" t="&#x2720;" note=" MALTESE CROSS  "/>
+<s d="&#x2721;" t="&#x2721;" note=" STAR OF DAVID  "/>
+<s d="&#x2722;" t="&#x2722;" note=" FOUR TEARDROP-SPOKED ASTERISK  "/>
+<s d="&#x2723;" t="&#x2723;" note=" FOUR BALLOON-SPOKED ASTERISK  "/>
+<s d="&#x2724;" t="&#x2724;" note=" HEAVY FOUR BALLOON-SPOKED ASTERISK  "/>
+<s d="&#x2725;" t="&#x2725;" note=" FOUR CLUB-SPOKED ASTERISK  "/>
+<s d="&#x2726;" t="&#x2726;" note=" BLACK FOUR POINTED STAR  "/>
+<s d="&#x2727;" t="&#x2727;" note=" WHITE FOUR POINTED STAR  "/>
+<s d="&#x2729;" t="&#x2729;" note=" STRESS OUTLINED WHITE STAR  "/>
+<s d="&#x272A;" t="&#x272A;" note=" CIRCLED WHITE STAR  "/>
+<s d="&#x272B;" t="&#x272B;" note=" OPEN CENTRE BLACK STAR  "/>
+<s d="&#x272C;" t="&#x272C;" note=" BLACK CENTRE WHITE STAR  "/>
+<s d="&#x272D;" t="&#x272D;" note=" OUTLINED BLACK STAR  "/>
+<s d="&#x272E;" t="&#x272E;" note=" HEAVY OUTLINED BLACK STAR  "/>
+<s d="&#x272F;" t="&#x272F;" note=" PINWHEEL STAR  "/>
+<s d="&#x2730;" t="&#x2730;" note=" SHADOWED WHITE STAR  "/>
+<s d="&#x2731;" t="&#x2731;" note=" HEAVY ASTERISK  "/>
+<s d="&#x2732;" t="&#x2732;" note=" OPEN CENTRE ASTERISK  "/>
+<s d="&#x2733;" t="&#x2733;" note=" EIGHT SPOKED ASTERISK  "/>
+<s d="&#x2734;" t="&#x2734;" note=" EIGHT POINTED BLACK STAR  "/>
+<s d="&#x2735;" t="&#x2735;" note=" EIGHT POINTED PINWHEEL STAR  "/>
+<s d="&#x2736;" t="&#x2736;" note=" SIX POINTED BLACK STAR  "/>
+<s d="&#x2737;" t="&#x2737;" note=" EIGHT POINTED RECTILINEAR BLACK STAR  "/>
+<s d="&#x2738;" t="&#x2738;" note=" HEAVY EIGHT POINTED RECTILINEAR BLACK STAR  "/>
+<s d="&#x2739;" t="&#x2739;" note=" TWELVE POINTED BLACK STAR  "/>
+<s d="&#x273A;" t="&#x273A;" note=" SIXTEEN POINTED ASTERISK  "/>
+<s d="&#x273B;" t="&#x273B;" note=" TEARDROP-SPOKED ASTERISK  "/>
+<s d="&#x273C;" t="&#x273C;" note=" OPEN CENTRE TEARDROP-SPOKED ASTERISK  "/>
+<s d="&#x273D;" t="&#x273D;" note=" HEAVY TEARDROP-SPOKED ASTERISK  "/>
+<s d="&#x273E;" t="&#x273E;" note=" SIX PETALLED BLACK AND WHITE FLORETTE  "/>
+<s d="&#x273F;" t="&#x273F;" note=" BLACK FLORETTE  "/>
+<s d="&#x2740;" t="&#x2740;" note=" WHITE FLORETTE  "/>
+<s d="&#x2741;" t="&#x2741;" note=" EIGHT PETALLED OUTLINED BLACK FLORETTE  "/>
+<s d="&#x2742;" t="&#x2742;" note=" CIRCLED OPEN CENTRE EIGHT POINTED STAR  "/>
+<s d="&#x2743;" t="&#x2743;" note=" HEAVY TEARDROP-SPOKED PINWHEEL ASTERISK  "/>
+<s d="&#x2744;" t="&#x2744;" note=" SNOWFLAKE  "/>
+<s d="&#x2745;" t="&#x2745;" note=" TIGHT TRIFOLIATE SNOWFLAKE  "/>
+<s d="&#x2746;" t="&#x2746;" note=" HEAVY CHEVRON SNOWFLAKE  "/>
+<s d="&#x2747;" t="&#x2747;" note=" SPARKLE  "/>
+<s d="&#x2748;" t="&#x2748;" note=" HEAVY SPARKLE  "/>
+<s d="&#x2749;" t="&#x2749;" note=" BALLOON-SPOKED ASTERISK  "/>
+<s d="&#x274A;" t="&#x274A;" note=" EIGHT TEARDROP-SPOKED PROPELLER ASTERISK  "/>
+<s d="&#x274B;" t="&#x274B;" note=" HEAVY EIGHT TEARDROP-SPOKED PROPELLER ASTERISK  "/>
+<s d="&#x274D;" t="&#x274D;" note=" SHADOWED WHITE CIRCLE  "/>
+<s d="&#x274F;" t="&#x274F;" note=" LOWER RIGHT DROP-SHADOWED WHITE SQUARE  "/>
+<s d="&#x2750;" t="&#x2750;" note=" UPPER RIGHT DROP-SHADOWED WHITE SQUARE  "/>
+<s d="&#x2751;" t="&#x2751;" note=" LOWER RIGHT SHADOWED WHITE SQUARE  "/>
+<s d="&#x2752;" t="&#x2752;" note=" UPPER RIGHT SHADOWED WHITE SQUARE  "/>
+<s d="&#x2756;" t="&#x2756;" note=" BLACK DIAMOND MINUS WHITE X  "/>
+<s d="&#x2758;" t="&#x2758;" note=" LIGHT VERTICAL BAR  "/>
+<s d="&#x2759;" t="&#x2759;" note=" MEDIUM VERTICAL BAR  "/>
+<s d="&#x275A;" t="&#x275A;" note=" HEAVY VERTICAL BAR  "/>
+<s d="&#x275B;" t="&#x275B;" note=" HEAVY SINGLE TURNED COMMA QUOTATION MARK ORNAMENT  "/>
+<s d="&#x275C;" t="&#x275C;" note=" HEAVY SINGLE COMMA QUOTATION MARK ORNAMENT  "/>
+<s d="&#x275D;" t="&#x275D;" note=" HEAVY DOUBLE TURNED COMMA QUOTATION MARK ORNAMENT  "/>
+<s d="&#x275E;" t="&#x275E;" note=" HEAVY DOUBLE COMMA QUOTATION MARK ORNAMENT  "/>
+<s d="&#x2761;" t="&#x2761;" note=" CURVED STEM PARAGRAPH SIGN ORNAMENT  "/>
+<s d="&#x2762;" t="&#x2762;" note=" HEAVY EXCLAMATION MARK ORNAMENT  "/>
+<s d="&#x2763;" t="&#x2763;" note=" HEAVY HEART EXCLAMATION MARK ORNAMENT  "/>
+<s d="&#x2764;" t="&#x2764;" note=" HEAVY BLACK HEART  "/>
+<s d="&#x2765;" t="&#x2765;" note=" ROTATED HEAVY BLACK HEART BULLET  "/>
+<s d="&#x2766;" t="&#x2766;" note=" FLORAL HEART  "/>
+<s d="&#x2767;" t="&#x2767;" note=" ROTATED FLORAL HEART BULLET  "/>
+<s d="&#x2768;" t="&#x2768;" note=" MEDIUM LEFT PARENTHESIS ORNAMENT  "/>
+<s d="&#x2769;" t="&#x2769;" note=" MEDIUM RIGHT PARENTHESIS ORNAMENT  "/>
+<s d="&#x276A;" t="&#x276A;" note=" MEDIUM FLATTENED LEFT PARENTHESIS ORNAMENT  "/>
+<s d="&#x276B;" t="&#x276B;" note=" MEDIUM FLATTENED RIGHT PARENTHESIS ORNAMENT  "/>
+<s d="&#x276C;" t="&#x276C;" note=" MEDIUM LEFT-POINTING ANGLE BRACKET ORNAMENT  "/>
+<s d="&#x276D;" t="&#x276D;" note=" MEDIUM RIGHT-POINTING ANGLE BRACKET ORNAMENT  "/>
+<s d="&#x276E;" t="&#x276E;" note=" HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT  "/>
+<s d="&#x276F;" t="&#x276F;" note=" HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT  "/>
+<s d="&#x2770;" t="&#x2770;" note=" HEAVY LEFT-POINTING ANGLE BRACKET ORNAMENT  "/>
+<s d="&#x2771;" t="&#x2771;" note=" HEAVY RIGHT-POINTING ANGLE BRACKET ORNAMENT  "/>
+<s d="&#x2772;" t="&#x2772;" note=" LIGHT LEFT TORTOISE SHELL BRACKET ORNAMENT  "/>
+<s d="&#x2773;" t="&#x2773;" note=" LIGHT RIGHT TORTOISE SHELL BRACKET ORNAMENT  "/>
+<s d="&#x2774;" t="&#x2774;" note=" MEDIUM LEFT CURLY BRACKET ORNAMENT  "/>
+<s d="&#x2775;" t="&#x2775;" note=" MEDIUM RIGHT CURLY BRACKET ORNAMENT  "/>
+<s d="&#x2776;" t="&#x2776;" note=" DINGBAT NEGATIVE CIRCLED DIGIT ONE  "/>
+<s d="&#x2777;" t="&#x2777;" note=" DINGBAT NEGATIVE CIRCLED DIGIT TWO  "/>
+<s d="&#x2778;" t="&#x2778;" note=" DINGBAT NEGATIVE CIRCLED DIGIT THREE  "/>
+<s d="&#x2779;" t="&#x2779;" note=" DINGBAT NEGATIVE CIRCLED DIGIT FOUR  "/>
+<s d="&#x277A;" t="&#x277A;" note=" DINGBAT NEGATIVE CIRCLED DIGIT FIVE  "/>
+<s d="&#x277B;" t="&#x277B;" note=" DINGBAT NEGATIVE CIRCLED DIGIT SIX  "/>
+<s d="&#x277C;" t="&#x277C;" note=" DINGBAT NEGATIVE CIRCLED DIGIT SEVEN  "/>
+<s d="&#x277D;" t="&#x277D;" note=" DINGBAT NEGATIVE CIRCLED DIGIT EIGHT  "/>
+<s d="&#x277E;" t="&#x277E;" note=" DINGBAT NEGATIVE CIRCLED DIGIT NINE  "/>
+<s d="&#x277F;" t="&#x277F;" note=" DINGBAT NEGATIVE CIRCLED NUMBER TEN  "/>
+<s d="&#x2780;" t="&#x2780;" note=" DINGBAT CIRCLED SANS-SERIF DIGIT ONE  "/>
+<s d="&#x2781;" t="&#x2781;" note=" DINGBAT CIRCLED SANS-SERIF DIGIT TWO  "/>
+<s d="&#x2782;" t="&#x2782;" note=" DINGBAT CIRCLED SANS-SERIF DIGIT THREE  "/>
+<s d="&#x2783;" t="&#x2783;" note=" DINGBAT CIRCLED SANS-SERIF DIGIT FOUR  "/>
+<s d="&#x2784;" t="&#x2784;" note=" DINGBAT CIRCLED SANS-SERIF DIGIT FIVE  "/>
+<s d="&#x2785;" t="&#x2785;" note=" DINGBAT CIRCLED SANS-SERIF DIGIT SIX  "/>
+<s d="&#x2786;" t="&#x2786;" note=" DINGBAT CIRCLED SANS-SERIF DIGIT SEVEN  "/>
+<s d="&#x2787;" t="&#x2787;" note=" DINGBAT CIRCLED SANS-SERIF DIGIT EIGHT  "/>
+<s d="&#x2788;" t="&#x2788;" note=" DINGBAT CIRCLED SANS-SERIF DIGIT NINE  "/>
+<s d="&#x2789;" t="&#x2789;" note=" DINGBAT CIRCLED SANS-SERIF NUMBER TEN  "/>
+<s d="&#x278A;" t="&#x278A;" note=" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE  "/>
+<s d="&#x278B;" t="&#x278B;" note=" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO  "/>
+<s d="&#x278C;" t="&#x278C;" note=" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE  "/>
+<s d="&#x278D;" t="&#x278D;" note=" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR  "/>
+<s d="&#x278E;" t="&#x278E;" note=" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE  "/>
+<s d="&#x278F;" t="&#x278F;" note=" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX  "/>
+<s d="&#x2790;" t="&#x2790;" note=" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN  "/>
+<s d="&#x2791;" t="&#x2791;" note=" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT  "/>
+<s d="&#x2792;" t="&#x2792;" note=" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE  "/>
+<s d="&#x2793;" t="&#x2793;" note=" DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN  "/>
+<s d="&#x2794;" t="&#x2794;" note=" HEAVY WIDE-HEADED RIGHTWARDS ARROW  "/>
+<s d="&#x2798;" t="&#x2798;" note=" HEAVY SOUTH EAST ARROW  "/>
+<s d="&#x2799;" t="&#x2799;" note=" HEAVY RIGHTWARDS ARROW  "/>
+<s d="&#x279A;" t="&#x279A;" note=" HEAVY NORTH EAST ARROW  "/>
+<s d="&#x279B;" t="&#x279B;" note=" DRAFTING POINT RIGHTWARDS ARROW  "/>
+<s d="&#x279C;" t="&#x279C;" note=" HEAVY ROUND-TIPPED RIGHTWARDS ARROW  "/>
+<s d="&#x279D;" t="&#x279D;" note=" TRIANGLE-HEADED RIGHTWARDS ARROW  "/>
+<s d="&#x279E;" t="&#x279E;" note=" HEAVY TRIANGLE-HEADED RIGHTWARDS ARROW  "/>
+<s d="&#x279F;" t="&#x279F;" note=" DASHED TRIANGLE-HEADED RIGHTWARDS ARROW  "/>
+<s d="&#x27A0;" t="&#x27A0;" note=" HEAVY DASHED TRIANGLE-HEADED RIGHTWARDS ARROW  "/>
+<s d="&#x27A1;" t="&#x27A1;" note=" BLACK RIGHTWARDS ARROW  "/>
+<s d="&#x27A2;" t="&#x27A2;" note=" THREE-D TOP-LIGHTED RIGHTWARDS ARROWHEAD  "/>
+<s d="&#x27A3;" t="&#x27A3;" note=" THREE-D BOTTOM-LIGHTED RIGHTWARDS ARROWHEAD  "/>
+<s d="&#x27A4;" t="&#x27A4;" note=" BLACK RIGHTWARDS ARROWHEAD  "/>
+<s d="&#x27A5;" t="&#x27A5;" note=" HEAVY BLACK CURVED DOWNWARDS AND RIGHTWARDS ARROW  "/>
+<s d="&#x27A6;" t="&#x27A6;" note=" HEAVY BLACK CURVED UPWARDS AND RIGHTWARDS ARROW  "/>
+<s d="&#x27A7;" t="&#x27A7;" note=" SQUAT BLACK RIGHTWARDS ARROW  "/>
+<s d="&#x27A8;" t="&#x27A8;" note=" HEAVY CONCAVE-POINTED BLACK RIGHTWARDS ARROW  "/>
+<s d="&#x27A9;" t="&#x27A9;" note=" RIGHT-SHADED WHITE RIGHTWARDS ARROW  "/>
+<s d="&#x27AA;" t="&#x27AA;" note=" LEFT-SHADED WHITE RIGHTWARDS ARROW  "/>
+<s d="&#x27AB;" t="&#x27AB;" note=" BACK-TILTED SHADOWED WHITE RIGHTWARDS ARROW  "/>
+<s d="&#x27AC;" t="&#x27AC;" note=" FRONT-TILTED SHADOWED WHITE RIGHTWARDS ARROW  "/>
+<s d="&#x27AD;" t="&#x27AD;" note=" HEAVY LOWER RIGHT-SHADOWED WHITE RIGHTWARDS ARROW  "/>
+<s d="&#x27AE;" t="&#x27AE;" note=" HEAVY UPPER RIGHT-SHADOWED WHITE RIGHTWARDS ARROW  "/>
+<s d="&#x27AF;" t="&#x27AF;" note=" NOTCHED LOWER RIGHT-SHADOWED WHITE RIGHTWARDS ARROW  "/>
+<s d="&#x27B1;" t="&#x27B1;" note=" NOTCHED UPPER RIGHT-SHADOWED WHITE RIGHTWARDS ARROW  "/>
+<s d="&#x27B2;" t="&#x27B2;" note=" CIRCLED HEAVY WHITE RIGHTWARDS ARROW  "/>
+<s d="&#x27B3;" t="&#x27B3;" note=" WHITE-FEATHERED RIGHTWARDS ARROW  "/>
+<s d="&#x27B4;" t="&#x27B4;" note=" BLACK-FEATHERED SOUTH EAST ARROW  "/>
+<s d="&#x27B5;" t="&#x27B5;" note=" BLACK-FEATHERED RIGHTWARDS ARROW  "/>
+<s d="&#x27B6;" t="&#x27B6;" note=" BLACK-FEATHERED NORTH EAST ARROW  "/>
+<s d="&#x27B7;" t="&#x27B7;" note=" HEAVY BLACK-FEATHERED SOUTH EAST ARROW  "/>
+<s d="&#x27B8;" t="&#x27B8;" note=" HEAVY BLACK-FEATHERED RIGHTWARDS ARROW  "/>
+<s d="&#x27B9;" t="&#x27B9;" note=" HEAVY BLACK-FEATHERED NORTH EAST ARROW  "/>
+<s d="&#x27BA;" t="&#x27BA;" note=" TEARDROP-BARBED RIGHTWARDS ARROW  "/>
+<s d="&#x27BB;" t="&#x27BB;" note=" HEAVY TEARDROP-SHANKED RIGHTWARDS ARROW  "/>
+<s d="&#x27BC;" t="&#x27BC;" note=" WEDGE-TAILED RIGHTWARDS ARROW  "/>
+<s d="&#x27BD;" t="&#x27BD;" note=" HEAVY WEDGE-TAILED RIGHTWARDS ARROW  "/>
+<s d="&#x27BE;" t="&#x27BE;" note=" OPEN-OUTLINED RIGHTWARDS ARROW "/>
+</group>
+<group name="Letterlike Symbols Block">
+<s d="&#x2100;" t="&#x2100;" note=" ACCOUNT OF  "/>
+<s d="&#x2101;" t="&#x2101;" note=" ADDRESSED TO THE SUBJECT  "/>
+<s d="&#x2102;" t="&#x2102;" note=" DOUBLE-STRUCK CAPITAL C  "/>
+<s d="&#x2103;" t="&#x2103;" note=" DEGREE CELSIUS  "/>
+<s d="&#x2104;" t="&#x2104;" note=" CENTRE LINE SYMBOL  "/>
+<s d="&#x2105;" t="&#x2105;" note=" CARE OF  "/>
+<s d="&#x2106;" t="&#x2106;" note=" CADA UNA  "/>
+<s d="&#x2107;" t="&#x2107;" note=" EULER CONSTANT  "/>
+<s d="&#x2108;" t="&#x2108;" note=" SCRUPLE  "/>
+<s d="&#x2109;" t="&#x2109;" note=" DEGREE FAHRENHEIT  "/>
+<s d="&#x210A;" t="&#x210A;" note=" SCRIPT SMALL G  "/>
+<s d="&#x210B;" t="&#x210B;" note=" SCRIPT CAPITAL H  "/>
+<s d="&#x210C;" t="&#x210C;" note=" BLACK-LETTER CAPITAL H  "/>
+<s d="&#x210D;" t="&#x210D;" note=" DOUBLE-STRUCK CAPITAL H  "/>
+<s d="&#x210E;" t="&#x210E;" note=" PLANCK CONSTANT  "/>
+<s d="&#x210F;" t="&#x210F;" note=" PLANCK CONSTANT OVER TWO PI  "/>
+<s d="&#x2110;" t="&#x2110;" note=" SCRIPT CAPITAL I  "/>
+<s d="&#x2111;" t="&#x2111;" note=" BLACK-LETTER CAPITAL I  "/>
+<s d="&#x2112;" t="&#x2112;" note=" SCRIPT CAPITAL L  "/>
+<s d="&#x2113;" t="&#x2113;" note=" SCRIPT SMALL L  "/>
+<s d="&#x2114;" t="&#x2114;" note=" L B BAR SYMBOL  "/>
+<s d="&#x2115;" t="&#x2115;" note=" DOUBLE-STRUCK CAPITAL N  "/>
+<s d="&#x2116;" t="&#x2116;" note=" NUMERO SIGN  "/>
+<s d="&#x2117;" t="&#x2117;" note=" SOUND RECORDING COPYRIGHT  "/>
+<s d="&#x2118;" t="&#x2118;" note=" SCRIPT CAPITAL P  "/>
+<s d="&#x2119;" t="&#x2119;" note=" DOUBLE-STRUCK CAPITAL P  "/>
+<s d="&#x211A;" t="&#x211A;" note=" DOUBLE-STRUCK CAPITAL Q  "/>
+<s d="&#x211B;" t="&#x211B;" note=" SCRIPT CAPITAL R  "/>
+<s d="&#x211C;" t="&#x211C;" note=" BLACK-LETTER CAPITAL R  "/>
+<s d="&#x211D;" t="&#x211D;" note=" DOUBLE-STRUCK CAPITAL R  "/>
+<s d="&#x211E;" t="&#x211E;" note=" PRESCRIPTION TAKE  "/>
+<s d="&#x211F;" t="&#x211F;" note=" RESPONSE  "/>
+<s d="&#x2120;" t="&#x2120;" note=" SERVICE MARK  "/>
+<s d="&#x2121;" t="&#x2121;" note=" TELEPHONE SIGN  "/>
+<s d="&#x2122;" t="&#x2122;" note=" TRADE MARK SIGN  "/>
+<s d="&#x2123;" t="&#x2123;" note=" VERSICLE  "/>
+<s d="&#x2124;" t="&#x2124;" note=" DOUBLE-STRUCK CAPITAL Z  "/>
+<s d="&#x2125;" t="&#x2125;" note=" OUNCE SIGN  "/>
+<s d="&#x2126;" t="&#x2126;" note=" OHM SIGN  "/>
+<s d="&#x2127;" t="&#x2127;" note=" INVERTED OHM SIGN  "/>
+<s d="&#x2128;" t="&#x2128;" note=" BLACK-LETTER CAPITAL Z  "/>
+<s d="&#x2129;" t="&#x2129;" note=" TURNED GREEK SMALL LETTER IOTA  "/>
+<s d="&#x212A;" t="&#x212A;" note=" KELVIN SIGN  "/>
+<s d="&#x212B;" t="&#x212B;" note=" ANGSTROM SIGN  "/>
+<s d="&#x212C;" t="&#x212C;" note=" SCRIPT CAPITAL B  "/>
+<s d="&#x212D;" t="&#x212D;" note=" BLACK-LETTER CAPITAL C  "/>
+<s d="&#x212E;" t="&#x212E;" note=" ESTIMATED SYMBOL  "/>
+<s d="&#x212F;" t="&#x212F;" note=" SCRIPT SMALL E  "/>
+<s d="&#x2130;" t="&#x2130;" note=" SCRIPT CAPITAL E  "/>
+<s d="&#x2131;" t="&#x2131;" note=" SCRIPT CAPITAL F  "/>
+<s d="&#x2132;" t="&#x2132;" note=" TURNED CAPITAL F  "/>
+<s d="&#x2133;" t="&#x2133;" note=" SCRIPT CAPITAL M  "/>
+<s d="&#x2134;" t="&#x2134;" note=" SCRIPT SMALL O  "/>
+<s d="&#x2135;" t="&#x2135;" note=" ALEF SYMBOL  "/>
+<s d="&#x2136;" t="&#x2136;" note=" BET SYMBOL  "/>
+<s d="&#x2137;" t="&#x2137;" note=" GIMEL SYMBOL  "/>
+<s d="&#x2138;" t="&#x2138;" note=" DALET SYMBOL  "/>
+<s d="&#x2139;" t="&#x2139;" note=" INFORMATION SOURCE  "/>
+<s d="&#x213A;" t="&#x213A;" note=" ROTATED CAPITAL Q  "/>
+<s d="&#x213B;" t="&#x213B;" note=" FACSIMILE SIGN  "/>
+<s d="&#x213D;" t="&#x213D;" note=" DOUBLE-STRUCK SMALL GAMMA  "/>
+<s d="&#x213E;" t="&#x213E;" note=" DOUBLE-STRUCK CAPITAL GAMMA  "/>
+<s d="&#x213F;" t="&#x213F;" note=" DOUBLE-STRUCK CAPITAL PI  "/>
+<s d="&#x2140;" t="&#x2140;" note=" DOUBLE-STRUCK N-ARY SUMMATION  "/>
+<s d="&#x2141;" t="&#x2141;" note=" TURNED SANS-SERIF CAPITAL G  "/>
+<s d="&#x2142;" t="&#x2142;" note=" TURNED SANS-SERIF CAPITAL L  "/>
+<s d="&#x2143;" t="&#x2143;" note=" REVERSED SANS-SERIF CAPITAL L  "/>
+<s d="&#x2144;" t="&#x2144;" note=" TURNED SANS-SERIF CAPITAL Y  "/>
+<s d="&#x2145;" t="&#x2145;" note=" DOUBLE-STRUCK ITALIC CAPITAL D  "/>
+<s d="&#x2146;" t="&#x2146;" note=" DOUBLE-STRUCK ITALIC SMALL D  "/>
+<s d="&#x2147;" t="&#x2147;" note=" DOUBLE-STRUCK ITALIC SMALL E  "/>
+<s d="&#x2148;" t="&#x2148;" note=" DOUBLE-STRUCK ITALIC SMALL I  "/>
+<s d="&#x2149;" t="&#x2149;" note=" DOUBLE-STRUCK ITALIC SMALL J  "/>
+<s d="&#x214A;" t="&#x214A;" note=" PROPERTY LINE  "/>
+<s d="&#x214B;" t="&#x214B;" note=" TURNED AMPERSAND "/>
+</group>
+<group name="KANBUN GROUP" b="111">
+<s d="&#x3190;" t="&#x3190;" note=" IDEOGRAPHIC ANNOTATION LINKING MARK  "/>
+<s d="&#x3191;" t="&#x3191;" note=" IDEOGRAPHIC ANNOTATION REVERSE MARK  "/>
+<s d="&#x3192;" t="&#x3192;" note=" IDEOGRAPHIC ANNOTATION ONE MARK  "/>
+<s d="&#x3193;" t="&#x3193;" note=" IDEOGRAPHIC ANNOTATION TWO MARK  "/>
+<s d="&#x3194;" t="&#x3194;" note=" IDEOGRAPHIC ANNOTATION THREE MARK  "/>
+<s d="&#x3195;" t="&#x3195;" note=" IDEOGRAPHIC ANNOTATION FOUR MARK  "/>
+<s d="&#x3196;" t="&#x3196;" note=" IDEOGRAPHIC ANNOTATION TOP MARK  "/>
+<s d="&#x3197;" t="&#x3197;" note=" IDEOGRAPHIC ANNOTATION MIDDLE MARK  "/>
+<s d="&#x3198;" t="&#x3198;" note=" IDEOGRAPHIC ANNOTATION BOTTOM MARK  "/>
+<s d="&#x3199;" t="&#x3199;" note=" IDEOGRAPHIC ANNOTATION FIRST MARK  "/>
+<s d="&#x319A;" t="&#x319A;" note=" IDEOGRAPHIC ANNOTATION SECOND MARK  "/>
+<s d="&#x319B;" t="&#x319B;" note=" IDEOGRAPHIC ANNOTATION THIRD MARK  "/>
+<s d="&#x319C;" t="&#x319C;" note=" IDEOGRAPHIC ANNOTATION FOURTH MARK  "/>
+<s d="&#x319D;" t="&#x319D;" note=" IDEOGRAPHIC ANNOTATION HEAVEN MARK  "/>
+<s d="&#x319E;" t="&#x319E;" note=" IDEOGRAPHIC ANNOTATION EARTH MARK  "/>
+<s d="&#x319F;" t="&#x319F;" note=" IDEOGRAPHIC ANNOTATION MAN MARK "/>
+</group>
+<group name="ARABIC">
+<s d="&#x0600;" t="&#x0600;" note=" ARABIC NUMBER SIGN  "/>
+<s d="&#x0601;" t="&#x0601;" note=" ARABIC SIGN SANAH  "/>
+<s d="&#x0602;" t="&#x0602;" note=" ARABIC FOOTNOTE MARKER  "/>
+<s d="&#x0603;" t="&#x0603;" note=" ARABIC SIGN SAFHA  "/>
+<s d="&#x060C;" t="&#x060C;" note=" ARABIC COMMA  "/>
+<s d="&#x060D;" t="&#x060D;" note=" ARABIC DATE SEPARATOR  "/>
+<s d="&#x060E;" t="&#x060E;" note=" ARABIC POETIC VERSE SIGN  "/>
+<s d="&#x060F;" t="&#x060F;" note=" ARABIC SIGN MISRA  "/>
+<s d="&#x0610;" t="&#x0610;" note=" ARABIC SIGN SALLALLAHOU ALAYHE WASSALLAM  "/>
+<s d="&#x0611;" t="&#x0611;" note=" ARABIC SIGN ALAYHE ASSALLAM  "/>
+<s d="&#x0612;" t="&#x0612;" note=" ARABIC SIGN RAHMATULLAH ALAYHE  "/>
+<s d="&#x0613;" t="&#x0613;" note=" ARABIC SIGN RADI ALLAHOU ANHU  "/>
+<s d="&#x0614;" t="&#x0614;" note=" ARABIC SIGN TAKHALLUS  "/>
+<s d="&#x0615;" t="&#x0615;" note=" ARABIC SMALL HIGH TAH   "/>
+<s d="&#x061B;" t="&#x061B;" note=" ARABIC SEMICOLON  "/>
+<s d="&#x061F;" t="&#x061F;" note=" ARABIC QUESTION MARK  "/>
+<s d="&#x0621;" t="&#x0621;" note=" ARABIC LETTER HAMZA  "/>
+<s d="&#x0622;" t="&#x0622;" note=" ARABIC LETTER ALEF WITH MADDA ABOVE  "/>
+<s d="&#x0623;" t="&#x0623;" note=" ARABIC LETTER ALEF WITH HAMZA ABOVE  "/>
+<s d="&#x0624;" t="&#x0624;" note=" ARABIC LETTER WAW WITH HAMZA ABOVE  "/>
+<s d="&#x0625;" t="&#x0625;" note=" ARABIC LETTER ALEF WITH HAMZA BELOW  "/>
+<s d="&#x0626;" t="&#x0626;" note=" ARABIC LETTER YEH WITH HAMZA ABOVE  "/>
+<s d="&#x0627;" t="&#x0627;" note=" ARABIC LETTER ALEF  "/>
+<s d="&#x0628;" t="&#x0628;" note=" ARABIC LETTER BEH  "/>
+<s d="&#x0629;" t="&#x0629;" note=" ARABIC LETTER TEH MARBUTA  "/>
+<s d="&#x062A;" t="&#x062A;" note=" ARABIC LETTER TEH  "/>
+<s d="&#x062B;" t="&#x062B;" note=" ARABIC LETTER THEH  "/>
+<s d="&#x062C;" t="&#x062C;" note=" ARABIC LETTER JEEM  "/>
+<s d="&#x062D;" t="&#x062D;" note=" ARABIC LETTER HAH  "/>
+<s d="&#x062E;" t="&#x062E;" note=" ARABIC LETTER KHAH  "/>
+<s d="&#x062F;" t="&#x062F;" note=" ARABIC LETTER DAL  "/>
+<s d="&#x0630;" t="&#x0630;" note=" ARABIC LETTER THAL  "/>
+<s d="&#x0631;" t="&#x0631;" note=" ARABIC LETTER REH  "/>
+<s d="&#x0632;" t="&#x0632;" note=" ARABIC LETTER ZAIN  "/>
+<s d="&#x0633;" t="&#x0633;" note=" ARABIC LETTER SEEN  "/>
+<s d="&#x0634;" t="&#x0634;" note=" ARABIC LETTER SHEEN  "/>
+<s d="&#x0635;" t="&#x0635;" note=" ARABIC LETTER SAD  "/>
+<s d="&#x0636;" t="&#x0636;" note=" ARABIC LETTER DAD  "/>
+<s d="&#x0637;" t="&#x0637;" note=" ARABIC LETTER TAH  "/>
+<s d="&#x0638;" t="&#x0638;" note=" ARABIC LETTER ZAH  "/>
+<s d="&#x0639;" t="&#x0639;" note=" ARABIC LETTER AIN  "/>
+<s d="&#x063A;" t="&#x063A;" note=" ARABIC LETTER GHAIN  "/>
+<s d="&#x0640;" t="&#x0640;" note=" ARABIC TATWEEL  "/>
+<s d="&#x0641;" t="&#x0641;" note=" ARABIC LETTER FEH  "/>
+<s d="&#x0642;" t="&#x0642;" note=" ARABIC LETTER QAF  "/>
+<s d="&#x0643;" t="&#x0643;" note=" ARABIC LETTER KAF  "/>
+<s d="&#x0644;" t="&#x0644;" note=" ARABIC LETTER LAM  "/>
+<s d="&#x0645;" t="&#x0645;" note=" ARABIC LETTER MEEM  "/>
+<s d="&#x0646;" t="&#x0646;" note=" ARABIC LETTER NOON  "/>
+<s d="&#x0647;" t="&#x0647;" note=" ARABIC LETTER HEH  "/>
+<s d="&#x0648;" t="&#x0648;" note=" ARABIC LETTER WAW  "/>
+<s d="&#x0649;" t="&#x0649;" note=" ARABIC LETTER ALEF MAKSURA  "/>
+<s d="&#x064A;" t="&#x064A;" note=" ARABIC LETTER YEH  "/>
+<s d="&#x064B;" t="&#x064B;" note=" ARABIC FATHATAN  "/>
+<s d="&#x064C;" t="&#x064C;" note=" ARABIC DAMMATAN  "/>
+<s d="&#x064D;" t="&#x064D;" note=" ARABIC KASRATAN  "/>
+<s d="&#x064E;" t="&#x064E;" note=" ARABIC FATHA  "/>
+<s d="&#x064F;" t="&#x064F;" note=" ARABIC DAMMA  "/>
+<s d="&#x0650;" t="&#x0650;" note=" ARABIC KASRA  "/>
+<s d="&#x0651;" t="&#x0651;" note=" ARABIC SHADDA  "/>
+<s d="&#x0652;" t="&#x0652;" note=" ARABIC SUKUN  "/>
+<s d="&#x0653;" t="&#x0653;" note=" ARABIC MADDAH ABOVE  "/>
+<s d="&#x0654;" t="&#x0654;" note=" ARABIC HAMZA ABOVE  "/>
+<s d="&#x0655;" t="&#x0655;" note=" ARABIC HAMZA BELOW  "/>
+<s d="&#x0656;" t="&#x0656;" note=" ARABIC SUBSCRIPT ALEF  "/>
+<s d="&#x0657;" t="&#x0657;" note=" ARABIC INVERTED DAMMA  "/>
+<s d="&#x0658;" t="&#x0658;" note=" ARABIC MARK NOON GHUNNA  "/>
+<s d="&#x0660;" t="&#x0660;" note=" ARABIC-INDIC DIGIT ZERO  "/>
+<s d="&#x0661;" t="&#x0661;" note=" ARABIC-INDIC DIGIT ONE  "/>
+<s d="&#x0662;" t="&#x0662;" note=" ARABIC-INDIC DIGIT TWO  "/>
+<s d="&#x0663;" t="&#x0663;" note=" ARABIC-INDIC DIGIT THREE  "/>
+<s d="&#x0664;" t="&#x0664;" note=" ARABIC-INDIC DIGIT FOUR  "/>
+<s d="&#x0665;" t="&#x0665;" note=" ARABIC-INDIC DIGIT FIVE  "/>
+<s d="&#x0666;" t="&#x0666;" note=" ARABIC-INDIC DIGIT SIX  "/>
+<s d="&#x0667;" t="&#x0667;" note=" ARABIC-INDIC DIGIT SEVEN  "/>
+<s d="&#x0668;" t="&#x0668;" note=" ARABIC-INDIC DIGIT EIGHT  "/>
+<s d="&#x0669;" t="&#x0669;" note=" ARABIC-INDIC DIGIT NINE  "/>
+<s d="&#x066A;" t="&#x066A;" note=" ARABIC PERCENT SIGN  "/>
+<s d="&#x066B;" t="&#x066B;" note=" ARABIC DECIMAL SEPARATOR  "/>
+<s d="&#x066C;" t="&#x066C;" note=" ARABIC THOUSANDS SEPARATOR  "/>
+<s d="&#x066D;" t="&#x066D;" note=" ARABIC FIVE POINTED STAR  "/>
+<s d="&#x066E;" t="&#x066E;" note=" ARABIC LETTER DOTLESS BEH  "/>
+<s d="&#x066F;" t="&#x066F;" note=" ARABIC LETTER DOTLESS QAF  "/>
+<s d="&#x0670;" t="&#x0670;" note=" ARABIC LETTER SUPERSCRIPT ALEF  "/>
+<s d="&#x0671;" t="&#x0671;" note=" ARABIC LETTER ALEF WASLA  "/>
+<s d="&#x0672;" t="&#x0672;" note=" ARABIC LETTER ALEF WITH WAVY HAMZA ABOVE  "/>
+<s d="&#x0673;" t="&#x0673;" note=" ARABIC LETTER ALEF WITH WAVY HAMZA BELOW  "/>
+<s d="&#x0674;" t="&#x0674;" note=" ARABIC LETTER HIGH HAMZA  "/>
+<s d="&#x0675;" t="&#x0675;" note=" ARABIC LETTER HIGH HAMZA ALEF  "/>
+<s d="&#x0676;" t="&#x0676;" note=" ARABIC LETTER HIGH HAMZA WAW  "/>
+<s d="&#x0677;" t="&#x0677;" note=" ARABIC LETTER U WITH HAMZA ABOVE  "/>
+<s d="&#x0678;" t="&#x0678;" note=" ARABIC LETTER HIGH HAMZA YEH  "/>
+<s d="&#x0679;" t="&#x0679;" note=" ARABIC LETTER TTEH  "/>
+<s d="&#x067A;" t="&#x067A;" note=" ARABIC LETTER TTEHEH  "/>
+<s d="&#x067B;" t="&#x067B;" note=" ARABIC LETTER BEEH  "/>
+<s d="&#x067C;" t="&#x067C;" note=" ARABIC LETTER TEH WITH RING  "/>
+<s d="&#x067D;" t="&#x067D;" note=" ARABIC LETTER TEH WITH THREE DOTS ABOVE DOWNWARDS  "/>
+<s d="&#x067E;" t="&#x067E;" note=" ARABIC LETTER PEH  "/>
+<s d="&#x067F;" t="&#x067F;" note=" ARABIC LETTER TEHEH  "/>
+<s d="&#x0680;" t="&#x0680;" note=" ARABIC LETTER BEHEH  "/>
+<s d="&#x0681;" t="&#x0681;" note=" ARABIC LETTER HAH WITH HAMZA ABOVE  "/>
+<s d="&#x0682;" t="&#x0682;" note=" ARABIC LETTER HAH WITH TWO DOTS VERTICAL ABOVE  "/>
+<s d="&#x0683;" t="&#x0683;" note=" ARABIC LETTER NYEH  "/>
+<s d="&#x0684;" t="&#x0684;" note=" ARABIC LETTER DYEH  "/>
+<s d="&#x0685;" t="&#x0685;" note=" ARABIC LETTER HAH WITH THREE DOTS ABOVE  "/>
+<s d="&#x0686;" t="&#x0686;" note=" ARABIC LETTER TCHEH  "/>
+<s d="&#x0687;" t="&#x0687;" note=" ARABIC LETTER TCHEHEH  "/>
+<s d="&#x0688;" t="&#x0688;" note=" ARABIC LETTER DDAL  "/>
+<s d="&#x0689;" t="&#x0689;" note=" ARABIC LETTER DAL WITH RING  "/>
+<s d="&#x068A;" t="&#x068A;" note=" ARABIC LETTER DAL WITH DOT BELOW  "/>
+<s d="&#x068B;" t="&#x068B;" note=" ARABIC LETTER DAL WITH DOT BELOW AND SMALL TAH  "/>
+<s d="&#x068C;" t="&#x068C;" note=" ARABIC LETTER DAHAL  "/>
+<s d="&#x068D;" t="&#x068D;" note=" ARABIC LETTER DDAHAL  "/>
+<s d="&#x068E;" t="&#x068E;" note=" ARABIC LETTER DUL  "/>
+<s d="&#x068F;" t="&#x068F;" note=" ARABIC LETTER DAL WITH THREE DOTS ABOVE DOWNWARDS  "/>
+<s d="&#x0690;" t="&#x0690;" note=" ARABIC LETTER DAL WITH FOUR DOTS ABOVE  "/>
+<s d="&#x0691;" t="&#x0691;" note=" ARABIC LETTER RREH  "/>
+<s d="&#x0692;" t="&#x0692;" note=" ARABIC LETTER REH WITH SMALL V  "/>
+<s d="&#x0693;" t="&#x0693;" note=" ARABIC LETTER REH WITH RING  "/>
+<s d="&#x0694;" t="&#x0694;" note=" ARABIC LETTER REH WITH DOT BELOW  "/>
+<s d="&#x0695;" t="&#x0695;" note=" ARABIC LETTER REH WITH SMALL V BELOW  "/>
+<s d="&#x0696;" t="&#x0696;" note=" ARABIC LETTER REH WITH DOT BELOW AND DOT ABOVE  "/>
+<s d="&#x0697;" t="&#x0697;" note=" ARABIC LETTER REH WITH TWO DOTS ABOVE  "/>
+<s d="&#x0698;" t="&#x0698;" note=" ARABIC LETTER JEH  "/>
+<s d="&#x0699;" t="&#x0699;" note=" ARABIC LETTER REH WITH FOUR DOTS ABOVE  "/>
+<s d="&#x069A;" t="&#x069A;" note=" ARABIC LETTER SEEN WITH DOT BELOW AND DOT ABOVE  "/>
+<s d="&#x069B;" t="&#x069B;" note=" ARABIC LETTER SEEN WITH THREE DOTS BELOW  "/>
+<s d="&#x069C;" t="&#x069C;" note=" ARABIC LETTER SEEN WITH THREE DOTS BELOW AND THREE DOTS ABOVE  "/>
+<s d="&#x069D;" t="&#x069D;" note=" ARABIC LETTER SAD WITH TWO DOTS BELOW  "/>
+<s d="&#x069E;" t="&#x069E;" note=" ARABIC LETTER SAD WITH THREE DOTS ABOVE  "/>
+<s d="&#x069F;" t="&#x069F;" note=" ARABIC LETTER TAH WITH THREE DOTS ABOVE  "/>
+<s d="&#x06A0;" t="&#x06A0;" note=" ARABIC LETTER AIN WITH THREE DOTS ABOVE  "/>
+<s d="&#x06A1;" t="&#x06A1;" note=" ARABIC LETTER DOTLESS FEH  "/>
+<s d="&#x06A2;" t="&#x06A2;" note=" ARABIC LETTER FEH WITH DOT MOVED BELOW  "/>
+<s d="&#x06A3;" t="&#x06A3;" note=" ARABIC LETTER FEH WITH DOT BELOW  "/>
+<s d="&#x06A4;" t="&#x06A4;" note=" ARABIC LETTER VEH  "/>
+<s d="&#x06A5;" t="&#x06A5;" note=" ARABIC LETTER FEH WITH THREE DOTS BELOW  "/>
+<s d="&#x06A6;" t="&#x06A6;" note=" ARABIC LETTER PEHEH  "/>
+<s d="&#x06A7;" t="&#x06A7;" note=" ARABIC LETTER QAF WITH DOT ABOVE  "/>
+<s d="&#x06A8;" t="&#x06A8;" note=" ARABIC LETTER QAF WITH THREE DOTS ABOVE  "/>
+<s d="&#x06A9;" t="&#x06A9;" note=" ARABIC LETTER KEHEH  "/>
+<s d="&#x06AA;" t="&#x06AA;" note=" ARABIC LETTER SWASH KAF  "/>
+<s d="&#x06AB;" t="&#x06AB;" note=" ARABIC LETTER KAF WITH RING  "/>
+<s d="&#x06AC;" t="&#x06AC;" note=" ARABIC LETTER KAF WITH DOT ABOVE  "/>
+<s d="&#x06AD;" t="&#x06AD;" note=" ARABIC LETTER NG  "/>
+<s d="&#x06AE;" t="&#x06AE;" note=" ARABIC LETTER KAF WITH THREE DOTS BELOW  "/>
+<s d="&#x06AF;" t="&#x06AF;" note=" ARABIC LETTER GAF  "/>
+<s d="&#x06B0;" t="&#x06B0;" note=" ARABIC LETTER GAF WITH RING  "/>
+<s d="&#x06B1;" t="&#x06B1;" note=" ARABIC LETTER NGOEH  "/>
+<s d="&#x06B2;" t="&#x06B2;" note=" ARABIC LETTER GAF WITH TWO DOTS BELOW  "/>
+<s d="&#x06B3;" t="&#x06B3;" note=" ARABIC LETTER GUEH  "/>
+<s d="&#x06B4;" t="&#x06B4;" note=" ARABIC LETTER GAF WITH THREE DOTS ABOVE  "/>
+<s d="&#x06B5;" t="&#x06B5;" note=" ARABIC LETTER LAM WITH SMALL V  "/>
+<s d="&#x06B6;" t="&#x06B6;" note=" ARABIC LETTER LAM WITH DOT ABOVE  "/>
+<s d="&#x06B7;" t="&#x06B7;" note=" ARABIC LETTER LAM WITH THREE DOTS ABOVE  "/>
+<s d="&#x06B8;" t="&#x06B8;" note=" ARABIC LETTER LAM WITH THREE DOTS BELOW  "/>
+<s d="&#x06B9;" t="&#x06B9;" note=" ARABIC LETTER NOON WITH DOT BELOW  "/>
+<s d="&#x06BA;" t="&#x06BA;" note=" ARABIC LETTER NOON GHUNNA  "/>
+<s d="&#x06BB;" t="&#x06BB;" note=" ARABIC LETTER RNOON  "/>
+<s d="&#x06BC;" t="&#x06BC;" note=" ARABIC LETTER NOON WITH RING  "/>
+<s d="&#x06BD;" t="&#x06BD;" note=" ARABIC LETTER NOON WITH THREE DOTS ABOVE  "/>
+<s d="&#x06BE;" t="&#x06BE;" note=" ARABIC LETTER HEH DOACHASHMEE  "/>
+<s d="&#x06BF;" t="&#x06BF;" note=" ARABIC LETTER TCHEH WITH DOT ABOVE  "/>
+<s d="&#x06C0;" t="&#x06C0;" note=" ARABIC LETTER HEH WITH YEH ABOVE  "/>
+<s d="&#x06C1;" t="&#x06C1;" note=" ARABIC LETTER HEH GOAL  "/>
+<s d="&#x06C2;" t="&#x06C2;" note=" ARABIC LETTER HEH GOAL WITH HAMZA ABOVE  "/>
+<s d="&#x06C3;" t="&#x06C3;" note=" ARABIC LETTER TEH MARBUTA GOAL  "/>
+<s d="&#x06C4;" t="&#x06C4;" note=" ARABIC LETTER WAW WITH RING  "/>
+<s d="&#x06C5;" t="&#x06C5;" note=" ARABIC LETTER KIRGHIZ OE  "/>
+<s d="&#x06C6;" t="&#x06C6;" note=" ARABIC LETTER OE  "/>
+<s d="&#x06C7;" t="&#x06C7;" note=" ARABIC LETTER U  "/>
+<s d="&#x06C8;" t="&#x06C8;" note=" ARABIC LETTER YU  "/>
+<s d="&#x06C9;" t="&#x06C9;" note=" ARABIC LETTER KIRGHIZ YU  "/>
+<s d="&#x06CA;" t="&#x06CA;" note=" ARABIC LETTER WAW WITH TWO DOTS ABOVE  "/>
+<s d="&#x06CB;" t="&#x06CB;" note=" ARABIC LETTER VE  "/>
+<s d="&#x06CC;" t="&#x06CC;" note=" ARABIC LETTER FARSI YEH  "/>
+<s d="&#x06CD;" t="&#x06CD;" note=" ARABIC LETTER YEH WITH TAIL  "/>
+<s d="&#x06CE;" t="&#x06CE;" note=" ARABIC LETTER YEH WITH SMALL V  "/>
+<s d="&#x06CF;" t="&#x06CF;" note=" ARABIC LETTER WAW WITH DOT ABOVE  "/>
+<s d="&#x06D0;" t="&#x06D0;" note=" ARABIC LETTER E  "/>
+<s d="&#x06D1;" t="&#x06D1;" note=" ARABIC LETTER YEH WITH THREE DOTS BELOW  "/>
+<s d="&#x06D2;" t="&#x06D2;" note=" ARABIC LETTER YEH BARREE  "/>
+<s d="&#x06D3;" t="&#x06D3;" note=" ARABIC LETTER YEH BARREE WITH HAMZA ABOVE  "/>
+<s d="&#x06D4;" t="&#x06D4;" note=" ARABIC FULL STOP  "/>
+<s d="&#x06D5;" t="&#x06D5;" note=" ARABIC LETTER AE  "/>
+<s d="&#x06D6;" t="&#x06D6;" note=" ARABIC SMALL HIGH LIGATURE SAD WITH LAM WITH ALEF MAKSURA  "/>
+<s d="&#x06D7;" t="&#x06D7;" note=" ARABIC SMALL HIGH LIGATURE QAF WITH LAM WITH ALEF MAKSURA  "/>
+<s d="&#x06D8;" t="&#x06D8;" note=" ARABIC SMALL HIGH MEEM INITIAL FORM  "/>
+<s d="&#x06D9;" t="&#x06D9;" note=" ARABIC SMALL HIGH LAM ALEF  "/>
+<s d="&#x06DA;" t="&#x06DA;" note=" ARABIC SMALL HIGH JEEM  "/>
+<s d="&#x06DB;" t="&#x06DB;" note=" ARABIC SMALL HIGH THREE DOTS  "/>
+<s d="&#x06DC;" t="&#x06DC;" note=" ARABIC SMALL HIGH SEEN  "/>
+<s d="&#x06DD;" t="&#x06DD;" note=" ARABIC END OF AYAH  "/>
+<s d="&#x06DE;" t="&#x06DE;" note=" ARABIC START OF RUB EL HIZB  "/>
+<s d="&#x06DF;" t="&#x06DF;" note=" ARABIC SMALL HIGH ROUNDED ZERO  "/>
+<s d="&#x06E0;" t="&#x06E0;" note=" ARABIC SMALL HIGH UPRIGHT RECTANGULAR ZERO  "/>
+<s d="&#x06E1;" t="&#x06E1;" note=" ARABIC SMALL HIGH DOTLESS HEAD OF KHAH  "/>
+<s d="&#x06E2;" t="&#x06E2;" note=" ARABIC SMALL HIGH MEEM ISOLATED FORM  "/>
+<s d="&#x06E3;" t="&#x06E3;" note=" ARABIC SMALL LOW SEEN  "/>
+<s d="&#x06E4;" t="&#x06E4;" note=" ARABIC SMALL HIGH MADDA  "/>
+<s d="&#x06E5;" t="&#x06E5;" note=" ARABIC SMALL WAW  "/>
+<s d="&#x06E6;" t="&#x06E6;" note=" ARABIC SMALL YEH  "/>
+<s d="&#x06E7;" t="&#x06E7;" note=" ARABIC SMALL HIGH YEH  "/>
+<s d="&#x06E8;" t="&#x06E8;" note=" ARABIC SMALL HIGH NOON  "/>
+<s d="&#x06E9;" t="&#x06E9;" note=" ARABIC PLACE OF SAJDAH  "/>
+<s d="&#x06EA;" t="&#x06EA;" note=" ARABIC EMPTY CENTRE LOW STOP  "/>
+<s d="&#x06EB;" t="&#x06EB;" note=" ARABIC EMPTY CENTRE HIGH STOP  "/>
+<s d="&#x06EC;" t="&#x06EC;" note=" ARABIC ROUNDED HIGH STOP WITH FILLED CENTRE  "/>
+<s d="&#x06ED;" t="&#x06ED;" note=" ARABIC SMALL LOW MEEM  "/>
+<s d="&#x06EE;" t="&#x06EE;" note=" ARABIC LETTER DAL WITH INVERTED V  "/>
+<s d="&#x06EF;" t="&#x06EF;" note=" ARABIC LETTER REH WITH INVERTED V  "/>
+<s d="&#x06F0;" t="&#x06F0;" note=" EXTENDED ARABIC-INDIC DIGIT ZERO  "/>
+<s d="&#x06F1;" t="&#x06F1;" note=" EXTENDED ARABIC-INDIC DIGIT ONE  "/>
+<s d="&#x06F2;" t="&#x06F2;" note=" EXTENDED ARABIC-INDIC DIGIT TWO  "/>
+<s d="&#x06F3;" t="&#x06F3;" note=" EXTENDED ARABIC-INDIC DIGIT THREE  "/>
+<s d="&#x06F4;" t="&#x06F4;" note=" EXTENDED ARABIC-INDIC DIGIT FOUR  "/>
+<s d="&#x06F5;" t="&#x06F5;" note=" EXTENDED ARABIC-INDIC DIGIT FIVE  "/>
+<s d="&#x06F6;" t="&#x06F6;" note=" EXTENDED ARABIC-INDIC DIGIT SIX  "/>
+<s d="&#x06F7;" t="&#x06F7;" note=" EXTENDED ARABIC-INDIC DIGIT SEVEN  "/>
+<s d="&#x06F8;" t="&#x06F8;" note=" EXTENDED ARABIC-INDIC DIGIT EIGHT  "/>
+<s d="&#x06F9;" t="&#x06F9;" note=" EXTENDED ARABIC-INDIC DIGIT NINE  "/>
+<s d="&#x06FA;" t="&#x06FA;" note=" ARABIC LETTER SHEEN WITH DOT BELOW  "/>
+<s d="&#x06FB;" t="&#x06FB;" note=" ARABIC LETTER DAD WITH DOT BELOW  "/>
+<s d="&#x06FC;" t="&#x06FC;" note=" ARABIC LETTER GHAIN WITH DOT BELOW  "/>
+<s d="&#x06FD;" t="&#x06FD;" note=" ARABIC SIGN SINDHI AMPERSAND  "/>
+<s d="&#x06FE;" t="&#x06FE;" note=" ARABIC SIGN SINDHI POSTPOSITION MEN  "/>
+<s d="&#x06FF;" t="&#x06FF;" note=" ARABIC LETTER HEH WITH INVERTED V "/>
+</group>
+<group name="Runic">
+<s d="&#x16A0;" t="&#x16A0;" note=" RUNIC LETTER FEHU FEOH FE F  "/>
+<s d="&#x16A1;" t="&#x16A1;" note=" RUNIC LETTER V  "/>
+<s d="&#x16A2;" t="&#x16A2;" note=" RUNIC LETTER URUZ UR U  "/>
+<s d="&#x16A3;" t="&#x16A3;" note=" RUNIC LETTER YR  "/>
+<s d="&#x16A4;" t="&#x16A4;" note=" RUNIC LETTER Y  "/>
+<s d="&#x16A5;" t="&#x16A5;" note=" RUNIC LETTER W  "/>
+<s d="&#x16A6;" t="&#x16A6;" note=" RUNIC LETTER THURISAZ THURS THORN  "/>
+<s d="&#x16A7;" t="&#x16A7;" note=" RUNIC LETTER ETH  "/>
+<s d="&#x16A8;" t="&#x16A8;" note=" RUNIC LETTER ANSUZ A  "/>
+<s d="&#x16A9;" t="&#x16A9;" note=" RUNIC LETTER OS O  "/>
+<s d="&#x16AA;" t="&#x16AA;" note=" RUNIC LETTER AC A  "/>
+<s d="&#x16AB;" t="&#x16AB;" note=" RUNIC LETTER AESC  "/>
+<s d="&#x16AC;" t="&#x16AC;" note=" RUNIC LETTER LONG-BRANCH-OSS O  "/>
+<s d="&#x16AD;" t="&#x16AD;" note=" RUNIC LETTER SHORT-TWIG-OSS O  "/>
+<s d="&#x16AE;" t="&#x16AE;" note=" RUNIC LETTER O  "/>
+<s d="&#x16AF;" t="&#x16AF;" note=" RUNIC LETTER OE  "/>
+<s d="&#x16B0;" t="&#x16B0;" note=" RUNIC LETTER ON  "/>
+<s d="&#x16B1;" t="&#x16B1;" note=" RUNIC LETTER RAIDO RAD REID R  "/>
+<s d="&#x16B2;" t="&#x16B2;" note=" RUNIC LETTER KAUNA  "/>
+<s d="&#x16B3;" t="&#x16B3;" note=" RUNIC LETTER CEN  "/>
+<s d="&#x16B4;" t="&#x16B4;" note=" RUNIC LETTER KAUN K  "/>
+<s d="&#x16B5;" t="&#x16B5;" note=" RUNIC LETTER G  "/>
+<s d="&#x16B6;" t="&#x16B6;" note=" RUNIC LETTER ENG  "/>
+<s d="&#x16B7;" t="&#x16B7;" note=" RUNIC LETTER GEBO GYFU G  "/>
+<s d="&#x16B8;" t="&#x16B8;" note=" RUNIC LETTER GAR  "/>
+<s d="&#x16B9;" t="&#x16B9;" note=" RUNIC LETTER WUNJO WYNN W  "/>
+<s d="&#x16BA;" t="&#x16BA;" note=" RUNIC LETTER HAGLAZ H  "/>
+<s d="&#x16BB;" t="&#x16BB;" note=" RUNIC LETTER HAEGL H  "/>
+<s d="&#x16BC;" t="&#x16BC;" note=" RUNIC LETTER LONG-BRANCH-HAGALL H  "/>
+<s d="&#x16BD;" t="&#x16BD;" note=" RUNIC LETTER SHORT-TWIG-HAGALL H  "/>
+<s d="&#x16BE;" t="&#x16BE;" note=" RUNIC LETTER NAUDIZ NYD NAUD N  "/>
+<s d="&#x16BF;" t="&#x16BF;" note=" RUNIC LETTER SHORT-TWIG-NAUD N  "/>
+<s d="&#x16C0;" t="&#x16C0;" note=" RUNIC LETTER DOTTED-N  "/>
+<s d="&#x16C1;" t="&#x16C1;" note=" RUNIC LETTER ISAZ IS ISS I  "/>
+<s d="&#x16C2;" t="&#x16C2;" note=" RUNIC LETTER E  "/>
+<s d="&#x16C3;" t="&#x16C3;" note=" RUNIC LETTER JERAN J  "/>
+<s d="&#x16C4;" t="&#x16C4;" note=" RUNIC LETTER GER  "/>
+<s d="&#x16C5;" t="&#x16C5;" note=" RUNIC LETTER LONG-BRANCH-AR AE  "/>
+<s d="&#x16C6;" t="&#x16C6;" note=" RUNIC LETTER SHORT-TWIG-AR A  "/>
+<s d="&#x16C7;" t="&#x16C7;" note=" RUNIC LETTER IWAZ EOH  "/>
+<s d="&#x16C8;" t="&#x16C8;" note=" RUNIC LETTER PERTHO PEORTH P  "/>
+<s d="&#x16C9;" t="&#x16C9;" note=" RUNIC LETTER ALGIZ EOLHX  "/>
+<s d="&#x16CA;" t="&#x16CA;" note=" RUNIC LETTER SOWILO S  "/>
+<s d="&#x16CB;" t="&#x16CB;" note=" RUNIC LETTER SIGEL LONG-BRANCH-SOL S  "/>
+<s d="&#x16CC;" t="&#x16CC;" note=" RUNIC LETTER SHORT-TWIG-SOL S  "/>
+<s d="&#x16CD;" t="&#x16CD;" note=" RUNIC LETTER C  "/>
+<s d="&#x16CE;" t="&#x16CE;" note=" RUNIC LETTER Z  "/>
+<s d="&#x16CF;" t="&#x16CF;" note=" RUNIC LETTER TIWAZ TIR TYR T  "/>
+<s d="&#x16D0;" t="&#x16D0;" note=" RUNIC LETTER SHORT-TWIG-TYR T  "/>
+<s d="&#x16D1;" t="&#x16D1;" note=" RUNIC LETTER D  "/>
+<s d="&#x16D2;" t="&#x16D2;" note=" RUNIC LETTER BERKANAN BEORC BJARKAN B  "/>
+<s d="&#x16D3;" t="&#x16D3;" note=" RUNIC LETTER SHORT-TWIG-BJARKAN B  "/>
+<s d="&#x16D4;" t="&#x16D4;" note=" RUNIC LETTER DOTTED-P  "/>
+<s d="&#x16D5;" t="&#x16D5;" note=" RUNIC LETTER OPEN-P  "/>
+<s d="&#x16D6;" t="&#x16D6;" note=" RUNIC LETTER EHWAZ EH E  "/>
+<s d="&#x16D7;" t="&#x16D7;" note=" RUNIC LETTER MANNAZ MAN M  "/>
+<s d="&#x16D8;" t="&#x16D8;" note=" RUNIC LETTER LONG-BRANCH-MADR M  "/>
+<s d="&#x16D9;" t="&#x16D9;" note=" RUNIC LETTER SHORT-TWIG-MADR M  "/>
+<s d="&#x16DA;" t="&#x16DA;" note=" RUNIC LETTER LAUKAZ LAGU LOGR L  "/>
+<s d="&#x16DB;" t="&#x16DB;" note=" RUNIC LETTER DOTTED-L  "/>
+<s d="&#x16DC;" t="&#x16DC;" note=" RUNIC LETTER INGWAZ  "/>
+<s d="&#x16DD;" t="&#x16DD;" note=" RUNIC LETTER ING  "/>
+<s d="&#x16DE;" t="&#x16DE;" note=" RUNIC LETTER DAGAZ DAEG D  "/>
+<s d="&#x16DF;" t="&#x16DF;" note=" RUNIC LETTER OTHALAN ETHEL O  "/>
+<s d="&#x16E0;" t="&#x16E0;" note=" RUNIC LETTER EAR  "/>
+<s d="&#x16E1;" t="&#x16E1;" note=" RUNIC LETTER IOR  "/>
+<s d="&#x16E2;" t="&#x16E2;" note=" RUNIC LETTER CWEORTH  "/>
+<s d="&#x16E3;" t="&#x16E3;" note=" RUNIC LETTER CALC  "/>
+<s d="&#x16E4;" t="&#x16E4;" note=" RUNIC LETTER CEALC  "/>
+<s d="&#x16E5;" t="&#x16E5;" note=" RUNIC LETTER STAN  "/>
+<s d="&#x16E6;" t="&#x16E6;" note=" RUNIC LETTER LONG-BRANCH-YR  "/>
+<s d="&#x16E7;" t="&#x16E7;" note=" RUNIC LETTER SHORT-TWIG-YR  "/>
+<s d="&#x16E8;" t="&#x16E8;" note=" RUNIC LETTER ICELANDIC-YR  "/>
+<s d="&#x16E9;" t="&#x16E9;" note=" RUNIC LETTER Q  "/>
+<s d="&#x16EA;" t="&#x16EA;" note=" RUNIC LETTER X  "/>
+<s d="&#x16EB;" t="&#x16EB;" note=" RUNIC SINGLE PUNCTUATION  "/>
+<s d="&#x16EC;" t="&#x16EC;" note=" RUNIC MULTIPLE PUNCTUATION  "/>
+<s d="&#x16ED;" t="&#x16ED;" note=" RUNIC CROSS PUNCTUATION  "/>
+<s d="&#x16EE;" t="&#x16EE;" note=" RUNIC ARLAUG SYMBOL  "/>
+<s d="&#x16EF;" t="&#x16EF;" note=" RUNIC TVIMADUR SYMBOL  "/>
+<s d="&#x16F0;" t="&#x16F0;" note=" RUNIC BELGTHOR SYMBOL "/>
+</group>
+<group name="Buhid" >
+<s d="&#x1740;" t="&#x1740;" note=" BUHID LETTER A  "/>
+<s d="&#x1741;" t="&#x1741;" note=" BUHID LETTER I  "/>
+<s d="&#x1742;" t="&#x1742;" note=" BUHID LETTER U  "/>
+<s d="&#x1743;" t="&#x1743;" note=" BUHID LETTER KA  "/>
+<s d="&#x1744;" t="&#x1744;" note=" BUHID LETTER GA  "/>
+<s d="&#x1745;" t="&#x1745;" note=" BUHID LETTER NGA  "/>
+<s d="&#x1746;" t="&#x1746;" note=" BUHID LETTER TA  "/>
+<s d="&#x1747;" t="&#x1747;" note=" BUHID LETTER DA  "/>
+<s d="&#x1748;" t="&#x1748;" note=" BUHID LETTER NA  "/>
+<s d="&#x1749;" t="&#x1749;" note=" BUHID LETTER PA  "/>
+<s d="&#x174A;" t="&#x174A;" note=" BUHID LETTER BA  "/>
+<s d="&#x174B;" t="&#x174B;" note=" BUHID LETTER MA  "/>
+<s d="&#x174C;" t="&#x174C;" note=" BUHID LETTER YA  "/>
+<s d="&#x174D;" t="&#x174D;" note=" BUHID LETTER RA  "/>
+<s d="&#x174E;" t="&#x174E;" note=" BUHID LETTER LA  "/>
+<s d="&#x174F;" t="&#x174F;" note=" BUHID LETTER WA  "/>
+<s d="&#x1750;" t="&#x1750;" note=" BUHID LETTER SA  "/>
+<s d="&#x1751;" t="&#x1751;" note=" BUHID LETTER HA  "/>
+<s d="&#x1752;" t="&#x1752;" note=" BUHID VOWEL SIGN I  "/>
+<s d="&#x1753;" t="&#x1753;" note=" BUHID VOWEL SIGN U "/>
+
+</group>
+<group name="Ogham" >
+<s d="&#x1680;" t="&#x1680;" note=" OGHAM SPACE MARK  "/>
+<s d="&#x1681;" t="&#x1681;" note=" OGHAM LETTER BEITH  "/>
+<s d="&#x1682;" t="&#x1682;" note=" OGHAM LETTER LUIS  "/>
+<s d="&#x1683;" t="&#x1683;" note=" OGHAM LETTER FEARN  "/>
+<s d="&#x1684;" t="&#x1684;" note=" OGHAM LETTER SAIL  "/>
+<s d="&#x1685;" t="&#x1685;" note=" OGHAM LETTER NION  "/>
+<s d="&#x1686;" t="&#x1686;" note=" OGHAM LETTER UATH  "/>
+<s d="&#x1687;" t="&#x1687;" note=" OGHAM LETTER DAIR  "/>
+<s d="&#x1688;" t="&#x1688;" note=" OGHAM LETTER TINNE  "/>
+<s d="&#x1689;" t="&#x1689;" note=" OGHAM LETTER COLL  "/>
+<s d="&#x168A;" t="&#x168A;" note=" OGHAM LETTER CEIRT  "/>
+<s d="&#x168B;" t="&#x168B;" note=" OGHAM LETTER MUIN  "/>
+<s d="&#x168C;" t="&#x168C;" note=" OGHAM LETTER GORT  "/>
+<s d="&#x168D;" t="&#x168D;" note=" OGHAM LETTER NGEADAL  "/>
+<s d="&#x168E;" t="&#x168E;" note=" OGHAM LETTER STRAIF  "/>
+<s d="&#x168F;" t="&#x168F;" note=" OGHAM LETTER RUIS  "/>
+<s d="&#x1690;" t="&#x1690;" note=" OGHAM LETTER AILM  "/>
+<s d="&#x1691;" t="&#x1691;" note=" OGHAM LETTER ONN  "/>
+<s d="&#x1692;" t="&#x1692;" note=" OGHAM LETTER UR  "/>
+<s d="&#x1693;" t="&#x1693;" note=" OGHAM LETTER EADHADH  "/>
+<s d="&#x1694;" t="&#x1694;" note=" OGHAM LETTER IODHADH  "/>
+<s d="&#x1695;" t="&#x1695;" note=" OGHAM LETTER EABHADH  "/>
+<s d="&#x1696;" t="&#x1696;" note=" OGHAM LETTER OR  "/>
+<s d="&#x1697;" t="&#x1697;" note=" OGHAM LETTER UILLEANN  "/>
+<s d="&#x1698;" t="&#x1698;" note=" OGHAM LETTER IFIN  "/>
+<s d="&#x1699;" t="&#x1699;" note=" OGHAM LETTER EAMHANCHOLL  "/>
+<s d="&#x169A;" t="&#x169A;" note=" OGHAM LETTER PEITH  "/>
+<s d="&#x169B;" t="&#x169B;" note=" OGHAM FEATHER MARK  "/>
+<s d="&#x169C;" t="&#x169C;" note=" OGHAM REVERSED FEATHER MARK "/>
+</group>
+<group name="Limbu" >
+<s d="&#x1900;" t="&#x1900;" note=" LIMBU VOWEL-CARRIER LETTER  "/>
+<s d="&#x1901;" t="&#x1901;" note=" LIMBU LETTER KA  "/>
+<s d="&#x1902;" t="&#x1902;" note=" LIMBU LETTER KHA  "/>
+<s d="&#x1903;" t="&#x1903;" note=" LIMBU LETTER GA  "/>
+<s d="&#x1904;" t="&#x1904;" note=" LIMBU LETTER GHA  "/>
+<s d="&#x1905;" t="&#x1905;" note=" LIMBU LETTER NGA  "/>
+<s d="&#x1906;" t="&#x1906;" note=" LIMBU LETTER CA  "/>
+<s d="&#x1907;" t="&#x1907;" note=" LIMBU LETTER CHA  "/>
+<s d="&#x1908;" t="&#x1908;" note=" LIMBU LETTER JA  "/>
+<s d="&#x1909;" t="&#x1909;" note=" LIMBU LETTER JHA  "/>
+<s d="&#x190A;" t="&#x190A;" note=" LIMBU LETTER YAN  "/>
+<s d="&#x190B;" t="&#x190B;" note=" LIMBU LETTER TA  "/>
+<s d="&#x190C;" t="&#x190C;" note=" LIMBU LETTER THA  "/>
+<s d="&#x190D;" t="&#x190D;" note=" LIMBU LETTER DA  "/>
+<s d="&#x190E;" t="&#x190E;" note=" LIMBU LETTER DHA  "/>
+<s d="&#x190F;" t="&#x190F;" note=" LIMBU LETTER NA  "/>
+<s d="&#x1910;" t="&#x1910;" note=" LIMBU LETTER PA  "/>
+<s d="&#x1911;" t="&#x1911;" note=" LIMBU LETTER PHA  "/>
+<s d="&#x1912;" t="&#x1912;" note=" LIMBU LETTER BA  "/>
+<s d="&#x1913;" t="&#x1913;" note=" LIMBU LETTER BHA  "/>
+<s d="&#x1914;" t="&#x1914;" note=" LIMBU LETTER MA  "/>
+<s d="&#x1915;" t="&#x1915;" note=" LIMBU LETTER YA  "/>
+<s d="&#x1916;" t="&#x1916;" note=" LIMBU LETTER RA  "/>
+<s d="&#x1917;" t="&#x1917;" note=" LIMBU LETTER LA  "/>
+<s d="&#x1918;" t="&#x1918;" note=" LIMBU LETTER WA  "/>
+<s d="&#x1919;" t="&#x1919;" note=" LIMBU LETTER SHA  "/>
+<s d="&#x191A;" t="&#x191A;" note=" LIMBU LETTER SSA  "/>
+<s d="&#x191B;" t="&#x191B;" note=" LIMBU LETTER SA  "/>
+<s d="&#x191C;" t="&#x191C;" note=" LIMBU LETTER HA  "/>
+<s d="&#x1920;" t="&#x1920;" note=" LIMBU VOWEL SIGN A  "/>
+<s d="&#x1921;" t="&#x1921;" note=" LIMBU VOWEL SIGN I  "/>
+<s d="&#x1922;" t="&#x1922;" note=" LIMBU VOWEL SIGN U  "/>
+<s d="&#x1923;" t="&#x1923;" note=" LIMBU VOWEL SIGN EE  "/>
+<s d="&#x1924;" t="&#x1924;" note=" LIMBU VOWEL SIGN AI  "/>
+<s d="&#x1925;" t="&#x1925;" note=" LIMBU VOWEL SIGN OO  "/>
+<s d="&#x1926;" t="&#x1926;" note=" LIMBU VOWEL SIGN AU  "/>
+<s d="&#x1927;" t="&#x1927;" note=" LIMBU VOWEL SIGN E  "/>
+<s d="&#x1928;" t="&#x1928;" note=" LIMBU VOWEL SIGN O  "/>
+<s d="&#x1929;" t="&#x1929;" note=" LIMBU SUBJOINED LETTER YA  "/>
+<s d="&#x192A;" t="&#x192A;" note=" LIMBU SUBJOINED LETTER RA  "/>
+<s d="&#x192B;" t="&#x192B;" note=" LIMBU SUBJOINED LETTER WA  "/>
+<s d="&#x1930;" t="&#x1930;" note=" LIMBU SMALL LETTER KA  "/>
+<s d="&#x1931;" t="&#x1931;" note=" LIMBU SMALL LETTER NGA  "/>
+<s d="&#x1932;" t="&#x1932;" note=" LIMBU SMALL LETTER ANUSVARA  "/>
+<s d="&#x1933;" t="&#x1933;" note=" LIMBU SMALL LETTER TA  "/>
+<s d="&#x1934;" t="&#x1934;" note=" LIMBU SMALL LETTER NA  "/>
+<s d="&#x1935;" t="&#x1935;" note=" LIMBU SMALL LETTER PA  "/>
+<s d="&#x1936;" t="&#x1936;" note=" LIMBU SMALL LETTER MA  "/>
+<s d="&#x1937;" t="&#x1937;" note=" LIMBU SMALL LETTER RA  "/>
+<s d="&#x1938;" t="&#x1938;" note=" LIMBU SMALL LETTER LA  "/>
+<s d="&#x1939;" t="&#x1939;" note=" LIMBU SIGN MUKPHRENG  "/>
+<s d="&#x193A;" t="&#x193A;" note=" LIMBU SIGN KEMPHRENG  "/>
+<s d="&#x193B;" t="&#x193B;" note=" LIMBU SIGN SA-I  "/>
+<s d="&#x1940;" t="&#x1940;" note=" LIMBU SIGN LOO  "/>
+<s d="&#x1944;" t="&#x1944;" note=" LIMBU EXCLAMATION MARK  "/>
+<s d="&#x1945;" t="&#x1945;" note=" LIMBU QUESTION MARK  "/>
+<s d="&#x1946;" t="&#x1946;" note=" LIMBU DIGIT ZERO  "/>
+<s d="&#x1947;" t="&#x1947;" note=" LIMBU DIGIT ONE  "/>
+<s d="&#x1948;" t="&#x1948;" note=" LIMBU DIGIT TWO  "/>
+<s d="&#x1949;" t="&#x1949;" note=" LIMBU DIGIT THREE  "/>
+<s d="&#x194A;" t="&#x194A;" note=" LIMBU DIGIT FOUR  "/>
+<s d="&#x194B;" t="&#x194B;" note=" LIMBU DIGIT FIVE  "/>
+<s d="&#x194C;" t="&#x194C;" note=" LIMBU DIGIT SIX  "/>
+<s d="&#x194D;" t="&#x194D;" note=" LIMBU DIGIT SEVEN  "/>
+<s d="&#x194E;" t="&#x194E;" note=" LIMBU DIGIT EIGHT  "/>
+<s d="&#x194F;" t="&#x194F;" note=" LIMBU DIGIT NINE "/>
+</group>
+<group name="Tai Le" >
+<s d="&#x1950;" t="&#x1950;" note=" TAI LE LETTER KA  "/>
+<s d="&#x1951;" t="&#x1951;" note=" TAI LE LETTER XA  "/>
+<s d="&#x1952;" t="&#x1952;" note=" TAI LE LETTER NGA  "/>
+<s d="&#x1953;" t="&#x1953;" note=" TAI LE LETTER TSA  "/>
+<s d="&#x1954;" t="&#x1954;" note=" TAI LE LETTER SA  "/>
+<s d="&#x1955;" t="&#x1955;" note=" TAI LE LETTER YA  "/>
+<s d="&#x1956;" t="&#x1956;" note=" TAI LE LETTER TA  "/>
+<s d="&#x1957;" t="&#x1957;" note=" TAI LE LETTER THA  "/>
+<s d="&#x1958;" t="&#x1958;" note=" TAI LE LETTER LA  "/>
+<s d="&#x1959;" t="&#x1959;" note=" TAI LE LETTER PA  "/>
+<s d="&#x195A;" t="&#x195A;" note=" TAI LE LETTER PHA  "/>
+<s d="&#x195B;" t="&#x195B;" note=" TAI LE LETTER MA  "/>
+<s d="&#x195C;" t="&#x195C;" note=" TAI LE LETTER FA  "/>
+<s d="&#x195D;" t="&#x195D;" note=" TAI LE LETTER VA  "/>
+<s d="&#x195E;" t="&#x195E;" note=" TAI LE LETTER HA  "/>
+<s d="&#x195F;" t="&#x195F;" note=" TAI LE LETTER QA  "/>
+<s d="&#x1960;" t="&#x1960;" note=" TAI LE LETTER KHA  "/>
+<s d="&#x1961;" t="&#x1961;" note=" TAI LE LETTER TSHA  "/>
+<s d="&#x1962;" t="&#x1962;" note=" TAI LE LETTER NA  "/>
+<s d="&#x1963;" t="&#x1963;" note=" TAI LE LETTER A  "/>
+<s d="&#x1964;" t="&#x1964;" note=" TAI LE LETTER I  "/>
+<s d="&#x1965;" t="&#x1965;" note=" TAI LE LETTER EE  "/>
+<s d="&#x1966;" t="&#x1966;" note=" TAI LE LETTER EH  "/>
+<s d="&#x1967;" t="&#x1967;" note=" TAI LE LETTER U  "/>
+<s d="&#x1968;" t="&#x1968;" note=" TAI LE LETTER OO  "/>
+<s d="&#x1969;" t="&#x1969;" note=" TAI LE LETTER O  "/>
+<s d="&#x196A;" t="&#x196A;" note=" TAI LE LETTER UE  "/>
+<s d="&#x196B;" t="&#x196B;" note=" TAI LE LETTER E  "/>
+<s d="&#x196C;" t="&#x196C;" note=" TAI LE LETTER AUE  "/>
+<s d="&#x196D;" t="&#x196D;" note=" TAI LE LETTER AI  "/>
+<s d="&#x1970;" t="&#x1970;" note=" TAI LE LETTER TONE-2  "/>
+<s d="&#x1971;" t="&#x1971;" note=" TAI LE LETTER TONE-3  "/>
+<s d="&#x1972;" t="&#x1972;" note=" TAI LE LETTER TONE-4  "/>
+<s d="&#x1973;" t="&#x1973;" note=" TAI LE LETTER TONE-5  "/>
+<s d="&#x1974;" t="&#x1974;" note=" TAI LE LETTER TONE-6 "/>
+</group>
+<group name="Hanunoo" >
+<s d="&#x1720;" t="&#x1720;" note=" HANUNOO LETTER A  "/>
+<s d="&#x1721;" t="&#x1721;" note=" HANUNOO LETTER I  "/>
+<s d="&#x1722;" t="&#x1722;" note=" HANUNOO LETTER U  "/>
+<s d="&#x1723;" t="&#x1723;" note=" HANUNOO LETTER KA  "/>
+<s d="&#x1724;" t="&#x1724;" note=" HANUNOO LETTER GA  "/>
+<s d="&#x1725;" t="&#x1725;" note=" HANUNOO LETTER NGA  "/>
+<s d="&#x1726;" t="&#x1726;" note=" HANUNOO LETTER TA  "/>
+<s d="&#x1727;" t="&#x1727;" note=" HANUNOO LETTER DA  "/>
+<s d="&#x1728;" t="&#x1728;" note=" HANUNOO LETTER NA  "/>
+<s d="&#x1729;" t="&#x1729;" note=" HANUNOO LETTER PA  "/>
+<s d="&#x172A;" t="&#x172A;" note=" HANUNOO LETTER BA  "/>
+<s d="&#x172B;" t="&#x172B;" note=" HANUNOO LETTER MA  "/>
+<s d="&#x172C;" t="&#x172C;" note=" HANUNOO LETTER YA  "/>
+<s d="&#x172D;" t="&#x172D;" note=" HANUNOO LETTER RA  "/>
+<s d="&#x172E;" t="&#x172E;" note=" HANUNOO LETTER LA  "/>
+<s d="&#x172F;" t="&#x172F;" note=" HANUNOO LETTER WA  "/>
+<s d="&#x1730;" t="&#x1730;" note=" HANUNOO LETTER SA  "/>
+<s d="&#x1731;" t="&#x1731;" note=" HANUNOO LETTER HA  "/>
+<s d="&#x1732;" t="&#x1732;" note=" HANUNOO VOWEL SIGN I  "/>
+<s d="&#x1733;" t="&#x1733;" note=" HANUNOO VOWEL SIGN U  "/>
+<s d="&#x1734;" t="&#x1734;" note=" HANUNOO SIGN PAMUDPOD  "/>
+<s d="&#x1735;" t="&#x1735;" note=" PHILIPPINE SINGLE PUNCTUATION  "/>
+<s d="&#x1736;" t="&#x1736;" note=" PHILIPPINE DOUBLE PUNCTUATION "/>
+</group>
+<group name="Cherokee" >
+<s d="&#x13A0;" t="&#x13A0;" note=" CHEROKEE LETTER A  "/>
+<s d="&#x13A1;" t="&#x13A1;" note=" CHEROKEE LETTER E  "/>
+<s d="&#x13A2;" t="&#x13A2;" note=" CHEROKEE LETTER I  "/>
+<s d="&#x13A3;" t="&#x13A3;" note=" CHEROKEE LETTER O  "/>
+<s d="&#x13A4;" t="&#x13A4;" note=" CHEROKEE LETTER U  "/>
+<s d="&#x13A5;" t="&#x13A5;" note=" CHEROKEE LETTER V  "/>
+<s d="&#x13A6;" t="&#x13A6;" note=" CHEROKEE LETTER GA  "/>
+<s d="&#x13A7;" t="&#x13A7;" note=" CHEROKEE LETTER KA  "/>
+<s d="&#x13A8;" t="&#x13A8;" note=" CHEROKEE LETTER GE  "/>
+<s d="&#x13A9;" t="&#x13A9;" note=" CHEROKEE LETTER GI  "/>
+<s d="&#x13AA;" t="&#x13AA;" note=" CHEROKEE LETTER GO  "/>
+<s d="&#x13AB;" t="&#x13AB;" note=" CHEROKEE LETTER GU  "/>
+<s d="&#x13AC;" t="&#x13AC;" note=" CHEROKEE LETTER GV  "/>
+<s d="&#x13AD;" t="&#x13AD;" note=" CHEROKEE LETTER HA  "/>
+<s d="&#x13AE;" t="&#x13AE;" note=" CHEROKEE LETTER HE  "/>
+<s d="&#x13AF;" t="&#x13AF;" note=" CHEROKEE LETTER HI  "/>
+<s d="&#x13B0;" t="&#x13B0;" note=" CHEROKEE LETTER HO  "/>
+<s d="&#x13B1;" t="&#x13B1;" note=" CHEROKEE LETTER HU  "/>
+<s d="&#x13B2;" t="&#x13B2;" note=" CHEROKEE LETTER HV  "/>
+<s d="&#x13B3;" t="&#x13B3;" note=" CHEROKEE LETTER LA  "/>
+<s d="&#x13B4;" t="&#x13B4;" note=" CHEROKEE LETTER LE  "/>
+<s d="&#x13B5;" t="&#x13B5;" note=" CHEROKEE LETTER LI  "/>
+<s d="&#x13B6;" t="&#x13B6;" note=" CHEROKEE LETTER LO  "/>
+<s d="&#x13B7;" t="&#x13B7;" note=" CHEROKEE LETTER LU  "/>
+<s d="&#x13B8;" t="&#x13B8;" note=" CHEROKEE LETTER LV  "/>
+<s d="&#x13B9;" t="&#x13B9;" note=" CHEROKEE LETTER MA  "/>
+<s d="&#x13BA;" t="&#x13BA;" note=" CHEROKEE LETTER ME  "/>
+<s d="&#x13BB;" t="&#x13BB;" note=" CHEROKEE LETTER MI  "/>
+<s d="&#x13BC;" t="&#x13BC;" note=" CHEROKEE LETTER MO  "/>
+<s d="&#x13BD;" t="&#x13BD;" note=" CHEROKEE LETTER MU  "/>
+<s d="&#x13BE;" t="&#x13BE;" note=" CHEROKEE LETTER NA  "/>
+<s d="&#x13BF;" t="&#x13BF;" note=" CHEROKEE LETTER HNA  "/>
+<s d="&#x13C0;" t="&#x13C0;" note=" CHEROKEE LETTER NAH  "/>
+<s d="&#x13C1;" t="&#x13C1;" note=" CHEROKEE LETTER NE  "/>
+<s d="&#x13C2;" t="&#x13C2;" note=" CHEROKEE LETTER NI  "/>
+<s d="&#x13C3;" t="&#x13C3;" note=" CHEROKEE LETTER NO  "/>
+<s d="&#x13C4;" t="&#x13C4;" note=" CHEROKEE LETTER NU  "/>
+<s d="&#x13C5;" t="&#x13C5;" note=" CHEROKEE LETTER NV  "/>
+<s d="&#x13C6;" t="&#x13C6;" note=" CHEROKEE LETTER QUA  "/>
+<s d="&#x13C7;" t="&#x13C7;" note=" CHEROKEE LETTER QUE  "/>
+<s d="&#x13C8;" t="&#x13C8;" note=" CHEROKEE LETTER QUI  "/>
+<s d="&#x13C9;" t="&#x13C9;" note=" CHEROKEE LETTER QUO  "/>
+<s d="&#x13CA;" t="&#x13CA;" note=" CHEROKEE LETTER QUU  "/>
+<s d="&#x13CB;" t="&#x13CB;" note=" CHEROKEE LETTER QUV  "/>
+<s d="&#x13CC;" t="&#x13CC;" note=" CHEROKEE LETTER SA  "/>
+<s d="&#x13CD;" t="&#x13CD;" note=" CHEROKEE LETTER S  "/>
+<s d="&#x13CE;" t="&#x13CE;" note=" CHEROKEE LETTER SE  "/>
+<s d="&#x13CF;" t="&#x13CF;" note=" CHEROKEE LETTER SI  "/>
+<s d="&#x13D0;" t="&#x13D0;" note=" CHEROKEE LETTER SO  "/>
+<s d="&#x13D1;" t="&#x13D1;" note=" CHEROKEE LETTER SU  "/>
+<s d="&#x13D2;" t="&#x13D2;" note=" CHEROKEE LETTER SV  "/>
+<s d="&#x13D3;" t="&#x13D3;" note=" CHEROKEE LETTER DA  "/>
+<s d="&#x13D4;" t="&#x13D4;" note=" CHEROKEE LETTER TA  "/>
+<s d="&#x13D5;" t="&#x13D5;" note=" CHEROKEE LETTER DE  "/>
+<s d="&#x13D6;" t="&#x13D6;" note=" CHEROKEE LETTER TE  "/>
+<s d="&#x13D7;" t="&#x13D7;" note=" CHEROKEE LETTER DI  "/>
+<s d="&#x13D8;" t="&#x13D8;" note=" CHEROKEE LETTER TI  "/>
+<s d="&#x13D9;" t="&#x13D9;" note=" CHEROKEE LETTER DO  "/>
+<s d="&#x13DA;" t="&#x13DA;" note=" CHEROKEE LETTER DU  "/>
+<s d="&#x13DB;" t="&#x13DB;" note=" CHEROKEE LETTER DV  "/>
+<s d="&#x13DC;" t="&#x13DC;" note=" CHEROKEE LETTER DLA  "/>
+<s d="&#x13DD;" t="&#x13DD;" note=" CHEROKEE LETTER TLA  "/>
+<s d="&#x13DE;" t="&#x13DE;" note=" CHEROKEE LETTER TLE  "/>
+<s d="&#x13DF;" t="&#x13DF;" note=" CHEROKEE LETTER TLI  "/>
+<s d="&#x13E0;" t="&#x13E0;" note=" CHEROKEE LETTER TLO  "/>
+<s d="&#x13E1;" t="&#x13E1;" note=" CHEROKEE LETTER TLU  "/>
+<s d="&#x13E2;" t="&#x13E2;" note=" CHEROKEE LETTER TLV  "/>
+<s d="&#x13E3;" t="&#x13E3;" note=" CHEROKEE LETTER TSA  "/>
+<s d="&#x13E4;" t="&#x13E4;" note=" CHEROKEE LETTER TSE  "/>
+<s d="&#x13E5;" t="&#x13E5;" note=" CHEROKEE LETTER TSI  "/>
+<s d="&#x13E6;" t="&#x13E6;" note=" CHEROKEE LETTER TSO  "/>
+<s d="&#x13E7;" t="&#x13E7;" note=" CHEROKEE LETTER TSU  "/>
+<s d="&#x13E8;" t="&#x13E8;" note=" CHEROKEE LETTER TSV  "/>
+<s d="&#x13E9;" t="&#x13E9;" note=" CHEROKEE LETTER WA  "/>
+<s d="&#x13EA;" t="&#x13EA;" note=" CHEROKEE LETTER WE  "/>
+<s d="&#x13EB;" t="&#x13EB;" note=" CHEROKEE LETTER WI  "/>
+<s d="&#x13EC;" t="&#x13EC;" note=" CHEROKEE LETTER WO  "/>
+<s d="&#x13ED;" t="&#x13ED;" note=" CHEROKEE LETTER WU  "/>
+<s d="&#x13EE;" t="&#x13EE;" note=" CHEROKEE LETTER WV  "/>
+<s d="&#x13EF;" t="&#x13EF;" note=" CHEROKEE LETTER YA  "/>
+<s d="&#x13F0;" t="&#x13F0;" note=" CHEROKEE LETTER YE  "/>
+<s d="&#x13F1;" t="&#x13F1;" note=" CHEROKEE LETTER YI  "/>
+<s d="&#x13F2;" t="&#x13F2;" note=" CHEROKEE LETTER YO  "/>
+<s d="&#x13F3;" t="&#x13F3;" note=" CHEROKEE LETTER YU  "/>
+<s d="&#x13F4;" t="&#x13F4;" note=" CHEROKEE LETTER YV "/>
+</group>
+<group name="Tagbanwa" >
+<s d="&#x1760;" t="&#x1760;" note=" TAGBANWA LETTER A  "/>
+<s d="&#x1761;" t="&#x1761;" note=" TAGBANWA LETTER I  "/>
+<s d="&#x1762;" t="&#x1762;" note=" TAGBANWA LETTER U  "/>
+<s d="&#x1763;" t="&#x1763;" note=" TAGBANWA LETTER KA  "/>
+<s d="&#x1764;" t="&#x1764;" note=" TAGBANWA LETTER GA  "/>
+<s d="&#x1765;" t="&#x1765;" note=" TAGBANWA LETTER NGA  "/>
+<s d="&#x1766;" t="&#x1766;" note=" TAGBANWA LETTER TA  "/>
+<s d="&#x1767;" t="&#x1767;" note=" TAGBANWA LETTER DA  "/>
+<s d="&#x1768;" t="&#x1768;" note=" TAGBANWA LETTER NA  "/>
+<s d="&#x1769;" t="&#x1769;" note=" TAGBANWA LETTER PA  "/>
+<s d="&#x176A;" t="&#x176A;" note=" TAGBANWA LETTER BA  "/>
+<s d="&#x176B;" t="&#x176B;" note=" TAGBANWA LETTER MA  "/>
+<s d="&#x176C;" t="&#x176C;" note=" TAGBANWA LETTER YA  "/>
+<s d="&#x176E;" t="&#x176E;" note=" TAGBANWA LETTER LA  "/>
+<s d="&#x176F;" t="&#x176F;" note=" TAGBANWA LETTER WA  "/>
+<s d="&#x1770;" t="&#x1770;" note=" TAGBANWA LETTER SA  "/>
+<s d="&#x1772;" t="&#x1772;" note=" TAGBANWA VOWEL SIGN I  "/>
+<s d="&#x1773;" t="&#x1773;" note=" TAGBANWA VOWEL SIGN U "/>
+</group>
+<group name="Lao">
+<s d="&#x0E81;" t="&#x0E81;" note=" LAO LETTER KO  "/>
+<s d="&#x0E82;" t="&#x0E82;" note=" LAO LETTER KHO SUNG  "/>
+<s d="&#x0E84;" t="&#x0E84;" note=" LAO LETTER KHO TAM  "/>
+<s d="&#x0E87;" t="&#x0E87;" note=" LAO LETTER NGO  "/>
+<s d="&#x0E88;" t="&#x0E88;" note=" LAO LETTER CO  "/>
+<s d="&#x0E8A;" t="&#x0E8A;" note=" LAO LETTER SO TAM  "/>
+<s d="&#x0E8D;" t="&#x0E8D;" note=" LAO LETTER NYO  "/>
+<s d="&#x0E94;" t="&#x0E94;" note=" LAO LETTER DO  "/>
+<s d="&#x0E95;" t="&#x0E95;" note=" LAO LETTER TO  "/>
+<s d="&#x0E96;" t="&#x0E96;" note=" LAO LETTER THO SUNG  "/>
+<s d="&#x0E97;" t="&#x0E97;" note=" LAO LETTER THO TAM  "/>
+<s d="&#x0E99;" t="&#x0E99;" note=" LAO LETTER NO  "/>
+<s d="&#x0E9A;" t="&#x0E9A;" note=" LAO LETTER BO  "/>
+<s d="&#x0E9B;" t="&#x0E9B;" note=" LAO LETTER PO  "/>
+<s d="&#x0E9C;" t="&#x0E9C;" note=" LAO LETTER PHO SUNG  "/>
+<s d="&#x0E9D;" t="&#x0E9D;" note=" LAO LETTER FO TAM  "/>
+<s d="&#x0E9E;" t="&#x0E9E;" note=" LAO LETTER PHO TAM  "/>
+<s d="&#x0E9F;" t="&#x0E9F;" note=" LAO LETTER FO SUNG  "/>
+<s d="&#x0EA1;" t="&#x0EA1;" note=" LAO LETTER MO  "/>
+<s d="&#x0EA2;" t="&#x0EA2;" note=" LAO LETTER YO  "/>
+<s d="&#x0EA3;" t="&#x0EA3;" note=" LAO LETTER LO LING  "/>
+<s d="&#x0EA5;" t="&#x0EA5;" note=" LAO LETTER LO LOOT  "/>
+<s d="&#x0EA7;" t="&#x0EA7;" note=" LAO LETTER WO  "/>
+<s d="&#x0EAA;" t="&#x0EAA;" note=" LAO LETTER SO SUNG  "/>
+<s d="&#x0EAB;" t="&#x0EAB;" note=" LAO LETTER HO SUNG  "/>
+<s d="&#x0EAD;" t="&#x0EAD;" note=" LAO LETTER O  "/>
+<s d="&#x0EAE;" t="&#x0EAE;" note=" LAO LETTER HO TAM  "/>
+<s d="&#x0EAF;" t="&#x0EAF;" note=" LAO ELLIPSIS  "/>
+<s d="&#x0EB0;" t="&#x0EB0;" note=" LAO VOWEL SIGN A  "/>
+<s d="&#x0EB1;" t="&#x0EB1;" note=" LAO VOWEL SIGN MAI KAN  "/>
+<s d="&#x0EB2;" t="&#x0EB2;" note=" LAO VOWEL SIGN AA  "/>
+<s d="&#x0EB3;" t="&#x0EB3;" note=" LAO VOWEL SIGN AM  "/>
+<s d="&#x0EB4;" t="&#x0EB4;" note=" LAO VOWEL SIGN I  "/>
+<s d="&#x0EB5;" t="&#x0EB5;" note=" LAO VOWEL SIGN II  "/>
+<s d="&#x0EB6;" t="&#x0EB6;" note=" LAO VOWEL SIGN Y  "/>
+<s d="&#x0EB7;" t="&#x0EB7;" note=" LAO VOWEL SIGN YY  "/>
+<s d="&#x0EB8;" t="&#x0EB8;" note=" LAO VOWEL SIGN U  "/>
+<s d="&#x0EB9;" t="&#x0EB9;" note=" LAO VOWEL SIGN UU  "/>
+<s d="&#x0EBB;" t="&#x0EBB;" note=" LAO VOWEL SIGN MAI KON  "/>
+<s d="&#x0EBC;" t="&#x0EBC;" note=" LAO SEMIVOWEL SIGN LO  "/>
+<s d="&#x0EBD;" t="&#x0EBD;" note=" LAO SEMIVOWEL SIGN NYO  "/>
+<s d="&#x0EC0;" t="&#x0EC0;" note=" LAO VOWEL SIGN E  "/>
+<s d="&#x0EC1;" t="&#x0EC1;" note=" LAO VOWEL SIGN EI  "/>
+<s d="&#x0EC2;" t="&#x0EC2;" note=" LAO VOWEL SIGN O  "/>
+<s d="&#x0EC3;" t="&#x0EC3;" note=" LAO VOWEL SIGN AY  "/>
+<s d="&#x0EC4;" t="&#x0EC4;" note=" LAO VOWEL SIGN AI  "/>
+<s d="&#x0EC6;" t="&#x0EC6;" note=" LAO KO LA  "/>
+<s d="&#x0EC8;" t="&#x0EC8;" note=" LAO TONE MAI EK  "/>
+<s d="&#x0EC9;" t="&#x0EC9;" note=" LAO TONE MAI THO  "/>
+<s d="&#x0ECA;" t="&#x0ECA;" note=" LAO TONE MAI TI  "/>
+<s d="&#x0ECB;" t="&#x0ECB;" note=" LAO TONE MAI CATAWA  "/>
+<s d="&#x0ECC;" t="&#x0ECC;" note=" LAO CANCELLATION MARK  "/>
+<s d="&#x0ECD;" t="&#x0ECD;" note=" LAO NIGGAHITA  "/>
+<s d="&#x0ED0;" t="&#x0ED0;" note=" LAO DIGIT ZERO  "/>
+<s d="&#x0ED1;" t="&#x0ED1;" note=" LAO DIGIT ONE  "/>
+<s d="&#x0ED2;" t="&#x0ED2;" note=" LAO DIGIT TWO  "/>
+<s d="&#x0ED3;" t="&#x0ED3;" note=" LAO DIGIT THREE  "/>
+<s d="&#x0ED4;" t="&#x0ED4;" note=" LAO DIGIT FOUR  "/>
+<s d="&#x0ED5;" t="&#x0ED5;" note=" LAO DIGIT FIVE  "/>
+<s d="&#x0ED6;" t="&#x0ED6;" note=" LAO DIGIT SIX  "/>
+<s d="&#x0ED7;" t="&#x0ED7;" note=" LAO DIGIT SEVEN  "/>
+<s d="&#x0ED8;" t="&#x0ED8;" note=" LAO DIGIT EIGHT  "/>
+<s d="&#x0ED9;" t="&#x0ED9;" note=" LAO DIGIT NINE  "/>
+<s d="&#x0EDC;" t="&#x0EDC;" note=" LAO HO NO  "/>
+<s d="&#x0EDD;" t="&#x0EDD;" note=" LAO HO MO "/>
+</group>
+</alphabet>
+</alphabets>
+

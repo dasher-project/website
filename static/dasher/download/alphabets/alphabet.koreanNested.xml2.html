@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE alphabets SYSTEM "alphabet.dtd">
+<?xml-stylesheet type="text/xsl" href="alphabet-nest2.xsl"?>
+<alphabets>
+<alphabet name="Korean Nested Large Alphabet 2350 syllables">
+<!-- Note: Many fonts support 
+ 2350 Hangul syllables out of 11,172 modern syllables
+ Wed 8/6/05 by David MacKay
+ Excellent resource: http://www.ngdns.com/pds/rf01.html
+ -->
+<orientation type="LR"/>
+<encoding type="Western"/>
+<palette>European/Asian</palette>
+<train>training_korean_KO.txt</train>
+<space d="&#x25a1;" t=" " b="9" note="box" />
+<control d="Control"/>
+<paragraph d="&#182;" b="9"/>
+<group name="Korean syllables"  b="141" >
+<!-- Groups Start, building the consonants, vowels, and trailers tree  -->
+<!-- example explanation
+<group name="lead consonant is g" label="&#x1100;" b="90">
+	<group name="vowel is a" label="&#x1161;" b="100" >
+		<s d="&#x11A7;" t="&#xAC00;" note="final consonant null: ga"  b="105"/>
+		-->
+<group name="g" label="&#x1100;" b="90">
+	<group name="a" label="&#x1161;" b="100" >
+		<s d="&#xAC00;" t="&#xAC00;" note="ga_"  b="105"/>
+		<s d="&#x11A8;" t="&#xAC01;" note="gag"  b="106"/>
+<!--		<s d="&#x11A9;" t="&#xAC02;" note="gagg" b="107"/> -->
+<!--		<s d="&#x11AA;" t="&#xAC03;" note="gags" b="108"/> -->
+		<s d="&#x11AB;" t="&#xAC04;" note="gan"  b="109"/>
+<!--		<s d="&#x11AC;" t="&#xAC05;" note="ganj" b="105"/> -->
+<!--		<s d="&#x11AD;" t="&#xAC06;" note="ganh" b="106"/> -->
+		<s d="&#x11AE;" t="&#xAC07;" note="gad"  b="107"/>
+		<s d="&#x11AF;" t="&#xAC08;" note="gal"  b="108"/>
+		<s d="&#x11B0;" t="&#xAC09;" note="galg" b="109"/>
+	</group>
+	<group name="ae" label="&#x1162;" b="101" >
+		<s d="&#x11A7;" t="&#xAC1C;" note="gae"  b="105"/>
+		<s d="&#x11A8;" t="&#xAC1D;" note="gaeg" b="106"/>
+	</group>
+</group>
+<group name="gg" label="&#x1101;" b="91">
+	<group name="a" label="&#x1161;" b="100" >
+		<s d="&#xAE4C;" t="&#xAE4C;" note="gga"  b="105"/>
+		<s d="&#x11A8;" t="&#xAE4D;" note="ggag" b="106"/>
+	</group>
+	<group name="ae" label="&#x1162;" b="101" >
+		<s d="&#xAE68;" t="&#xAE68;" note="ggae"  b="105"/>
+		<s d="&#x11A8;" t="&#xAE69;" note="ggaeg" b="106"/>
+	</group>
+</group>
+<!-- End -->
+</group>
+
+</alphabet>
+</alphabets>
+

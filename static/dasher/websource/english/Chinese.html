@@ -1,0 +1,110 @@
+HiddenPage Chinese
+<h2>How does Chinese Dasher work?</h2>
+<p>As of Wed 30/8/06, there is now a working Chinese Dasher, written by
+Will Zou (yz246-at-cam)- it will be
+released as part of Dasher version 4.* (about 09/2007). 
+</p>
+<p>
+ Here are screenshots showing this prototype in use.
+ These screenshots show a long multi-phrase sentence  being entered
+all in one go - pinyin first, then chinese characters.
+ We also aim to make it equally easy, in Dasher, to enter the text
+one phrase at a time (about 2 to 4 chinese characters converted at a time).
+ (There are theoretical reasons and computational reasons for preferring
+to enter chinese a single phrase at a time.)
+</p>
+<table bgcolor="#ffaadd"><tr><td  bgcolor="#ffdddd">
+<center>
+<img src="/dasher/images/chinese/chinesedasher1_1.png" alt="chinesedasher1" width="616" height="689"><br>
+1. Starting writing 'I hope to be a volunteer for the Beijing Olympics.'
+<br>
+There's a separation symbol : <'> included in the PY string, between
+"beijing " and "aoyun" (Olympics), as an example of diambiguation.
+ <br>
+</center>
+</td></tr><tr><td   bgcolor="#ffdddd">
+<center>
+<img src="/dasher/images/chinese/chinesedasher1_2.png" alt="chinesedasher2" width="616" height="689"><br>
+2. typical choice of two frequently used phrases
+<br>
+</center>
+</td></tr><tr><td   bgcolor="#ffdddd">
+<center>
+<img src="/dasher/images/chinese/chinesedasher1_3.png" alt="chinesedasher3" width="616" height="689"><br>
+3.
+ writing 'I hope to be a volunteer for the Beijing Olympics.'
+<br>
+There's a separation symbol : <'> included in the PY string, between
+"beijing " and "aoyun" (Olympics), as an example of diambiguation.
+
+</center>
+</td></tr><tr><td   bgcolor="#ffdddd">
+<center>
+<img src="/dasher/images/chinese/chinesedasher1_4.png" alt="chinesedasher4" width="616" height="689"><br>
+4.
+ writing 'I hope to be a volunteer for the Beijing Olympics.'
+<br>
+There's a separation symbol : <'> included in the PY string, between
+"beijing " and "aoyun" (Olympics), as an example of diambiguation.
+
+</center>
+</td></tr><tr><td   bgcolor="#ffdddd">
+<center>
+<img src="/dasher/images/chinese/chinesedasher1_5.png" alt="chinesedasher5" width="616" height="689"><br>
+5.
+ writing 'I hope to be a volunteer for the Beijing Olympics.'
+<br>
+There's a separation symbol : <'> included in the PY string, between
+"beijing " and "aoyun" (Olympics), as an example of diambiguation.
+</center>
+</td></tr></table>
+
+</p>
+<h3>Here are David MacKay's old notes on Chinese Dasher</h3>
+<p>
+<a href=http://www.inference.phy.cam.ac.uk/cgi-bin/wiki/wiki.pl/ChineseDasher>Chinese Dasher wiki</a>
+</p>
+<p>
+<b><a href=http://www.inference.phy.cam.ac.uk/dasher/ChineseDevelopment.html>Some progress
+has now been made on Chinese Dasher</a></b>.
+David MacKay has obtained a pinyin corpus
+so you can write in
+<a href=http://www.inference.phy.cam.ac.uk/dasher/download/alphabets/alphabet.pinyin.xml>pinyin</a>.
+And <a href=http://www.inference.phy.cam.ac.uk/tianli/>Tian Li</a> and Kaburagi
+are working on making the phonetic-to-ideogram conversion software.
+
+</p>
+
+<p>
+We  would not go  directly for the ideograms, since there are too many
+ of them. We have to build up sentences using a sequence of symbols
+ each of which has small information content.
+</p>
+<p>
+We can imagine two possible approaches.
+<ol>
+  <li>
+Use a phonetic approach.
+       Pin-yin is 
+a standard method for writing chinese phonetically.
+       Having obtained a pin-yin sequence, we could
+       then if required have a probabilistic pronunciation-to-ideogram
+       mapping also implemented within Dasher.   This is how I envisage 
+       japanese Dasher working (with hiragana first, then kanji if required).
+       This is exactly how Japanese people write Japanese in JWord or Jemacs.
+</li>
+       <li>
+ Use a stroke-based approach. Have the writer build up
+ the ideogram stroke by stroke, in the standard sequence that
+every chinese / japanese child has drilled into them when they are young.
+ The displayed glyph on the screen could be "the character drawn thus far"
+or could be "the next stroke" or perhaps both on top of each other.
+	    </li>
+     </ol>
+
+<img src="/dasher/images/beijing.png" alt="beijing" width="641" height="632">
+<br>
+     This screenshot shows me writing "Beijing city" in Dasher 3.2,
+     the version that does not yet have a proper language model for Chinese.
+
+     
