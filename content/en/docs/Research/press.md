@@ -30,7 +30,7 @@ Dasher will be particularly useful for computer users who are unable to type usi
 David MacKay and David Ward plan to develop Dasher as an `Open Source' software project, like GNU/Linux.
 
 **Notes for Editors:** 'Fast hands-free writing by gaze direction', by David J. Ward and David J.C. MacKay, will be published in Nature on 22 August 2002.  
-For more information about Dasher, including video demonstrations, and [images](Images.html) look at: [http://www.inference.phy.cam.ac.uk/dasher/](http://www.inference.phy.cam.ac.uk/dasher/).  
+For more information about Dasher, including video demonstrations, and [images](Images.html) look at: [https://www.inference.phy.cam.ac.uk/dasher/](https://www.inference.phy.cam.ac.uk/dasher/).  
 [Further information for the press is available online](QA.html).
 
 For further information please contact:  

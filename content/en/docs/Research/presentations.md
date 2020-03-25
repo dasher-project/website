@@ -13,23 +13,23 @@ Dasher - information-efficient text entry (19th April 2007)
 
 September 2005
 
-[Dasher - writing fast and free with any muscle - Closing The Gap 2005](http://www.inference.phy.cam.ac.uk/dasher/presentations/Closing05/) (html) (includes slides used for presentation at Princeton University)
+[Dasher - writing fast and free with any muscle - Closing The Gap 2005](https://www.inference.phy.cam.ac.uk/dasher/presentations/Closing05/) (html) (includes slides used for presentation at Princeton University)
 
-[Hands-free writing - banquet presentation for UAI 2005](http://www.inference.phy.cam.ac.uk/mackay/presentations/UAI2005/) (html)
+[Hands-free writing - banquet presentation for UAI 2005](https://www.inference.phy.cam.ac.uk/mackay/presentations/UAI2005/) (html)
 
-[A neuron that communicates 10 words per minute](http://www.inference.phy.cam.ac.uk/dasher/presentations/Buttons0507/) (html) - a presentation about Dasher's new button modes.
+[A neuron that communicates 10 words per minute](https://www.inference.phy.cam.ac.uk/dasher/presentations/Buttons0507/) (html) - a presentation about Dasher's new button modes.
 
-[Dasher for Korean](http://www.inference.phy.cam.ac.uk/dasher/presentations/Korean/) (html) - shows how to write Korean using a simple roughly-80-character alphabet.
+[Dasher for Korean](https://www.inference.phy.cam.ac.uk/dasher/presentations/Korean/) (html) - shows how to write Korean using a simple roughly-80-character alphabet.
 
-[Dasher - Write efficiently with any muscle!](http://www.inference.phy.cam.ac.uk/dasher/presentations/BECTA/) (html) - Dasher presentation for BECTA Seminar Oct 2004.
+[Dasher - Write efficiently with any muscle!](https://www.inference.phy.cam.ac.uk/dasher/presentations/BECTA/) (html) - Dasher presentation for BECTA Seminar Oct 2004.
 
-[Information-Efficient Writing](http://www.inference.phy.cam.ac.uk/dasher/presentations/sheffield/) (html) - Dasher presentation for Machine Learning Workshop 2004. Includes preliminary results on breath mouse and enhanced eyetracking mode.
+[Information-Efficient Writing](https://www.inference.phy.cam.ac.uk/dasher/presentations/sheffield/) (html) - Dasher presentation for Machine Learning Workshop 2004. Includes preliminary results on breath mouse and enhanced eyetracking mode.
 
-[Dasher for Eyetracking](http://www.inference.phy.cam.ac.uk/dasher/presentations/cogain/) (html) - presentation for [Cogain meeting](/cogain/).
+[Dasher for Eyetracking](https://www.inference.phy.cam.ac.uk/dasher/presentations/cogain/) (html) - presentation for [Cogain meeting](/cogain/).
 
-[Alternative Controls for Dasher](http://www.inference.phy.cam.ac.uk/dasher/presentations/buttons/) (html) - presentation about one-dimensional mode, eyetracking mode, and Button modes.
+[Alternative Controls for Dasher](https://www.inference.phy.cam.ac.uk/dasher/presentations/buttons/) (html) - presentation about one-dimensional mode, eyetracking mode, and Button modes.
 
-[Probability, Information, and Hands-free writing](http://www.inference.phy.cam.ac.uk/dasher/presentations/maxent2004/) (html) - Dasher presentation for Maximum Entropy conference 2004.
+[Probability, Information, and Hands-free writing](https://www.inference.phy.cam.ac.uk/dasher/presentations/maxent2004/) (html) - Dasher presentation for Maximum Entropy conference 2004.
 
 [Power point file:](/dasher/download/papers/Dasher.ppt) Dasher Presentation for John Hopfield's birthday Symposium, June 2003.
 

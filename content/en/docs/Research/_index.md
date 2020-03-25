@@ -7,7 +7,7 @@ weight: -70
     by David J Ward, Alan F Blackwell and David J C MacKay  
     In proceedings UIST 2000.  
       
-    Figures showing the main results in the above paper are [here](http://www.inference.phy.cam.ac.uk/djw30/dasher/exp.html).  
+    Figures showing the main results in the above paper are [here](https://www.inference.phy.cam.ac.uk/djw30/dasher/exp.html).  
       
     
 *   \[**Eyetracker-driven Dasher**\]
@@ -15,10 +15,10 @@ weight: -70
     **[Fast Hands-free Writing by Gaze Direction](/mackay/abstracts/eyeshortpaper.html)**,
     
     by David J. Ward and David J.C. MacKay. Submitted to _Nature_ April 2002. Published August 22 2002.  
-    [eyeshortpaper.ps.gz](http://www.inference.phy.cam.ac.uk/mackay/eyeshortpaper.ps.gz) | [eyeshortpaper.pdf](http://www.inference.phy.cam.ac.uk/mackay/eyeshortpaper.pdf) | [abstract](http://www.inference.phy.cam.ac.uk/mackay/abstracts/eyeshortpaper.html) | (or via [arxiv.org](http://arxiv.org/abs/cs.HC/0204030).)  
+    [eyeshortpaper.ps.gz](https://www.inference.phy.cam.ac.uk/mackay/eyeshortpaper.ps.gz) | [eyeshortpaper.pdf](https://www.inference.phy.cam.ac.uk/mackay/eyeshortpaper.pdf) | [abstract](https://www.inference.phy.cam.ac.uk/mackay/abstracts/eyeshortpaper.html) | (or via [arxiv.org](http://arxiv.org/abs/cs.HC/0204030).)  
       
     
-*   [eyeflyer.ps.gz](http://www.inference.phy.cam.ac.uk/mackay/eyeflyer.ps.gz). [eyeflyer.pdf](http://www.inference.phy.cam.ac.uk/mackay/eyeflyer.pdf). [abstract](http://www.inference.phy.cam.ac.uk/mackay/abstracts/eyeflyer.html).
+*   [eyeflyer.ps.gz](https://www.inference.phy.cam.ac.uk/mackay/eyeflyer.ps.gz). [eyeflyer.pdf](https://www.inference.phy.cam.ac.uk/mackay/eyeflyer.pdf). [abstract](https://www.inference.phy.cam.ac.uk/mackay/abstracts/eyeflyer.html).
     
     ` **Hands-free Text Entry using _Dasher_ with an Eyetracker** '.  
     A one-page flyer by David J. Ward and David J.C. MacKay.
@@ -39,12 +39,12 @@ weight: -70
     
     _Dasher - an efficient keyboard alternative_ by David MacKay.
     
-*   **[Bliss-Dasher - Efficient semantic writing with any muscle (pdf file)](http://www.inference.phy.cam.ac.uk/dasher/development/bliss/abi/BlissDasher.pdf)** \- by David MacKay, Seb Wills, and Annalu Waller.  
-    \[See also [The Bliss-Dasher project](http://www.inference.phy.cam.ac.uk/dasher/development/bliss/) webpage.\]
+*   **[Bliss-Dasher - Efficient semantic writing with any muscle (pdf file)](https://www.inference.phy.cam.ac.uk/dasher/development/bliss/abi/BlissDasher.pdf)** \- by David MacKay, Seb Wills, and Annalu Waller.  
+    \[See also [The Bliss-Dasher project](https://www.inference.phy.cam.ac.uk/dasher/development/bliss/) webpage.\]
 
 
 
 Speech-Dasher prototype
 -----------------------
 
-Keith Vertanen has made nice videos of his prototype speech-recognition/Dasher hybrid. [www.inference.phy.cam.ac.uk/kv227/speechdasher/](http://www.inference.phy.cam.ac.uk/kv227/speechdasher/)
+Keith Vertanen has made nice videos of his prototype speech-recognition/Dasher hybrid. [www.inference.phy.cam.ac.uk/kv227/speechdasher/](https://www.inference.phy.cam.ac.uk/kv227/speechdasher/)

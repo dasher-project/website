@@ -6,7 +6,7 @@ weight: -100
 Android
 -------
 
-Available from the Android Market (search for "Dasher") or from the [Downloads page](http://www.inference.phy.cam.ac.uk/dasher/Download.html)
+Available from the Android Market (search for "Dasher") or from the [Downloads page](https://www.inference.phy.cam.ac.uk/dasher/Download.html)
 
 Tested on Nexus One; HTC G1; HTC Incredible.
 
@@ -27,11 +27,11 @@ Button modes can also be controlled by external switches connected via Bluetooth
 
 [Installation Instructions](MobileDasher.html#android_install) below.
 
-![Write into any application](http://www.inference.phy.cam.ac.uk/acl33/img/Android_talkdroid.JPG)
+![Write into any application](https://www.inference.phy.cam.ac.uk/acl33/img/Android_talkdroid.JPG)
 
-![Write SMS or email by touch, tilt, or trackball](http://www.inference.phy.cam.ac.uk/acl33/img/Android_sms.JPG)
+![Write SMS or email by touch, tilt, or trackball](https://www.inference.phy.cam.ac.uk/acl33/img/Android_sms.JPG)
 
-![Use portrait or landscape](http://www.inference.phy.cam.ac.uk/acl33/img/Android_landscape.JPG)
+![Use portrait or landscape](https://www.inference.phy.cam.ac.uk/acl33/img/Android_landscape.JPG)
 
 #### Installation
 
@@ -47,21 +47,21 @@ Video forthcoming...
 
 The "Input Mode" page offers a choice of methods, e.g. "Touch Control" or "Tilt Control", of which you may pick one. (Each will bring up further settings specific to that mode.)
 
-![Dasher settings](http://www.inference.phy.cam.ac.uk/acl33/img/dasher_settings_sm.png)
+![Dasher settings](https://www.inference.phy.cam.ac.uk/acl33/img/dasher_settings_sm.png)
 
 * * *
 
 (3) Next you must enable Dasher as an input method. This varies between models, the following instructions are for a Nexus One running Android 2.1 (Eclair) or 2.2 (Froyo)...
 
-![Activating system settings](http://www.inference.phy.cam.ac.uk/acl33/img/android_settings_sm.png)
+![Activating system settings](https://www.inference.phy.cam.ac.uk/acl33/img/android_settings_sm.png)
 
 (3a) From your desktop, press menu button, and choose "Settings"
 
 (3b) Choose "Language & Keyboard"
 
-![Within system settings](http://www.inference.phy.cam.ac.uk/acl33/img/langkey_sm.png)
+![Within system settings](https://www.inference.phy.cam.ac.uk/acl33/img/langkey_sm.png)
 
-![List of input methods](http://www.inference.phy.cam.ac.uk/acl33/img/ime_enable_sm.png)
+![List of input methods](https://www.inference.phy.cam.ac.uk/acl33/img/ime_enable_sm.png)
 
 (3c)A list of input methods should be displayed, including Dasher.
 
@@ -73,11 +73,11 @@ Make sure Dasher is enabled i.e. its box is ticked. (You will be warned about co
 
 Long-press in the text field to pop-up menu and choose "Input Method"
 
-![Text field context menu](http://www.inference.phy.cam.ac.uk/acl33/img/text_menu_sm.png)
+![Text field context menu](https://www.inference.phy.cam.ac.uk/acl33/img/text_menu_sm.png)
 
 * * *
 
-![Select input method](http://www.inference.phy.cam.ac.uk/acl33/img/ime_list_sm.png)
+![Select input method](https://www.inference.phy.cam.ac.uk/acl33/img/ime_list_sm.png)
 
 (5) Select Dasher in the list of input methods.
 
@@ -85,6 +85,6 @@ Long-press in the text field to pop-up menu and choose "Input Method"
 
 Dasher should then come up on your screen
 
-![Dasher editing google search box](http://www.inference.phy.cam.ac.uk/acl33/img/dasher_sm.png)
+![Dasher editing google search box](https://www.inference.phy.cam.ac.uk/acl33/img/dasher_sm.png)
 
 * * *

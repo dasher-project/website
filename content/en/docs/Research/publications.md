@@ -16,4 +16,4 @@ Between 1999 and 2002, we made three assessments of Dasher, comparing it with al
 *   Text-entry on a pocket PC with a stylus
 *   Text-entry with **no** hands, using Dasher with an Eyetracker ([Further information about hardware](SpecialNeeds.html))
 
-The details can be found in David Ward's [PhD thesis](http://www.inference.phy.cam.ac.uk/djw30/papers/thesis.html) and in the publications listed below.
+The details can be found in David Ward's [PhD thesis](https://www.inference.phy.cam.ac.uk/djw30/papers/thesis.html) and in the publications listed below.

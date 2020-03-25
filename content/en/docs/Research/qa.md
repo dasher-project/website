@@ -150,7 +150,7 @@ We have also compared Dasher, **driven by a mouse**, with other pointer-based te
 
 We can tell you results for the mouse-driven version of Dasher, and for the eye-tracking version.
 
-*   Using a **mouse** to steer: Within 10 minutes, novice users of Dasher can write in English at speeds in the range of 5 to 15 words per minute. After 60 minutes of practice, writing speeds range from 15 to 25 words per minute. Our most experienced Dasher user, David Ward, can write at 39 words per minute. [(Some Experimental results online)](http://www.inference.phy.cam.ac.uk/djw30/dasher/exp.html))
+*   Using a **mouse** to steer: Within 10 minutes, novice users of Dasher can write in English at speeds in the range of 5 to 15 words per minute. After 60 minutes of practice, writing speeds range from 15 to 25 words per minute. Our most experienced Dasher user, David Ward, can write at 39 words per minute. [(Some Experimental results online)](https://www.inference.phy.cam.ac.uk/djw30/dasher/exp.html))
 *   With the **eye-tracker**, novices can write English at 7 words per minute after 10 minutes, and at 12-15 words per minute after 60 minutes practice. Users with more experience of Dasher can write at 20-25 words per minute.
 
 * * *
@@ -309,7 +309,7 @@ I think the long term is already here. Right now, one of our disabled friends is
 *   <a name = "q21a" > You said that Dasher can work in most languages. How do you think it might be used in Japanese? </a>
 
 As a first step towards a full Japanese version of Dasher handling both Kana and Kanji, David Ward has written a Hiragana version, "Daishoya", available in Windows version 1.6.3 of Dasher and GNU/Linux versions 1.6.3-1.6.8.  
-A demonstration of "Daishoya" being used to write ![howareyouH](/dasher/images/howareyouH.gif) (hajime mashite) can be reached from [www.inference.phy.cam.ac.uk/dasher/Languages.html](http://www.inference.phy.cam.ac.uk/dasher/Languages.html).  
+A demonstration of "Daishoya" being used to write ![howareyouH](/dasher/images/howareyouH.gif) (hajime mashite) can be reached from [www.inference.phy.cam.ac.uk/dasher/Languages.html](https://www.inference.phy.cam.ac.uk/dasher/Languages.html).  
 The conversion of Dasher to Daishoya is simple: we replace the English alphabet a..z by the Hiragana alphabet, ![aiueo...](/dasher/images/aiueo.gif) (a,i,u,e,o,ka,ki,ku,ke,ko...). We replace the English training text by a Hiragana document. \[Unfortunately, we have not been able to find a large pure-Hiragana document, so our language model is not as well-trained as we would like.\]  
 Daishoya then allows you to write Hiragana text without a keyboard.  
 In the long term, we can imagine two ways of using Daishoya to write Kanji:
@@ -401,7 +401,7 @@ We are happy to be referred to as David Ward and David MacKay, or Dr. David Ward
 * * *
 
 <a name = "q26" > Is there anything else you'd like to say? </a>
-Executable copies of the Dasher software can be downloaded for free from the Dasher project website, [http://www.inference.phy.cam.ac.uk/dasher/](http://www.inference.phy.cam.ac.uk/dasher/). There are tips for new users on the website too. Don't give up if it takes you a minute or two to get started - within ten minutes, you'll be dashing along.  
+Executable copies of the Dasher software can be downloaded for free from the Dasher project website, [https://www.inference.phy.cam.ac.uk/dasher/](https://www.inference.phy.cam.ac.uk/dasher/). There are tips for new users on the website too. Don't give up if it takes you a minute or two to get started - within ten minutes, you'll be dashing along.  
 Please try it out!  
   
 Donations to support our research are always welcome.

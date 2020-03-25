@@ -76,7 +76,7 @@ Movies
 
 560K
 
-[Animated gif of Dasher version 1, should work in any browser](http://www.inference.phy.cam.ac.uk/djw30/dasher/dasher.gif)
+[Animated gif of Dasher version 1, should work in any browser](https://www.inference.phy.cam.ac.uk/djw30/dasher/dasher.gif)
 
 81K
 
@@ -115,13 +115,13 @@ This movie is highly recommended as the commentary explains how Dasher is used.
 
 28 M  
 
-[Dasher with an eye-tracker](http://www.inference.phy.cam.ac.uk/djw30/dasher/movies/eye.mpg) (November 2001)
+[Dasher with an eye-tracker](https://www.inference.phy.cam.ac.uk/djw30/dasher/movies/eye.mpg) (November 2001)
 
 6 M  
 
 \[In this movie, David hits the space bar to start the program going, and after that he uses nothing but eyes; he's using Dasher version 1.6. In Dasher versions 3 and 4, we can start and stop Dasher without cheating in this way.\]
 
-[Dasher running on a Compaq iPAQ](http://www.inference.phy.cam.ac.uk/djw30/dasher/movies/ipaq.mpg)
+[Dasher running on a Compaq iPAQ](https://www.inference.phy.cam.ac.uk/djw30/dasher/movies/ipaq.mpg)
 
 9 M  
 
@@ -137,7 +137,7 @@ This movie is highly recommended as the commentary explains how Dasher is used.
 
 25 M
 
-[Keith Vertanen](http://www.inference.phy.cam.ac.uk/kv227/speechdasher/)'s [Speech-Dasher prototype (mpg)](http://www.inference.phy.cam.ac.uk/kv227/videos/dasher_the_hibernating_skunk.mpg) [(avi)](http://www.inference.phy.cam.ac.uk/kv227/videos/dasher_the_hibernating_skunk.avi)
+[Keith Vertanen](https://www.inference.phy.cam.ac.uk/kv227/speechdasher/)'s [Speech-Dasher prototype (mpg)](https://www.inference.phy.cam.ac.uk/kv227/videos/dasher_the_hibernating_skunk.mpg) [(avi)](https://www.inference.phy.cam.ac.uk/kv227/videos/dasher_the_hibernating_skunk.avi)
 
 13 M  
 
@@ -149,15 +149,15 @@ This movie is highly recommended as the commentary explains how Dasher is used.
 
 **File size**
 
-[Dasher with an eye-tracker](http://www.inference.phy.cam.ac.uk/djw30/dasher/movies/eye.avi) (November 2001)
+[Dasher with an eye-tracker](https://www.inference.phy.cam.ac.uk/djw30/dasher/movies/eye.avi) (November 2001)
 
 54 M  
 
-[AVI of Dasher running on a Compaq iPAQ](http://www.inference.phy.cam.ac.uk/djw30/dasher/movies/pocket.avi)
+[AVI of Dasher running on a Compaq iPAQ](https://www.inference.phy.cam.ac.uk/djw30/dasher/movies/pocket.avi)
 
 4 M  
 
-[Very large AVI of Dasher running on a Compaq iPAQ](http://www.inference.phy.cam.ac.uk/djw30/dasher/movies/ipaq.avi)
+[Very large AVI of Dasher running on a Compaq iPAQ](https://www.inference.phy.cam.ac.uk/djw30/dasher/movies/ipaq.avi)
 
 90 M  
 
@@ -169,6 +169,6 @@ Daniel Jalkut's movie of Dasher on a Mac [can be found on this blog](http://www.
 
 28M
 
-More screenshots with captions can be found [here](MoreScreen.html) and [here](Images.html). For further demonstrations, [movies](http://www.inference.phy.cam.ac.uk/djw30/dasher/movies.html) and [screenshots](http://www.inference.phy.cam.ac.uk/djw30/dasher/screenshots.html) see [**David Ward's Dasher site**](http://www.inference.phy.cam.ac.uk/djw30/dasher/); also [Keith Vertanen's](http://www.inference.phy.cam.ac.uk/kv227/videos/).
+More screenshots with captions can be found [here](MoreScreen.html) and [here](Images.html). For further demonstrations, [movies](https://www.inference.phy.cam.ac.uk/djw30/dasher/movies.html) and [screenshots](https://www.inference.phy.cam.ac.uk/djw30/dasher/screenshots.html) see [**David Ward's Dasher site**](https://www.inference.phy.cam.ac.uk/djw30/dasher/); also [Keith Vertanen's](https://www.inference.phy.cam.ac.uk/kv227/videos/).
 
 Thanks to Steve Hiner, Geoff Stead, and Simon Cozens for help with animations.

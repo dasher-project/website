@@ -53,7 +53,7 @@ October 2003: [Linux User (German)](http://www.linux-user.de/ausgabe/2003/10/)
 
 #### The Financial Times, February 2002
 
-![](http://www.inference.phy.cam.ac.uk/is/press/ft0202.gif)
+![](https://www.inference.phy.cam.ac.uk/is/press/ft0202.gif)
 
 * * *
 
