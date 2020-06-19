@@ -58,12 +58,12 @@ description = "Dasher is an information-efficient text-entry interface, driven b
 languageName ="English"
 # Weight used for sorting.
 weight = 1
-[languages.no]
-title = "Dasher"
-description = "Docsy er operativsystem for skyen"
-languageName ="Norsk"
-contentDir = "content/no"
-time_format_default = "02.01.2006"
+#[languages.no]
+#title = "Dasher"
+#description = "Docsy er operativsystem for skyen"
+#languageName ="Norsk"
+#contentDir = "content/no"
+#time_format_default = "02.01.2006"
 time_format_blog = "02.01.2006"
 
 [markup]
@@ -74,7 +74,7 @@ time_format_blog = "02.01.2006"
 # Everything below this are Site Params
 
 [params]
-copyright = "The Ace Centre 2020"
+copyright = "Ace Centre 2020"
 privacy_policy = "https://acecentre.org.uk/privacy/"
 
 # First one is picked as the Twitter card image if not set on page.
@@ -113,7 +113,7 @@ github_project_repo = "https://github.com/dasher-project/redash"
 algolia_docsearch = false
 
 # Enable Lunr.js offline search
-offlineSearch = true
+offlineSearch = false
 
 # User interface configuration
 [params.ui]
@@ -122,7 +122,7 @@ sidebar_menu_compact = false
 #  Set to true to disable breadcrumb navigation.
 breadcrumb_disable = false
 #  Set to true to hide the sidebar search box (the top nav search box will still be displayed if search is enabled)
-sidebar_search_disable = false
+sidebar_search_disable = true
 #  Set to false if you don't want to display a logo (/assets/icons/logo.svg) in the top nav bar
 navbar_logo = true
 # Set to true to disable the About link in the site footer
