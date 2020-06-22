@@ -4,33 +4,99 @@ linkTitle: About
 menu:
   main:
     weight: 10
+layout: docs
+# https://www.wbur.org/commonhealth/2018/05/03/als-chelsea-leonard-florence-center 
 
 ---
 
+{{% blocks/cover title="About Dasher" height="auto" %}}
 
-{{< blocks/cover title="About Dasher" image_anchor="bottom" height="min" >}}
+Dasher is a novel text entry system. Originally developed by <a href="http://inference.org.uk/dasher/">the inference group</a> at Cambridge University from 1997 to 2007, the project was seen as a breakthrough in Assistive Technology. Its still seen as one of the fastest text entry methods for alternative mouse control methods such as head tracking, joystick and shows huge promise for systems such as switch users. These methods are useful for people with limited control of their hands where regular touch screens and on-screen keyboards are difficult to access - and importantly <i>Slow</i>.
+{{% /blocks/cover %}}
 
-<p class="lead mt-5">A fast text entry system useful for communication and writing with alternative input methods</p>
+{{% blocks/section type="section" color="primary" %}}
+## So what is it exactly?
 
-{{< /blocks/cover >}}
-
-{{% blocks/lead %}}
-Dasher is an information-efficient text-entry interface, driven by natural continuous pointing gestures. Dasher is a competitive text-entry system wherever a full-size keyboard cannot be used.{{% /blocks/lead %}}
-
-
-{{< blocks/section >}}
-<div class="col-12">
-<h1 class="text-center">This is another section</h1>
-</div>
-
-{{< /blocks/section >}}
+Dasher is <i>hard</i> to explain. David Mackay, the founder of the inference group and original inventor of dasher used to explain it was like driving through letters. The key with dasher is that as you move your cursor towards the letters (which are usually presented in a a-z alphabetical list on the right) - letters and blocks start to change size and shape. They get bigger based on the likelihood of being the next letter. Its easiest to watch in action. This is video was made by Ada - and demonstrates some of the features nicely:
 
 
+{{< youtube SvsSrClBwPM >}}
 
-{{< blocks/section >}}
 
-<div class="col-12">
-<h1 class="text-center">This is another section</h1>
-</div>
+{{% /blocks/section %}}
 
-{{< /blocks/section >}}
+{{% blocks/section type="section" color="white" %}}
+## I want to find out more about the original Dasher and download it
+
+Sure. All the information about the original dasher can be found at <http://inference.org.uk/dasher/>. The codebase can be found at <https://github.com/dasher-project/dasher> with releases found <https://github.com/dasher-project/dasher/releases>
+
+{{% /blocks/section %}}
+
+{{% blocks/section type="section" color="primary" %}}
+## So why do we need a new Dasher?
+
+Due to its success [a number of people](https://github.com/dasher-project/dasher/graphs/contributors) have carried on working - and fixing - Dasher over the years.  The last developer who inputted a lot of time was Ada Majorek. Ada worked at Google in Mountain View and sadly passed away after having ALS. Ada used Dasher herself - and worked on the big set of improvements in the current release of version 5. 
+
+Although hugely beneficial to many Dasher is seen as often hard to use and have a large array of configuration options to learn. Over the years a number of Assistive Technology companies have wanted to integrate dasher into their own commercial software to make this ease of use better. They have been willing to input changes into the open source project - but it has caused difficulties to mix well with commercial software due to the strict GPL v3 Licence terms. So the uptake of Dasher has been restricted to those who are savvy enough to understand the inner workings of the system. 
+
+Alongside this need to re-look at a licence model there has been a long desire to overhaul some key aspects
+
+1.  The prediction model that is used. 
+2.  The User Interface/User experience of dasher requires an overhaul. In the original roadmap a tutorial/dasher game interface was suggested. This is desperatley needed to help users learn what dasher is and how to use it efficiently
+3.  Cross-platform support. Currently version 5 has the main feature set on Windows. There are also builds on iOS, Android, Linux and Mac - but subtle (and not so subtle) differences exist between these releases. The code base has become quite difficult to manage and requires a new direction
+
+
+{{% /blocks/section %}}
+
+{{% blocks/section type="section" color="white" %}}
+## Who uses dasher right now? What features do we need to support?
+
+We are collecting current users of Dasher v5 so we cant accurately prioritise features for v6. If you are - or know of - a Dasher user please get in touch with [Will](wwade@acecentre.org.uk). 
+
+| User 	| Platform                                      	| Language             	| Input method                                                       	| Output formats                                            	| Corpus size 	|
+|------	|-----------------------------------------------	|----------------------	|--------------------------------------------------------------------	|-----------------------------------------------------------	|-------------	|
+| 001  	| Windows (with Grid3)                          	| English (US)         	| Mouse (headmouse)                                                  	| Keyboard (Direct), Regular, and Speech                    	| 1.9kb - 5Mb 	|
+| 002  	| Windows (with Grid3 and other apps to do TTS) 	| English (US), German 	| Mouse (headmouse, eyegaze) and Switch                              	| Keyboard (Direct), Regular, Speech Dasher (although less) 	|             	|
+| 003  	| iOS (iPad)                                    	| English (US)         	| Touch-Drag                                                         	| Speech                                                    	| 74Kb ??     	|
+| 004  	| iOS (iPad & iPhone), Windows                  	| English (UK)         	| Touch-Drag                                                         	| SpeechRegular (Win)                                       	|             	|
+| 005  	| MacOS                                         	| English (Au)??       	|                                                                    	|                                                           	|             	|
+| 006  	| Windows, Linux                                	| Spanish (Eur)        	| Mouse, Switch                                                      	| Speech, Keyboard (Direct)                                 	| 1.7Mb       	|
+| 007  	| iOS (iPad)                                    	| English (US)         	| Touch-Drag                                                         	| Speech                                                    	|             	|
+| 008  	| Windows                                       	| English (UK)         	| Mouse                                                              	| Speech, Regular                                           	|             	|
+| 009  	| Windows                                       	| English (UK)         	| Mouse (Eyegaze)                                                    	| Speech, Direct, Regular                                   	|             	|
+| 010  	| WindowsiOS (iPhone)                           	| English (UK)         	| Mouse (Eyegaze / Headmouse / Joystick - depending on fatigue)Mouse 	| Speech, Direct, RegularSpeech                             	|             	|
+
+{{% /blocks/section %}}
+{{% blocks/section type="section" color="primary" %}}
+## Where are we up to with v6?
+
+The new dasher is *very* much a early prototype. You can try out a version that runs in your web browser [here](https://dasher-project.github.io/redash/browser/). 
+
+We are working towards the goals of our roadmap. Keep a track of the blog for news and updates. 
+
+{{% /blocks/section %}}
+
+{{% blocks/section type="section" color="white" %}}
+## Who is involved?
+
+There's an ever increasing number of people involved in the Dasher v6 project. Some of the key members of the dasher v6 project are listed below with their current role in brackets. For the latest developments see the [Google doc](https://docs.google.com/document/d/1OIi4zJTPuh1TiaAJLWwzjDVJRhITCfR-H0uUh1E9Ico)
+
+* **Jim Hawkins**, VMWare (Development lead)
+* **Lisie Lillianfeld**, Google (Comms, PM)
+* **Will Wade**, [Ace Centre](http://acecentre.org.uk ) (User engagement, User evaluation, Communications, Input methods, Third party integration)
+* **Brian Roark**, Google (Language Model)
+* **Keith Vertanen**, Associate Professor at [Michigan Tech](https://www.mtu.edu). Worked on research prototypes based on Dasher while doing PhD at the Inference Group.  
+* **Sasha Gutkin**, Google (Language Model)
+* **Çağdaş Gerede**, ex-Google, worked as a teammate with Ada Majorek, worked on Dasher v5 release. Currently an assistant professor in Turkey doing research and development on assistive software technologies (Unit Testing, Software architecture)
+* **Jeremy Cope**, Computer Engineer and entrepreneur. Responsible for implementing hooks into the Dasher 5.x source to provide access for a front facing display (2nd screen/dual output)
+* **Dianna Hu**, Google (Feature Matching v6 to v5)
+* **Katie Seaver**, Speech Therapist and AAC specialist. Resident SLP at Saling House. Recommend Dasher to users with head mouse (typically on PC). (User evaluation)
+* **Phil Cowans**, ex-Inference Group 
+* **Steve Salings**, Dasher user since 2009 (User evaluation)
+
+
+{{% /blocks/section %}}
+
+
+
+

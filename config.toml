@@ -138,7 +138,7 @@ enable = true
 yes = 'Glad to hear it! Please <a href="https://github.com/dasher-project/website/issues/new">tell us how we can improve</a>.'
 no = 'Sorry to hear that. Please <a href="https://github.com/dasher-project/website/issues/new">tell us how we can improve</a>.'
 
-[params.links]
+[params.links]	
 # End user relevant links. These will show up on left side of footer and in the community page if you have one.
 [[params.links.user]]
 	name = "User mailing list"
