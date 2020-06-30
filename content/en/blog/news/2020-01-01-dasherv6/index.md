@@ -12,7 +12,7 @@ resources:
 ---
 
 {{< imgproc steve Fill "600x300" >}}
-Screenshot of first build of site
+Steve Saling uses Dasher with a headmouse. 
 {{< /imgproc >}}
 
 ## History
@@ -29,37 +29,30 @@ As well as conventional pointing devices such as mouses, Dasher has been evaluat
 
 The original Dasher project was largely dormant after version 4.11, which was released in March 2010. In 2016 the Dasher project was restarted, and version 5 was developed. In 2019 the current project to create version 6, which is a complete rebuild using a more modern technology base, was kicked off.
 
-## Features
+## So why start all over again?
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lectus diam, dictum in nisl vitae, vehicula ornare dui. Donec nec elit sed leo accumsan volutpat sit amet nec mi. Fusce accumsan elit quis aliquet pretium. Vestibulum ut nisl iaculis, fringilla sem sit amet, vulputate tortor. Integer quis quam venenatis, feugiat sapien nec, molestie erat. Nam tincidunt suscipit porttitor. Aenean mattis at dolor sit amet dapibus. Praesent id consectetur nisl. Aenean semper dui augue, in scelerisque nulla vestibulum ut. Fusce neque ante, lobortis in semper sed, malesuada et ligula. Praesent vestibulum vitae lectus eu faucibus. Mauris sagittis porta lacus, ut ornare sapien pulvinar id. Aenean dapibus at sapien scelerisque commodo. Pellentesque scelerisque nisl ac rhoncus vulputate. Aenean ac vulputate lectus, vitae vehicula neque.
+A number of people have worked on Dasher's code base and going forward - with more features being added, or language model testing being carried out - or just to keep the application updated across the different operating systems - its not been easy. Its certainly not been the easiest codebase for anyone just to jump on board and help out on. 
 
-Aenean in tempus nibh. Donec placerat, nisi eu tempor fermentum, dui ligula condimentum nisl, quis ornare lorem augue in justo. Sed eu augue risus. Etiam sollicitudin vel magna quis dictum. Ut nisi neque, malesuada ut ligula ac, pharetra ullamcorper metus. Cras consectetur nunc ligula, a molestie libero mollis vitae. Maecenas vulputate lacus et nibh tincidunt sollicitudin. Sed sed mi fermentum, consequat sapien in, facilisis ipsum. Etiam eu tincidunt est, eu hendrerit urna. Suspendisse potenti. Vivamus tempor faucibus ipsum vitae laoreet. Vivamus id orci vel nisi pellentesque elementum. Etiam lacinia purus id enim dictum, vitae mollis lectus iaculis. Proin eget ipsum a ante mattis finibus. Fusce sit amet mollis orci, vitae aliquet ex. Ut felis mauris, aliquam id sem ut, tempor ullamcorper sem.
+But also - its 2020 and its time to build an architecture that last another 20 years. 
 
-*   Define single a `GameServer`, or large pre-spun game server `Fleets`, either through kubectl + yaml or via the 
-    Kubernetes API.
-*   Manage GameServer life cycles - including health checking and connection information through configuration and an
-    integrated SDK.
-*   Game server `Fleet` autoscaling capabilities that integrate with Kubernetes' native cluster autoscaling.
-*   Game server specific metric exports and dashboards for operations teams.
-*   Allocate `GameServers` out of a set for players to play on, even while scaling or updating backing Fleet
-    configuration and rollout.
-*   Optimisation patterns for both Cloud and On-Premises to ensure cost effective usage of your infrastructure.
-*   Modular architecture that can be further customised to the needs of your game.
-*   Local development tools for fast development interaction without the need of a full Kubernetes cluster.
-*   … and even more!
 
 ## What’s Next
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lectus diam, dictum in nisl vitae, vehicula ornare dui. Donec nec elit sed leo accumsan volutpat sit amet nec mi. Fusce accumsan elit quis aliquet pretium. Vestibulum ut nisl iaculis, fringilla sem sit amet, vulputate tortor. Integer quis quam venenatis, feugiat sapien nec, molestie erat. Nam tincidunt suscipit porttitor. Aenean mattis at dolor sit amet dapibus. Praesent id consectetur nisl. Aenean semper dui augue, in scelerisque nulla vestibulum ut. Fusce neque ante, lobortis in semper sed, malesuada et ligula. Praesent vestibulum vitae lectus eu faucibus. Mauris sagittis porta lacus, ut ornare sapien pulvinar id. Aenean dapibus at sapien scelerisque commodo. Pellentesque scelerisque nisl ac rhoncus vulputate. Aenean ac vulputate lectus, vitae vehicula neque.
-
-
+There's a lot to do. Here is a quick rundown:
+- Build an *awesome* language model that has an impact for dasher users - but hopefully - the entire AAC ecosystem. We hope to support as many languages as possible. 
+- Create a modular architecture that allows for input (eg touch, switch, headmouse, eyegaze) and output methods (text in a display bar, speech, secondary display) to be accessed by a API/SDK. But also allow for configuration of the zooming interface by API - and make it accessible to the user themselves
+- Providing an architecture to extend dasher more easily than before. Want to drive Dasher by speech? By Breath? We want to help future proof dasher and help the development pathway easier. 
+- Develop a user experience for the app that allows new users to feel comfortable with dasher and learn - steadily - how to use it - and adapt to their changing needs. 
+- Iterative user testing throughout creating a solution that is user led. 
 
 ## Getting Started
 
-If you want to get started, have a look at the ...
+If you want to get started, have a look at the [issue queue](https://github.com/dasher-project/redash/issues) - and submit a Pull Request. 
 
-## Finally
+## What do we need?
 
-A massive thanks to everyone in the  community - from our users, to people that have submitted bugs and feature
-requests, to contributors, approvers and more. This has truly been a group effort, and it wouldn’t have been
-possible without the time and effort that many people have put into this project.
+If you are a user of dasher - please get in touch with [Will](mailto:wwade@acecentre.org.uk). As you can see [here](/about/#who-uses-dasher-right-now-what-features-do-we-need-to-support) - we are trying to pull together as many current use cases to identify priorities - but also help with user testing
+
+The team coding dasher is all working on this pro-bono. A massive, massive thanks to [them](/about/#who-is-involved). However we always need more coding support. If something in the issue queue doesnt look right - then please join the community or drop us a email and we'd love to point you in the right direction to get you helping out. We do need to pay for user testing and design work. If you can offer funds towards the project - please get in touch with [Will](mailto:wwade@acecentre.org.uk). If you are a UX/UI expert we particularly want to hear from you!
+
+
