@@ -39,6 +39,7 @@ But also - its 2020 and its time to build an architecture that last another 20 y
 ## What’s Next
 
 There's a lot to do. Here is a quick rundown:
+
 - Build an *awesome* language model that has an impact for dasher users - but hopefully - the entire AAC ecosystem. We hope to support as many languages as possible. 
 - Create a modular architecture that allows for input (eg touch, switch, headmouse, eyegaze) and output methods (text in a display bar, speech, secondary display) to be accessed by a API/SDK. But also allow for configuration of the zooming interface by API - and make it accessible to the user themselves
 - Providing an architecture to extend dasher more easily than before. Want to drive Dasher by speech? By Breath? We want to help future proof dasher and help the development pathway easier. 
