@@ -161,8 +161,3 @@ no = 'Sorry to hear that. Please <a href="https://github.com/dasher-project/webs
 	url = "mailto:dasher-redesign-external@google.com"
 	icon = "fa fa-envelope"
         desc = "Discuss development issues around the project"
-[[params.links.developer]]
-	name = "Code of Conduct"
-	url = "/community/code-of-conduct"
-	icon = "fab fa-heart"
-        desc = "Code of conduct"
