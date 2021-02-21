@@ -158,6 +158,6 @@ no = 'Sorry to hear that. Please <a href="https://github.com/dasher-project/webs
         desc = "Chat with other project developers"
 [[params.links.developer]]
 	name = "Developer mailing list"
-	url = "mailto:dasher-redesign-external@google.com"
+	url = "mailto:dasher-redesign@google.com"
 	icon = "fa fa-envelope"
         desc = "Discuss development issues around the project"
