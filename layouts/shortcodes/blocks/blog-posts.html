@@ -1,0 +1,17 @@
+<div class="container py-4">
+    <h3 class="text-center pb-2">{{ .Inner }}</h3>
+    <div class="container">
+        <div class="row align-items-start py-2 gx-5">
+
+        {{ range first 2 (where .Site.RegularPages "Section" "blog") }}
+        <div class="col pb-3">
+            <h4 class="pb-2 text-primary bold">{{ .Title }}</h4>
+            <h5 class="pb-2 font-italic">{{ .Description }}</h5>
+            <p>{{.Summary | truncate 250}}</p>
+            <a href="{{ .Permalink }}" class="fs-4 btn-primary p-2 mt-1">Read More</a>
+        </div>
+        {{ end }}
+
+        </div>
+    </div>
+</div>
