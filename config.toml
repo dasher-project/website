@@ -153,9 +153,9 @@ no = 'Sorry to hear that. Please <a href="https://github.com/dasher-project/webs
         desc = "Development takes place here!"
 [[params.links.developer]]
 	name = "Slack"
-	url = "http://acecentre.slack.com"
+	url = "https://join.slack.com/t/openaac/shared_invite/enQtNTQwNDgwODYyNjU5LTAwODNmZjM4ZmJmOTJkYTY2MWZkNjc0MDQ0NTcwMTRmMzY0MWI3OWJiNGYwZGIzMzc2YTk2N2FiY2JlYTI5Njc"
 	icon = "fab fa-slack"
-        desc = "Chat with other project developers"
+        desc = "Chat with other project developers on OpenAAC Slack (Join #dasher-general)"
 [[params.links.developer]]
 	name = "Developer mailing list"
 	url = "mailto:dasher-redesign@google.com"
