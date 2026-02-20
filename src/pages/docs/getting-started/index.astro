@@ -1,0 +1,197 @@
+---
+import DocsLayout from '../../../layouts/DocsLayout.astro';
+---
+
+<DocsLayout title="Get started - Dasher">
+  <h1>Get started</h1>
+
+  <p>
+    Dasher is an information-efficient text-entry interface, driven by natural continuous pointing gestures. Dasher is a competitive text-entry system wherever a full-size keyboard cannot be used.
+  </p>
+
+  <h2>Platform Features</h2>
+  <p>There are different versions for different platforms:</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Platform</th>
+        <th>Feature 1</th>
+        <th>Feature 2</th>
+        <th>Feature 3</th>
+        <th>Feature 4</th>
+        <th>Feature 5</th>
+        <th>Feature 6</th>
+        <th>Feature 7</th>
+        <th>Feature 8</th>
+        <th>Feature 9</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Windows</strong></td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+      </tr>
+      <tr>
+        <td><strong>Mac</strong></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>Linux</strong></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>Java</strong></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>iOS</strong></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>Android</strong></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Downloads</h2>
+  <ul>
+    <li><a href="https://github.com/dasher-project/dasher/releases/tag/DASHER_5_0_0_beta" target="_blank" rel="noopener noreferrer">Windows</a></li>
+    <li><a href="/docs/getting-started/install/mac/">Mac</a></li>
+    <li><a href="/docs/getting-started/install/linux/">Linux</a></li>
+    <li>iOS (coming soon)</li>
+    <li><a href="/docs/getting-started/install/android/">Android</a></li>
+    <li>Java (coming soon)</li>
+  </ul>
+
+  <div class="doc-sections">
+    <section class="doc-section">
+      <h2>Installation Guides</h2>
+      <p>Choose your platform to get started with Dasher:</p>
+      <ul>
+        <li><a href="/docs/getting-started/install/windows/">Windows Installation</a></li>
+        <li><a href="/docs/getting-started/install/linux/">Linux Installation</a></li>
+        <li><a href="/docs/getting-started/install/mac/">Mac Installation</a></li>
+        <li><a href="/docs/getting-started/install/android/">Android Installation</a></li>
+      </ul>
+    </section>
+
+    <section class="doc-section">
+      <h2>How to Use Dasher</h2>
+      <p>Learn how to use Dasher effectively:</p>
+      <ul>
+        <li><a href="/docs/getting-started/how-to/tips/">Tips for Novices</a></li>
+        <li><a href="/docs/getting-started/how-to/manual/">Dasher Manual</a></li>
+      </ul>
+    </section>
+  </div>
+</DocsLayout>
+
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--space-lg) 0;
+  }
+
+  th, td {
+    padding: var(--space-sm);
+    text-align: center;
+    border: 1px solid var(--color-horizon-mint);
+  }
+
+  th {
+    background-color: var(--color-canvas-white);
+    font-weight: 600;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: var(--color-canvas-white);
+  }
+
+  ul {
+    list-style: disc;
+    padding-left: var(--space-lg);
+  }
+
+  li {
+    margin-bottom: var(--space-sm);
+  }
+
+  a {
+    color: var(--color-deep-ink);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--color-target-coral);
+    text-decoration: underline;
+  }
+
+  .doc-sections {
+    display: grid;
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+  }
+
+  .doc-section {
+    padding: var(--space-lg);
+    background-color: var(--color-canvas-white);
+    border: 2px solid var(--color-horizon-mint);
+    border-radius: var(--radius-lg);
+  }
+
+  .doc-section h2 {
+    margin-top: 0;
+    color: var(--color-deep-ink);
+  }
+</style>

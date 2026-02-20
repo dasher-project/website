@@ -1,0 +1,353 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Downloads - Dasher">
+  <div class="container">
+    <section class="section">
+      <h1>Downloads</h1>
+
+      <p class="lead">
+        Download alphabet files, training texts, and other resources for Dasher.
+      </p>
+
+      <section class="download-section">
+        <h2>Alphabet Files</h2>
+
+        <p>
+          Dasher supports over 60 languages through alphabet XML files. These files define
+          the characters, ordering, and display properties for each language.
+        </p>
+
+        <div class="download-options">
+          <a href="/download/alphabets/all.zip" class="download-card">
+            <h3>All Alphabets</h3>
+            <p>Complete package with all alphabet files</p>
+            <span class="file-size">~410KB</span>
+          </a>
+
+          <a href="/download/training.html" class="download-card">
+            <h3>Training Texts</h3>
+            <p>Training files for 50+ languages</p>
+            <span class="file-size">View index</span>
+          </a>
+        </div>
+
+        <div class="alphabet-list">
+          <h3>Individual Alphabet Files</h3>
+          <p class="note">
+            Browse individual alphabet files by language. These files can be placed in
+            Dasher's alphabet directory to add language support.
+          </p>
+
+          <div class="language-groups">
+            <div class="group">
+              <h4>European Languages</h4>
+              <div class="files">
+                <a href="/download/alphabets/alphabet.english.xml">English</a>
+                <a href="/download/alphabets/alphabet.french.xml">French</a>
+                <a href="/download/alphabets/alphabet.german.xml">German</a>
+                <a href="/download/alphabets/alphabet.spanish.xml">Spanish</a>
+                <a href="/download/alphabets/alphabet.italian.xml">Italian</a>
+                <a href="/download/alphabets/alphabet.portuguese.xml">Portuguese</a>
+                <a href="/download/alphabets/alphabet.dutch.xml">Dutch</a>
+                <a href="/download/alphabets/alphabet.swedish.xml">Swedish</a>
+                <a href="/download/alphabets/alphabet.danish.xml">Danish</a>
+                <a href="/download/alphabets/alphabet.norwegian.xml">Norwegian</a>
+                <a href="/download/alphabets/alphabet.finnish.xml">Finnish</a>
+                <a href="/download/alphabets/alphabet.polish.xml">Polish</a>
+                <a href="/download/alphabets/alphabet.czech.xml">Czech</a>
+                <a href="/download/alphabets/alphabet.hungarian.xml">Hungarian</a>
+                <a href="/download/alphabets/alphabet.greek.xml">Greek</a>
+                <a href="/download/alphabets/alphabet.russian.xml">Russian</a>
+                <a href="/download/alphabets/alphabet.bulgarian.xml">Bulgarian</a>
+              </div>
+            </div>
+
+            <div class="group">
+              <h4>Middle-Eastern Languages</h4>
+              <div class="files">
+                <a href="/download/alphabets/alphabet.arabic.xml">Arabic</a>
+                <a href="/download/alphabets/alphabet.hebrew.xml">Hebrew</a>
+                <a href="/download/alphabets/alphabet.persian.xml">Persian (Farsi)</a>
+              </div>
+            </div>
+
+            <div class="group">
+              <h4>Indian Languages</h4>
+              <div class="files">
+                <a href="/download/alphabets/alphabet.hindi.xml">Hindi</a>
+                <a href="/download/alphabets/alphabet.bengali.xml">Bengali</a>
+                <a href="/download/alphabets/alphabet.tamil.xml">Tamil</a>
+                <a href="/download/alphabets/alphabet.telugu.xml">Telugu</a>
+                <a href="/download/alphabets/alphabet.kannada.xml">Kannada</a>
+                <a href="/download/alphabets/alphabet.malayalam.xml">Malayalam</a>
+                <a href="/download/alphabets/alphabet.gujarati.xml">Gujarati</a>
+                <a href="/download/alphabets/alphabet.punjabi.xml">Punjabi</a>
+                <a href="/download/alphabets/alphabet.marathi.xml">Marathi</a>
+                <a href="/download/alphabets/alphabet.oriya.xml">Oriya</a>
+                <a href="/download/alphabets/alphabet.assamese.xml">Assamese</a>
+                <a href="/download/alphabets/alphabet.urdu.xml">Urdu</a>
+                <a href="/download/alphabets/alphabet.sinhala.xml">Sinhala</a>
+              </div>
+            </div>
+
+            <div class="group">
+              <h4>Asian Languages</h4>
+              <div class="files">
+                <a href="/download/alphabets/alphabet.japanese_hiragana.xml">Japanese (Hiragana)</a>
+                <a href="/download/alphabets/alphabet.japanese_katakana.xml">Japanese (Katakana)</a>
+                <a href="/download/alphabets/alphabet.korean.xml">Korean</a>
+                <a href="/download/alphabets/alphabet.thai.xml">Thai</a>
+                <a href="/download/alphabets/alphabet.mongolian.xml">Mongolian</a>
+                <a href="/download/alphabets/alphabet.chinese.xml">Chinese (Simplified)</a>
+              </div>
+            </div>
+
+            <div class="group">
+              <h4>African Languages</h4>
+              <div class="files">
+                <a href="/download/alphabets/alphabet.swahili.xml">Swahili</a>
+                <a href="/download/alphabets/alphabet.afrikaans.xml">Afrikaans</a>
+                <a href="/download/alphabets/alphabet.zulu.xml">Zulu</a>
+                <a href="/download/alphabets/alphabet.xhosa.xml">Xhosa</a>
+              </div>
+            </div>
+
+            <div class="group">
+              <h4>Other Languages</h4>
+              <div class="files">
+                <a href="/download/alphabets/alphabet.esperanto.xml">Esperanto</a>
+                <a href="/download/alphabets/alphabet.turkish.xml">Turkish</a>
+                <a href="/download/alphabets/alphabet.icelandic.xml">Icelandic</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="download-section">
+        <h2>How to Install Alphabet Files</h2>
+
+        <div class="platform-instructions">
+          <div class="platform">
+            <h4>Windows</h4>
+            <ol>
+              <li>Download the alphabet file</li>
+              <li>Place it in: <code>C:\Program Files\Dasher\alphabets\</code></li>
+              <li>Restart Dasher</li>
+              <li>Select <strong>Options → Alphabet</strong> to choose your language</li>
+            </ol>
+          </div>
+
+          <div class="platform">
+            <h4>Linux</h4>
+            <ol>
+              <li>Download the alphabet file</li>
+              <li>Place it in: <code>/usr/share/dasher/alphabets/</code></li>
+              <li>Or use <code>~/.dasher/alphabets/</code> for user-specific files</li>
+              <li>Restart Dasher</li>
+              <li>Select <strong>Options → Alphabet</strong> to choose your language</li>
+            </ol>
+          </div>
+
+          <div class="platform">
+            <h4>macOS</h4>
+            <ol>
+              <li>Download the alphabet file</li>
+              <li>Right-click Dasher.app and select "Show Package Contents"</li>
+              <li>Navigate to <code>Contents/Resources/alphabets/</code></li>
+              <li>Copy the file there</li>
+              <li>Restart Dasher</li>
+              <li>Select <strong>Options → Alphabet</strong> to choose your language</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="download-section">
+        <h2>Creating Custom Alphabets</h2>
+
+        <p>
+          Want to create your own alphabet file? See our guide on
+          <a href="/docs/languages/creating-alphabets/">Creating Custom Alphabets</a>.
+        </p>
+
+        <div class="info-box">
+          <h3>Need Help?</h3>
+          <p>
+            If you need help with alphabet files or want to contribute one you've created,
+            please <a href="https://github.com/dasher-project/dasher/discussions" target="_blank" rel="noopener noreferrer">
+            contact us on GitHub Discussions</a>.
+          </p>
+        </div>
+      </section>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .lead {
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto var(--space-lg);
+    text-align: center;
+    opacity: 0.9;
+  }
+
+  .download-section {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .download-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-md);
+    margin: var(--space-lg) 0;
+  }
+
+  .download-card {
+    display: block;
+    padding: var(--space-lg);
+    background-color: var(--color-horizon-mint);
+    border: 2px solid var(--color-horizon-mint);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    color: var(--color-deep-ink);
+    transition: var(--transition-smooth);
+  }
+
+  .download-card:hover {
+    border-color: var(--color-target-coral);
+    transform: translateY(-4px);
+  }
+
+  .download-card h3 {
+    margin: 0 0 var(--space-sm) 0;
+    font-size: 1.25rem;
+  }
+
+  .download-card p {
+    margin: 0 0 var(--space-sm) 0;
+  }
+
+  .file-size {
+    display: inline-block;
+    padding: var(--space-xs) var(--space-sm);
+    background-color: var(--color-target-coral);
+    color: var(--color-canvas-white);
+    border-radius: var(--radius-sm);
+    font-size: 0.875rem;
+  }
+
+  .alphabet-list {
+    margin-top: var(--space-xl);
+  }
+
+  .alphabet-list h3 {
+    margin-bottom: var(--space-sm);
+  }
+
+  .note {
+    padding: var(--space-md);
+    background-color: var(--color-focus-yellow);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-lg);
+  }
+
+  .language-groups {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+  }
+
+  .group {
+    padding: var(--space-md);
+    background-color: var(--color-canvas-white);
+    border: 2px solid var(--color-horizon-mint);
+    border-radius: var(--radius-md);
+  }
+
+  .group h4 {
+    margin: 0 0 var(--space-md) 0;
+    font-size: 1.125rem;
+  }
+
+  .files {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+
+  .files a {
+    padding: var(--space-xs) var(--space-sm);
+    background-color: var(--color-horizon-mint);
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    color: var(--color-deep-ink);
+    font-size: 0.875rem;
+    transition: var(--transition-smooth);
+  }
+
+  .files a:hover {
+    background-color: var(--color-target-coral);
+    color: var(--color-canvas-white);
+  }
+
+  .platform-instructions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-md);
+    margin: var(--space-md) 0;
+  }
+
+  .platform {
+    padding: var(--space-md);
+    background-color: var(--color-canvas-white);
+    border: 2px solid var(--color-horizon-mint);
+    border-radius: var(--radius-md);
+  }
+
+  .platform h4 {
+    margin: 0 0 var(--space-sm) 0;
+    font-size: 1.125rem;
+  }
+
+  .platform ol {
+    padding-left: var(--space-lg);
+    margin: 0;
+  }
+
+  .platform li {
+    margin-bottom: var(--space-sm);
+  }
+
+  code {
+    background-color: var(--color-horizon-mint);
+    padding: 0.125rem 0.25rem;
+    border-radius: var(--radius-sm);
+    font-family: monospace;
+    font-size: 0.9em;
+  }
+
+  .info-box {
+    padding: var(--space-lg);
+    background-color: var(--color-horizon-mint);
+    border-radius: var(--radius-md);
+    margin: var(--space-lg) 0;
+  }
+
+  .info-box h3 {
+    margin-top: 0;
+  }
+
+  a {
+    color: var(--color-deep-ink);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--color-target-coral);
+    text-decoration: underline;
+  }
+</style>

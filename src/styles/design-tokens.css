@@ -1,0 +1,40 @@
+/* ==========================================================================
+   DASHER MODERN - CSS VARIABLES & DESIGN TOKENS
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700&display=swap');
+
+:root {
+  /* Color Palette */
+  --color-deep-ink: #27537B;
+  --color-horizon-mint: #A8D0CB;
+  --color-focus-yellow: #F4E47E;
+  --color-target-coral: #D96A6A;
+  --color-canvas-white: #F8F9FA;
+
+  /* Typography */
+  --font-ui: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Outfit', sans-serif;
+
+  /* Radii for nested box motif */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+
+  /* Transitions */
+  --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --transition-zoom: transform 0.4s ease-in-out;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 2.5rem;
+
+  /* Layout */
+  --max-width-content: 1200px;
+  --max-width-docs: 900px;
+  --header-height: 64px;
+}

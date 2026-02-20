@@ -1,0 +1,466 @@
+---
+import DocsLayout from '../../../layouts/DocsLayout.astro';
+---
+
+<DocsLayout title="Creating Custom Alphabets - Dasher">
+  <h1>Creating Custom Alphabets</h1>
+
+  <p>
+    If your language is not already supported in Dasher, you can add support by creating
+    an alphabet file and providing training text. This guide will walk you through the process.
+  </p>
+
+  <section class="section">
+    <h2>Overview</h2>
+
+    <p>
+      Dasher uses two main components to support a language:
+    </p>
+
+    <ol>
+      <li><strong>Alphabet file</strong> (<code>alphabet.xml</code>) - Defines the characters and their order</li>
+      <li><strong>Training text</strong> - A sample of natural writing (300K or more) to teach Dasher character probabilities</li>
+    </ol>
+  </section>
+
+  <section class="section">
+    <h2>Step 1: Create the Alphabet File</h2>
+
+    <p>
+      The alphabet file is an XML file that defines all characters in your language and their
+      display order in Dasher.
+    </p>
+
+    <div class="example-box">
+      <h3>Basic Alphabet File Structure</h3>
+      <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;alphabet name="MyLanguage"&gt;
+  &lt;!-- Define character groups --&gt;
+  &lt;group label="Lowercase"&gt;
+    &lt;char d="a" /&gt;
+    &lt;char d="b" /&gt;
+    &lt;!-- more characters... --&gt;
+  &lt;/group&gt;
+
+  &lt;group label="Uppercase"&gt;
+    &lt;char d="A" /&gt;
+    &lt;char d="B" /&gt;
+    &lt;!-- more characters... --&gt;
+  &lt;/group&gt;
+
+  &lt;group label="Numbers"&gt;
+    &lt;char d="0" /&gt;
+    &lt;char d="1" /&gt;
+    &lt;!-- more characters... --&gt;
+  &lt;/group&gt;
+
+  &lt;group label="Punctuation"&gt;
+    &lt;char d=" " /&gt;  &lt;!-- space --&gt;
+    &lt;char d="." /&gt;
+    &lt;char d="," /&gt;
+    &lt;!-- more punctuation... --&gt;
+  &lt;/group&gt;
+&lt;/alphabet&gt;</code></pre>
+    </div>
+
+    <h3>Character Attributes</h3>
+
+    <p>
+      Characters can have various attributes:
+    </p>
+
+    <ul>
+      <li><code>d</code> - The character itself (display)</li>
+      <li><code>t</code> - Text output (if different from display)</li>
+      <li><code>colour</code> - Color for the character box</li>
+      <li><code>label</code> - Display label for character groups</li>
+    </ul>
+
+    <h3>Combining Characters</h3>
+
+    <p>
+      For languages with combining characters (like Thai), use special handling:
+    </p>
+
+    <div class="info-box">
+      <p>
+        Dasher can generate complicated multi-part characters by combining Unicode components.
+        Define base characters and combining marks separately in the alphabet file.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Step 2: Prepare Training Text</h2>
+
+    <p>
+      Training text helps Dasher learn the probability distribution of characters in your language.
+    </p>
+
+    <h3>Requirements</h3>
+
+    <ul>
+      <li><strong>Size:</strong> At least 300KB of text (more is better)</li>
+      <li><strong>Content:</strong> Natural writing in your target language</li>
+      <li><strong>Format:</strong> Plain text file, UTF-8 encoded</li>
+      <li><strong>Quality:</strong> Representative of typical usage</li>
+    </ul>
+
+    <h3>Sources for Training Text</h3>
+
+    <div class="sources">
+      <div class="source">
+        <h4>Public Domain Books</h4>
+        <p>Project Gutenberg, public domain literature, government documents</p>
+      </div>
+
+      <div class="source">
+        <h4>News Articles</h4>
+        <p>News websites (check copyright), press releases</p>
+      </div>
+
+      <div class="source">
+        <h4>Wikipedia</h4>
+        <p>Dump files available for many languages</p>
+      </div>
+
+      <div class="source">
+        <h4>Corpora</h4>
+        <p>Existing language corpora for linguistics research</p>
+      </div>
+    </div>
+
+    <h3>Creating Your Own Training Text</h3>
+
+    <p>
+      For best results, create training text that matches your personal writing style.
+      Collect emails, documents, or other text you've written in the target language.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Step 3: Install the Files</h2>
+
+    <div class="platform-instructions">
+      <div class="platform">
+        <h4>Windows</h4>
+        <ol>
+          <li>Place <code>alphabet.xml</code> in: <code>C:\Program Files\Dasher\alphabets\</code></li>
+          <li>Place training text in: <code>C:\Program Files\Dasher\training\</code></li>
+          <li>Restart Dasher</li>
+          <li>Select <strong>Options → Alphabet</strong> and choose your language</li>
+        </ol>
+      </div>
+
+      <div class="platform">
+        <h4>Linux</h4>
+        <ol>
+          <li>Place <code>alphabet.xml</code> in: <code>/usr/share/dasher/alphabets/</code></li>
+          <li>Place training text in: <code>/usr/share/dasher/training/</code></li>
+          <li>Or use <code>~/.dasher/</code> for user-specific files</li>
+          <li>Restart Dasher</li>
+          <li>Select <strong>Options → Alphabet</strong> and choose your language</li>
+        </ol>
+      </div>
+
+      <div class="platform">
+        <h4>macOS</h4>
+        <ol>
+          <li>Right-click Dasher.app and select "Show Package Contents"</li>
+          <li>Navigate to <code>Contents/Resources/</code></li>
+          <li>Place files in <code>alphabets/</code> and <code>training/</code> subdirectories</li>
+          <li>Restart Dasher</li>
+          <li>Select <strong>Options → Alphabet</strong> and choose your language</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Step 4: Test and Refine</h2>
+
+    <h3>Testing Your Alphabet</h3>
+
+    <ol>
+      <li>Start Dasher and select your new alphabet</li>
+      <li>Try writing some sample text</li>
+      <li>Check that all characters appear correctly</li>
+      <li>Verify character order makes sense for your language</li>
+    </ol>
+
+    <h3>Troubleshooting</h3>
+
+    <div class="troubleshooting">
+      <div class="issue">
+        <h4>Characters not appearing</h4>
+        <p>Check that your font supports the characters. Install a Unicode font for your language if needed.</p>
+      </div>
+
+      <div class="issue">
+        <h4>Predictions seem wrong</h4>
+        <p>Add more training text, or ensure it's representative of natural writing in your language.</p>
+      </div>
+
+      <div class="issue">
+        <h4>File not loading</h4>
+        <p>Verify the XML is well-formed. Check for encoding issues (should be UTF-8).</p>
+      </div>
+
+      <div class="issue">
+        <h4>Wrong character order</h4>
+        <p>Adjust the order of characters in the alphabet file to match your language's conventions.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Advanced Topics</h2>
+
+    <h3>Context-Dependent Characters</h3>
+
+    <p>
+      Some languages have characters that change form based on context. Dasher can handle
+      this through special XML attributes and context rules.
+    </p>
+
+    <h3>Multiple Input Methods</h3>
+
+    <p>
+      For languages with multiple input methods (like different keyboard layouts), you can
+      create multiple alphabet files with different <code>context</code> attributes.
+    </p>
+
+    <h3>Sharing Your Alphabet</h3>
+
+    <p>
+      If you create an alphabet for a language not yet supported, please consider contributing
+      it to the Dasher project!
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Resources and References</h2>
+
+    <div class="resources">
+      <div class="resource">
+        <h4>Unicode Resources</h4>
+        <p>
+          <a href="https://www.unicode.org/" target="_blank" rel="noopener noreferrer">Unicode Consortium</a> -
+          Official Unicode charts and standards
+        </p>
+      </div>
+
+      <div class="resource">
+        <h4>Alphabet Examples</h4>
+        <p>
+          <a href="https://github.com/dasher-project/dasher" target="_blank" rel="noopener noreferrer">Dasher GitHub</a> -
+          View existing alphabet files in the repository
+        </p>
+      </div>
+
+      <div class="resource">
+        <h4>Font Information</h4>
+        <p>
+          <a href="https://www.alanwood.net/unicode/fonts.html" target="_blank" rel="noopener noreferrer">
+            Alan Wood's Unicode Fonts
+          </a> -
+          Information about Unicode fonts for various languages
+        </p>
+      </div>
+
+      <div class="resource">
+        <h4>Training Text Corpora</h4>
+        <p>
+          <a href="https://www.gutenberg.org/" target="_blank" rel="noopener noreferrer">Project Gutenberg</a> -
+          Free public domain books in many languages
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-box">
+    <h2>Need Help?</h2>
+    <p>
+      If you need help creating an alphabet or want to contribute one you've made,
+      please <a href="https://github.com/dasher-project/dasher/discussions" target="_blank" rel="noopener noreferrer">
+      contact us on GitHub Discussions</a>.
+    </p>
+  </div>
+</DocsLayout>
+
+<style>
+  .section {
+    margin-top: var(--space-xl);
+  }
+
+  pre {
+    background-color: var(--color-canvas-white);
+    border: 2px solid var(--color-horizon-mint);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    overflow-x: auto;
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  code {
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  }
+
+  .example-box, .info-box {
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    margin: var(--space-md) 0;
+  }
+
+  .example-box {
+    background-color: var(--color-canvas-white);
+    border: 2px solid var(--color-horizon-mint);
+  }
+
+  .info-box {
+    background-color: var(--color-focus-yellow);
+  }
+
+  .example-box h3, .info-box h3 {
+    margin-top: 0;
+  }
+
+  ol, ul {
+    padding-left: var(--space-lg);
+  }
+
+  li {
+    margin-bottom: var(--space-sm);
+  }
+
+  .sources {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-md);
+    margin: var(--space-md) 0;
+  }
+
+  .source {
+    padding: var(--space-md);
+    background-color: var(--color-canvas-white);
+    border: 2px solid var(--color-horizon-mint);
+    border-radius: var(--radius-md);
+  }
+
+  .source h4 {
+    margin: 0 0 var(--space-sm) 0;
+    font-size: 1rem;
+  }
+
+  .source p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  .platform-instructions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-md);
+    margin: var(--space-md) 0;
+  }
+
+  .platform {
+    padding: var(--space-md);
+    background-color: var(--color-canvas-white);
+    border: 2px solid var(--color-horizon-mint);
+    border-radius: var(--radius-md);
+  }
+
+  .platform h4 {
+    margin: 0 0 var(--space-sm) 0;
+    font-size: 1.125rem;
+  }
+
+  .platform ol {
+    padding-left: var(--space-lg);
+    margin: 0;
+  }
+
+  .platform li {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  code.inline {
+    background-color: var(--color-horizon-mint);
+    padding: 0.125rem 0.25rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.9em;
+  }
+
+  .troubleshooting {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-md);
+    margin: var(--space-md) 0;
+  }
+
+  .issue {
+    padding: var(--space-md);
+    background-color: var(--color-canvas-white);
+    border-left: 4px solid var(--color-target-coral);
+    border-radius: var(--radius-md);
+  }
+
+  .issue h4 {
+    margin: 0 0 var(--space-sm) 0;
+    font-size: 1rem;
+  }
+
+  .issue p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  .resources {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-md);
+    margin: var(--space-md) 0;
+  }
+
+  .resource {
+    padding: var(--space-md);
+    background-color: var(--color-canvas-white);
+    border: 2px solid var(--color-horizon-mint);
+    border-radius: var(--radius-md);
+  }
+
+  .resource h4 {
+    margin: 0 0 var(--space-sm) 0;
+    font-size: 1rem;
+  }
+
+  .resource p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  .cta-box {
+    margin-top: var(--space-xl);
+    padding: var(--space-lg);
+    background-color: var(--color-horizon-mint);
+    border-radius: var(--radius-lg);
+    text-align: center;
+  }
+
+  .cta-box h2 {
+    margin-top: 0;
+  }
+
+  a {
+    color: var(--color-deep-ink);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--color-target-coral);
+    text-decoration: underline;
+  }
+</style>

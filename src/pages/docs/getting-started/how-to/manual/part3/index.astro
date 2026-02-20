@@ -1,0 +1,92 @@
+---
+import DocsLayout from '../../../../../../layouts/DocsLayout.astro';
+---
+
+<DocsLayout title="3. Personalizing Dasher - Dasher Manual">
+  <h1>3. Personalizing Dasher</h1>
+
+  <nav class="breadcrumbs">
+    <a href="/docs/getting-started/how-to/manual/">← Back to Manual</a>
+  </nav>
+
+  <p>There are three classes of files you can tweak in order to make Dasher work better for you: <strong>alphabet</strong> files, <strong>colour</strong> files, and <strong>training</strong> files.</p>
+
+  <h2>3.1 Personalizing the Language Model</h2>
+  <p>Dasher's predictions (in version 3 of Dasher) are based not on a dictionary but on a training text of ordinary text. For example, when you download Dasher version 3, it comes with a file called <strong>training_english GB.txt.</strong> This is 300 kbytes of ordinary english harvested from various documents on the internet.</p>
+
+  <p>When you use Dasher, it stores everything you write in another personal file with the same name as the training file. Next time you use Dasher, it reads in the original training file and everything you wrote last time, to help it predict better. Dasher learns all the time. To get the best results from Dasher:</p>
+
+  <ul>
+    <li>If possible, provide Dasher with a training text in your own style – a plain text file made from documents you have written before, and containing your own pet phrases, friends' names, and so forth. Either append this file to the training file, or replace the original training file.</li>
+    <li>If you think your personal training file may have become corrupted with rubbish text, edit it using any plain text editor. (Or ask a friend to do this for you.)</li>
+    <li>If you use Dasher for many months, the personal training file may become so large that Dasher becomes slow to start up; if so, edit the training file using a plain text editor.</li>
+  </ul>
+
+  <h2>3.2 Personalizing the Alphabet</h2>
+  <p>Which characters are available to you, and their order, is determined by the alphabet file. For example, you might use <strong>alphabet.english.xml.</strong> Dasher comes with many alternative alphabets. You can edit alphabet files to change which characters are in the alphabet, or their order.</p>
+
+  <p>When you edit this xml file, it might be a good idea to save the new file with a new name and change the name of the alphabets in the new file, to avoid confusion. Each field in the xml file specifies a symbol by three items: the character that should be displayed <strong>(d=. . . )</strong>; the character that goes into the text when this symbol is selected <strong>(t=. . . )</strong>; and the background colour number of the box for this symbol <strong>(b=. . . )</strong>, of which more below.</p>
+
+  <h2>3.3 Personalizing the Colour Scheme</h2>
+  <p>You can change the colours of the Dasher world in two ways. The colour file (for example <strong>colour.xml</strong> or <strong>colour.euroasian.xml</strong>) specifies the 200 colours in the palette that Dasher uses. Each line specifies red, green, blue values.</p>
+
+  <p>These colours are used to colour multiple objects in Dasher. If for example you want to change the colour of the "red line", change the second colour line of the colour file, which reads <strong>&lt;colour r="255" g="0" b="0"/&gt;</strong>.</p>
+
+  <p>You can change which of these colours is used for each symbol's box by changing the "b" field for that symbol in the alphabet file.</p>
+
+  <nav class="manual-nav">
+    <a href="/docs/getting-started/how-to/manual/part2/">← Previous: How to use Dasher in real life</a>
+    <a href="/docs/getting-started/how-to/manual/part4/">Next: Languages →</a>
+  </nav>
+</DocsLayout>
+
+<style>
+  .breadcrumbs {
+    margin-bottom: var(--space-lg);
+  }
+
+  h2 {
+    margin-top: var(--space-xl);
+  }
+
+  ul {
+    list-style: disc;
+    padding-left: var(--space-lg);
+  }
+
+  li {
+    margin-bottom: var(--space-sm);
+  }
+
+  .manual-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--space-xl);
+    padding-top: var(--space-lg);
+    border-top: 2px solid var(--color-horizon-mint);
+  }
+
+  .manual-nav a {
+    padding: var(--space-sm) var(--space-md);
+    background-color: var(--color-horizon-mint);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: var(--color-deep-ink);
+    font-weight: 500;
+  }
+
+  .manual-nav a:hover {
+    background-color: var(--color-target-coral);
+    color: white;
+  }
+
+  a {
+    color: var(--color-deep-ink);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--color-target-coral);
+    text-decoration: underline;
+  }
+</style>

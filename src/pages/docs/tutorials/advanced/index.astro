@@ -1,0 +1,55 @@
+---
+import DocsLayout from '../../../../layouts/DocsLayout.astro';
+---
+
+<DocsLayout title="Advanced Tutorial - Dasher">
+  <h1>Advanced Tutorial</h1>
+
+  <p>This tutorial is currently under development. Please check back soon for detailed tutorials on advanced Dasher configurations.</p>
+
+  <p>In the meantime, please explore the <a href="/docs/getting-started/how-to/manual/">Dasher Manual</a> for comprehensive information about using Dasher.</p>
+
+  <h2>Advanced Topics</h2>
+  <ul>
+    <li><a href="/docs/getting-started/how-to/manual/part3/">Personalizing Dasher</a> - Customizing your Dasher experience</li>
+    <li><a href="/docs/getting-started/how-to/manual/part6/">Continuous Gestures</a> - Advanced input methods</li>
+    <li><a href="/docs/getting-started/how-to/manual/part7/">Button Modes</a> - Alternative control methods</li>
+  </ul>
+
+  <div class="note-box">
+    <h2>Note</h2>
+    <p>The tutorial section is being actively developed. For the latest updates, please check our <a href="https://github.com/dasher-project/dasher" target="_blank" rel="noopener noreferrer">GitHub repository</a>.</p>
+  </div>
+</DocsLayout>
+
+<style>
+  ul {
+    list-style: disc;
+    padding-left: var(--space-lg);
+  }
+
+  li {
+    margin-bottom: var(--space-sm);
+  }
+
+  .note-box {
+    margin-top: var(--space-lg);
+    padding: var(--space-lg);
+    background-color: var(--color-horizon-mint);
+    border-radius: var(--radius-lg);
+  }
+
+  .note-box h2 {
+    margin-top: 0;
+  }
+
+  a {
+    color: var(--color-deep-ink);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--color-target-coral);
+    text-decoration: underline;
+  }
+</style>

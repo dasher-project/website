@@ -1,0 +1,97 @@
+---
+import DocsLayout from '../../../../../../layouts/DocsLayout.astro';
+---
+
+<DocsLayout title="4. Languages - Dasher Manual">
+  <h1>4. Languages</h1>
+
+  <nav class="breadcrumbs">
+    <a href="/docs/getting-started/how-to/manual/">← Back to Manual</a>
+  </nav>
+
+  <p>Dasher works in hundreds of languages.</p>
+
+  <p>For each language there is an alphabet file (or possibly more than one alphabet file). On the Dasher website we aim to supply at least one training text for each language. If we don't have a good training text for your language, please help us by making one and sending it to us.</p>
+
+  <p>See the Dasher website for the list of languages supported by Dasher. As of October 2005, all the major languages of the world are well supported, with the exception of Japanese and Chinese, for which Dasher version 3 offers only phonetic support (hiragana and pin-yin). In Dasher version 4, we will provide full support for Japanese and Chinese.</p>
+
+  <h2>Fonts for Dasher</h2>
+  <p>For Dasher to work in any language, your computer must have the right fonts on board.</p>
+
+  <h3>Example: Getting Malayalam Working on Linux</h3>
+  <ol>
+    <li>Go to Alan Wood's <a href="http://www.alanwood.net/unicode/fonts.html" target="_blank" rel="noopener noreferrer">Fonts</a> page, which gave lots of links for Malayalam fonts</li>
+    <li>Select the <a href="http://tdil.mit.gov.in/download/janamalayalam.htm" target="_blank" rel="noopener noreferrer">janamalayalam</a> link, download their zip file, unzipped it, and put the resulting TTF file into your ~/.fonts folder (create this directory if it does not exist)</li>
+    <li>Type <code>fc-cache</code> and restart Dasher. Malayalam worked instantly</li>
+  </ol>
+
+  <h3>Other Font Sources</h3>
+  <ul>
+    <li><strong>FarsiWeb</strong> - for Persian (Farsi) fonts</li>
+    <li><strong>corefonts.sourceforge.net</strong> - download major fonts from Microsoft, including Tahoma and Times New Roman</li>
+    <li><strong>Sun Microsystems</strong> - Saraswati font provides most Indian languages except Oriya and Sinhala</li>
+    <li><strong>Sinhala fonts</strong> - available from <a href="http://sinhala.linux.lk/" target="_blank" rel="noopener noreferrer">sinhala.linux.lk</a></li>
+  </ul>
+
+  <nav class="manual-nav">
+    <a href="/docs/getting-started/how-to/manual/part3/">← Previous: Personalizing Dasher</a>
+    <a href="/docs/getting-started/how-to/manual/part5/">Next: What's new in Version 4.0 →</a>
+  </nav>
+</DocsLayout>
+
+<style>
+  .breadcrumbs {
+    margin-bottom: var(--space-lg);
+  }
+
+  h2, h3 {
+    margin-top: var(--space-xl);
+  }
+
+  ul, ol {
+    padding-left: var(--space-lg);
+  }
+
+  li {
+    margin-bottom: var(--space-sm);
+  }
+
+  code {
+    background-color: var(--color-horizon-mint);
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+  }
+
+  .manual-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--space-xl);
+    padding-top: var(--space-lg);
+    border-top: 2px solid var(--color-horizon-mint);
+  }
+
+  .manual-nav a {
+    padding: var(--space-sm) var(--space-md);
+    background-color: var(--color-horizon-mint);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: var(--color-deep-ink);
+    font-weight: 500;
+  }
+
+  .manual-nav a:hover {
+    background-color: var(--color-target-coral);
+    color: white;
+  }
+
+  a {
+    color: var(--color-deep-ink);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--color-target-coral);
+    text-decoration: underline;
+  }
+</style>

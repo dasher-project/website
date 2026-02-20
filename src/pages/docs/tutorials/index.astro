@@ -1,0 +1,110 @@
+---
+import DocsLayout from '../../../layouts/DocsLayout.astro';
+---
+
+<DocsLayout title="Tutorials - Dasher">
+  <h1>Tutorials</h1>
+
+  <p>Welcome to the Dasher tutorials. These step-by-step guides will help you learn how to use Dasher effectively.</p>
+
+  <div class="tutorial-list">
+    <section class="tutorial-card">
+      <h2>Getting Started with Dasher</h2>
+      <p>Learn the basics of Dasher and how to start writing text efficiently.</p>
+      <ul>
+        <li><a href="/docs/getting-started/install/">Installation</a> - Install Dasher on your platform</li>
+        <li><a href="/docs/getting-started/how-to/tips/">Tips for Novices</a> - Essential tips for beginners</li>
+        <li><a href="/docs/getting-started/how-to/manual/part1/">Manual Part 1</a> - Introduction to Dasher</li>
+      </ul>
+    </section>
+
+    <section class="tutorial-card">
+      <h2>Advanced Usage</h2>
+      <p>Take your Dasher skills to the next level with advanced techniques.</p>
+      <ul>
+        <li><a href="/docs/getting-started/how-to/manual/part3/">Personalizing Dasher</a> - Customize alphabet, colors, and training</li>
+        <li><a href="/docs/getting-started/how-to/manual/part6/">Continuous Gestures</a> - Using joysticks, head-tracking, and eye-tracking</li>
+        <li><a href="/docs/getting-started/how-to/manual/part7/">Button Modes</a> - Alternative input methods</li>
+      </ul>
+    </section>
+
+    <section class="tutorial-card">
+      <h2>Special Topics</h2>
+      <p>Explore specialized topics and use cases.</p>
+      <ul>
+        <li><a href="/docs/getting-started/how-to/manual/part4/">Languages</a> - Using Dasher in different languages</li>
+        <li><a href="/docs/research/publications/">Research Publications</a> - Academic background on Dasher</li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="video-section">
+    <h2>Video Tutorials</h2>
+    <p>See Dasher in action with our video demonstrations:</p>
+    <ul>
+      <li><a href="https://www.dasher.org.uk" target="_blank" rel="noopener noreferrer">Dasher Movies and Demos</a></li>
+      <li><a href="https://video.google.com/videoplay?docid=5078334075080674416" target="_blank" rel="noopener noreferrer">Google Tech Talk (54 minutes)</a></li>
+    </ul>
+  </div>
+</DocsLayout>
+
+<style>
+  .tutorial-list {
+    display: grid;
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+  }
+
+  .tutorial-card {
+    background-color: var(--color-canvas-white);
+    border: 2px solid var(--color-horizon-mint);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+  }
+
+  .tutorial-card h2 {
+    margin-top: 0;
+    margin-bottom: var(--space-md);
+    color: var(--color-deep-ink);
+  }
+
+  .tutorial-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .tutorial-card li {
+    margin-bottom: var(--space-sm);
+  }
+
+  .video-section {
+    margin-top: var(--space-xl);
+    padding: var(--space-lg);
+    background-color: var(--color-horizon-mint);
+    border-radius: var(--radius-lg);
+  }
+
+  .video-section h2 {
+    margin-top: 0;
+  }
+
+  ul {
+    list-style: disc;
+    padding-left: var(--space-lg);
+  }
+
+  li {
+    margin-bottom: var(--space-sm);
+  }
+
+  a {
+    color: var(--color-deep-ink);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--color-target-coral);
+    text-decoration: underline;
+  }
+</style>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE alphabets SYSTEM "alphabet.dtd">
+<?xml-stylesheet type="text/xsl" href="alphabet.xsl"?>
+<alphabets>
+<alphabet name="Phonics">
+<orientation type="LR"/>
+<encoding type="Western"/>
+<palette>European/Asian</palette>
+<train>training_phonics8_GB.txt</train>
+<space d="&#x25a1;" t=" " b="9" note="box" />
+<control d="Control" t="" b="8"/>
+<group name="Lower case Latin letters" b="0">
+<s d="a" t="a" />
+<s d="c" t="c" />
+<s d="g" t="g" />
+<s d="m" t="m" />
+<s d="o" t="o" />
+<s d="p" t="p" />
+<s d="s" t="s" />
+<s d="t" t="t" />
+</group>
+</alphabet>
+<alphabet name="Phonics 2">
+<orientation type="LR"/>
+<encoding type="Western"/>
+<palette>European/Asian</palette>
+<train>training_phonics8_GB.txt</train>
+<space d="&#x25a1;" t=" " b="9" note="box" />
+<control d="Control" t="" b="8"/>
+<group name="Lower case Latin letters" b="0">
+<s d="s" t="s" />
+<s d="m" t="m" />
+<s d="c" t="c" />
+<s d="t" t="t" />
+<s d="g" t="g" />
+<s d="p" t="p" />
+<s d="a" t="a" />
+<s d="o" t="o" />
+</group>
+</alphabet>
+</alphabets>

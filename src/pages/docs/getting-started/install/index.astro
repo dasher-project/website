@@ -1,0 +1,65 @@
+---
+import DocsLayout from '../../../../layouts/DocsLayout.astro';
+---
+
+<DocsLayout title="Install Dasher - Dasher">
+  <h1>Install Dasher</h1>
+
+  <p>Choose your platform to install Dasher:</p>
+
+  <div class="install-grid">
+    <a href="/docs/getting-started/install/windows/" class="install-card">
+      <h2>Windows</h2>
+      <p>Download and install Dasher on Windows</p>
+    </a>
+
+    <a href="/docs/getting-started/install/linux/" class="install-card">
+      <h2>Linux</h2>
+      <p>Build and install from source on Linux</p>
+    </a>
+
+    <a href="/docs/getting-started/install/mac/" class="install-card">
+      <h2>Mac</h2>
+      <p>Install Dasher on macOS</p>
+    </a>
+
+    <a href="/docs/getting-started/install/android/" class="install-card">
+      <h2>Android</h2>
+      <p>Install Dasher on Android devices</p>
+    </a>
+  </div>
+</DocsLayout>
+
+<style>
+  .install-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+  }
+
+  .install-card {
+    display: block;
+    padding: var(--space-lg);
+    background-color: var(--color-canvas-white);
+    border: 2px solid var(--color-horizon-mint);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    color: var(--color-deep-ink);
+    transition: var(--transition-smooth);
+  }
+
+  .install-card:hover {
+    border-color: var(--color-target-coral);
+    transform: translateY(-2px);
+  }
+
+  .install-card h2 {
+    margin-top: 0;
+    margin-bottom: var(--space-sm);
+  }
+
+  .install-card p {
+    margin-bottom: 0;
+  }
+</style>

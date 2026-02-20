@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE alphabets SYSTEM "alphabet.dtd">
+<?xml-stylesheet type="text/xsl" href="alphabet.xsl"?>
+<alphabets>
+<alphabet name="Bliss Symbolic Alphabet">
+<orientation type="LR"/>
+<encoding type="Western"/>
+<palette>European/Asian</palette>
+<train>training_bliss_XX.txt</train>
+<paragraph d="&#182;" b="9"/>
+<space d="&#x25a1;" t=" " b="9" note="box" />
+<control d="Control" t="" b="8"/>
+<group name="blisscii: nonbreaking spaces" b="0">
+<s d="&#xEBA1;" t="&#xEBA1;"/>
+<s d="&#xEBA2;" t="&#xEBA2;"/>
+<s d="&#xEBA3;" t="&#xEBA3;"/>
+<s d="&#xEBA4;" t="&#xEBA4;"/>
+<s d="&#xEBA5;" t="&#xEBA5;"/>
+</group>
+<group name="blisscii: non-spacing line letters" b="1">
+<s d="&#xEBA7;" t="&#xEBA7;"/>
+<s d="&#xEBA8;" t="&#xEBA8;"/>
+<s d="&#xEBA9;" t="&#xEBA9;"/>
+<s d="&#xEBAA;" t="&#xEBAA;"/>
+<s d="&#xEBAB;" t="&#xEBAB;"/>
+<s d="&#xEBAC;" t="&#xEBAC;"/>
+<s d="&#xEBAD;" t="&#xEBAD;"/>
+<s d="&#xEBAE;" t="&#xEBAE;"/>
+<s d="&#xEBAF;" t="&#xEBAF;"/>
+<s d="&#xEBB0;" t="&#xEBB0;"/>
+<s d="&#xEBB1;" t="&#xEBB1;"/>
+<s d="&#xEBB2;" t="&#xEBB2;"/>
+<s d="&#xEBB3;" t="&#xEBB3;"/>
+<s d="&#xEBB4;" t="&#xEBB4;"/>
+<s d="&#xEBB5;" t="&#xEBB5;"/>
+<s d="&#xEBB6;" t="&#xEBB6;"/>
+<s d="&#xEBB7;" t="&#xEBB7;"/>
+<s d="&#xEBB8;" t="&#xEBB8;"/>
+<s d="&#xEBB9;" t="&#xEBB9;"/>
+<s d="&#xEBBA;" t="&#xEBBA;"/>
+<s d="&#xEBBB;" t="&#xEBBB;"/>
+<s d="&#xEBBC;" t="&#xEBBC;"/>
+<s d="&#xEBBD;" t="&#xEBBD;"/>
+<s d="&#xEBBE;" t="&#xEBBE;"/>
+<s d="&#xEBBF;" t="&#xEBBF;"/>
+<s d="&#xEBC0;" t="&#xEBC0;"/>
+<s d="&#xEBC1;" t="&#xEBC1;"/>
+<s d="&#xEBC2;" t="&#xEBC2;"/>
+<s d="&#xEBC3;" t="&#xEBC3;"/>
+<s d="&#xEBC4;" t="&#xEBC4;"/>
+<s d="&#xEBC5;" t="&#xEBC5;"/>
+<s d="&#xEBC6;" t="&#xEBC6;"/>
+<s d="&#xEBC7;" t="&#xEBC7;"/>
+<s d="&#xEBC8;" t="&#xEBC8;"/>
+<s d="&#xEBC9;" t="&#xEBC9;"/>
+<s d="&#xEBCA;" t="&#xEBCA;"/>
+<s d="&#xEBCB;" t="&#xEBCB;"/>
+<s d="&#xEBCC;" t="&#xEBCC;"/>
+<s d="&#xEBCD;" t="&#xEBCD;"/>
+<s d="&#xEBCE;" t="&#xEBCE;"/>
+<s d="&#xEBCF;" t="&#xEBCF;"/>
+<s d="&#xEBD0;" t="&#xEBD0;"/>
+<s d="&#xEBD1;" t="&#xEBD1;"/>
+<s d="&#xEBD2;" t="&#xEBD2;"/>
+<s d="&#xEBD3;" t="&#xEBD3;"/>
+<s d="&#xEBD4;" t="&#xEBD4;"/>
+<s d="&#xEBD5;" t="&#xEBD5;"/>
+<s d="&#xEBD6;" t="&#xEBD6;"/>
+<s d="&#xEBD7;" t="&#xEBD7;"/>
+<s d="&#xEBD8;" t="&#xEBD8;"/>
+<s d="&#xEBD9;" t="&#xEBD9;"/>
+<s d="&#xEBDA;" t="&#xEBDA;"/>
+<s d="&#xEBDB;" t="&#xEBDB;"/>
+<s d="&#xEBDC;" t="&#xEBDC;"/>
+<s d="&#xEBDD;" t="&#xEBDD;"/>
+<s d="&#xEBDE;" t="&#xEBDE;"/>
+<s d="&#xEBDF;" t="&#xEBDF;"/>
+<s d="&#xEBE0;" t="&#xEBE0;"/>
+<s d="&#xEBE1;" t="&#xEBE1;"/>
+<s d="&#xEBE2;" t="&#xEBE2;"/>
+<s d="&#xEBE3;" t="&#xEBE3;"/>
+<s d="&#xEBE4;" t="&#xEBE4;"/>
+<s d="&#xEBE5;" t="&#xEBE5;"/>
+<s d="&#xEBE6;" t="&#xEBE6;"/>
+<s d="&#xEBE7;" t="&#xEBE7;"/>
+<s d="&#xEBE8;" t="&#xEBE8;"/>
+<s d="&#xEBE9;" t="&#xEBE9;"/>
+<s d="&#xEBEA;" t="&#xEBEA;"/>
+<s d="&#xEBEB;" t="&#xEBEB;"/>
+<s d="&#xEBEC;" t="&#xEBEC;"/>
+<s d="&#xEBED;" t="&#xEBED;"/>
+<s d="&#xEBEE;" t="&#xEBEE;"/>
+<s d="&#xEBEF;" t="&#xEBEF;"/>
+<s d="&#xEBF0;" t="&#xEBF0;"/>
+<s d="&#xEBF1;" t="&#xEBF1;"/>
+<s d="&#xEBF2;" t="&#xEBF2;"/>
+<s d="&#xEBF3;" t="&#xEBF3;"/>
+<s d="&#xEBF4;" t="&#xEBF4;"/>
+<s d="&#xEBF5;" t="&#xEBF5;"/>
+</group>
+<group name="blisscii: grammatical indicators" b="2">
+<s d="&#xEBF8;" t="&#xEBF8;"/>
+<s d="&#xEBF9;" t="&#xEBF9;"/>
+<s d="&#xEBFA;" t="&#xEBFA;"/>
+<s d="&#xEBFB;" t="&#xEBFB;"/>
+<s d="&#xEBFC;" t="&#xEBFC;"/>
+<s d="&#xEBFD;" t="&#xEBFD;"/>
+</group>
+</alphabet>
+</alphabets>
+<!-- "http://www.crockford.com/blissym/blisscii/codechart.html" BLISSCII Code Chart -->

@@ -1,0 +1,129 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Dasher - An information-efficient text-entry interface">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-content">
+      <h1>Dasher v6</h1>
+      <p class="hero-subtitle">
+        An information-efficient text-entry interface driven by natural continuous pointing gestures.
+        Originally developed by the Inference Group.
+      </p>
+      <div class="hero-actions">
+        <a href="/docs/" class="btn-primary">Get Started</a>
+        <a href="https://github.com/dasher-project/dasher" class="btn-secondary" target="_blank" rel="noopener noreferrer">
+          GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- What is Dasher -->
+  <section class="section">
+    <div class="container-narrow">
+      <h2>What is Dasher?</h2>
+      <p>
+        Dasher is a zooming predictive text interface. Instead of hunting for each letter on a keyboard,
+        you navigate through letters by steering toward your target. As you move toward a letter,
+        it expands and other letters appear, creating a continuous flow of text entry.
+      </p>
+      <p>
+        Originally designed for users with severe disabilities, Dasher works with any pointing device:
+        mouse, touchscreen, eye-tracking, or even breath control. It supports over 100 languages
+        through adaptive language models.
+      </p>
+      <div class="cta-links">
+        <a href="/docs/">Documentation</a>
+        <a href="/demonstrations/">Watch Demonstrations</a>
+        <a href="/docs/research/">Research</a>
+        <a href="https://matrix.to/#/#dasher:matrix.org" target="_blank" rel="noopener noreferrer">Community</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* ==========================================================================
+     HERO
+     ========================================================================== */
+
+  .hero {
+    padding: var(--space-xl) 0;
+    background: linear-gradient(135deg, var(--color-canvas-white) 0%, var(--color-horizon-mint) 50%);
+  }
+
+  .hero-content {
+    max-width: 600px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    margin-bottom: var(--space-md);
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: var(--space-sm);
+  }
+
+  /* ==========================================================================
+     CONTENT
+     ========================================================================== */
+
+  .section {
+    padding: var(--space-lg) 0;
+  }
+
+  .container-narrow h2 {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .container-narrow p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: var(--space-sm);
+  }
+
+  .cta-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+  }
+
+  .cta-links a {
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--color-deep-ink);
+    border-bottom: 1px solid var(--color-horizon-mint);
+  }
+
+  .cta-links a:hover {
+    color: var(--color-target-coral);
+    border-color: var(--color-target-coral);
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding: var(--space-lg) 0;
+    }
+
+    .hero-actions {
+      flex-direction: column;
+    }
+
+    .cta-links {
+      flex-direction: column;
+    }
+  }
+</style>

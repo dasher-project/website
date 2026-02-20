@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Community - Dasher">
+  <div class="container">
+    <section class="section">
+      <h1>Join the Dasher Community</h1>
+      <p class="lead">
+        Dasher is developed and maintained by a global community of users, developers, and researchers.
+        We welcome contributions of all kinds.
+      </p>
+
+      <div class="community-links">
+        <a href="https://matrix.to/#/#dasher:matrix.org" class="community-link" target="_blank" rel="noopener noreferrer">
+          <h2>Matrix Chat</h2>
+          <p>Join our real-time chat for questions and support.</p>
+        </a>
+
+        <a href="https://github.com/dasher-project/dasher" class="community-link" target="_blank" rel="noopener noreferrer">
+          <h2>GitHub</h2>
+          <p>Report bugs, request features, and contribute code.</p>
+        </a>
+
+        <a href="https://github.com/dasher-project/dasher/discussions" class="community-link" target="_blank" rel="noopener noreferrer">
+          <h2>Discussions</h2>
+          <p>Share questions and ideas with the community.</p>
+        </a>
+
+        <a href="/docs/" class="community-link">
+          <h2>Documentation</h2>
+          <p>Installation guides, tutorials, and reference material.</p>
+        </a>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .lead {
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto var(--space-lg);
+    text-align: center;
+    opacity: 0.9;
+  }
+
+  .community-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-md);
+  }
+
+  .community-link {
+    display: block;
+    padding: var(--space-md);
+    background-color: var(--color-canvas-white);
+    border: 2px solid var(--color-horizon-mint);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: var(--color-deep-ink);
+    transition: var(--transition-smooth);
+  }
+
+  .community-link:hover {
+    border-color: var(--color-target-coral);
+  }
+
+  .community-link h2 {
+    font-size: 1.125rem;
+    margin: 0 0 var(--space-xs) 0;
+  }
+
+  .community-link p {
+    font-size: 0.9rem;
+    margin: 0;
+    opacity: 0.7;
+  }
+
+  .section {
+    padding: var(--space-lg) 0;
+  }
+
+  a {
+    color: var(--color-deep-ink);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--color-target-coral);
+    text-decoration: underline;
+  }
+</style>

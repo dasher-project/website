@@ -1,0 +1,149 @@
+---
+import DocsLayout from '../../../../layouts/DocsLayout.astro';
+---
+
+<DocsLayout title="How Dasher Works: The Library Concept - Dasher">
+  <h1>How Dasher Works: The Library Concept</h1>
+
+  <div class="page-nav">
+    <span class="current">Page 1</span>
+    <a href="/docs/concepts/how-dasher-works/page-2/">Page 2</a>
+    <a href="/docs/concepts/how-dasher-works/page-3/">Page 3</a>
+  </div>
+
+  <section class="explanation-section">
+    <h2>Imagine a Library Containing All Possible Books</h2>
+
+    <p>
+      Imagine <strong>a library containing all possible books</strong>, ordered alphabetically on a single shelf.
+      Books in which the first letter is "a" are at the left hand side. Books in which the first letter is "z"
+      are at the right.
+    </p>
+
+    <p>
+      In picture (i) below, the shelf is shown vertically with "left" (a) at the top and "right" (z) at the bottom.
+      The first book in the "a" section reads "aaaaaaaaaaaa..."; somewhere to its right are books that start
+      "all good things must come to an end..."; a tiny bit further to the right are books that start
+      "all good things must come to an enema...".
+    </p>
+
+    <div class="diagram-container">
+      <div class="diagram">
+        <strong>(i)</strong>
+        <p>The entire library a-z</p>
+      </div>
+    </div>
+
+    <h2>Finding Your Book</h2>
+
+    <p>
+      When someone writes a piece of text, their choice of the text string can be viewed as a choice of a book
+      from this library of all books - the book that contains exactly the chosen text.
+    </p>
+
+    <p>How do they choose that book? Let's imagine they want to write "all good things..."</p>
+
+    <p>
+      First, they walk into the "a" section of the library. There, they are confronted by books starting
+      "aa", "ab", "ac.... az" [Picture (ii)].
+    </p>
+
+    <div class="diagram-container">
+      <div class="diagram">
+        <strong>(ii)</strong>
+        <p>Looking more closely at the "al" section</p>
+      </div>
+    </div>
+
+    <p>
+      Looking more closely at the "al" section, they can find books starting "ala", "alb"... "alz" [Picture (iii)].
+    </p>
+
+    <div class="diagram-container">
+      <div class="diagram">
+        <strong>(iii)</strong>
+        <p>The "ala" through "alz" subsection</p>
+      </div>
+    </div>
+
+    <p>
+      By looking ever more closely at the shelf, the writer can find the book containing the text he wishes to write.
+      Thus writing can be described as <strong>zooming in on an alphabetical library, steering as you go</strong>.
+    </p>
+
+    <div class="key-concept">
+      <h2>The Key Concept</h2>
+      <p>
+        This is exactly how Dasher works, except for one crucial point...
+      </p>
+      <p class="next-page-link">
+        <a href="/docs/concepts/how-dasher-works/page-2/" class="btn-primary">Continue to Page 2 →</a>
+      </p>
+    </div>
+  </section>
+</DocsLayout>
+
+<style>
+  .page-nav {
+    display: flex;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+    padding: var(--space-md);
+    background-color: var(--color-horizon-mint);
+    border-radius: var(--radius-md);
+  }
+
+  .page-nav .current {
+    font-weight: 700;
+    text-decoration: underline;
+  }
+
+  .explanation-section h2 {
+    margin-top: var(--space-xl);
+  }
+
+  .diagram-container {
+    margin: var(--space-lg) 0;
+    text-align: center;
+  }
+
+  .diagram {
+    display: inline-block;
+    padding: var(--space-lg);
+    background-color: var(--color-horizon-mint);
+    border-radius: var(--radius-md);
+    min-width: 200px;
+  }
+
+  .diagram strong {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .key-concept {
+    margin-top: var(--space-xl);
+    padding: var(--space-lg);
+    background-color: var(--color-focus-yellow);
+    border-radius: var(--radius-lg);
+    text-align: center;
+  }
+
+  .key-concept h2 {
+    margin-top: 0;
+  }
+
+  .next-page-link {
+    margin-top: var(--space-md);
+  }
+
+  a {
+    color: var(--color-deep-ink);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--color-target-coral);
+    text-decoration: underline;
+  }
+</style>

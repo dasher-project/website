@@ -1,0 +1,119 @@
+---
+import DocsLayout from '../../../../../layouts/DocsLayout.astro';
+---
+
+<DocsLayout title="Android Installation - Dasher">
+  <h1>Android Installation</h1>
+
+  <p>Dasher for Android is available from the Android Market (search for "Dasher") or from the <a href="https://www.inference.phy.cam.ac.uk/dasher/Download.html" target="_blank" rel="noopener noreferrer">Downloads page</a>.</p>
+
+  <h2>Tested Devices</h2>
+  <ul>
+    <li>Nexus One</li>
+    <li>HTC G1</li>
+    <li>HTC Incredible</li>
+  </ul>
+
+  <h2>Features</h2>
+  <p>Works as a system input method - select any text field to activate. Cursor movement (via trackball) should cause Dasher to automatically update its display (unless the trackball is being used to control Dasher in Compass Mode).</p>
+
+  <h3>Supported Control Modes</h3>
+  <ul>
+    <li><strong>Touch</strong> - tap to zoom to a point or hold to move steadily</li>
+    <li><strong>Tilt</strong> - in one or two dimensions, either tap (/circle) to start/stop or hold finger to go</li>
+    <li><strong>Box modes</strong> - (scanning/direct)</li>
+    <li><strong>Compass mode</strong> - move trackball up/down to scroll, right to zoom in, left to back up</li>
+    <li><strong>Two-button dynamic mode</strong> - by volume control, or tap top/bottom of screen</li>
+    <li><strong>One-button dynamic mode</strong> - aka two-push - use any key, or tap anywhere on screen</li>
+  </ul>
+
+  <h2>External Switch Support</h2>
+  <p>Button modes can also be controlled by external switches connected via Bluetooth using the <a href="http://scyp.idrc.ocad.ca/projects/tekla" target="_blank" rel="noopener noreferrer">Tekla</a> external switch.</p>
+
+  <h2>Source Code</h2>
+  <p>Available from <a href="http://github.com/acl33/AndroidDasher" target="_blank" rel="noopener noreferrer">github.com/acl33/AndroidDasher</a></p>
+
+  <h2>Screenshots</h2>
+
+  <figure class="screenshot">
+    <img src="/images/docs/android-sms.jpg" alt="Write SMS or email by touch, tilt, or trackball" />
+    <figcaption>Write SMS or email by touch, tilt, or trackball</figcaption>
+  </figure>
+
+  <figure class="screenshot">
+    <img src="/images/docs/android-landscape.jpg" alt="Use portrait or landscape" />
+    <figcaption>Use portrait or landscape</figcaption>
+  </figure>
+
+  <h2>Installation Instructions</h2>
+
+  <h3>Step 1</h3>
+  <p>Download from <a href="http://inference.phy.cam.ac.uk/Dasher/downloads/" target="_blank" rel="noopener noreferrer">Dasher website</a> or search for "Dasher" on the Android Market.</p>
+
+  <h3>Step 2</h3>
+  <p>Running Dasher will present a blank screen (titled Dasher) while Dasher loads (please wait). You'll then be presented with Dasher's own settings.</p>
+
+  <p>The "Input Mode" page offers a choice of methods, e.g. "Touch Control" or "Tilt Control", of which you may pick one. (Each will bring up further settings specific to that mode.)</p>
+
+  <h3>Step 3</h3>
+  <p>Next you must enable Dasher as an input method. This varies between models. The following instructions are for a Nexus One running Android 2.1 (Eclair) or 2.2 (Froyo).</p>
+
+  <h4>3a) From your desktop, press menu button, and choose "Settings"</h4>
+
+  <h4>3b) Choose "Language & Keyboard"</h4>
+
+  <h4>3c) A list of input methods should be displayed, including Dasher.</h4>
+  <p>Make sure Dasher is enabled i.e. its box is ticked. (You will be warned about collecting data such as passwords. We do not recommend Dasher for entering passwords!)</p>
+
+  <h3>Step 4</h3>
+  <p>Exit from system settings, and select any text field to bring up your standard/previous input method.</p>
+
+  <p>Long-press in the text field to pop-up menu and choose "Input Method".</p>
+
+  <h3>Step 5</h3>
+  <p>Select Dasher in the list of input methods.</p>
+
+  <p>Dasher should then come up on your screen.</p>
+</DocsLayout>
+
+<style>
+  h2, h3, h4 {
+    margin-top: var(--space-xl);
+  }
+
+  ul {
+    list-style: disc;
+    padding-left: var(--space-lg);
+  }
+
+  li {
+    margin-bottom: var(--space-sm);
+  }
+
+  a {
+    color: var(--color-deep-ink);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--color-target-coral);
+    text-decoration: underline;
+  }
+
+  .screenshot {
+    margin: var(--space-lg) 0;
+    text-align: center;
+  }
+
+  .screenshot img {
+    max-width: 100%;
+    border: 2px solid var(--color-horizon-mint);
+    border-radius: var(--radius-lg);
+  }
+
+  .screenshot figcaption {
+    margin-top: var(--space-sm);
+    font-style: italic;
+    color: var(--color-deep-ink);
+  }
+</style>

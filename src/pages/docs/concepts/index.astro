@@ -1,0 +1,99 @@
+---
+import DocsLayout from '../../../layouts/DocsLayout.astro';
+---
+
+<DocsLayout title="Concepts - Dasher">
+  <h1>Concepts</h1>
+
+  <p>Welcome to the Dasher concepts documentation. This section explains key concepts and principles behind Dasher's design and operation.</p>
+
+  <div class="concept-grid">
+    <section class="concept-card">
+      <h2>Information Theory</h2>
+      <p>Dasher is built on principles of information theory, using language models to predict the most likely next characters and allocate screen space accordingly.</p>
+    </section>
+
+    <section class="concept-card">
+      <h2>Zooming Interface</h2>
+      <p>Dasher uses a unique zooming interface where you navigate through a library of all possible text by steering toward your desired destination.</p>
+    </section>
+
+    <section class="concept-card">
+      <h2>Language Models</h2>
+      <p>Dasher's predictions are based on training texts that help it learn language patterns and adapt to your writing style over time.</p>
+    </section>
+
+    <section class="concept-card">
+      <h2>Continuous Gestures</h2>
+      <p>Unlike traditional keyboards that use discrete key presses, Dasher uses continuous pointing gestures for efficient text entry.</p>
+    </section>
+
+    <section class="concept-card">
+      <h2>Accessibility</h2>
+      <p>Dasher is designed to be accessible to users with various disabilities, supporting input methods like eye-tracking, head-tracking, and breath control.</p>
+    </section>
+
+    <section class="concept-card">
+      <h2>Mode-Free Operation</h2>
+      <p>Dasher eliminates the need to switch between writing and prediction modes, integrating word completion seamlessly into the writing process.</p>
+    </section>
+  </div>
+
+  <div class="learn-more">
+    <h2>Learn More</h2>
+    <p>For a detailed explanation of how Dasher works, see the <a href="/docs/getting-started/how-to/manual/part1/">Introduction</a> section of the Dasher Manual.</p>
+  </div>
+</DocsLayout>
+
+<style>
+  .concept-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+  }
+
+  .concept-card {
+    background-color: var(--color-canvas-white);
+    border: 2px solid var(--color-horizon-mint);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    transition: var(--transition-smooth);
+  }
+
+  .concept-card:hover {
+    border-color: var(--color-target-coral);
+    transform: translateY(-2px);
+  }
+
+  .concept-card h2 {
+    margin-top: 0;
+    margin-bottom: var(--space-md);
+    color: var(--color-deep-ink);
+  }
+
+  .concept-card p {
+    margin-bottom: 0;
+  }
+
+  .learn-more {
+    margin-top: var(--space-xl);
+    padding: var(--space-lg);
+    background-color: var(--color-horizon-mint);
+    border-radius: var(--radius-lg);
+  }
+
+  .learn-more h2 {
+    margin-top: 0;
+  }
+
+  a {
+    color: var(--color-deep-ink);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--color-target-coral);
+    text-decoration: underline;
+  }
+</style>

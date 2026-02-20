@@ -1,0 +1,75 @@
+---
+import DocsLayout from '../../../layouts/DocsLayout.astro';
+---
+
+<DocsLayout title="Reference - Dasher">
+  <h1>Reference</h1>
+
+  <p>Welcome to the Dasher reference documentation.</p>
+
+  <div class="reference-list">
+    <section class="reference-item">
+      <h2><a href="/docs/reference/parameters/">Parameter Reference</a></h2>
+      <p>Complete list of Dasher configuration parameters and their effects.</p>
+    </section>
+  </div>
+
+  <div class="developer-note">
+    <h2>For Developers</h2>
+    <p>Dasher is open source software. If you're interested in contributing or extending Dasher, please visit our <a href="https://github.com/dasher-project/dasher" target="_blank" rel="noopener noreferrer">GitHub repository</a>.</p>
+  </div>
+</DocsLayout>
+
+<style>
+  .reference-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+  }
+
+  .reference-item {
+    background-color: var(--color-canvas-white);
+    border: 2px solid var(--color-horizon-mint);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+  }
+
+  .reference-item h2 {
+    margin: 0 0 var(--space-xs) 0;
+  }
+
+  .reference-item h2 a {
+    color: var(--color-deep-ink);
+    text-decoration: none;
+  }
+
+  .reference-item h2 a:hover {
+    color: var(--color-target-coral);
+  }
+
+  .reference-item p {
+    margin: 0;
+  }
+
+  .developer-note {
+    margin-top: var(--space-lg);
+    padding: var(--space-md);
+    background-color: var(--color-horizon-mint);
+    border-radius: var(--radius-md);
+  }
+
+  .developer-note h2 {
+    margin-top: 0;
+  }
+
+  a {
+    color: var(--color-deep-ink);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--color-target-coral);
+    text-decoration: underline;
+  }
+</style>

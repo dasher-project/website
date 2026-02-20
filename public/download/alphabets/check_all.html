@@ -1,0 +1,64 @@
+#!/bin/csh
+foreach f ( alphabet.Armenian.xml \
+alphabet.Azerbaijani.xml \
+alphabet.Belarusian.xml \
+alphabet.Bulgarian.xml \
+alphabet.Esperanto.xml \
+alphabet.Estonian.xml \
+alphabet.Filipino.xml \
+alphabet.Greek.xml \
+alphabet.Hebrew.xml \
+alphabet.Icelandic.xml \
+alphabet.Igbo.xml \
+alphabet.Indonesian.xml \
+alphabet.IrishGaelic.xml \
+alphabet.Joyo.xml \
+alphabet.Joyo2.xml \
+alphabet.Joyotest.xml \
+alphabet.Malay.xml \
+alphabet.Moldavian.xml \
+alphabet.Ndebele.xml \
+alphabet.Romanian.xml \
+alphabet.Sami.xml \
+alphabet.ScotsGaelic.xml \
+alphabet.Sepedi.xml \
+alphabet.Sesotho.xml \
+alphabet.Slovak.xml \
+alphabet.Slovenian.xml \
+alphabet.Swati.xml \
+alphabet.Tajik.xml \
+alphabet.Thai.xml \
+alphabet.Tsonga.xml \
+alphabet.Tswana.xml \
+alphabet.Turkish.xml \
+alphabet.Vietnamese.xml \
+alphabet.Xhosa.xml \
+alphabet.Yoruba.xml \
+alphabet.Zulu.xml \
+alphabet.afrikaans.xml \
+alphabet.albanian.xml \
+alphabet.danish.xml \
+alphabet.dutch.xml \
+alphabet.english.xml \
+alphabet.french.xml \
+alphabet.german.xml \
+alphabet.greek.xml \
+alphabet.hiragana.xml \
+alphabet.hungarian.xml \
+alphabet.hungarianLowerCase.xml \
+alphabet.ipa.xml \
+alphabet.italian.xml \
+alphabet.korean.xml \
+alphabet.norwegian.xml \
+alphabet.polish.xml \
+alphabet.portuguese.xml \
+alphabet.russian.xml \
+alphabet.spanish.xml \
+alphabet.swahili.xml \
+alphabet.swedish.xml \
+alphabet.venda.xml \
+alphabet.welsh.xml )
+#	wc   /usr/local/share/dasher/$f $f | grep -v total
+	ls -lisat  /usr/local/share/dasher/$f $f
+	echo diff /usr/local/share/dasher/$f $f 
+end

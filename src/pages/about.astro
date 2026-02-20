@@ -1,0 +1,277 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="About Dasher">
+  <div class="container">
+    <section class="section">
+      <h1>About Dasher</h1>
+
+      <div class="about-grid">
+        <div class="about-content">
+          <h2>What is Dasher?</h2>
+          <p>
+            Dasher is an information-efficient text-entry interface driven by natural continuous pointing gestures.
+            Unlike traditional keyboards where you hunt for each letter, Dasher presents letters in a zooming
+            interface where you navigate toward your target.
+          </p>
+          <p>
+            As you move toward a letter, it expands and other letters appear. By continuously steering toward
+            your target, you can enter text at speeds competitive with touch typing, using only a single
+            pointing device.
+          </p>
+
+          <h2>Origins</h2>
+          <p>
+            Dasher was originally developed by the <a href="https://www.inference.org.uk/" target="_blank" rel="noopener noreferrer">Inference Group</a>
+            at the University of Cambridge, led by David MacKay and funded in part by the Gatsby Charitable Foundation.
+            The project began in 1997 and has since evolved through multiple major versions.
+          </p>
+
+          <h2>Accessibility</h2>
+          <p>
+            While Dasher is useful for anyone seeking an alternative text entry method, it was originally
+            designed for users with severe disabilities. Because it works with any continuous pointing device,
+            Dasher enables text entry for users who cannot use traditional keyboards.
+          </p>
+          <p>
+            Supported input methods include:
+          </p>
+          <ul>
+            <li><strong>Mouse</strong> - The most common input method</li>
+            <li><strong>Touchscreen</strong> - Tablets and smartphones</li>
+            <li><strong>Eye-tracking</strong> - For users with limited motor control</li>
+            <li><strong>Head-tracking</strong> - Using head movements</li>
+            <li><strong>Switch access</strong> - Single-switch scanning</li>
+            <li><strong>And more</strong> - Any device providing continuous 2D input</li>
+          </ul>
+
+          <h2>Open Source</h2>
+          <p>
+            Dasher is free and open-source software, licensed under the GPL-3.0. The project is maintained
+            by a community of developers and researchers committed to keeping Dasher accessible and improving
+            its capabilities.
+          </p>
+          <p>
+            You can contribute to Dasher by:
+          </p>
+          <ul>
+            <li>Reporting bugs on <a href="https://github.com/dasher-project/dasher/issues" target="_blank" rel="noopener noreferrer">GitHub Issues</a></li>
+            <li>Submitting pull requests with improvements</li>
+            <li>Joining discussions on <a href="https://matrix.to/#/#dasher:matrix.org" target="_blank" rel="noopener noreferrer">Matrix</a></li>
+            <li>Improving documentation</li>
+            <li>Spreading the word about Dasher</li>
+          </ul>
+
+          <h2>Version 6</h2>
+          <p>
+            Dasher v6 represents a complete rewrite of the codebase with modern software architecture.
+            This version improves performance, expands platform support, and makes the codebase more
+            maintainable for future development.
+          </p>
+          <p>
+            Key improvements in v6 include:
+          </p>
+          <ul>
+            <li>Modern, cross-platform codebase</li>
+            <li>Improved performance on low-power devices</li>
+            <li>Better language model support</li>
+            <li>Enhanced accessibility features</li>
+            <li>Active development and community support</li>
+          </ul>
+        </div>
+
+        <aside class="about-sidebar">
+          <div class="sidebar-card dasher-card">
+            <div class="dasher-card-inner">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="/docs/">Documentation</a></li>
+                <li><a href="https://github.com/dasher-project/dasher" target="_blank" rel="noopener noreferrer">Source Code</a></li>
+                <li><a href="https://github.com/dasher-project/dasher/releases" target="_blank" rel="noopener noreferrer">Releases</a></li>
+                <li><a href="/community/">Community</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="sidebar-card dasher-card">
+            <div class="dasher-card-inner">
+              <h3>Research</h3>
+              <p>
+                Dasher is built on published research in information theory and human-computer interaction.
+              </p>
+              <a href="/docs/research/publications/" class="btn-secondary">Read Publications</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="section timeline-section">
+      <h2>Dasher Timeline</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">1997</div>
+          <div class="timeline-content">
+            <h3>Dasher Project Begins</h3>
+            <p>Development starts at the Inference Group, University of Cambridge</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2002</div>
+          <div class="timeline-content">
+            <h3>Nature Publication</h3>
+            <p>"Dasher - A Data-Entry Interface Using Continuous Gestures and Language Models" published in Nature</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2000s</div>
+          <div class="timeline-content">
+            <h3>Multiple Releases</h3>
+            <p>Dasher v4 and v5 released with extensive platform support and language models</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2020</div>
+          <div class="timeline-content">
+            <h3>Dasher v6 Announced</h3>
+            <p>Complete rewrite announced with modern architecture and expanded platform support</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">Present</div>
+          <div class="timeline-content">
+            <h3>Active Development</h3>
+            <p>Community-driven development continues with regular updates and improvements</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .about-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--space-xl);
+    align-items: start;
+  }
+
+  .about-content h2 {
+    margin-top: var(--space-xl);
+  }
+
+  .about-content ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: var(--space-md);
+  }
+
+  .about-content li {
+    padding-left: var(--space-md);
+    margin-bottom: var(--space-sm);
+    position: relative;
+  }
+
+  .about-content li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-target-coral);
+    font-weight: bold;
+  }
+
+  .about-content strong {
+    color: var(--color-deep-ink);
+  }
+
+  .sidebar-card {
+    margin-bottom: var(--space-md);
+  }
+
+  .sidebar-card h3 {
+    margin-top: 0;
+    margin-bottom: var(--space-sm);
+  }
+
+  .sidebar-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--space-md) 0;
+  }
+
+  .sidebar-card li {
+    margin-bottom: var(--space-xs);
+  }
+
+  .sidebar-card a {
+    text-decoration: none;
+    color: var(--color-deep-ink);
+  }
+
+  .sidebar-card a:hover {
+    color: var(--color-target-coral);
+  }
+
+  /* Timeline */
+  .timeline-section {
+    background-color: var(--color-canvas-white);
+    border-top: 2px solid var(--color-horizon-mint);
+  }
+
+  .timeline {
+    display: grid;
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+  }
+
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: var(--space-md);
+    align-items: start;
+  }
+
+  .timeline-year {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-target-coral);
+    font-family: var(--font-display);
+  }
+
+  .timeline-content {
+    padding: var(--space-md);
+    background-color: var(--color-canvas-white);
+    border-left: 4px solid var(--color-horizon-mint);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  }
+
+  .timeline-content h3 {
+    margin-top: 0;
+    margin-bottom: var(--space-xs);
+  }
+
+  .timeline-content p {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 900px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .timeline-item {
+      grid-template-columns: 1fr;
+    }
+
+    .timeline-year {
+      margin-bottom: var(--space-xs);
+    }
+  }
+</style>

@@ -1,0 +1,38 @@
+The master corpus is made thus
+  Take half of the lines from corpus2 and add corpus1.
+	every.p 2 < corpus2.txt > corpus2.5.txt
+	cat corpus1 corpus2.5.txt > corpus-fr.txt
+	zip  corpus-fr.zip corpus-fr.txt
+  236104 corpus1
+  789863 corpus2.txt
+----------------------------------	
+  636944 corpus-fr.txt
+  245773 corpus-fr.zip
+
+----------------------------------	
+
+	From nimzov@yahoo.com  Thu Sep 19 23:08:41 2002
+corpus1.zip (french)
+Gilles Brodeur
+
+
+When I view the corpus using more, I get the impression that 
+two different characters have been used for the apostrophe (').
+One of them does not render correctly under more.
+
+DJCM  20/9/2002
+
+
+ corpus2.zip  contains corpus2.txt derived from   MetroFR.TXT  which was supplied by    Peter Baert <pbaert@rug.be>
+ It's Newspaper articles.
+
+DJCM  (I edited it a little to remove gibberish and mark-ups; also to remove a few pages of English)
+ Wed 9/10/02
+The document contains a lot of URLs (without http:// prefix). It might be good to strip these out
+if the corpus is to be used for conversational French. Indeed, that's what's in corpus2.txt
+perl -pe 's/^www\..*\n//'   MetroFR.TXT   > corpus2.txt
+perl -pi.bak -e 's/^http:\/\/.*\n//'   corpus2.txt
+(789863 bytes)
+
+
+

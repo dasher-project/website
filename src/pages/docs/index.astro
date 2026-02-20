@@ -1,0 +1,109 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+
+<DocsLayout title="Documentation - Dasher">
+  <h1>Documentation</h1>
+
+  <p>
+    Welcome to the Dasher documentation. This site is being actively developed as part of the v6 rewrite.
+  </p>
+
+  <div class="doc-sections">
+    <section class="doc-section">
+      <h2>About Dasher</h2>
+      <p>
+        Learn what Dasher is and how it works.
+      </p>
+      <ul>
+        <li><a href="/about/">About Dasher</a> - Project history and overview</li>
+        <li><a href="/community/">Community</a> - Join the discussion and contribute</li>
+      </ul>
+    </section>
+
+    <section class="doc-section">
+      <h2>Research</h2>
+      <p>
+        Dasher is built on decades of research from the Inference Group.
+      </p>
+      <ul>
+        <li><a href="/docs/research/publications/">Publications</a> - Academic papers on Dasher</li>
+        <li><a href="/docs/research/presentations/">Presentations</a> - Talks and demos</li>
+        <li><a href="/docs/research/press/">Press Coverage</a> - Media mentions and articles</li>
+      </ul>
+    </section>
+
+    <section class="doc-section">
+      <h2>Getting Started</h2>
+      <p>
+        Installation and usage guides are coming soon. For now, check out the
+        <a href="https://github.com/dasher-project/dasher/releases" target="_blank" rel="noopener noreferrer">GitHub releases</a>
+        to download Dasher.
+      </p>
+    </section>
+  </div>
+
+  <div class="cta-box">
+    <h2>Need Help?</h2>
+    <p>
+      Join our community on <a href="https://matrix.to/#/#dasher:matrix.org" target="_blank" rel="noopener noreferrer">Matrix</a>
+      to ask questions and get help from other Dasher users.
+    </p>
+  </div>
+</DocsLayout>
+
+<style>
+  .doc-sections {
+    display: grid;
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+  }
+
+  .doc-section {
+    padding: var(--space-lg);
+    background-color: var(--color-canvas-white);
+    border: 2px solid var(--color-horizon-mint);
+    border-radius: var(--radius-lg);
+  }
+
+  .doc-section:hover {
+    border-color: var(--color-focus-yellow);
+  }
+
+  .doc-section h2 {
+    margin-top: 0;
+    color: var(--color-deep-ink);
+  }
+
+  .doc-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .doc-section li {
+    margin-bottom: var(--space-sm);
+  }
+
+  .doc-section a {
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--color-deep-ink);
+  }
+
+  .doc-section a:hover {
+    color: var(--color-target-coral);
+    text-decoration: underline;
+  }
+
+  .cta-box {
+    margin-top: var(--space-xl);
+    padding: var(--space-lg);
+    background-color: var(--color-horizon-mint);
+    border-radius: var(--radius-lg);
+    text-align: center;
+  }
+
+  .cta-box h2 {
+    margin-top: 0;
+  }
+</style>

@@ -1,7 +1,33 @@
-public
-public/*
-.firebaserc
-node_modules/*
-.DS_Store
-resources/_gen
+# Astro build output
+dist/
+.astro/
 
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Hugo legacy (to be removed after migration)
+config.toml
+netlify.toml
+.gitmodules
+themes/
+content/
+layouts/
+resources/
+
+# Keep public/ for Astro, but exclude legacy content
+public/legacy/
+
+# Logs
+*.log
