@@ -8,9 +8,80 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <h1>Downloads</h1>
 
       <p class="lead">
-        Download alphabet files, training texts, and other resources for Dasher.
+        Download Dasher for your platform, alphabet files, training texts, and other resources.
       </p>
 
+      <!-- Current Releases Section - NEW -->
+      <section class="download-section">
+        <h2><span class="highlight">⬇️</span> Get Dasher</h2>
+        <p>
+          Download the latest stable version of Dasher for your platform.
+          <a href="/docs/getting-started/install/">View installation instructions →</a>
+        </p>
+
+        <div class="platform-downloads">
+          <div class="platform-download">
+            <div class="platform-icon">🪟</div>
+            <div class="platform-info">
+              <h3>Windows</h3>
+              <p>v5.0 - Latest stable release</p>
+              <a href="https://github.com/dasher-project/dasher/releases" target="_blank" rel="noopener noreferrer" class="btn-primary">Download from GitHub</a>
+              <a href="/docs/getting-started/install/windows/" class="link">Installation guide →</a>
+            </div>
+          </div>
+
+          <div class="platform-download">
+            <div class="platform-icon">🍎</div>
+            <div class="platform-info">
+              <h3>macOS</h3>
+              <p>v5.14 - Updated for recent macOS</p>
+              <a href="https://github.com/dasher-project/dasher/releases" target="_blank" rel="noopener noreferrer" class="btn-primary">Download DMG</a>
+              <a href="/docs/getting-started/install/macos/" class="link">Installation guide →</a>
+            </div>
+          </div>
+
+          <div class="platform-download">
+            <div class="platform-icon">🐧</div>
+            <div class="platform-info">
+              <h3>Linux</h3>
+              <p>Install from your package manager</p>
+              <code>sudo apt-get install dasher</code>
+              <a href="/docs/getting-started/install/linux/" class="link">Installation guide →</a>
+            </div>
+          </div>
+
+          <div class="platform-download">
+            <div class="platform-icon">🤖</div>
+            <div class="platform-info">
+              <h3>Android</h3>
+              <p>Available on Google Play or F-Droid</p>
+              <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer" class="btn-secondary">Play Store</a>
+              <a href="https://f-droid.org/" target="_blank" rel="noopener noreferrer" class="btn-secondary">F-Droid</a>
+              <a href="/docs/getting-started/install/android/" class="link">Installation guide →</a>
+            </div>
+          </div>
+
+          <div class="platform-download">
+            <div class="platform-icon">📱</div>
+            <div class="platform-info">
+              <h3>iOS</h3>
+              <p>Available on the App Store for iPhone and iPad</p>
+              <a href="https://apps.apple.com/app/dasher" target="_blank" rel="noopener noreferrer" class="btn-secondary">App Store →</a>
+              <a href="/docs/getting-started/install/ios/" class="link">Installation guide →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-box" style="margin-top: var(--space-lg);">
+          <h3>💡 Development Version</h3>
+          <p>
+            <strong>Dasher v6</strong> is under active development but not yet ready for end users.
+            See <a href="/docs/development/">Development Guide</a> for information on v6.
+          </p>
+        </div>
+      </section>
+
+      <!-- Alphabet Files Section -->
       <section class="download-section">
         <h2>Alphabet Files</h2>
 
@@ -88,7 +159,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 <a href="/download/alphabets/alphabet.oriya.xml">Oriya</a>
                 <a href="/download/alphabets/alphabet.assamese.xml">Assamese</a>
                 <a href="/download/alphabets/alphabet.urdu.xml">Urdu</a>
-                <a href="/download/alphabets/alphabet.sinhala.xml">Sinhala</a>
               </div>
             </div>
 
@@ -187,167 +257,63 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </BaseLayout>
 
 <style>
-  .lead {
-    font-size: 1rem;
-    max-width: 600px;
-    margin: 0 auto var(--space-lg);
-    text-align: center;
-    opacity: 0.9;
+  .highlight {
+    color: var(--color-target-coral);
   }
 
-  .download-section {
-    margin-bottom: var(--space-2xl);
-  }
-
-  .download-options {
+  .platform-downloads {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--space-md);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
     margin: var(--space-lg) 0;
   }
 
-  .download-card {
-    display: block;
+  .platform-download {
+    display: flex;
+    gap: var(--space-md);
     padding: var(--space-lg);
-    background-color: var(--color-horizon-mint);
+    background-color: var(--color-canvas-white);
     border: 2px solid var(--color-horizon-mint);
     border-radius: var(--radius-lg);
-    text-decoration: none;
-    color: var(--color-deep-ink);
+    align-items: center;
     transition: var(--transition-smooth);
   }
 
-  .download-card:hover {
+  .platform-download:hover {
     border-color: var(--color-target-coral);
-    transform: translateY(-4px);
+    transform: translateY(-2px);
   }
 
-  .download-card h3 {
-    margin: 0 0 var(--space-sm) 0;
-    font-size: 1.25rem;
+  .platform-icon {
+    font-size: 2.5rem;
+    line-height: 1;
   }
 
-  .download-card p {
-    margin: 0 0 var(--space-sm) 0;
+  .platform-info {
+    flex: 1;
   }
 
-  .file-size {
-    display: inline-block;
-    padding: var(--space-xs) var(--space-sm);
-    background-color: var(--color-target-coral);
-    color: var(--color-canvas-white);
-    border-radius: var(--radius-sm);
-    font-size: 0.875rem;
+  .platform-info h3 {
+    margin-top: 0;
+    margin-bottom: var(--space-xs);
   }
 
-  .alphabet-list {
-    margin-top: var(--space-xl);
-  }
-
-  .alphabet-list h3 {
+  .platform-info p {
     margin-bottom: var(--space-sm);
+    opacity: 0.9;
   }
 
-  .note {
-    padding: var(--space-md);
-    background-color: var(--color-focus-yellow);
-    border-radius: var(--radius-md);
-    margin-bottom: var(--space-lg);
-  }
-
-  .language-groups {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--space-lg);
-  }
-
-  .group {
-    padding: var(--space-md);
-    background-color: var(--color-canvas-white);
-    border: 2px solid var(--color-horizon-mint);
-    border-radius: var(--radius-md);
-  }
-
-  .group h4 {
-    margin: 0 0 var(--space-md) 0;
-    font-size: 1.125rem;
-  }
-
-  .files {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-sm);
-  }
-
-  .files a {
-    padding: var(--space-xs) var(--space-sm);
-    background-color: var(--color-horizon-mint);
-    border-radius: var(--radius-sm);
-    text-decoration: none;
-    color: var(--color-deep-ink);
-    font-size: 0.875rem;
-    transition: var(--transition-smooth);
-  }
-
-  .files a:hover {
-    background-color: var(--color-target-coral);
-    color: var(--color-canvas-white);
-  }
-
-  .platform-instructions {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--space-md);
-    margin: var(--space-md) 0;
-  }
-
-  .platform {
-    padding: var(--space-md);
-    background-color: var(--color-canvas-white);
-    border: 2px solid var(--color-horizon-mint);
-    border-radius: var(--radius-md);
-  }
-
-  .platform h4 {
-    margin: 0 0 var(--space-sm) 0;
-    font-size: 1.125rem;
-  }
-
-  .platform ol {
-    padding-left: var(--space-lg);
-    margin: 0;
-  }
-
-  .platform li {
-    margin-bottom: var(--space-sm);
-  }
-
-  code {
+  .platform-info code {
     background-color: var(--color-horizon-mint);
     padding: 0.125rem 0.25rem;
     border-radius: var(--radius-sm);
     font-family: monospace;
-    font-size: 0.9em;
   }
 
-  .info-box {
-    padding: var(--space-lg);
-    background-color: var(--color-horizon-mint);
-    border-radius: var(--radius-md);
-    margin: var(--space-lg) 0;
-  }
-
-  .info-box h3 {
-    margin-top: 0;
-  }
-
-  a {
-    color: var(--color-deep-ink);
-    text-decoration: none;
-  }
-
-  a:hover {
-    color: var(--color-target-coral);
-    text-decoration: underline;
+  @media (max-width: 768px) {
+    .platform-download {
+      flex-direction: column;
+      text-align: center;
+    }
   }
 </style>

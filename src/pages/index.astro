@@ -3,127 +3,88 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Dasher - An information-efficient text-entry interface">
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container hero-content">
-      <h1>Dasher v6</h1>
-      <p class="hero-subtitle">
+  <div class="container">
+    <section class="section hero-section">
+      <h1>Dasher</h1>
+      <p class="hero-tagline">
         An information-efficient text-entry interface driven by natural continuous pointing gestures.
-        Originally developed by the Inference Group.
       </p>
-      <div class="hero-actions">
-        <a href="/docs/" class="btn-primary">Get Started</a>
-        <a href="https://github.com/dasher-project/dasher" class="btn-secondary" target="_blank" rel="noopener noreferrer">
-          GitHub
-        </a>
-      </div>
-    </div>
-  </section>
 
-  <!-- What is Dasher -->
-  <section class="section">
-    <div class="container-narrow">
+      <div class="cta-links">
+        <a href="/docs/getting-started/install/" class="btn-primary">Get Started</a>
+        <a href="/docs/concepts/how-dasher-works/" class="btn-secondary">How It Works</a>
+      </div>
+    </section>
+
+    <section class="section">
       <h2>What is Dasher?</h2>
       <p>
-        Dasher is a zooming predictive text interface. Instead of hunting for each letter on a keyboard,
-        you navigate through letters by steering toward your target. As you move toward a letter,
-        it expands and other letters appear, creating a continuous flow of text entry.
+        Dasher is a revolutionary text-entry interface that uses a zooming interface where you navigate
+        toward your target. Unlike traditional keyboards where you hunt for each letter, Dasher presents
+        letters in a continuous stream where you steer toward what you want to type.
       </p>
       <p>
-        Originally designed for users with severe disabilities, Dasher works with any pointing device:
-        mouse, touchscreen, eye-tracking, or even breath control. It supports over 100 languages
-        through adaptive language models.
+        As you move toward a letter, it expands and other letters appear. By continuously steering toward
+        your target, you can enter text at speeds competitive with touch typing, using only a single
+        pointing device.
       </p>
-      <div class="cta-links">
-        <a href="/docs/">Documentation</a>
-        <a href="/demonstrations/">Watch Demonstrations</a>
-        <a href="/docs/research/">Research</a>
-        <a href="https://matrix.to/#/#dasher:matrix.org" target="_blank" rel="noopener noreferrer">Community</a>
+    </section>
+
+    <section class="section">
+      <h2>Key Features</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>Accessible</h3>
+          <p>Works with any continuous pointing device: mouse, touchscreen, eye-tracking, head-tracking, and more.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Multilingual</h3>
+          <p>Support for over 60 languages through customizable alphabet files.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Efficient</h3>
+          <p>Information-theoretic optimal text entry using language models for prediction.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Open Source</h3>
+          <p>Free and open-source software licensed under GPL-3.0.</p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="section">
+      <h2>Quick Start</h2>
+      <div class="quick-start-grid">
+        <a href="/docs/getting-started/install/" class="quick-start-card">
+          <h3>Install Dasher</h3>
+          <p>Download and install Dasher on Windows, macOS, or Linux.</p>
+        </a>
+        <a href="/docs/getting-started/how-to/tips/" class="quick-start-card">
+          <h3>Learn the Basics</h3>
+          <p>Get started with basic Dasher usage and tips.</p>
+        </a>
+        <a href="/docs/languages/" class="quick-start-card">
+          <h3>Add Languages</h3>
+          <p>Configure Dasher for your preferred language.</p>
+        </a>
+        <a href="/community/" class="quick-start-card">
+          <h3>Join the Community</h3>
+          <p>Get help, report bugs, and contribute to Dasher.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Latest Updates</h2>
+      <div class="update-card">
+        <h3>Dasher v6</h3>
+        <p>
+          Dasher v6 represents a complete rewrite of the codebase with modern software architecture.
+          This version improves performance, expands platform support, and makes the codebase more
+          maintainable for future development.
+        </p>
+        <a href="/blog/announcing-dasher-v6/" class="link">Read the announcement →</a>
+      </div>
+    </section>
+  </div>
 </BaseLayout>
-
-<style>
-  /* ==========================================================================
-     HERO
-     ========================================================================== */
-
-  .hero {
-    padding: var(--space-xl) 0;
-    background: linear-gradient(135deg, var(--color-canvas-white) 0%, var(--color-horizon-mint) 50%);
-  }
-
-  .hero-content {
-    max-width: 600px;
-  }
-
-  .hero-content h1 {
-    font-size: 2rem;
-    margin-bottom: var(--space-sm);
-  }
-
-  .hero-subtitle {
-    font-size: 1rem;
-    line-height: 1.6;
-    opacity: 0.9;
-    margin-bottom: var(--space-md);
-  }
-
-  .hero-actions {
-    display: flex;
-    gap: var(--space-sm);
-  }
-
-  /* ==========================================================================
-     CONTENT
-     ========================================================================== */
-
-  .section {
-    padding: var(--space-lg) 0;
-  }
-
-  .container-narrow h2 {
-    font-size: 1.5rem;
-    margin-bottom: var(--space-sm);
-  }
-
-  .container-narrow p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: var(--space-sm);
-  }
-
-  .cta-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-md);
-    margin-top: var(--space-md);
-  }
-
-  .cta-links a {
-    font-weight: 500;
-    text-decoration: none;
-    color: var(--color-deep-ink);
-    border-bottom: 1px solid var(--color-horizon-mint);
-  }
-
-  .cta-links a:hover {
-    color: var(--color-target-coral);
-    border-color: var(--color-target-coral);
-  }
-
-  @media (max-width: 768px) {
-    .hero {
-      padding: var(--space-lg) 0;
-    }
-
-    .hero-actions {
-      flex-direction: column;
-    }
-
-    .cta-links {
-      flex-direction: column;
-    }
-  }
-</style>

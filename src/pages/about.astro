@@ -87,6 +87,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <h3>Quick Links</h3>
               <ul>
                 <li><a href="/docs/">Documentation</a></li>
+                <li><a href="/faq/">FAQ</a></li>
+                <li><a href="/press/">Press Information</a></li>
+                <li><a href="/demonstrations/">Demonstrations</a></li>
                 <li><a href="https://github.com/dasher-project/dasher" target="_blank" rel="noopener noreferrer">Source Code</a></li>
                 <li><a href="https://github.com/dasher-project/dasher/releases" target="_blank" rel="noopener noreferrer">Releases</a></li>
                 <li><a href="/community/">Community</a></li>
@@ -154,124 +157,3 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </section>
   </div>
 </BaseLayout>
-
-<style>
-  .about-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: var(--space-xl);
-    align-items: start;
-  }
-
-  .about-content h2 {
-    margin-top: var(--space-xl);
-  }
-
-  .about-content ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: var(--space-md);
-  }
-
-  .about-content li {
-    padding-left: var(--space-md);
-    margin-bottom: var(--space-sm);
-    position: relative;
-  }
-
-  .about-content li::before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    color: var(--color-target-coral);
-    font-weight: bold;
-  }
-
-  .about-content strong {
-    color: var(--color-deep-ink);
-  }
-
-  .sidebar-card {
-    margin-bottom: var(--space-md);
-  }
-
-  .sidebar-card h3 {
-    margin-top: 0;
-    margin-bottom: var(--space-sm);
-  }
-
-  .sidebar-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 var(--space-md) 0;
-  }
-
-  .sidebar-card li {
-    margin-bottom: var(--space-xs);
-  }
-
-  .sidebar-card a {
-    text-decoration: none;
-    color: var(--color-deep-ink);
-  }
-
-  .sidebar-card a:hover {
-    color: var(--color-target-coral);
-  }
-
-  /* Timeline */
-  .timeline-section {
-    background-color: var(--color-canvas-white);
-    border-top: 2px solid var(--color-horizon-mint);
-  }
-
-  .timeline {
-    display: grid;
-    gap: var(--space-lg);
-    margin-top: var(--space-lg);
-  }
-
-  .timeline-item {
-    display: grid;
-    grid-template-columns: 120px 1fr;
-    gap: var(--space-md);
-    align-items: start;
-  }
-
-  .timeline-year {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--color-target-coral);
-    font-family: var(--font-display);
-  }
-
-  .timeline-content {
-    padding: var(--space-md);
-    background-color: var(--color-canvas-white);
-    border-left: 4px solid var(--color-horizon-mint);
-    border-radius: 0 var(--radius-md) var(--radius-md) 0;
-  }
-
-  .timeline-content h3 {
-    margin-top: 0;
-    margin-bottom: var(--space-xs);
-  }
-
-  .timeline-content p {
-    margin-bottom: 0;
-  }
-
-  @media (max-width: 900px) {
-    .about-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .timeline-item {
-      grid-template-columns: 1fr;
-    }
-
-    .timeline-year {
-      margin-bottom: var(--space-xs);
-    }
-  }
-</style>
