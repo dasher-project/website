@@ -19,10 +19,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           flow of text entry.
         </p>
         <div class="demo-media">
-          <video controls width="600" poster="/images/dasher-poster.jpg">
-            <source src="/videos/intro.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+          <img src="/videos/newdasher.gif" alt="Animated GIF of Dasher in action" width="250" height="230" loading="lazy" />
         </div>
       </section>
 
@@ -54,39 +51,63 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <section class="demo-section">
         <h2>See It In Action</h2>
+        <p>
+          The original project videos are now available on YouTube.
+          Start with the full playlist, then use the featured demos below.
+        </p>
+        <p>
+          <a href="https://www.youtube.com/playlist?list=PLG22wrzFpavafCF-5u9jh6kS-UAIGkPbw" target="_blank" rel="noopener noreferrer" class="btn-secondary">Open YouTube Playlist</a>
+        </p>
 
         <div class="video-list">
           <div class="video-item">
-            <h3>Introduction to Dasher</h3>
-            <p>A complete overview of how Dasher works and its key features.</p>
+            <h3>Eye-Tracking Demo (Nov 2001)</h3>
+            <p>Classic eye-tracking demonstration from the original project videos.</p>
             <div class="video-player">
-              <video controls poster="/images/dasher-poster.jpg">
-                <source src="/videos/intro.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
+              <iframe
+                src="https://www.youtube.com/embed/-96VfRFS7tw"
+                title="Eye-tracking demo (Nov 2001)"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+              </iframe>
             </div>
           </div>
 
           <div class="video-item">
-            <h3>Eye-Tracking Demonstration</h3>
-            <p>See how Dasher enables text entry using only eye movements.</p>
+            <h3>Control Mode</h3>
+            <p>Enhanced eye-tracking mode demonstrating control mode behavior.</p>
             <div class="video-player">
-              <video controls poster="/images/dasher-poster.jpg">
-                <source src="/videos/eye-tracking.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
+              <iframe
+                src="https://www.youtube.com/embed/KwpGpCSK2Pk"
+                title="Dasher control mode demo"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+              </iframe>
             </div>
           </div>
 
           <div class="video-item">
-            <h3>Advanced Techniques</h3>
-            <p>Learn tips and tricks for faster text entry with Dasher.</p>
+            <h3>Dasher Eyetracker and BreathDasher</h3>
+            <p>Additional legacy demos now hosted on YouTube.</p>
             <div class="video-player">
-              <video controls poster="/images/dasher-poster.jpg">
-                <source src="/videos/advanced.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
+              <iframe
+                src="https://www.youtube.com/embed/qW2-Qvj_p7k"
+                title="Dasher Eyetracker demo"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+              </iframe>
             </div>
+            <p>
+              More videos:
+              <a href="https://youtu.be/Bz3OJXokFDs" target="_blank" rel="noopener noreferrer">EyeDasher 4800</a>,
+              <a href="https://youtu.be/_tMIotLU7Co" target="_blank" rel="noopener noreferrer">BreathDasher</a>.
+            </p>
           </div>
         </div>
       </section>

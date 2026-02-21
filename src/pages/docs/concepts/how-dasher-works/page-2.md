@@ -33,15 +33,18 @@ and more to the more plausible books, thus making it easier to find books that c
   <div class="diagram-grid">
     <div class="diagram">
       <strong>(i)</strong>
-      <p>a-z (all equal size)</p>
+      <img src="/videos/areas.gif" alt="Dasher area map showing available text space" width="384" height="384" loading="lazy" />
+      <p>All possibilities visible as regions</p>
     </div>
     <div class="diagram">
       <strong>(ii)</strong>
-      <p>aa-az (sized by probability)</p>
+      <img src="/videos/areas2.gif" alt="Dasher area map zoomed into likely regions" width="384" height="384" loading="lazy" />
+      <p>Likely continuations occupy more space</p>
     </div>
     <div class="diagram">
       <strong>(iii)</strong>
-      <p>ala-alz (sized by probability)</p>
+      <img src="/videos/object-from-site.gif" alt="Dasher showing object/objective branch with larger likely targets" width="507" height="447" loading="lazy" />
+      <p>Fine-grained steering among probable words</p>
     </div>
   </div>
 </div>

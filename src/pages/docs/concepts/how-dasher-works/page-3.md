@@ -19,7 +19,7 @@ If you find Dasher hard to imagine based on static pictures, you're not alone.
 but be assured: it is actually very easy; it's a lot like driving a car.</strong>
 
 <div class="demo-preview">
-  <img src="/images/object.gif" alt="Dasher text entry interface showing word selection" width="507" height="447" loading="lazy" />
+  <img src="/videos/object-from-site.gif" alt="Dasher text entry interface showing word selection" width="507" height="447" loading="lazy" />
   <p class="caption">
     The image above shows the state of the Dasher interface while the user is writing the word "objection".
     Alternative words that could easily be written at this point include "objective", "objects_", and "object_oriented".
@@ -30,20 +30,32 @@ but be assured: it is actually very easy; it's a lot like driving a car.</strong
 
 The best way to understand Dasher is to see it in motion. We have several types of demonstrations:
 
-<div class="demo-types">
-  <div class="demo-type">
-    <h3>Animated GIFs</h3>
-    <p>Short animations showing Dasher version 3 in action. These work in any modern browser.</p>
+<div class="video-list">
+  <div class="video-item">
+    <h3>Animated GIF: Dasher v3</h3>
+    <div class="demo-media">
+      <img src="/videos/newdasher.gif" alt="Animated GIF of Dasher version 3" width="250" height="230" loading="lazy" />
+    </div>
   </div>
 
-  <div class="demo-type">
-    <h3>Video Demonstrations</h3>
-    <p>Longer videos showing various input methods including eye-tracking, breath control, and more.</p>
+  <div class="video-item">
+    <h3>Animated GIF: Dasher v1</h3>
+    <div class="demo-media">
+      <img src="/videos/dasher-v1.gif" alt="Animated GIF of early Dasher version" loading="lazy" />
+    </div>
   </div>
 
-  <div class="demo-type">
-    <h3>External Videos</h3>
-    <p>Google Tech Talks, YouTube demonstrations, and media features showing real-world usage.</p>
+  <div class="video-item">
+    <h3>YouTube Demonstrations</h3>
+    <p>Current long-form demos are now hosted on YouTube.</p>
+    <ul>
+      <li><a href="https://www.youtube.com/playlist?list=PLG22wrzFpavafCF-5u9jh6kS-UAIGkPbw" target="_blank" rel="noopener noreferrer">Dasher YouTube Playlist</a></li>
+      <li><a href="https://youtu.be/-96VfRFS7tw" target="_blank" rel="noopener noreferrer">Eye-tracker demo (Nov 2001)</a></li>
+      <li><a href="https://youtu.be/KwpGpCSK2Pk" target="_blank" rel="noopener noreferrer">Control Mode</a></li>
+      <li><a href="https://youtu.be/qW2-Qvj_p7k" target="_blank" rel="noopener noreferrer">Dasher Eyetracker</a></li>
+      <li><a href="https://youtu.be/Bz3OJXokFDs" target="_blank" rel="noopener noreferrer">EyeDasher 4800</a></li>
+      <li><a href="https://youtu.be/_tMIotLU7Co" target="_blank" rel="noopener noreferrer">BreathDasher</a></li>
+    </ul>
   </div>
 </div>
 

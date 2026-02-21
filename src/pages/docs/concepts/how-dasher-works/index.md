@@ -23,11 +23,11 @@ The first book in the "a" section reads "aaaaaaaaaaaa..."; somewhere to its righ
 "all good things must come to an end..."; a tiny bit further to the right are books that start
 "all good things must come to an enema...".
 
-<div class="diagram-container">
-  <div class="diagram">
-    <strong>(i)</strong>
-    <p>The entire library a-z</p>
-  </div>
+<div class="demo-preview">
+  <img src="/videos/newdasher.gif" alt="Dasher zooming interface animation (version 3)" width="250" height="230" loading="lazy" />
+  <p class="caption">
+    The original "How does Dasher work?" page (<code>DasherSummary2.html</code>) used this animation on the right side.
+  </p>
 </div>
 
 ## Finding Your Book
@@ -43,7 +43,8 @@ First, they walk into the "a" section of the library. There, they are confronted
 <div class="diagram-container">
   <div class="diagram">
     <strong>(ii)</strong>
-    <p>Looking more closely at the "al" section</p>
+    <img src="/videos/he2.gif" alt="Dasher showing letter regions while writing 'hello'" width="226" height="363" loading="lazy" />
+    <p>Looking more closely at a specific region</p>
   </div>
 </div>
 
@@ -52,7 +53,8 @@ Looking more closely at the "al" section, they can find books starting "ala", "a
 <div class="diagram-container">
   <div class="diagram">
     <strong>(iii)</strong>
-    <p>The "ala" through "alz" subsection</p>
+    <img src="/videos/he10.gif" alt="Higher-resolution Dasher screenshot showing probable next letters" width="226" height="363" loading="lazy" />
+    <p>Zooming further into the most likely continuations</p>
   </div>
 </div>
 

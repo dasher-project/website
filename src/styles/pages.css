@@ -601,17 +601,29 @@ pre code {
 }
 
 .diagram {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: var(--space-lg);
   background-color: var(--color-horizon-mint);
   border-radius: var(--radius-md);
-  min-width: 200px;
+  min-width: 0;
+  width: 100%;
+  overflow: hidden;
 }
 
 .diagram strong {
   display: block;
   font-size: 1.5rem;
   margin-bottom: var(--space-sm);
+}
+
+.diagram img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-sm);
 }
 
 .key-concept {
@@ -1173,6 +1185,13 @@ li {
   width: 100%;
   height: auto;
   max-height: 480px;
+}
+
+.video-player iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  display: block;
 }
 
 /* External links */
