@@ -1,0 +1,25 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = 'Documentation - Dasher', description } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="container-narrow docs-content">
+    <article>
+      <slot />
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  .docs-content {
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-xl);
+  }
+</style>

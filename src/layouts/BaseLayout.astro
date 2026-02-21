@@ -1,0 +1,158 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Dasher',
+  description = 'An information-efficient text-entry interface',
+} = Astro.props;
+
+const currentPath = Astro.url.pathname;
+const navItems = [
+  { href: '/', label: 'Home' },
+  { href: '/about/', label: 'About' },
+  { href: '/demonstrations/', label: 'Demonstrations' },
+  { href: '/downloads/', label: 'Downloads' },
+  { href: '/docs/', label: 'Docs' },
+  { href: '/community/', label: 'Community' },
+  { href: '/faq/', label: 'FAQ' },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/x-icon" href="/favicons/favicon.ico" />
+    <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" />
+    <link rel="manifest" href="/favicons/site.webmanifest" />
+  </head>
+  <body>
+    <a class="skip-to-main" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="container site-header-inner">
+        <a class="site-brand" href="/">Dasher</a>
+        <nav aria-label="Primary">
+          <ul class="site-nav-list">
+            {navItems.map((item) => {
+              const active = item.href === '/'
+                ? currentPath === '/'
+                : currentPath.startsWith(item.href);
+              return (
+                <li>
+                  <a class={active ? 'active' : undefined} href={item.href}>{item.label}</a>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer-inner">
+        <p>Dasher Project</p>
+        <p><a href="https://github.com/dasher-project" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  @import '../styles/design-tokens.css';
+  @import '../styles/global.css';
+  @import '../styles/pages.css';
+
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: color-mix(in srgb, var(--color-canvas-white) 92%, white);
+    border-bottom: 1px solid color-mix(in srgb, var(--color-deep-ink) 15%, transparent);
+    backdrop-filter: blur(6px);
+  }
+
+  .site-header-inner {
+    min-height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+  }
+
+  .site-brand {
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .site-nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .site-nav-list a {
+    text-decoration: none;
+    padding: 0.4rem 0.65rem;
+    border-radius: var(--radius-sm);
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .site-nav-list a:hover {
+    background-color: color-mix(in srgb, var(--color-horizon-mint) 55%, transparent);
+  }
+
+  .site-nav-list a.active {
+    background-color: var(--color-horizon-mint);
+    font-weight: 600;
+  }
+
+  .site-footer {
+    margin-top: var(--space-2xl);
+    border-top: 1px solid color-mix(in srgb, var(--color-deep-ink) 15%, transparent);
+    padding: var(--space-lg) 0;
+  }
+
+  .site-footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+
+  .site-footer p {
+    margin: 0;
+  }
+
+  @media (max-width: 900px) {
+    .site-header-inner {
+      min-height: auto;
+      padding-top: var(--space-sm);
+      padding-bottom: var(--space-sm);
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .site-footer-inner {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>

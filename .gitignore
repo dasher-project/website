@@ -24,6 +24,8 @@ netlify.toml
 themes/
 content/
 layouts/
+!src/layouts/
+!src/layouts/*.astro
 resources/
 
 # Keep public/ for Astro, but exclude legacy content
