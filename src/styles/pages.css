@@ -1199,6 +1199,24 @@ li {
   transform: translateY(-2px);
 }
 
+/* Search page */
+.search-section .lead {
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
+}
+
+.search-ui {
+  margin-top: var(--space-md);
+}
+
+.search-fallback {
+  padding: var(--space-md);
+  background-color: var(--color-focus-yellow);
+  border-radius: var(--radius-md);
+  border: 2px solid var(--color-horizon-mint);
+}
+
 .external-link h3 {
   font-size: 1rem;
   margin: 0 0 var(--space-xs) 0;

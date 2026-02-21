@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Search - Dasher" description="Search the Dasher website documentation and pages.">
+  <div class="container">
+    <section class="section search-section">
+      <h1>Search</h1>
+      <p class="lead">
+        Search across docs, guides, and site pages.
+      </p>
+      <div id="search-ui" class="search-ui" aria-live="polite"></div>
+      <noscript>
+        <p>Search requires JavaScript enabled in your browser.</p>
+      </noscript>
+    </section>
+  </div>
+</BaseLayout>
+
+<link rel="stylesheet" href="/pagefind/pagefind-ui.css" />
+<script is:inline type="module">
+  const mount = document.getElementById('search-ui');
+
+  if (!mount) {
+    throw new Error('Search mount not found');
+  }
+
+  const showFallback = () => {
+    mount.innerHTML = `
+      <div class="search-fallback">
+        <p>Search index not available in this environment yet.</p>
+        <p>Run <code>npm run build</code> to generate Pagefind assets, then open this page from the built site.</p>
+      </div>
+    `;
+  };
+
+  try {
+    const { PagefindUI } = await import('/pagefind/pagefind-ui.js');
+    new PagefindUI({
+      element: '#search-ui',
+      showSubResults: true,
+      resetStyles: false,
+      autofocus: true,
+      placeholder: 'Search docs, demos, and pages...',
+      translations: {
+        clear_search: 'Clear',
+        load_more: 'Load more results',
+        search_label: 'Search site',
+      },
+    });
+  } catch {
+    showFallback();
+  }
+</script>
