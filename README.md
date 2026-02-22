@@ -56,9 +56,12 @@ npm run preview
 ├── tsconfig.json          # TypeScript configuration
 ├── public/                # Static assets (images, videos, downloads)
 │   ├── download/          # Alphabet XML files and training texts
+│   ├── locales/           # Legacy mirrored locale HTML content
 │   ├── images/            # Images and banners
 │   ├── videos/            # Demo videos
 │   └── logo.svg           # Dasher logo
+├── static/                # Legacy mirrored site subtree (old dasher pages)
+│   └── dasher/            # Historical pages/assets preserved from original site
 ├── src/
 │   ├── layouts/           # Layout components
 │   │   ├── BaseLayout.astro      # Main site layout
@@ -122,6 +125,18 @@ Alphabet XML files and training texts are stored in `public/download/`:
 - `/public/download/alphabets/` - 144 alphabet XML files
 - `/public/download/training.html` - Training text downloads
 
+### Legacy Mirror Content
+
+This repository includes mirrored legacy content from the original Dasher site for preservation and reference.
+
+- `public/download/` contains downloadable resources served at `/download/...` (alphabets, training corpora, legacy platform downloads).
+- `public/locales/` contains locale-specific legacy HTML pages served at `/locales/...`.
+- `static/dasher/` contains a broader historical mirror of old Dasher pages and assets.
+
+These directories are not identical. They overlap in historical material but serve different URL trees and use different folder layouts.
+
+When updating modern site content, prefer editing `src/` and current assets in `public/images` or `public/videos`. Avoid reformatting mirrored legacy HTML unless intentionally curating those archives.
+
 ### Images and Videos
 
 - Place images in `public/images/`
@@ -141,11 +156,11 @@ Alphabet XML files and training texts are stored in `public/download/`:
 
 ## Deployment
 
-The site is automatically deployed to GitHub Pages on push to the `master` branch via GitHub Actions.
+The site is automatically deployed to GitHub Pages on push to the `astro-build` branch via GitHub Actions.
 
 **Deployment workflow:**
 
-1. Push to `master` branch
+1. Push to `astro-build` branch
 2. GitHub Actions runs `build.yml` (lint + build)
 3. If successful, `deploy.yml` publishes to GitHub Pages
 4. Site is live at https://dasher.at
