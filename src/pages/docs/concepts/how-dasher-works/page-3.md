@@ -1,6 +1,6 @@
 ---
-title: "How Dasher Works: Demonstrations - Dasher"
-description: "Learn how Dasher works - seeing it in action"
+title: 'How Dasher Works: Demonstrations - Dasher'
+description: 'Learn how Dasher works - seeing it in action'
 layout: ../../../../layouts/DocsLayout.astro
 ---
 

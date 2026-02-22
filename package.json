@@ -10,8 +10,8 @@
     "astro": "astro",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
+    "format": "prettier --write \"src/**/*.{astro,md,css,ts,js,mjs,json}\" \"assets/**/*.scss\" \".github/**/*.{yml,yaml}\" \"README.md\" \"astro.config.mjs\" \"eslint.config.js\" \".eslintrc.js\" \"tsconfig.json\" \"package.json\"",
+    "format:check": "prettier --check \"src/**/*.{astro,md,css,ts,js,mjs,json}\" \"assets/**/*.scss\" \".github/**/*.{yml,yaml}\" \"README.md\" \"astro.config.mjs\" \"eslint.config.js\" \".eslintrc.js\" \"tsconfig.json\" \"package.json\"",
     "typecheck": "astro check"
   },
   "repository": {

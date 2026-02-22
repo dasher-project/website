@@ -1,6 +1,6 @@
 ---
-title: "How Dasher Works: The Library Concept - Dasher"
-description: "Learn how Dasher works - the library concept"
+title: 'How Dasher Works: The Library Concept - Dasher'
+description: 'Learn how Dasher works - the library concept'
 layout: ../../../../layouts/DocsLayout.astro
 ---
 

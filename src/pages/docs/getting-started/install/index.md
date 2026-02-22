@@ -62,6 +62,7 @@ Choose your platform for detailed installation instructions:
 **Download:** <a href="https://github.com/dasher-project/dasher/releases" target="_blank" rel="noopener noreferrer">GitHub Releases</a>
 
 Quick steps:
+
 1. Download the installer
 2. Run the executable
 3. Follow installation prompts
@@ -74,6 +75,7 @@ Quick steps:
 **Download:** <a href="https://github.com/dasher-project/dasher/releases" target="_blank" rel="noopener noreferrer">v5.14 DMG</a>
 
 Quick steps:
+
 1. Download the DMG
 2. Drag Dasher to Applications
 3. Right-click → Open if needed (unidentified developer warning)
@@ -101,6 +103,7 @@ sudo pacman -S dasher
 ### Android
 
 **Download from:**
+
 - <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer">Google Play Store</a>
 - <a href="https://f-droid.org/" target="_blank" rel="noopener noreferrer">F-Droid</a>
 
@@ -165,6 +168,7 @@ To improve predictions for your language:
 **Problem:** Dasher won't start
 
 **Solution:**
+
 - Windows: Ensure you have admin rights
 - macOS: Try right-click → Open (see above)
 - Linux: Check that required dependencies are installed
@@ -172,12 +176,14 @@ To improve predictions for your language:
 **Problem:** Text prediction seems wrong
 
 **Solution:**
+
 - Select the correct alphabet for your language (Options → Alphabet)
 - Add training text for better predictions
 
 **Problem:** Can't enter special characters
 
 **Solution:**
+
 - Some alphabets have special characters in separate groups
 - Navigate through the zooming interface to find them
 - Check that your alphabet file includes the characters you need

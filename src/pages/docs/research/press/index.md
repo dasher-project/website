@@ -13,6 +13,7 @@ layout: ../../../../layouts/DocsLayout.astro
 ## Press Release, 21 August 2002
 
 ### The Eyes Have It
+
 #### Writing Fast Without a Keyboard
 
 A new text entry system developed at Cambridge University could transform computing for people unable to use a normal keyboard.

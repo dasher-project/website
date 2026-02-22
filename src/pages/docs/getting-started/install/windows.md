@@ -65,12 +65,14 @@ Dasher for Windows supports many input methods:
 ### Eye-Tracking
 
 Compatible with:
+
 - **Tobii Eye Tracker** (4C, 5, Eye Tracker 4)
 - **Tobii Dynavox** I-series and PCEye series
 - **MyGaze** assistive eye trackers
 - **Alea Intelligaze** eye trackers
 
 **Setup:**
+
 1. Install your eye tracker software first
 2. Calibrate using the tracker's software
 3. In Dasher, go to **Settings → Control → Input Device**
@@ -94,6 +96,7 @@ Use a webcam to track head movements:
 - Generic gamepads
 
 **Setup:**
+
 1. Connect your controller
 2. In Dasher, go to **Settings → Control → Input Device**
 3. Select "Joystick"
@@ -131,6 +134,7 @@ Dasher can speak entered text using Windows Speech API.
 ### Installing Additional Voices
 
 Windows 10/11:
+
 1. Go to **Settings → Time & Language → Speech**
 2. Under "Manage voices", click "Add voices"
 3. Download language packs as needed
@@ -140,6 +144,7 @@ Windows 10/11:
 **Problem:** "Windows protected your PC" warning
 
 **Solution:**
+
 - Click "More info"
 - Click "Run anyway"
 - This is Windows SmartScreen for unsigned software
@@ -147,6 +152,7 @@ Windows 10/11:
 **Problem:** Dasher won't start
 
 **Solution:**
+
 - Ensure you're using Windows XP or later
 - Run as administrator: Right-click → Run as administrator
 - Check Windows Event Viewer for crash logs
@@ -155,6 +161,7 @@ Windows 10/11:
 **Problem:** Speech output not working
 
 **Solution:**
+
 - Install [Microsoft Speech SDK 5.1](http://www.microsoft.com/speech/download/sdk51/) if on Windows 7 or earlier
 - Check Windows is not muted
 - Test in Control Panel → Speech Recognition
@@ -163,6 +170,7 @@ Windows 10/11:
 **Problem:** Eye tracker not detected
 
 **Solution:**
+
 - Ensure eye tracker software is installed and working
 - Test tracker in manufacturer's software
 - Try running Dasher as administrator
@@ -172,6 +180,7 @@ Windows 10/11:
 **Problem:** Installation fails
 
 **Solution:**
+
 - Ensure you have admin rights
 - Disable antivirus temporarily
 - Run installer from a local folder (not network drive)

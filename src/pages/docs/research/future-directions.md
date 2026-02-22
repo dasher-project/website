@@ -30,6 +30,7 @@ Dasher v6 represents a complete rewrite of the Dasher codebase with modern softw
 ### Hybrid Systems
 
 #### Speech-Dasher
+
 **Status:** Research prototype
 
 A hybrid system combining speech recognition with Dasher. Speak naturally into an imperfect speech recognizer, and watch as its inferences are displayed as predictions. Where the recognizer is uncertain, use Dasher to steer into the correct sentence.
@@ -37,6 +38,7 @@ A hybrid system combining speech recognition with Dasher. Speak naturally into a
 This approach is much easier than having to correct errors using voice commands alone. Developed by Keith Vertanen (2003-2007).
 
 #### Translation-Dasher
+
 **Status:** Concept stage
 
 A hybrid automatic-translation-Dasher system for cleaning up machine translations. Uses the output of a translator to define a language model, allowing an expert to quickly correct translation errors within Dasher.
@@ -44,21 +46,25 @@ A hybrid automatic-translation-Dasher system for cleaning up machine translation
 ### Advanced Input Methods
 
 #### Breath Control
+
 **Status:** Implemented (v3+)
 
 Dasher can be controlled by breathing using a breath sensor. This provides an additional input option for users with very limited mobility.
 
 #### Button Dasher
+
 **Status:** Implemented (v4+)
 
 For users who can only use a single switch, Dasher offers button/switch modes. The interface scans through options and the user selects by pressing the button.
 
 #### Tilt Sensors
+
 **Status:** Research prototype
 
 Control Dasher using tilt sensors, which could be attached to a headband, wrist, or other body part.
 
 #### Two-Dimensional Dasher (Peano Dasher)
+
 **Status:** Research prototype
 
 Fully two-dimensional variants of Dasher that can use both dimensions as information sources, rather than having one dimension determined by a language model. Named after the Peano curve space-filling algorithm.
@@ -66,11 +72,13 @@ Fully two-dimensional variants of Dasher that can use both dimensions as informa
 ### Platform Development
 
 #### Wearable Computers
+
 **Status:** Ongoing research
 
 Dasher has been tested on wearable computers including the Xybernaut platform. The zooming interface is particularly well-suited to small, head-mounted displays.
 
 #### Mobile Platforms
+
 **Status:** Android available, iOS in development
 
 Dasher is available for Android. iOS development is ongoing through community contributions and partnerships with accessibility organizations.
@@ -78,19 +86,23 @@ Dasher is available for Android. iOS development is ongoing through community co
 ### Language and Accessibility
 
 #### Expanded Language Support
+
 **Status:** Ongoing
 
 Adding support for more languages, particularly underrepresented languages and indigenous languages. The alphabet system makes it straightforward to add new languages.
 
 #### Improved Language Models
+
 **Status:** Ongoing research
 
 Research into better language models including:
+
 - Domain-specific models for specialized vocabulary
 - Personalized models that adapt to individual writing styles
 - Context-aware models for different applications
 
 #### Self-Tuning Eyetracking
+
 **Status:** Research prototype (Phil Cowans, Piotr Zielinski)
 
 Automatic calibration and tuning of eyetracking systems to work seamlessly with Dasher without requiring manual calibration.
@@ -112,12 +124,15 @@ See our [community page](/community/) for more ways to contribute.
 The Dasher project has inspired and is related to several other research projects:
 
 ### Basher
+
 A mouse-driven command-line interface; a one-handed, keyboardless alternative to traditional shells like bash, tcsh, or csh.
 
 ### Coraler
+
 A Dasher-like hypertext navigation environment for making websites more disabled-friendly.
 
 ### Skipper
+
 Full access to Linux and the Internet for people with severe physical disabilities, being integrated with Dasher.
 
 ## Academic Collaboration

@@ -7,12 +7,6 @@ export default [
   ...tseslint.configs.recommended,
   ...astroPlugin.configs.recommended,
   {
-    ignores: [
-      'dist',
-      'node_modules',
-      '.astro',
-      'public/legacy',
-      'astro.config.mjs',
-    ],
+    ignores: ['dist', 'node_modules', '.astro', 'public/legacy', 'astro.config.mjs'],
   },
 ];

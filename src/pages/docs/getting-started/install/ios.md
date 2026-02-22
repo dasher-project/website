@@ -84,6 +84,7 @@ Dasher is designed to work alongside VoiceOver:
 **Problem:** App crashes on launch
 
 **Solution:**
+
 - Ensure iOS 12.0 or later
 - Restart your device
 - Check for iOS updates
@@ -93,6 +94,7 @@ Dasher is designed to work alongside VoiceOver:
 **Problem:** Can't enter special characters
 
 **Solution:**
+
 - Some alphabets group special characters separately
 - Navigate through the zooming interface to find them
 - Check that your alphabet file includes needed characters
@@ -101,6 +103,7 @@ Dasher is designed to work alongside VoiceOver:
 **Problem:** Switch control not working
 
 **Solution:**
+
 - Verify iOS Switch Control is enabled
 - Check switch connections in iOS Accessibility settings
 - Ensure Dasher has "Switch" input method selected

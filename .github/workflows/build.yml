@@ -2,9 +2,9 @@ name: Build & Lint
 
 on:
   push:
-    branches: [master]
+    branches: [astro-build]
   pull_request:
-    branches: [master]
+    branches: [astro-build]
 
 jobs:
   lint:

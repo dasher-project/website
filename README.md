@@ -118,6 +118,7 @@ To add a page to the documentation sidebar, edit `src/utils/nav.ts`:
 ### Downloadable Resources
 
 Alphabet XML files and training texts are stored in `public/download/`:
+
 - `/public/download/alphabets/` - 144 alphabet XML files
 - `/public/download/training.html` - Training text downloads
 
@@ -129,20 +130,21 @@ Alphabet XML files and training texts are stored in `public/download/`:
 
 ## Scripts
 
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start development server |
-| `npm run build` | Build for production |
-| `npm run preview` | Preview production build |
-| `npm run lint` | Run ESLint |
-| `npm run format` | Format code with Prettier |
-| `npm run format:check` | Check formatting |
+| Command                | Description               |
+| ---------------------- | ------------------------- |
+| `npm run dev`          | Start development server  |
+| `npm run build`        | Build for production      |
+| `npm run preview`      | Preview production build  |
+| `npm run lint`         | Run ESLint                |
+| `npm run format`       | Format code with Prettier |
+| `npm run format:check` | Check formatting          |
 
 ## Deployment
 
 The site is automatically deployed to GitHub Pages on push to the `master` branch via GitHub Actions.
 
 **Deployment workflow:**
+
 1. Push to `master` branch
 2. GitHub Actions runs `build.yml` (lint + build)
 3. If successful, `deploy.yml` publishes to GitHub Pages
@@ -153,6 +155,7 @@ The site is automatically deployed to GitHub Pages on push to the `master` branc
 The site uses a custom design system with CSS custom properties:
 
 **Colors:**
+
 - `--color-deep-ink: #27537B` - Primary text and headings
 - `--color-horizon-mint: #A8D0CB` - Accents and highlights
 - `--color-focus-yellow: #F4E47E` - Callouts and emphasis
@@ -160,6 +163,7 @@ The site uses a custom design system with CSS custom properties:
 - `--color-canvas-white: #F8F9FA` - Backgrounds
 
 **Typography:**
+
 - `--font-ui: 'Inter'` - UI text
 - `--font-display: 'Outfit'` - Headings
 

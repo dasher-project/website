@@ -33,6 +33,7 @@ These repositories contain the latest development work but are **not yet ready f
 ### Stable Release (v5)
 
 The stable version 5 release is maintained separately:
+
 - **[dasher-project/dasher](https://github.com/dasher-project/dasher)** - Version 5.x releases (stable)
 
 ## Getting Started as a Developer
@@ -109,6 +110,7 @@ dasher-gtk/               # GTK user interface
 ### Key Classes and Interfaces
 
 #### DasherCore
+
 The main engine that coordinates all components:
 
 ```cpp
@@ -124,6 +126,7 @@ namespace Dasher {
 ```
 
 #### CDasherAlphabet
+
 Represents the character set and ordering:
 
 ```cpp
@@ -136,6 +139,7 @@ class CDasherAlphabet {
 ```
 
 #### CDasherLanguageModel
+
 Language model interface for predictions:
 
 ```cpp
@@ -152,6 +156,7 @@ class CDasherLanguageModel {
 To port Dasher to a new platform, you need to implement:
 
 ### CDasherScreen
+
 Draws the Dasher display:
 
 ```cpp
@@ -166,6 +171,7 @@ class CDasherScreen {
 ```
 
 ### CDasherInput
+
 Receives pointer input:
 
 ```cpp
@@ -177,6 +183,7 @@ class CDasherInput {
 ```
 
 ### CDasherTimer
+
 Controls frame timing:
 
 ```cpp
@@ -224,6 +231,7 @@ Collect 300K+ characters of natural text in the target language. The text should
 - From public domain or appropriately licensed sources
 
 Good sources include:
+
 - [Project Gutenberg](https://www.gutenberg.org/) (public domain books)
 - Wikipedia dumps
 - Government documents

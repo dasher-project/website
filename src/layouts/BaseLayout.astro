@@ -1,8 +1,6 @@
 ---
-const {
-  title = 'Dasher',
-  description = 'An information-efficient text-entry interface',
-} = Astro.props;
+const { title = 'Dasher', description = 'An information-efficient text-entry interface' } =
+  Astro.props;
 
 const currentPath = Astro.url.pathname;
 const navItems = [
@@ -36,16 +34,19 @@ const navItems = [
         <a class="site-brand" href="/">Dasher</a>
         <nav aria-label="Primary">
           <ul class="site-nav-list">
-            {navItems.map((item) => {
-              const active = item.href === '/'
-                ? currentPath === '/'
-                : currentPath.startsWith(item.href);
-              return (
-                <li>
-                  <a class={active ? 'active' : undefined} href={item.href}>{item.label}</a>
-                </li>
-              );
-            })}
+            {
+              navItems.map((item) => {
+                const active =
+                  item.href === '/' ? currentPath === '/' : currentPath.startsWith(item.href);
+                return (
+                  <li>
+                    <a class={active ? 'active' : undefined} href={item.href}>
+                      {item.label}
+                    </a>
+                  </li>
+                );
+              })
+            }
           </ul>
         </nav>
       </div>
@@ -58,7 +59,11 @@ const navItems = [
     <footer class="site-footer">
       <div class="container site-footer-inner">
         <p>Dasher Project</p>
-        <p><a href="https://github.com/dasher-project" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+        <p>
+          <a href="https://github.com/dasher-project" target="_blank" rel="noopener noreferrer"
+            >GitHub</a
+          >
+        </p>
       </div>
     </footer>
   </body>

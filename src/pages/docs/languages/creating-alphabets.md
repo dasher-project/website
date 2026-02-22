@@ -32,25 +32,26 @@ display order in Dasher.
     &lt;!-- more characters... --&gt;
   &lt;/group&gt;
 
-  &lt;group label="Uppercase"&gt;
-    &lt;char d="A" /&gt;
-    &lt;char d="B" /&gt;
-    &lt;!-- more characters... --&gt;
-  &lt;/group&gt;
+&lt;group label="Uppercase"&gt;
+&lt;char d="A" /&gt;
+&lt;char d="B" /&gt;
+&lt;!-- more characters... --&gt;
+&lt;/group&gt;
 
-  &lt;group label="Numbers"&gt;
-    &lt;char d="0" /&gt;
-    &lt;char d="1" /&gt;
-    &lt;!-- more characters... --&gt;
-  &lt;/group&gt;
+&lt;group label="Numbers"&gt;
+&lt;char d="0" /&gt;
+&lt;char d="1" /&gt;
+&lt;!-- more characters... --&gt;
+&lt;/group&gt;
 
-  &lt;group label="Punctuation"&gt;
-    &lt;char d=" " /&gt;  &lt;!-- space --&gt;
-    &lt;char d="." /&gt;
-    &lt;char d="," /&gt;
-    &lt;!-- more punctuation... --&gt;
-  &lt;/group&gt;
+&lt;group label="Punctuation"&gt;
+&lt;char d=" " /&gt; &lt;!-- space --&gt;
+&lt;char d="." /&gt;
+&lt;char d="," /&gt;
+&lt;!-- more punctuation... --&gt;
+&lt;/group&gt;
 &lt;/alphabet&gt;</code></pre>
+
 </div>
 
 ### Character Attributes

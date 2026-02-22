@@ -1,0 +1,8 @@
+dist
+.astro
+
+# Legacy mirrored site content (invalid/legacy HTML not suitable for Prettier)
+public/download/**
+public/videos/*.html
+static/dasher/**
+static/images/favicon.ico

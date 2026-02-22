@@ -1008,7 +1008,8 @@ blockquote {
 }
 
 /* Lists */
-ol, ul {
+ol,
+ul {
   padding-left: var(--space-lg);
 }
 

@@ -147,6 +147,7 @@ Dasher can use macOS's built-in text-to-speech:
 **Problem:** "Damaged" or "can't be opened" error
 
 **Solution:**
+
 ```bash
 # Remove quarantine attribute
 xattr -cr /Applications/Dasher.app
@@ -158,6 +159,7 @@ open /Applications/Dasher.app
 **Problem:** Dasher crashes on launch
 
 **Solution:**
+
 - Check macOS version (need 10.9+)
 - Download v5.14 for recent macOS
 - Try running from Terminal to see error messages:
@@ -169,6 +171,7 @@ open /Applications/Dasher.app
 **Problem:** Camera not working for head tracking
 
 **Solution:**
+
 - Grant camera permissions: System Settings → Privacy & Security → Camera
 - Ensure no other app is using the camera
 - Test camera in Photo Booth first
@@ -177,6 +180,7 @@ open /Applications/Dasher.app
 **Problem:** No sound output
 
 **Solution:**
+
 - Check System Settings → Sound (Output not muted)
 - In Dasher, check Preferences → Speech
 - Test system speech in Terminal:
@@ -187,6 +191,7 @@ open /Applications/Dasher.app
 **Problem:** Switch Control not working
 
 **Solution:**
+
 - Verify macOS Switch Control is enabled
 - Test switches work in System Settings
 - Ensure Dasher has accessibility permissions
@@ -195,6 +200,7 @@ open /Applications/Dasher.app
 **Problem:** For older macOS (pre-10.5)
 
 **Solution:**
+
 - The v4.11 package requires expat 2.0.1
 - Consider upgrading macOS if possible
 - Or build from source (see Development Guide)

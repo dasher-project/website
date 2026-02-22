@@ -32,9 +32,7 @@ export const docsNav: NavItem[] = [
   {
     title: 'Concepts',
     href: '/docs/concepts/',
-    children: [
-      { title: 'How Dasher Works', href: '/docs/concepts/how-dasher-works/' },
-    ],
+    children: [{ title: 'How Dasher Works', href: '/docs/concepts/how-dasher-works/' }],
   },
   {
     title: 'Special Needs',
@@ -43,9 +41,7 @@ export const docsNav: NavItem[] = [
   {
     title: 'Languages',
     href: '/docs/languages/',
-    children: [
-      { title: 'Creating Alphabets', href: '/docs/languages/creating-alphabets/' },
-    ],
+    children: [{ title: 'Creating Alphabets', href: '/docs/languages/creating-alphabets/' }],
   },
   {
     title: 'History',
@@ -54,16 +50,12 @@ export const docsNav: NavItem[] = [
   {
     title: 'Tutorials',
     href: '/docs/tutorials/',
-    children: [
-      { title: 'Advanced Tutorial', href: '/docs/tutorials/advanced/' },
-    ],
+    children: [{ title: 'Advanced Tutorial', href: '/docs/tutorials/advanced/' }],
   },
   {
     title: 'Reference',
     href: '/docs/reference/',
-    children: [
-      { title: 'Parameter Reference', href: '/docs/reference/parameters/' },
-    ],
+    children: [{ title: 'Parameter Reference', href: '/docs/reference/parameters/' }],
   },
   {
     title: 'Research',

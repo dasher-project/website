@@ -64,6 +64,7 @@ To use Dasher to type in other apps:
 **Problem:** App won't install
 
 **Solution:**
+
 - Ensure you have Android 5.0 (Lollipop) or higher
 - Clear Play Store cache: Settings → Apps → Play Store → Storage → Clear cache
 - If using F-Droid, ensure "Unknown sources" is enabled in your security settings
@@ -71,6 +72,7 @@ To use Dasher to type in other apps:
 **Problem:** Touch input is unresponsive
 
 **Solution:**
+
 - Check your device's touch sensitivity settings
 - Try a different input method (tilt or button)
 - Recalibrate touch in Dasher settings
@@ -78,6 +80,7 @@ To use Dasher to type in other apps:
 **Problem:** Can't select Dasher as keyboard
 
 **Solution:**
+
 - Go to Android Settings → Language & input
 - Enable Dasher in the keyboard list
 - When typing, long-press the spacebar to switch keyboards

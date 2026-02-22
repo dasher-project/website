@@ -80,6 +80,7 @@ layout: ../../../layouts/BaseLayout.astro
       check out our <a href="https://github.com/dasher-project/dasher" target="_blank" rel="noopener noreferrer">GitHub repository</a>,
       and follow our progress as we continue to improve Dasher.
     </p>
+
   </div>
 
   <footer class="blog-footer">

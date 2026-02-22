@@ -1,6 +1,6 @@
 ---
-title: "How Dasher Works: Probability - Dasher"
-description: "Learn how Dasher works - probability and size"
+title: 'How Dasher Works: Probability - Dasher'
+description: 'Learn how Dasher works - probability and size'
 layout: ../../../../layouts/DocsLayout.astro
 ---
 

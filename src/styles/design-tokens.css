@@ -6,11 +6,11 @@
 
 :root {
   /* Color Palette */
-  --color-deep-ink: #27537B;
-  --color-horizon-mint: #A8D0CB;
-  --color-focus-yellow: #F4E47E;
-  --color-target-coral: #D96A6A;
-  --color-canvas-white: #F8F9FA;
+  --color-deep-ink: #27537b;
+  --color-horizon-mint: #a8d0cb;
+  --color-focus-yellow: #f4e47e;
+  --color-target-coral: #d96a6a;
+  --color-canvas-white: #f8f9fa;
 
   /* Typography */
   --font-ui: 'Inter', system-ui, -apple-system, sans-serif;

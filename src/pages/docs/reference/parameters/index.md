@@ -38,6 +38,7 @@ Dasher can be configured through various parameters to customize the experience 
 ## Getting Help
 
 For more information on specific parameters, see:
+
 - <a href="/docs/getting-started/how-to/manual/">User Manual</a>
 - <a href="https://github.com/dasher-project/dasher/issues" target="_blank" rel="noopener noreferrer">GitHub Issues</a>
 - <a href="https://matrix.to/#/#dasher:matrix.org" target="_blank" rel="noopener noreferrer">Matrix Chat</a>
