@@ -35,8 +35,37 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     `;
   };
 
+  const loadPagefindUI = () =>
+    new Promise((resolve, reject) => {
+      if (window.PagefindUI) {
+        resolve(window.PagefindUI);
+        return;
+      }
+
+      const existing = document.querySelector('script[data-pagefind-ui]');
+      if (existing) {
+        existing.addEventListener('load', () => {
+          if (window.PagefindUI) resolve(window.PagefindUI);
+          else reject(new Error('Pagefind UI loaded without global constructor'));
+        });
+        existing.addEventListener('error', () => reject(new Error('Failed to load Pagefind UI')));
+        return;
+      }
+
+      const script = document.createElement('script');
+      script.src = '/pagefind/pagefind-ui.js';
+      script.async = true;
+      script.dataset.pagefindUi = 'true';
+      script.onload = () => {
+        if (window.PagefindUI) resolve(window.PagefindUI);
+        else reject(new Error('Pagefind UI loaded without global constructor'));
+      };
+      script.onerror = () => reject(new Error('Failed to load Pagefind UI'));
+      document.head.appendChild(script);
+    });
+
   try {
-    const { PagefindUI } = await import('/pagefind/pagefind-ui.js');
+    const PagefindUI = await loadPagefindUI();
     new PagefindUI({
       element: '#search-ui',
       showSubResults: true,
@@ -49,7 +78,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         search_label: 'Search site',
       },
     });
-  } catch {
+  } catch (error) {
+    console.error(error);
     showFallback();
   }
 </script>
