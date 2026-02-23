@@ -1,6 +1,7 @@
 # Dasher Website
 
 This repository contains the source code for the [official Dasher website](https://dasher.at).
+NB: We hold this on astro-build - the original one is on hugo-build
 
 ## Technology Stack
 
