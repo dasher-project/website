@@ -1474,3 +1474,289 @@ li {
 .link:hover {
   text-decoration: underline;
 }
+
+/* ==========================================================================
+   DARK MODE OVERRIDES - WCAG AA Compliant
+   ========================================================================== */
+
+/* Cards and boxes with light backgrounds need dark mode treatment */
+html.dark .community-link,
+html.dark .download-card,
+html.dark .group,
+html.dark .platform,
+html.dark .example-box,
+html.dark .source,
+html.dark .resource,
+html.dark .issue,
+html.dark .faq-item,
+html.dark .hardware-recommendation,
+html.dark .team-member,
+html.dark .year,
+html.dark .language-category,
+html.dark .special-lang,
+html.dark .step,
+html.dark .doc-section,
+html.dark .research-card,
+html.dark .paper,
+html.dark .presentation,
+html.dark .blog-post-card,
+html.dark .demo-card,
+html.dark .demo-preview,
+html.dark .video-item,
+html.dark .external-link,
+html.dark .feature-card,
+html.dark .update-card,
+html.dark .input-method,
+html.dark .timeline-item,
+html.dark .timeline-content,
+html.dark .previous-summary,
+html.dark .demo-type {
+  background-color: var(--color-bg-elevated);
+  border-color: var(--color-border);
+  color: var(--color-text-primary);
+}
+
+/* Colored backgrounds need accessible alternatives in dark mode */
+html.dark .note,
+html.dark .info-box,
+html.dark .cta-box,
+html.dark .page-nav,
+html.dark .diagram,
+html.dark .performance-box,
+html.dark .instruction-box,
+html.dark .contributors-box,
+html.dark .try-section,
+html.dark .presentation-note,
+html.dark .demo-nav,
+html.dark .demo-note,
+html.dark .demo-media,
+html.dark .demo-iframe-wrap,
+html.dark .blog-tag,
+html.dark .cta-links a {
+  background-color: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+}
+
+/* Key concept boxes */
+html.dark .key-concept,
+html.dark .cta-section,
+html.dark .search-fallback {
+  background-color: var(--color-bg-elevated);
+  border: 2px solid var(--color-focus-yellow);
+  color: var(--color-text-primary);
+}
+
+/* Coral backgrounds need high contrast text */
+html.dark .intro-box,
+html.dark .key-concept-coral,
+html.dark .note-box {
+  background-color: #8a4a4a;
+  color: #ffffff;
+}
+
+html.dark .intro-box h1,
+html.dark .intro-box h2,
+html.dark .key-concept-coral h2 {
+  color: #ffffff;
+}
+
+/* File size badges */
+html.dark .file-size,
+html.dark .year-label {
+  background-color: var(--color-target-coral);
+  color: #121820;
+}
+
+/* Code blocks */
+html.dark code {
+  background-color: var(--color-bg-elevated);
+  color: var(--color-text-primary);
+}
+
+html.dark pre {
+  background-color: var(--color-bg-secondary);
+  border-color: var(--color-border);
+  color: var(--color-text-primary);
+}
+
+/* Blockquotes */
+html.dark blockquote {
+  border-left-color: var(--color-border);
+  color: var(--color-text-secondary);
+}
+
+/* Notes and contacts */
+html.dark .notes-editors,
+html.dark .contacts {
+  background-color: var(--color-bg-elevated);
+  border-color: var(--color-border);
+}
+
+/* Links in cards */
+html.dark .community-link,
+html.dark .download-card,
+html.dark .research-card,
+html.dark .quick-start-card,
+html.dark .external-link {
+  color: var(--color-text-primary);
+}
+
+html.dark .community-link:hover,
+html.dark .download-card:hover,
+html.dark .research-card:hover,
+html.dark .quick-start-card:hover,
+html.dark .external-link:hover {
+  border-color: var(--color-target-coral);
+}
+
+html.dark .quick-start-card {
+  background-color: var(--color-bg-elevated);
+  border-color: var(--color-border);
+}
+
+html.dark .quick-start-card:hover {
+  background-color: var(--color-bg-secondary);
+}
+
+/* File links */
+html.dark .files a {
+  background-color: var(--color-bg-elevated);
+  color: var(--color-text-primary);
+}
+
+html.dark .files a:hover {
+  background-color: var(--color-target-coral);
+  color: #121820;
+}
+
+/* CTA links */
+html.dark .cta-links a:hover {
+  background-color: var(--color-target-coral);
+  color: #121820;
+}
+
+/* Doc sections */
+html.dark .doc-section:hover {
+  border-color: var(--color-focus-yellow);
+}
+
+html.dark .doc-section h2,
+html.dark .feature-card h3 {
+  color: var(--color-text-primary);
+}
+
+html.dark .doc-section a,
+html.dark .sidebar-card a {
+  color: var(--color-link);
+}
+
+html.dark .doc-section a:hover,
+html.dark .sidebar-card a:hover {
+  color: var(--color-link-hover);
+}
+
+/* Blog content */
+html.dark .blog-post-card h2 a {
+  color: var(--color-text-primary);
+}
+
+html.dark .blog-post-card h2 a:hover {
+  color: var(--color-link-hover);
+}
+
+html.dark .blog-content h2 {
+  border-bottom-color: var(--color-border);
+}
+
+html.dark .blog-footer {
+  border-top-color: var(--color-border);
+}
+
+/* Team member role */
+html.dark .team-member .role {
+  color: var(--color-target-coral);
+}
+
+/* Timeline */
+html.dark .timeline-year {
+  color: var(--color-target-coral);
+}
+
+html.dark .timeline-section {
+  background-color: var(--color-bg-primary);
+  border-top-color: var(--color-border);
+}
+
+/* About content */
+html.dark .about-content strong {
+  color: var(--color-text-primary);
+}
+
+html.dark .about-content li::before,
+html.dark .blog-content li::before {
+  color: var(--color-target-coral);
+}
+
+/* Demo images */
+html.dark .demo-image-container img {
+  border-color: var(--color-border);
+}
+
+/* Sidebar card */
+html.dark .sidebar-card {
+  background-color: var(--color-bg-elevated);
+  border-color: var(--color-border);
+}
+
+/* Caption text */
+html.dark .demo-preview .caption {
+  color: var(--color-text-secondary);
+}
+
+/* Video player */
+html.dark .video-player {
+  background-color: #000000;
+}
+
+/* Iframe */
+html.dark .demo-iframe {
+  background-color: var(--color-bg-secondary);
+}
+
+/* Lead text */
+html.dark .lead {
+  color: var(--color-text-secondary);
+}
+
+/* Ensure all headings are visible */
+html.dark h1,
+html.dark h2,
+html.dark h3,
+html.dark h4,
+html.dark h5,
+html.dark h6 {
+  color: var(--color-text-primary);
+}
+
+/* Ensure paragraphs in colored boxes are readable */
+html.dark .community-link p,
+html.dark .download-card p,
+html.dark .demo-card p,
+html.dark .demo-type p,
+html.dark .step p,
+html.dark .resource p,
+html.dark .source p,
+html.dark .issue p,
+html.dark .hardware-recommendation p,
+html.dark .team-member p,
+html.dark .year p,
+html.dark .external-link p,
+html.dark .blog-excerpt,
+html.dark .paper-meta,
+html.dark .research-card p,
+html.dark .feature-card p,
+html.dark .quick-start-card p,
+html.dark .update-card p {
+  color: var(--color-text-secondary);
+}
