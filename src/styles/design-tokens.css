@@ -5,12 +5,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700&display=swap');
 
 :root {
-  /* Color Palette */
+  /* Color Palette - Light Mode */
   --color-deep-ink: #27537b;
   --color-horizon-mint: #a8d0cb;
   --color-focus-yellow: #f4e47e;
   --color-target-coral: #d96a6a;
   --color-canvas-white: #f8f9fa;
+
+  /* Semantic Colors - Light Mode */
+  --color-text-primary: #1a2a3a;
+  --color-text-secondary: #4a5a6a;
+  --color-text-muted: #6a7a8a;
+  --color-link: #1e4a6e;
+  --color-link-hover: #c25050;
+  --color-bg-primary: #f8f9fa;
+  --color-bg-secondary: #ffffff;
+  --color-bg-elevated: #ffffff;
+  --color-border: #d0dde8;
+  --color-border-subtle: #e8eff5;
+  --color-focus-ring: #d96a6a;
 
   /* Typography */
   --font-ui: 'Inter', system-ui, -apple-system, sans-serif;
@@ -37,4 +50,27 @@
   --max-width-content: 1200px;
   --max-width-docs: 900px;
   --header-height: 64px;
+}
+
+/* Dark Mode - WCAG AA Compliant */
+html.dark {
+  /* Brand colors adjusted for dark backgrounds */
+  --color-deep-ink: #7eb8d8;
+  --color-horizon-mint: #2a4a5a;
+  --color-focus-yellow: #e8d86c;
+  --color-target-coral: #f09090;
+  --color-canvas-white: #121820;
+
+  /* Semantic Colors - Dark Mode */
+  --color-text-primary: #f0f4f8;
+  --color-text-secondary: #c8d4e0;
+  --color-text-muted: #98a8b8;
+  --color-link: #7ec8f8;
+  --color-link-hover: #f8a8a8;
+  --color-bg-primary: #121820;
+  --color-bg-secondary: #1a2430;
+  --color-bg-elevated: #222e3c;
+  --color-border: #3a4a5a;
+  --color-border-subtle: #2a3a4a;
+  --color-focus-ring: #f09090;
 }

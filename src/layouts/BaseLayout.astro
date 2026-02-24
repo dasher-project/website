@@ -47,6 +47,16 @@ const navItems = [
                 );
               })
             }
+            <li>
+              <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                <svg id="sun-icon" class="theme-icon" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+                </svg>
+                <svg id="moon-icon" class="theme-icon" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                </svg>
+              </button>
+            </li>
           </ul>
         </nav>
       </div>
@@ -66,6 +76,40 @@ const navItems = [
         </p>
       </div>
     </footer>
+
+    <script is:inline>
+      // Dark mode toggle functionality
+      const themeToggle = document.getElementById('theme-toggle');
+      const html = document.documentElement;
+      const sunIcon = document.getElementById('sun-icon');
+      const moonIcon = document.getElementById('moon-icon');
+      
+      function updateIcons() {
+        if (html.classList.contains('dark')) {
+          sunIcon.style.display = 'block';
+          moonIcon.style.display = 'none';
+        } else {
+          sunIcon.style.display = 'none';
+          moonIcon.style.display = 'block';
+        }
+      }
+      
+      function toggleTheme() {
+        html.classList.toggle('dark');
+        localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+        updateIcons();
+      }
+      
+      // Initialize theme from localStorage or system preference
+      if (localStorage.getItem('theme') === 'dark' || 
+          (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        html.classList.add('dark');
+      }
+      
+      updateIcons();
+      
+      themeToggle.addEventListener('click', toggleTheme);
+    </script>
   </body>
 </html>
 
@@ -78,9 +122,15 @@ const navItems = [
     position: sticky;
     top: 0;
     z-index: 100;
-    background: color-mix(in srgb, var(--color-canvas-white) 92%, white);
-    border-bottom: 1px solid color-mix(in srgb, var(--color-deep-ink) 15%, transparent);
-    backdrop-filter: blur(6px);
+    background: color-mix(in srgb, var(--color-bg-primary) 95%, transparent);
+    border-bottom: 1px solid var(--color-border-subtle);
+    backdrop-filter: blur(8px);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+
+  html.dark .site-header {
+    background: color-mix(in srgb, var(--color-bg-primary) 90%, transparent);
+    border-bottom-color: var(--color-border);
   }
 
   .site-header-inner {
@@ -96,6 +146,11 @@ const navItems = [
     font-size: 1.125rem;
     font-weight: 700;
     text-decoration: none;
+    color: var(--color-text-primary);
+  }
+
+  .site-brand:hover {
+    color: var(--color-link-hover);
   }
 
   .site-nav-list {
@@ -114,21 +169,36 @@ const navItems = [
     border-radius: var(--radius-sm);
     display: inline-flex;
     align-items: center;
+    color: var(--color-text-primary);
+    transition: var(--transition-smooth);
   }
 
   .site-nav-list a:hover {
-    background-color: color-mix(in srgb, var(--color-horizon-mint) 55%, transparent);
+    background-color: var(--color-bg-elevated);
+    color: var(--color-link-hover);
   }
 
   .site-nav-list a.active {
     background-color: var(--color-horizon-mint);
     font-weight: 600;
+    color: #1a2a3a;
+  }
+
+  html.dark .site-nav-list a.active {
+    background-color: var(--color-bg-elevated);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
   }
 
   .site-footer {
     margin-top: var(--space-2xl);
-    border-top: 1px solid color-mix(in srgb, var(--color-deep-ink) 15%, transparent);
+    border-top: 1px solid var(--color-border-subtle);
     padding: var(--space-lg) 0;
+    transition: border-color 0.3s ease;
+  }
+
+  html.dark .site-footer {
+    border-top-color: var(--color-border);
   }
 
   .site-footer-inner {
@@ -140,6 +210,15 @@ const navItems = [
 
   .site-footer p {
     margin: 0;
+    color: var(--color-text-secondary);
+  }
+
+  .site-footer a {
+    color: var(--color-link);
+  }
+
+  .site-footer a:hover {
+    color: var(--color-link-hover);
   }
 
   @media (max-width: 900px) {
@@ -155,5 +234,33 @@ const navItems = [
       flex-direction: column;
       align-items: flex-start;
     }
+  }
+
+  /* Theme Toggle Button */
+  .theme-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.4rem 0.65rem;
+    border-radius: var(--radius-sm);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-smooth);
+  }
+
+  .theme-toggle:hover {
+    background-color: var(--color-bg-elevated);
+  }
+
+  .theme-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: var(--color-text-primary);
+    transition: var(--transition-smooth);
+  }
+
+  .theme-toggle:hover .theme-icon {
+    color: var(--color-link-hover);
   }
 </style>

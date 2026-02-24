@@ -25,7 +25,7 @@ Welcome to the Dasher development guide! This document provides comprehensive in
 
 These repositories contain the latest development work but are **not yet ready for end users**:
 
-- **[dasher-core](https://github.com/dasher-project/dasher-core)** - Core engine, algorithms, and platform-independent code
+- **[dasher-core](https://github.com/dasher-project/DasherCore)** - Core engine, algorithms, and platform-independent code
 - **[dasher-gtk](https://github.com/dasher-project/dasher-gtk)** - GTK-based user interface
 
 ⚠️ **Warning:** The v6 code in these repositories is under active development. It may be unstable, incomplete, and unsuitable for daily use. For production use, download [Dasher 5.0](/downloads/).
@@ -51,7 +51,7 @@ The stable version 5 release is maintained separately:
 
 ```bash
 # Clone core engine
-git clone https://github.com/dasher-project/dasher-core.git
+git clone https://github.com/dasher-project/DasherCore.git
 
 # Clone GTK interface
 git clone https://github.com/dasher-project/dasher-gtk.git
@@ -377,8 +377,8 @@ ctest
 
 ### For Developers
 
-- **GitHub Issues:** [issues](https://github.com/dasher-project/dasher-core/issues)
-- **Pull Requests:** [PRs](https://github.com/dasher-project/dasher-core/pulls)
+- **GitHub Issues:** [issues](https://github.com/dasher-project/DasherCore/issues)
+- **Pull Requests:** [PRs](https://github.com/dasher-project/DasherCore/pulls)
 
 ### Historical Note
 
@@ -406,7 +406,7 @@ Dasher is licensed under the GNU General Public License (GPL-3.0). By contributi
 
 If you need help with development:
 
-1. Check existing [GitHub Issues](https://github.com/dasher-project/dasher-core/issues)
+1. Check existing [GitHub Issues](https://github.com/dasher-project/DasherCore/issues)
 2. Search [Discussions](https://github.com/dasher-project/dasher/discussions)
 3. Ask in [Matrix chat](https://matrix.to/#/#dasher:matrix.org)
 4. Create a new issue with your question
@@ -414,7 +414,7 @@ If you need help with development:
 <div class="cta-box">
   <h2>Ready to contribute?</h2>
   <p>
-    Fork <a href="https://github.com/dasher-project/dasher-core">dasher-core</a> or
+    Fork <a href="https://github.com/dasher-project/DasherCore">dasher-core</a> or
     <a href="https://github.com/dasher-project/dasher-gtk">dasher-gtk</a> and start contributing!
   </p>
 </div>
