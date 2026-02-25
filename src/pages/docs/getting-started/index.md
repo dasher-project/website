@@ -31,7 +31,7 @@ Welcome to the Dasher documentation. This section will help you get started with
     <h2>Demonstrations</h2>
     <p>See Dasher in action.</p>
     <ul>
-      <li><a href="/demonstrations/">Watch Demonstrations</a> - Videos and animations</li>
+      <li><a href="/about/#demonstrations">Watch Demonstrations</a> - Videos and animations</li>
     </ul>
   </section>
 
@@ -39,7 +39,7 @@ Welcome to the Dasher documentation. This section will help you get started with
     <h2>Need Help?</h2>
     <p>Get help from the community.</p>
     <ul>
-      <li><a href="/community/">Community</a> - Join the discussion</li>
+      <li><a href="/about/#community">Community</a> - Join the discussion</li>
       <li><a href="https://matrix.to/#/#dasher:matrix.org" target="_blank" rel="noopener noreferrer">Matrix Chat</a> - Real-time help</li>
     </ul>
   </section>

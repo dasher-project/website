@@ -117,7 +117,7 @@ Dasher welcomes contributions in all these areas. If you're interested in workin
 - **Research** - Conduct experiments and publish results
 - **Documentation** - Improve guides and tutorials
 
-See our [community page](/community/) for more ways to contribute.
+See our [community page](/about/#community) for more ways to contribute.
 
 ## Related Projects
 
@@ -171,5 +171,5 @@ The future of Dasher depends on community involvement. Whether you're a:
     <a href="https://github.com/dasher-project/dasher-core">dasher-core</a> and
     <a href="https://github.com/dasher-project/dasher-gtk">dasher-gtk</a> on GitHub.
   </p>
-  <a href="/community/" class="btn-primary">Join the Community</a>
+  <a href="/about/#community" class="btn-primary">Join the Community</a>
 </div>

@@ -20,6 +20,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             steering toward your target, you can enter text at speeds competitive with touch typing,
             using only a single pointing device.
           </p>
+          <div class="demo-note">
+            <p>
+              Real-world example: Yvette, a Dasher user, writes using a trackpad and reports speeds
+              of around 32 words per minute, faster than other techniques she has tried.
+            </p>
+            <p>
+              <a href="#yvette-trackpad-demo">Watch Yvette's demonstration video</a>.
+            </p>
+          </div>
 
           <h2>Origins</h2>
           <p>
@@ -99,8 +108,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <ul>
                 <li><a href="/docs/">Documentation</a></li>
                 <li><a href="/faq/">FAQ</a></li>
-                <li><a href="/press/">Press Information</a></li>
-                <li><a href="/demonstrations/">Demonstrations</a></li>
+                <li><a href="/downloads/">Downloads</a></li>
+                <li><a href="#demonstrations">Video Demos</a></li>
+                <li><a href="#community">Community</a></li>
                 <li>
                   <a
                     href="https://github.com/dasher-project/dasher"
@@ -115,7 +125,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                     rel="noopener noreferrer">Releases</a
                   >
                 </li>
-                <li><a href="/community/">Community</a></li>
               </ul>
             </div>
           </div>
@@ -180,6 +189,145 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <p>Community-driven development continues with regular updates and improvements</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Video Demonstrations -->
+    <section class="section" id="demonstrations">
+      <h2>Video Demonstrations</h2>
+      <p class="lead">
+        Watch Dasher in action with these video demonstrations showing different input methods.
+      </p>
+      <p>
+        <a
+          href="https://www.youtube.com/playlist?list=PLG22wrzFpavafCF-5u9jh6kS-UAIGkPbw"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-secondary">Open Full YouTube Playlist</a
+        >
+      </p>
+
+      <div class="video-list">
+        <div class="video-item" id="yvette-trackpad-demo">
+          <h3>Yvette: Trackpad Demo (~32 WPM)</h3>
+          <p>
+            Yvette uses Dasher with a trackpad and reports typing at around 32 words per minute.
+          </p>
+          <div class="video-player">
+            <iframe
+              src="https://www.youtube.com/embed/va1WufK864o"
+              title="Yvette using Dasher with a trackpad"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+        </div>
+
+        <div class="video-item">
+          <h3>Eye-Tracking Demo (Nov 2001)</h3>
+          <p>Classic eye-tracking demonstration from the original project videos.</p>
+          <div class="video-player">
+            <iframe
+              src="https://www.youtube.com/embed/-96VfRFS7tw"
+              title="Eye-tracking demo (Nov 2001)"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+        </div>
+
+        <div class="video-item">
+          <h3>Control Mode</h3>
+          <p>Enhanced eye-tracking mode demonstrating control mode behavior.</p>
+          <div class="video-player">
+            <iframe
+              src="https://www.youtube.com/embed/KwpGpCSK2Pk"
+              title="Dasher control mode demo"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+        </div>
+
+        <div class="video-item">
+          <h3>Dasher Eyetracker and BreathDasher</h3>
+          <p>Additional legacy demos now hosted on YouTube.</p>
+          <div class="video-player">
+            <iframe
+              src="https://www.youtube.com/embed/qW2-Qvj_p7k"
+              title="Dasher Eyetracker demo"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+          <p>
+            More videos:
+            <a href="https://youtu.be/Bz3OJXokFDs" target="_blank" rel="noopener noreferrer"
+              >EyeDasher 4800</a
+            >,
+            <a href="https://youtu.be/_tMIotLU7Co" target="_blank" rel="noopener noreferrer"
+              >BreathDasher</a
+            >.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community -->
+    <section class="section" id="community">
+      <h2>Join the Dasher Community</h2>
+      <p>
+        Dasher is developed and maintained by a global community of users, developers, and
+        researchers. We welcome contributions of all kinds.
+      </p>
+
+      <div class="community-links">
+        <a
+          href="https://matrix.to/#/#dasher:matrix.org"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="community-link"
+        >
+          <h3>Matrix Chat</h3>
+          <p>Join our real-time chat for questions and support.</p>
+        </a>
+
+        <a
+          href="https://github.com/dasher-project/dasher"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="community-link"
+        >
+          <h3>GitHub</h3>
+          <p>Report bugs, request features, and contribute code.</p>
+        </a>
+
+        <a
+          href="https://github.com/dasher-project/dasher/discussions"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="community-link"
+        >
+          <h3>Discussions</h3>
+          <p>Share questions and ideas with the community.</p>
+        </a>
+
+        <a href="/blog/" class="community-link">
+          <h3>Blog</h3>
+          <p>News, updates, and development progress.</p>
+        </a>
       </div>
     </section>
   </div>

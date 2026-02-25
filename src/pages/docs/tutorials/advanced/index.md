@@ -28,7 +28,7 @@ Advanced configuration and customization options for Dasher.
     <h2>Input Methods</h2>
     <ul>
       <li><a href="/docs/special-needs/">Accessibility Input Methods</a> - Eye-tracking, head-tracking, and more</li>
-      <li><a href="/demonstrations/">Demonstrations</a> - See various input methods in action</li>
+      <li><a href="/about/#demonstrations">Demonstrations</a> - See various input methods in action</li>
     </ul>
   </section>
 </div>

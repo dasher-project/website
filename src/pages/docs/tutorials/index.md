@@ -30,7 +30,7 @@ Step-by-step guides to help you get started with Dasher.
     <h2>Demonstrations</h2>
     <p>See Dasher in action with videos and animations.</p>
     <ul>
-      <li><a href="/demonstrations/">Watch Demonstrations</a> - Videos and animated GIFs</li>
+      <li><a href="/about/#demonstrations">Watch Demonstrations</a> - Videos and animated GIFs</li>
     </ul>
   </section>
 </div>

@@ -620,7 +620,7 @@ pre code {
 
 .diagram img {
   max-width: 100%;
-  width: 100%;
+  width: min(100%, 420px);
   height: auto;
   display: block;
   border-radius: var(--radius-sm);
@@ -654,6 +654,14 @@ pre code {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: var(--space-md);
+}
+
+.diagram-grid-tight {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.diagram-grid-tight .diagram img {
+  width: min(100%, 260px);
 }
 
 /* Key concept with coral background */
@@ -1367,6 +1375,23 @@ li {
   }
 }
 
+@media (max-width: 860px) {
+  .what-is-dasher-content {
+    grid-template-columns: 1fr;
+  }
+
+  .what-is-dasher-demo {
+    max-width: 340px;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .diagram-grid-tight {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Homepage */
 .hero-section {
   text-align: center;
@@ -1384,6 +1409,43 @@ li {
   max-width: 700px;
   margin: 0 auto var(--space-lg);
   opacity: 0.9;
+}
+
+.what-is-dasher-content {
+  display: grid;
+  grid-template-columns: minmax(220px, 300px) 1fr;
+  gap: var(--space-lg);
+  align-items: start;
+}
+
+.what-is-dasher-demo {
+  margin: 0;
+  padding: var(--space-md);
+  background-color: var(--color-canvas-white);
+  border: 2px solid var(--color-horizon-mint);
+  border-radius: var(--radius-md);
+}
+
+.what-is-dasher-demo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-sm);
+}
+
+.demo-caption {
+  margin-top: var(--space-sm);
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
+.key-feature-points {
+  margin: var(--space-md) 0 0 0;
+  padding-left: 1.25rem;
+}
+
+.key-feature-points li {
+  margin-bottom: var(--space-xs);
 }
 
 .feature-grid {
@@ -1504,6 +1566,7 @@ html.dark .demo-card,
 html.dark .demo-preview,
 html.dark .video-item,
 html.dark .external-link,
+html.dark .what-is-dasher-demo,
 html.dark .feature-card,
 html.dark .update-card,
 html.dark .input-method,
@@ -1744,6 +1807,7 @@ html.dark .community-link p,
 html.dark .download-card p,
 html.dark .demo-card p,
 html.dark .demo-type p,
+html.dark .demo-caption,
 html.dark .step p,
 html.dark .resource p,
 html.dark .source p,

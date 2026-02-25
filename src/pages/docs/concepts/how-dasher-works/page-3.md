@@ -65,7 +65,7 @@ The best way to understand Dasher is to see it in motion. We have several types 
     Visit our demonstrations page to see animations and videos of Dasher in action.
   </p>
   <p>
-    <a href="/demonstrations/" class="btn-primary">View All Demonstrations →</a>
+    <a href="/about/#demonstrations" class="btn-primary">View All Demonstrations →</a>
   </p>
 </div>
 
