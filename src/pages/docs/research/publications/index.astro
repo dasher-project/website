@@ -2,19 +2,8 @@
 import DocsLayout from '../../../../layouts/DocsLayout.astro';
 import relatedResearch from '../../../../data/related-research.json';
 
-type RelatedPaper = {
-  id: string;
-  type: string;
-  title: string;
-  authors: string;
-  venue: string;
-  year: number | null;
-  month: number;
-  doi: string;
-  url: string;
-};
-
-const relatedPapers: RelatedPaper[] = relatedResearch?.papers ?? [];
+/** @type {Array<{id: string, type: string, title: string, authors: string, venue: string, year: number | null, month: number, doi: string, url: string}>} */
+const relatedPapers = relatedResearch?.papers ?? [];
 const relatedCount = relatedPapers.length;
 const generatedAt = relatedResearch?.generatedAt
   ? new Date(relatedResearch.generatedAt).toLocaleDateString('en-US', {
@@ -24,19 +13,19 @@ const generatedAt = relatedResearch?.generatedAt
     })
   : null;
 
-function formatAuthors(authorText: string) {
+function formatAuthors(authorText) {
   if (!authorText) return 'Unknown authors';
   return authorText.replace(/\s+and\s+/gi, ', ');
 }
 
-function formatVenue(paper: RelatedPaper) {
+function formatVenue(paper) {
   const parts = [];
   if (paper.venue) parts.push(paper.venue);
   if (paper.year) parts.push(String(paper.year));
   return parts.join(' • ');
 }
 
-function doiUrl(doi: string) {
+function doiUrl(doi) {
   if (!doi) return null;
   const normalized = doi.replace(/^https?:\/\/doi\.org\//i, '');
   return `https://doi.org/${normalized}`;
