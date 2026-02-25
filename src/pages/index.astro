@@ -19,16 +19,30 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     <section class="section">
       <h2>What is Dasher?</h2>
-      <p>
-        Dasher is a revolutionary text-entry interface that uses a zooming interface where you
-        navigate toward your target. Unlike traditional keyboards where you hunt for each letter,
-        Dasher presents letters in a continuous stream where you steer toward what you want to type.
-      </p>
-      <p>
-        As you move toward a letter, it expands and other letters appear. By continuously steering
-        toward your target, you can enter text at speeds competitive with touch typing, using only a
-        single pointing device.
-      </p>
+      <div class="what-is-dasher-content">
+        <div class="what-is-dasher-text">
+          <p>
+            Dasher is a revolutionary text-entry interface that uses a zooming interface where you
+            navigate toward your target. Unlike traditional keyboards where you hunt for each letter,
+            Dasher presents letters in a continuous stream where you steer toward what you want to type.
+          </p>
+          <p>
+            As you move toward a letter, it expands and other letters appear. By continuously steering
+            toward your target, you can enter text at speeds competitive with touch typing, using only a
+            single pointing device.
+          </p>
+        </div>
+        <div class="what-is-dasher-demo">
+          <img
+            src="/videos/newdasher.gif"
+            alt="Animated GIF showing Dasher's zooming text-entry interface in action"
+            width="250"
+            height="230"
+            loading="lazy"
+          />
+          <p class="demo-caption">Dasher's zooming interface lets you steer toward letters to type.</p>
+        </div>
+      </div>
     </section>
 
     <section class="section">
@@ -57,6 +71,28 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </section>
 
     <section class="section">
+      <h2>Try It Now</h2>
+      <p>Experience Dasher directly in your browser with our web demo.</p>
+      <div class="demo-iframe-wrap">
+        <iframe
+          src="https://dasher-project.github.io/dasher-web/browser/index.html"
+          title="Dasher Web Demo"
+          class="demo-iframe"
+          allow="clipboard-read; clipboard-write; microphone; autoplay"
+          loading="lazy"
+        >
+        </iframe>
+      </div>
+      <p class="demo-fallback">
+        If the embed doesn't load, <a
+          href="https://dasher-project.github.io/dasher-web/browser/index.html"
+          target="_blank"
+          rel="noopener noreferrer">open the demo in a new tab</a
+        >.
+      </p>
+    </section>
+
+    <section class="section">
       <h2>Quick Start</h2>
       <div class="quick-start-grid">
         <a href="/docs/getting-started/install/" class="quick-start-card">
@@ -71,7 +107,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <h3>Add Languages</h3>
           <p>Configure Dasher for your preferred language.</p>
         </a>
-        <a href="/community/" class="quick-start-card">
+        <a href="/about/#community" class="quick-start-card">
           <h3>Join the Community</h3>
           <p>Get help, report bugs, and contribute to Dasher.</p>
         </a>

@@ -6,11 +6,8 @@ const currentPath = Astro.url.pathname;
 const navItems = [
   { href: '/', label: 'Home' },
   { href: '/about/', label: 'About' },
-  { href: '/demonstrations/', label: 'Demonstrations' },
   { href: '/downloads/', label: 'Downloads' },
   { href: '/docs/', label: 'Docs' },
-  { href: '/search/', label: 'Search' },
-  { href: '/community/', label: 'Community' },
   { href: '/faq/', label: 'FAQ' },
 ];
 ---
@@ -68,12 +65,19 @@ const navItems = [
 
     <footer class="site-footer">
       <div class="container site-footer-inner">
-        <p>Dasher Project</p>
-        <p>
-          <a href="https://github.com/dasher-project" target="_blank" rel="noopener noreferrer"
-            >GitHub</a
-          >
-        </p>
+        <div class="footer-brand">
+          <p><strong>Dasher Project</strong></p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer">
+          <ul class="footer-nav-list">
+            {navItems.map((item) => (
+              <li><a href={item.href}>{item.label}</a></li>
+            ))}
+            <li>
+              <a href="https://github.com/dasher-project" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </footer>
 
@@ -213,11 +217,27 @@ const navItems = [
     color: var(--color-text-secondary);
   }
 
-  .site-footer a {
-    color: var(--color-link);
+  .footer-brand p {
+    margin: 0;
+    color: var(--color-text-primary);
   }
 
-  .site-footer a:hover {
+  .footer-nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm) var(--space-md);
+  }
+
+  .footer-nav-list a {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: var(--transition-smooth);
+  }
+
+  .footer-nav-list a:hover {
     color: var(--color-link-hover);
   }
 

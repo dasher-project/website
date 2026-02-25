@@ -55,7 +55,7 @@ Experienced users reach **30 words per minute**.
 </div>
 
 For a movie demonstrating Dasher with an eye-tracker, see our
-<a href="/demonstrations/">demonstrations page</a>.
+<a href="/about/#demonstrations">demonstrations page</a>.
 
 ## Frequently Asked Questions
 
@@ -170,6 +170,6 @@ and speech output. Integration is available for both Linux and Windows systems.
   <h2>Get Started</h2>
   <p>
     Ready to try Dasher? <a href="/docs/getting-started/install/">Download and install</a> or
-    <a href="/demonstrations/">watch demonstrations</a> to see Dasher in action.
+    <a href="/about/#demonstrations">watch demonstrations</a> to see Dasher in action.
   </p>
 </div>

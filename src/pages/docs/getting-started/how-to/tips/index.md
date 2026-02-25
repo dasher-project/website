@@ -11,7 +11,7 @@ layout: ../../../../../layouts/DocsLayout.astro
 </nav>
 
 If you find Dasher hard to imagine based on static pictures, please take a look at the
-<a href="/demonstrations/">animations</a>. **When you watch someone else steering Dasher,
+<a href="/about/#demonstrations">animations</a>. **When you watch someone else steering Dasher,
 you may find it looks difficult, but be assured: it is actually very easy; it's a lot like driving a car.**
 
 ## Quick Tips for Using Dasher
@@ -50,7 +50,7 @@ Dasher has many settings you can adjust to make it more comfortable:
 
 ## Need More Help?
 
-- Watch the <a href="/demonstrations/">demonstrations</a> to see Dasher in action
+- Watch the <a href="/about/#demonstrations">demonstrations</a> to see Dasher in action
 - Read the <a href="/docs/getting-started/how-to/manual/">user manual</a> for detailed instructions
 - Join our <a href="https://matrix.to/#/#dasher:matrix.org" target="_blank" rel="noopener noreferrer">Matrix chat</a> to ask questions
 - Check out the <a href="https://github.com/dasher-project/dasher/discussions" target="_blank" rel="noopener noreferrer">GitHub discussions</a>

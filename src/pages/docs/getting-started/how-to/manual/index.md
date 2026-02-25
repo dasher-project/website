@@ -144,7 +144,7 @@ Your settings are automatically saved. To reset to defaults:
 
 ### Getting Help
 
-- Visit the [Community](/community/) page for support
+- Visit the [Community](/about/#community) page for support
 - Check the [Documentation](/docs/) for more guides
 - Report issues on [GitHub](https://github.com/dasher-project/dasher/issues)
 
