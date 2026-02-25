@@ -12,24 +12,6 @@ const generatedAt = relatedResearch?.generatedAt
       day: 'numeric',
     })
   : null;
-
-function formatAuthors(authorText) {
-  if (!authorText) return 'Unknown authors';
-  return authorText.replace(/\s+and\s+/gi, ', ');
-}
-
-function formatVenue(paper) {
-  const parts = [];
-  if (paper.venue) parts.push(paper.venue);
-  if (paper.year) parts.push(String(paper.year));
-  return parts.join(' • ');
-}
-
-function doiUrl(doi) {
-  if (!doi) return null;
-  const normalized = doi.replace(/^https?:\/\/doi\.org\//i, '');
-  return `https://doi.org/${normalized}`;
-}
 ---
 
 <DocsLayout title="Publications - Dasher Research" description="Academic publications about Dasher">
@@ -257,28 +239,41 @@ function doiUrl(doi) {
 
   <div class="papers">
     {
-      relatedPapers.map((paper) => (
-        <article class="paper">
-          <h2>{paper.title}</h2>
-          <p class="paper-meta">{formatAuthors(paper.authors)}</p>
-          {formatVenue(paper) && <p class="paper-meta">{formatVenue(paper)}</p>}
-          {(paper.url || paper.doi) && (
-            <p class="paper-meta">
-              {paper.url && (
-                <a href={paper.url} target="_blank" rel="noopener noreferrer">
-                  Open paper
-                </a>
-              )}
-              {paper.url && paper.doi && <> • </>}
-              {paper.doi && (
-                <a href={doiUrl(paper.doi)} target="_blank" rel="noopener noreferrer">
-                  DOI
-                </a>
-              )}
-            </p>
-          )}
-        </article>
-      ))
+      relatedPapers.map((paper) => {
+        const authors = paper.authors
+          ? paper.authors.replace(/\s+and\s+/gi, ', ')
+          : 'Unknown authors';
+        const venueParts = [];
+        if (paper.venue) venueParts.push(paper.venue);
+        if (paper.year) venueParts.push(String(paper.year));
+        const venue = venueParts.join(' • ');
+        const doiLink = paper.doi
+          ? `https://doi.org/${paper.doi.replace(/^https?:\/\/doi\.org\//i, '')}`
+          : null;
+
+        return (
+          <article class="paper">
+            <h2>{paper.title}</h2>
+            <p class="paper-meta">{authors}</p>
+            {venue && <p class="paper-meta">{venue}</p>}
+            {(paper.url || paper.doi) && (
+              <p class="paper-meta">
+                {paper.url && (
+                  <a href={paper.url} target="_blank" rel="noopener noreferrer">
+                    Open paper
+                  </a>
+                )}
+                {paper.url && paper.doi && <> • </>}
+                {doiLink && (
+                  <a href={doiLink} target="_blank" rel="noopener noreferrer">
+                    DOI
+                  </a>
+                )}
+              </p>
+            )}
+          </article>
+        );
+      })
     }
   </div>
 
