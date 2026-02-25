@@ -41,22 +41,20 @@ First, they walk into the "a" section of the library. There, they are confronted
 "aa", "ab", "ac.... az" [Picture (ii)].
 
 <div class="diagram-container">
-  <div class="diagram">
-    <strong>(ii)</strong>
-    <img src="/videos/he2.gif" alt="Dasher showing letter regions while writing 'hello'" width="226" height="363" loading="lazy" />
-    <p>Looking more closely at a specific region</p>
+  <div class="diagram-grid diagram-grid-tight">
+    <div class="diagram">
+      <strong>(ii)</strong>
+      <img src="/videos/he2.gif" alt="Dasher showing letter regions while writing 'hello'" width="226" height="363" loading="lazy" />
+      <p>Looking more closely at a specific region</p>
+    </div>
+    <div class="diagram">
+      <strong>(iii)</strong>
+      <img src="/videos/he10.gif" alt="Higher-resolution Dasher screenshot showing probable next letters" width="226" height="363" loading="lazy" />
+      <p>Zooming further into the most likely continuations</p>
+    </div>
   </div>
 </div>
-
 Looking more closely at the "al" section, they can find books starting "ala", "alb"... "alz" [Picture (iii)].
-
-<div class="diagram-container">
-  <div class="diagram">
-    <strong>(iii)</strong>
-    <img src="/videos/he10.gif" alt="Higher-resolution Dasher screenshot showing probable next letters" width="226" height="363" loading="lazy" />
-    <p>Zooming further into the most likely continuations</p>
-  </div>
-</div>
 
 By looking ever more closely at the shelf, the writer can find the book containing the text he wishes to write.
 Thus writing can be described as **zooming in on an alphabetical library, steering as you go**.
