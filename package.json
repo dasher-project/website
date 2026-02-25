@@ -4,8 +4,10 @@
   "description": "Dasher - An information-efficient text-entry interface",
   "type": "module",
   "scripts": {
+    "prebuild": "node scripts/sync-related-research.mjs",
     "dev": "astro dev",
     "build": "astro check && astro build && pagefind --site dist",
+    "research:sync": "node scripts/sync-related-research.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint .",

@@ -1,0 +1,261 @@
+{
+  "sourceBibtexUrl": "https://paperpile.com/eb/VDzRdyJpus",
+  "sharedPageUrl": "https://paperpile.com/shared/sfRoEJyQ5QA2Oe4GSpZo2~A",
+  "generatedAt": "2026-02-25T07:34:35.205Z",
+  "count": 23,
+  "papers": [
+    {
+      "id": "Etikikota2024-jm",
+      "type": "article",
+      "title": "Predictive tree-based virtual keyboard for improved gaze typing",
+      "authors": "Etikikota, Hrushikesh and Meena, Yogesh Kumar",
+      "venue": "arXiv [cs.HC]",
+      "year": 2024,
+      "month": 10,
+      "doi": "",
+      "url": ""
+    },
+    {
+      "id": "Hamid2024-pg",
+      "type": "article",
+      "title": "40 years of eye typing: Challenges, gaps, and emergent strategies",
+      "authors": "Hamid, Aleesha and Kristensson, Per Ola",
+      "venue": "Proc. ACM Hum. Comput. Interact.",
+      "year": 2024,
+      "month": 5,
+      "doi": "",
+      "url": ""
+    },
+    {
+      "id": "Yusufali2023-oo",
+      "type": "incollection",
+      "title": "Bridging the communication rate gap: Enhancing text input for augmentative and alternative communication (AAC)",
+      "authors": "Yusufali, Hussein and Goetze, Stefan and Moore, Roger K",
+      "venue": "Lecture Notes in Computer Science",
+      "year": 2023,
+      "month": 0,
+      "doi": "",
+      "url": ""
+    },
+    {
+      "id": "Majaranta2019-es",
+      "type": "incollection",
+      "title": "Eye movements and human-computer interaction",
+      "authors": "Majaranta, Päivi and Räihä, Kari-Jouko and Hyrskykari, Aulikki and Špakov, Oleg",
+      "venue": "Eye Movement Research",
+      "year": 2019,
+      "month": 0,
+      "doi": "",
+      "url": ""
+    },
+    {
+      "id": "Nel2017-pb",
+      "type": "article",
+      "title": "Modelling noise-resilient single-switch scanning systems",
+      "authors": "Nel, Emli-Mari and Kristensson, Per Ola and MacKay, David J C",
+      "venue": "arXiv [cs.HC]",
+      "year": 2017,
+      "month": 12,
+      "doi": "",
+      "url": ""
+    },
+    {
+      "id": "Rough2014-to",
+      "type": "inproceedings",
+      "title": "An evaluation of Dasher with a high-performance language model as a gaze communication method",
+      "authors": "Rough, Daniel and Vertanen, Keith and Kristensson, Per Ola",
+      "venue": "Proceedings of the 2014 International Working Conference on Advanced Visual Interfaces",
+      "year": 2014,
+      "month": 5,
+      "doi": "",
+      "url": ""
+    },
+    {
+      "id": "Sharma2013-fk",
+      "type": "article",
+      "title": "Eye gaze techniques for human computer interaction: A research survey",
+      "authors": "Sharma, Anjana and Abrol, Pawanesh",
+      "venue": "Int. J. Comput. Appl.",
+      "year": 2013,
+      "month": 6,
+      "doi": "",
+      "url": ""
+    },
+    {
+      "id": "Axelsson2013-bd",
+      "type": "mastersthesis",
+      "title": "Text input rate enhancement for Tobii AAC products",
+      "authors": "Axelsson, Pelle and Onoszko, Arthur",
+      "venue": "Royal Institute of Technology",
+      "year": 2013,
+      "month": 6,
+      "doi": "",
+      "url": ""
+    },
+    {
+      "id": "Kristensson2012-gm",
+      "type": "inproceedings",
+      "title": "The potential of dwell-free eye-typing for fast assistive gaze communication",
+      "authors": "Kristensson, Per Ola and Vertanen, Keith",
+      "venue": "Proceedings of the Symposium on Eye Tracking Research and Applications",
+      "year": 2012,
+      "month": 4,
+      "doi": "",
+      "url": ""
+    },
+    {
+      "id": "Broderick2009-me",
+      "type": "article",
+      "title": "Fast and flexible selection with a single switch",
+      "authors": "Broderick, Tamara and Mackay, David J C",
+      "venue": "PLoS One",
+      "year": 2009,
+      "month": 10,
+      "doi": "",
+      "url": ""
+    },
+    {
+      "id": "Majaranta2009-cx",
+      "type": "phdthesis",
+      "title": "Text Entry by Eye Gaze",
+      "authors": "Majaranta, Päivi",
+      "venue": "Tampereen yliopisto",
+      "year": 2009,
+      "month": 8,
+      "doi": "",
+      "url": ""
+    },
+    {
+      "id": "San_Agustin2009-xz",
+      "type": "inproceedings",
+      "title": "Low-cost gaze interaction: ready to deliver the promises",
+      "authors": "San Agustin, Javier and Skovsgaard, Henrik and Hansen, John P and Hansen, Dan W",
+      "venue": "Proceedings of the 27th international conference extended abstracts on Human factors in computing systems",
+      "year": 2009,
+      "month": 0,
+      "doi": "",
+      "url": ""
+    },
+    {
+      "id": "Tuisku2008-ww",
+      "type": "inproceedings",
+      "title": "Now Dasher! Dash away! longitudinal study of fast text entry by Eye Gaze",
+      "authors": "Tuisku, Outi and Majaranta, Päivi and Isokoski, Poika and Räihä, Kari-Jouko",
+      "venue": "Proceedings of the 2008 symposium on Eye tracking research & applications",
+      "year": 2008,
+      "month": 3,
+      "doi": "",
+      "url": ""
+    },
+    {
+      "id": "Hansen2008-tf",
+      "type": "inproceedings",
+      "title": "Noise tolerant selection by gaze-controlled pan and zoom in 3D",
+      "authors": "Hansen, Dan Witzner and Skovsgaard, Henrik H T and Hansen, John Paulin and Møllenbach, Emilie",
+      "venue": "Proceedings of the 2008 symposium on Eye tracking research & applications - ETRA '08",
+      "year": 2008,
+      "month": 0,
+      "doi": "",
+      "url": ""
+    },
+    {
+      "id": "David-MacKay-Seb-Wills-and-Annalu-Waller2007-vd",
+      "type": "article",
+      "title": "Bliss-Dasher - Efficient semantic writing with any muscle",
+      "authors": "David MacKay, Seb Wills, and Annalu Waller",
+      "venue": "",
+      "year": 2007,
+      "month": 5,
+      "doi": "",
+      "url": ""
+    },
+    {
+      "id": "Zielinski2006-ib",
+      "type": "unpublished",
+      "title": "Optimal codes for human beings",
+      "authors": "Zielinski, Piotr",
+      "venue": "",
+      "year": 2006,
+      "month": 10,
+      "doi": "",
+      "url": ""
+    },
+    {
+      "id": "Itoh2006-ay",
+      "type": "inproceedings",
+      "title": "A comparative usability study of two Japanese gaze typing systems",
+      "authors": "Itoh, Kenji and Aoki, Hirotaka and Hansen, John Paulin",
+      "venue": "Proceedings of the 2006 symposium on Eye tracking research & applications - ETRA '06",
+      "year": 2006,
+      "month": 0,
+      "doi": "",
+      "url": ""
+    },
+    {
+      "id": "Hansen2004-yc",
+      "type": "inproceedings",
+      "title": "Gaze typing compared with input by head and hand",
+      "authors": "Hansen, John P and Tørning, Kristian and Johansen, Anders S and Itoh, Kenji and Aoki, Hirotaka",
+      "venue": "Proceedings of the 2004 symposium on Eye tracking research & applications",
+      "year": 2004,
+      "month": 0,
+      "doi": "",
+      "url": ""
+    },
+    {
+      "id": "MacKay2003-pa",
+      "type": "article",
+      "title": "Dasher \\_ an efficient keyboard alternative",
+      "authors": "MacKay, David",
+      "venue": "Adv. Clin. Neurosci. Rehabil.",
+      "year": 2003,
+      "month": 5,
+      "doi": "",
+      "url": ""
+    },
+    {
+      "id": "D_J_Ward_and_D_J_C_MacKay2002-pt",
+      "type": "article",
+      "title": "Fast Hands-free writing by Gaze Direction",
+      "authors": "D. J. Ward and D. J. C. MacKay",
+      "venue": "Nature",
+      "year": 2002,
+      "month": 0,
+      "doi": "",
+      "url": ""
+    },
+    {
+      "id": "Ward2000-wm",
+      "type": "inproceedings",
+      "title": "Dasher---a data entry interface using continuous gestures and language models",
+      "authors": "Ward, David J and Blackwell, Alan F and MacKay, David J C",
+      "venue": "Proceedings of the 13th annual ACM symposium on User interface software and technology - UIST '00",
+      "year": 2000,
+      "month": 0,
+      "doi": "",
+      "url": ""
+    },
+    {
+      "id": "MackayUnknown-ox",
+      "type": "misc",
+      "title": "Dasher – an eﬃcient keyboard alternative",
+      "authors": "Mackay, David",
+      "venue": "Written for Glot International, a web based linguistic journal.",
+      "year": null,
+      "month": 0,
+      "doi": "",
+      "url": ""
+    },
+    {
+      "id": "MackayUnknown-wp",
+      "type": "article",
+      "title": "Dasher – an eﬃcient keyboard alternative",
+      "authors": "Mackay, David",
+      "venue": "Interfaces magazine",
+      "year": null,
+      "month": 0,
+      "doi": "",
+      "url": ""
+    }
+  ]
+}
