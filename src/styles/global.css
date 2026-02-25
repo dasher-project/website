@@ -22,7 +22,9 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 /* ==========================================================================
@@ -280,7 +282,7 @@ html.dark .skip-to-main {
     --color-border: #1a2a3a;
     --color-text-secondary: #1a2a3a;
   }
-  
+
   html.dark {
     --color-border: #ffffff;
     --color-text-secondary: #ffffff;
