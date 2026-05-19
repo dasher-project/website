@@ -11,6 +11,18 @@ News, updates, and insights from the Dasher development team and community.
 <div class="blog-list">
   <article class="blog-post-card">
     <div class="blog-meta">
+      <time datetime="2026-05-19">May 19, 2026</time>
+      <span class="blog-tag">Community</span>
+    </div>
+    <h2>
+      <a href="/blog/dasher-mobile-android/">Dasher Mobile: A New Android Implementation</a>
+    </h2>
+    <p class="blog-excerpt">A new Android implementation of Dasher built on DasherCore with KenLM language model integration and Slovak language support, developed as a bachelor's thesis at Masaryk University.</p>
+    <a href="/blog/dasher-mobile-android/" class="btn-secondary">Read More</a>
+  </article>
+
+  <article class="blog-post-card">
+    <div class="blog-meta">
       <time datetime="2020-01-15">January 15, 2020</time>
       <span class="blog-tag">Release</span>
     </div>

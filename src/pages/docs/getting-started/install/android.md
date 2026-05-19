@@ -9,6 +9,17 @@ sidebarOrder: 2
 
 Dasher is available on Android devices through both the Google Play Store and F-Droid.
 
+## Dasher Mobile (Recommended)
+
+[Dasher Mobile](https://github.com/janmurin2/Dasher-Mobile) is a modern Android implementation built on DasherCore with KenLM language model integration. It is actively developed and available as a direct APK download.
+
+1. Download the latest APK from [Dasher Mobile Releases](https://github.com/janmurin2/Dasher-Mobile/releases/tag/v1.0)
+2. Enable "Install from unknown sources" in your Android security settings
+3. Open the downloaded APK and tap **Install**
+4. Grant necessary permissions when prompted
+
+**[Download Dasher Mobile v1.0](https://github.com/janmurin2/Dasher-Mobile/releases/tag/v1.0)** · **[View Source Code](https://github.com/janmurin2/Dasher-Mobile)**
+
 ## Installing from Google Play Store
 
 1. Open the **Google Play Store** app on your Android device
