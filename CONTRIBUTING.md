@@ -1,28 +1,24 @@
 # How to Contribute
 
-We'd love to accept your patches and contributions to this project. There are
-just a few small guidelines you need to follow.
+We'd love to accept your patches and contributions to Dasher! This repo
+hosts the Dasher website (<https://dasher.at>), built with
+[Astro](https://astro.build).
 
-## Contributor License Agreement
+For the full contributor guide — including our DCO (Developer Certificate of
+Origin) sign-off requirement, coding standards, and cross-platform workflow —
+see the **[organisation-wide CONTRIBUTING.md](https://github.com/dasher-project/.github/blob/main/CONTRIBUTING.md)**.
 
-Contributions to this project must be accompanied by a Contributor License
-Agreement. You (or your employer) retain the copyright to your contribution;
-this simply gives us permission to use and redistribute your contributions as
-part of the project. Head over to <https://cla.developers.google.com/> to see
-your current agreements on file or to sign a new one.
+## Quick start
 
-You generally only need to submit a CLA once, so if you've already submitted one
-(even if it was for a different project), you probably don't need to do it
-again.
+```sh
+git clone https://github.com/dasher-project/website.git
+cd website
+npm install
+npm run dev
+```
 
-## Code reviews
+## Pull requests
 
-All submissions, including submissions by project members, require review. We
-use GitHub pull requests for this purpose. Consult
-[GitHub Help](https://help.github.com/articles/about-pull-requests/) for more
-information on using pull requests.
-
-## Community Guidelines
-
-This project follows
-[Google's Open Source Community Guidelines](https://opensource.google.com/conduct/).
+All submissions require review via GitHub pull requests. Small, focused PRs
+land faster. Make sure your commits are signed off (`git commit -s`) per the
+[DCO](https://developercertificate.org/).

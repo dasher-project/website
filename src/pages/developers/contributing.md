@@ -1,60 +1,60 @@
 ---
-title: Contributing - Dasher Developers
-description: How to contribute to Dasher, and the Definition of Done that keeps the frontends consistent.
-layout: ../../layouts/DocsLayout.astro
+title: Contributing - Dasher
+description: How to contribute to Dasher v6 — DCO sign-off, Definition of Done, and cross-platform workflow.
+layout: ../../layouts/BaseLayout.astro
 ---
 
-# Contributing
+# Contributing to Dasher
 
-Thanks for contributing! The org-wide guide lives at
-[`dasher-project/.github/CONTRIBUTING.md`](https://github.com/dasher-project/.github/blob/main/CONTRIBUTING.md);
-this page adds the developer-specific detail.
+## Contributor Certificate: DCO
 
-## Branches & pull requests
+All contributions must be signed off under the
+[Developer Certificate of Origin](https://developercertificate.org/). This is
+a lightweight alternative to a CLA — it affirms that you wrote (or have the
+right to submit) the code you're contributing.
 
-- Work on a branch off the repo's default branch (`main`, except this `website` repo which uses `astro-build`).
-- Open a **pull request** — reviews are required on the default branch.
-- Keep PRs small and focused; link any issue or RFC.
+**Sign off with `-s`:**
 
-## Coding standards
+```sh
+git commit -s -m "Add Catalan alphabet support"
+```
 
-[`DasherCore/CONTRIBUTING.md`](https://github.com/dasher-project/DasherCore/blob/main/CONTRIBUTING.md)
-is the project's **gold standard**. Its six rules apply in spirit everywhere:
+This adds a `Signed-off-by:` trailer automatically. CI checks every PR —
+commits without it will fail.
 
-1. No naked `new`/`delete` (or per-language equivalent) — prefer safe, owning constructs.
-2. `const` / immutability by default.
-3. Use `auto`/inference only when the type is obvious.
-4. Keep the C API boundary clean (no exceptions across `extern "C"`, no C++ types crossing it).
-5. Zero compiler warnings.
-6. No premature optimization — readable first.
+For more detail (fixing missing sign-offs, the full DCO text, and why we chose
+DCO over a CLA), see the [DCO page](./dco/).
 
-Each frontend repo adds language-specific tooling:
-
-- **Dasher-Apple** — SwiftLint (`.swiftlint.yml`).
-- **Dasher-Windows** — Roslyn analyzers / `dotnet format` _(being added)_.
-- **Dasher-GTK** — clang-format / clang-tidy _(being added)_.
+> **Wait — I thought Dasher had a CLA?** When Dasher was relicensed from GPL
+> to MIT, each existing contributor gave individual written permission. Those
+> documents are held privately. Going forward, the DCO replaces that process.
+> See [`LICENSE_NOTES.md`](https://github.com/dasher-project/DasherCore/blob/main/LICENSE_NOTES.md)
+> for the relicensing history.
 
 ## Definition of Done
 
-A PR is ready to merge when:
+A pull request is ready to merge when:
 
-- [ ] CI is green (build + tests + lint + format, as applicable).
+- [ ] CI is green (build + tests + lint + format, as applicable to the repo).
 - [ ] New behaviour has tests.
-- [ ] If the change affects a cross-platform capability, the **feature matrix** (`website/src/data/feature-status.yaml`) is updated — in this PR or a linked one.
-- [ ] If it's a new UX/hardware interaction, an **RFC** is linked.
-- [ ] Docs / changelog updated if the change is user-facing.
+- [ ] If the change affects a cross-platform capability, the [feature matrix](../status/) has been updated.
+- [ ] If the change is a new UX/hardware interaction, an [RFC](./rfcs/) is linked.
+- [ ] Docs / changelog are updated if the change is user-facing.
+- [ ] Commits are signed off (DCO).
 
-The PR template includes checkboxes for the parity matrix and RFCs.
+## General workflow
 
-## Tests
+1. **Check the [feature matrix](../status/)** — see what's already supported.
+2. **Open an issue or RFC first** for anything cross-platform or user-facing.
+3. **Branch from `main`**, keep PRs small and focused.
+4. **Sign off your commits** (`git commit -s`).
+5. **Fill in the PR template** — especially the cross-platform impact section.
+6. **Address review feedback** — push new commits (don't force-push during review unless asked).
 
-For the engine, all new features and bug fixes must include tests (DasherCore
-defines Golden / Serialization / Algorithm / Contract tiers). The test suite
-doubles as the regression contract for a future rewrite — every test captures
-behaviour that a rewrite must match.
+## Where to go next
 
-## Code of Conduct & security
-
-Our [Code of Conduct](https://github.com/dasher-project/governance/blob/main/code-of-conduct.md)
-applies everywhere. Report security issues privately — see
-[SECURITY.md](https://github.com/dasher-project/.github/blob/main/SECURITY.md).
+- [Org-wide CONTRIBUTING.md](https://github.com/dasher-project/.github/blob/main/CONTRIBUTING.md) — the full contributor guide
+- [DCO details](./dco/)
+- [RFC process](./rfcs/)
+- [Feature parity matrix](../status/)
+- [Architecture overview](./architecture/)
