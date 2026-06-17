@@ -94,9 +94,6 @@ import {
                   <tr>
                     <th scope="row" class="feature-name">
                       <span class="feature-title">{feature.title}</span>
-                      {feature.dasher_core_dep && (
-                        <span class="feature-dep">{feature.dasher_core_dep}</span>
-                      )}
                     </th>
                     {platforms.map((p) => {
                       const v6entry = feature.platforms[p];
@@ -108,30 +105,18 @@ import {
                       return (
                         <td class="cell">
                           <span
-                            class={`badge-v6 badge badge-${v6key}`}
-                            title={v6detail || undefined}
+                            class={`badge-v6 badge badge-icon-only badge-${v6key}`}
+                            title={v6detail || statusLegend[v6key]}
                           >
                             <span class="sr-only">{statusLegend[v6key]}.</span>
-                            {v6detail ? (
-                              <span class="badge-detail">{v6detail}</span>
-                            ) : (
-                              <span class="badge-icon" aria-hidden="true">
-                                {statusIcons[v6key]}
-                              </span>
-                            )}
+                            <span aria-hidden="true">{statusIcons[v6key]}</span>
                           </span>
                           <span
-                            class={`badge-v5 badge badge-${v5key}`}
-                            title={v5detail || undefined}
+                            class={`badge-v5 badge badge-icon-only badge-${v5key}`}
+                            title={v5detail || statusLegend[v5key]}
                           >
                             <span class="sr-only">{statusLegend[v5key]}.</span>
-                            {v5detail ? (
-                              <span class="badge-detail">{v5detail}</span>
-                            ) : (
-                              <span class="badge-icon" aria-hidden="true">
-                                {statusIcons[v5key]}
-                              </span>
-                            )}
+                            <span aria-hidden="true">{statusIcons[v5key]}</span>
                           </span>
                         </td>
                       );
@@ -287,12 +272,12 @@ import {
   .status-matrix {
     width: 100%;
     border-collapse: collapse;
-    min-width: 800px;
+    min-width: 480px;
   }
 
   .status-matrix th,
   .status-matrix td {
-    padding: var(--space-sm) var(--space-md);
+    padding: var(--space-xs) var(--space-sm);
     text-align: left;
     border-bottom: 1px solid var(--color-border-subtle);
   }
@@ -326,13 +311,6 @@ import {
     display: block;
   }
 
-  .feature-dep {
-    display: block;
-    font-weight: 400;
-    font-size: 0.8rem;
-    color: var(--color-text-muted);
-  }
-
   .status-matrix .cell {
     text-align: center;
     vertical-align: middle;
@@ -341,17 +319,18 @@ import {
   .badge {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.35em;
-    font-size: 0.8rem;
-    padding: 0.2rem 0.55rem;
+    font-size: 0.95rem;
+    width: 1.8rem;
+    height: 1.8rem;
     border-radius: 999px;
-    line-height: 1.4;
-    white-space: nowrap;
+    line-height: 1;
     border: 1px solid transparent;
   }
 
-  .badge-detail {
-    font-size: 0.75rem;
+  .badge-icon-only {
+    padding: 0;
   }
 
   /* v5 badges hidden by default; shown when data-view=v5 */
@@ -438,8 +417,8 @@ import {
   }
 
   @media (max-width: 600px) {
-    .feature-dep {
-      display: none;
+    .status-matrix {
+      min-width: 400px;
     }
   }
 </style>
