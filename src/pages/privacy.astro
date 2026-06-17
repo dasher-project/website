@@ -1,0 +1,289 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Privacy - Dasher"
+  description="How Dasher handles your data. Short answer: we don't collect what you type, ever."
+>
+  <div class="container">
+    <section class="section">
+      <h1>Privacy</h1>
+
+      <p class="lead">
+        Dasher is free, open-source software. We respect your privacy. This page explains exactly
+        what data we do and don't collect.
+      </p>
+
+      <div class="privacy-summary">
+        <h2>The short version</h2>
+        <ul>
+          <li>
+            <strong>We never collect what you type.</strong> Not your text, not your clipboard, not your
+            Dasher canvas.
+          </li>
+          <li>
+            <strong>Analytics are strictly opt-in.</strong> If you don't opt in, nothing is sent.
+          </li>
+          <li><strong>No ads, no trackers, no third-party data sharing.</strong></li>
+          <li>
+            <strong>Analytics data is anonymised</strong> &mdash; no name, email, or device ID tied to
+            you.
+          </li>
+        </ul>
+      </div>
+
+      <h2>What Dasher collects today</h2>
+      <p>
+        <strong>Nothing.</strong> Dasher v6 does not currently send any data to any server. The app runs
+        entirely on your device. Your settings, text output, and training data stay local.
+      </p>
+
+      <h2>Proposed: optional analytics</h2>
+      <p>
+        We have proposed adding <strong>opt-in, anonymised analytics</strong> to help us understand how
+        Dasher is used and fix crashes. This is described in detail in
+        <a href="https://github.com/dasher-project/governance/blob/main/rfcs/0001-analytics.md"
+          >RFC 0001</a
+        >
+        and has not yet been implemented. When it ships, this is how it will work:
+      </p>
+
+      <h3>If you opt in, we collect:</h3>
+      <table class="privacy-table">
+        <thead>
+          <tr>
+            <th>Data point</th>
+            <th>Example</th>
+            <th>Why</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>App launched</td>
+            <td>macOS 15.3, Dasher 1.2</td>
+            <td>Count active users, know which OS versions to support</td>
+          </tr>
+          <tr>
+            <td>Input method selected</td>
+            <td>"touch", "switch", "eye-gaze"</td>
+            <td>Prioritise development on the methods people actually use</td>
+          </tr>
+          <tr>
+            <td>Alphabet/language chosen</td>
+            <td>"English", "Slovak", "Japanese"</td>
+            <td>Know which languages need support and testing</td>
+          </tr>
+          <tr>
+            <td>Settings tab viewed</td>
+            <td>"customization", "speech"</td>
+            <td>Understand which features people look for</td>
+          </tr>
+          <tr>
+            <td>Crash report</td>
+            <td>Stack trace, OS, app version</td>
+            <td>Fix bugs that cause crashes</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>We never collect:</h3>
+      <div class="never-collected">
+        <ul>
+          <li>Typed text or symbols</li>
+          <li>Clipboard contents</li>
+          <li>Dasher canvas contents or node positions</li>
+          <li>Your name, email, or account information</li>
+          <li>Your IP address (scrubbed at the server)</li>
+          <li>Training text contents</li>
+          <li>Game mode target text</li>
+          <li>Anything from the iOS keyboard extension</li>
+        </ul>
+      </div>
+
+      <h2>How analytics works</h2>
+      <ul>
+        <li>
+          <strong>Opt-in only.</strong> On first launch (once analytics ships), you'll see a prompt asking
+          if you'd like to help improve Dasher. If you decline, no data is ever sent. If you accept, you
+          can change your mind at any time in Settings &rarr; Privacy.
+        </li>
+        <li>
+          <strong>Anonymous.</strong> A random ID is generated on your device. It cannot be linked back
+          to you personally. You can reset it in Settings &rarr; Privacy.
+        </li>
+        <li>
+          <strong>Self-hosted.</strong> Data is sent to a PostHog instance controlled by the Dasher Project,
+          not to a third-party analytics company.
+        </li>
+        <li>
+          <strong>Offline-friendly.</strong> Events are queued locally and sent in batches when you're
+          online. Dasher works fully offline.
+        </li>
+        <li>
+          <strong>Open schema.</strong> The full list of events and properties is published in
+          <a href="https://github.com/dasher-project/governance/blob/main/rfcs/0001-analytics.md"
+            >the RFC</a
+          >
+          and in each repo. If it's not listed there, we don't collect it.
+        </li>
+      </ul>
+
+      <h2>Your choices</h2>
+      <table class="privacy-choices">
+        <thead>
+          <tr>
+            <th>Action</th>
+            <th>How</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Opt out of analytics</td>
+            <td>Settings &rarr; Privacy &rarr; turn off "Help improve Dasher"</td>
+          </tr>
+          <tr>
+            <td>Opt in later</td>
+            <td>Same location &mdash; it's always your choice</td>
+          </tr>
+          <tr>
+            <td>Reset your anonymous ID</td>
+            <td>Settings &rarr; Privacy &rarr; "Reset analytics ID"</td>
+          </tr>
+          <tr>
+            <td>Use Dasher completely offline</td>
+            <td>Just decline analytics. No network activity occurs.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Data retention</h2>
+      <p>
+        If analytics is enabled, anonymised event data is retained for
+        <strong>13 months</strong>, after which it is automatically deleted. This aligns with
+        PostHog's default retention policy. Crash reports are retained for the same period.
+      </p>
+
+      <h2>Third-party services</h2>
+      <p>
+        Dasher does not use any third-party advertising, tracking, or analytics SDKs. The only
+        external service used is the Dasher Project's own self-hosted PostHog instance (and only if
+        you opt in).
+      </p>
+
+      <h2>Children's privacy</h2>
+      <p>
+        Dasher is used by people of all ages, including children in educational settings. We do not
+        knowingly collect any data from children. The analytics opt-in is a deliberate action
+        &mdash; it cannot be triggered accidentally or by a minor without understanding the prompt.
+      </p>
+
+      <h2>Open source</h2>
+      <p>
+        Dasher is open-source (MIT licensed). The analytics implementation, event schema, and opt-in
+        flow are all visible in the
+        <a href="https://github.com/dasher-project">source code</a>. If you don't trust us, you can
+        verify exactly what's sent &mdash; or build Dasher from source with analytics removed
+        entirely.
+      </p>
+
+      <h2>Changes to this policy</h2>
+      <p>
+        If we change what data we collect, we will update this page and notify users in the app. Any
+        expansion of the event schema will go through the
+        <a href="https://github.com/dasher-project/governance/blob/main/rfcs/0001-analytics.md"
+          >RFC process</a
+        >
+        with community discussion.
+      </p>
+
+      <p class="updated">Last updated: <time datetime="2026-06-17">June 17, 2026</time></p>
+
+      <h2>Contact</h2>
+      <p>
+        Questions about privacy? Open an issue on
+        <a href="https://github.com/dasher-project/governance/discussions">GitHub Discussions</a>
+        or contact the project lead,
+        <a href="https://github.com/willwade">Will Wade</a>.
+      </p>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .lead {
+    font-size: 1.15rem;
+    max-width: 60ch;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-xl);
+  }
+
+  .privacy-summary {
+    background: color-mix(in srgb, var(--color-horizon-mint) 15%, transparent);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-xl);
+  }
+
+  .privacy-summary h2 {
+    margin-top: 0;
+  }
+
+  .privacy-summary ul {
+    margin: 0;
+  }
+
+  .privacy-summary li {
+    margin-bottom: var(--space-xs);
+  }
+
+  .privacy-table,
+  .privacy-choices {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--space-md) 0 var(--space-lg);
+  }
+
+  .privacy-table th,
+  .privacy-table td,
+  .privacy-choices th,
+  .privacy-choices td {
+    padding: var(--space-sm) var(--space-md);
+    text-align: left;
+    border-bottom: 1px solid var(--color-border-subtle);
+  }
+
+  .privacy-table th,
+  .privacy-choices th {
+    background: var(--color-bg-elevated);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-text-secondary);
+  }
+
+  .never-collected {
+    background: color-mix(in srgb, #f8e3e3 30%, transparent);
+    border: 1px solid #eec4c4;
+    border-radius: var(--radius-md);
+    padding: var(--space-md) var(--space-lg);
+    margin: var(--space-md) 0;
+  }
+
+  .never-collected ul {
+    margin: 0;
+    columns: 2;
+  }
+
+  @media (max-width: 600px) {
+    .never-collected ul {
+      columns: 1;
+    }
+  }
+
+  .updated {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+  }
+</style>
