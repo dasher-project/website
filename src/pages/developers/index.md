@@ -16,7 +16,11 @@ Dasher v6 is **one shared engine** ([DasherCore](https://github.com/dasher-proje
 | [Dasher-Apple](https://github.com/dasher-project/Dasher-Apple)     | iOS / macOS / visionOS       | SwiftUI            | compiled core + C API header  |
 | [Dasher-Windows](https://github.com/dasher-project/Dasher-Windows) | Windows                      | Avalonia (.NET)    | `dasher.dll` via P/Invoke     |
 | [Dasher-GTK](https://github.com/dasher-project/Dasher-GTK)         | Linux (+ Win/macOS fallback) | GTK4 / gtkmm       | `libdasher.so` linked         |
-| [website](https://github.com/dasher-project/website)               | Web                          | Astro              | this handbook + public status |
+
+> [dasher-web](https://github.com/dasher-project/dasher-web) is a standalone
+> WASM demo (not a full frontend) — it powers the live demo on the
+> [homepage](/). It's available for anyone who wants to embed Dasher on the
+> web, but it is not under active feature development.
 
 Read the [architecture overview](./architecture/) for how the engine and frontends fit together, and the [C API contract](https://github.com/dasher-project/DasherCore/blob/main/docs/C_API.md) in DasherCore for the exact integration surface.
 
