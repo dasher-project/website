@@ -319,18 +319,22 @@ import {
   .badge {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
     gap: 0.35em;
-    font-size: 0.95rem;
-    width: 1.8rem;
-    height: 1.8rem;
+    font-size: 0.8rem;
+    padding: 0.2rem 0.55rem;
     border-radius: 999px;
-    line-height: 1;
+    line-height: 1.4;
+    white-space: nowrap;
     border: 1px solid transparent;
   }
 
   .badge-icon-only {
+    justify-content: center;
+    font-size: 0.95rem;
+    width: 1.8rem;
+    height: 1.8rem;
     padding: 0;
+    line-height: 1;
   }
 
   /* v5 badges hidden by default; shown when data-view=v5 */
