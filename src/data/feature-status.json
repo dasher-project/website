@@ -950,11 +950,11 @@
       "category": "Platform Integration",
       "title": "Privacy-preserving analytics & crash reporting",
       "dasher_core_dep": "n/a (frontend-only)",
-      "notes": "Opt-in analytics via self-hosted PostHog (see RFC 0001). No text content ever collected. Windows ships posthog-dotnet SDK. Apple and GTK planned.",
+      "notes": "Opt-in analytics via self-hosted PostHog (see RFC 0001). No text content ever collected. Windows ships posthog-dotnet SDK. Apple ships posthog-ios. GTK planned.",
       "platforms": {
-        "macos": { "status": "planned" },
-        "ios": { "status": "planned" },
-        "visionos": { "status": "planned" },
+        "macos": { "status": "shipped" },
+        "ios": { "status": "shipped" },
+        "visionos": { "status": "shipped" },
         "windows": { "status": "shipped" },
         "gtk": { "status": "planned" }
       },
@@ -964,6 +964,27 @@
         "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
         "windows": { "status": "not-supported" },
         "gtk": { "status": "not-supported" }
+      }
+    },
+    {
+      "id": "lucide-icons",
+      "category": "Platform Integration",
+      "title": "Lucide icon set",
+      "dasher_core_dep": "n/a (frontend-only)",
+      "notes": "Unified cross-platform icon library (see RFC 0002). Apple uses lucide-icons-swift, Windows uses Lucide.Avalonia, GTK will use the Lucide TTF font.",
+      "platforms": {
+        "macos": { "status": "shipped" },
+        "ios": { "status": "shipped" },
+        "visionos": { "status": "shipped" },
+        "windows": { "status": "shipped" },
+        "gtk": { "status": "planned" }
+      },
+      "v5": {
+        "macos": { "status": "not-supported", "reason": "Platform-native icons (SF Symbols)" },
+        "ios": { "status": "not-supported", "reason": "Platform-native icons (SF Symbols)" },
+        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
+        "windows": { "status": "not-supported", "reason": "Mixed MaterialDesignIcons / custom" },
+        "gtk": { "status": "not-supported", "reason": "GTK stock icons" }
       }
     }
   ]
