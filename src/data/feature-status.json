@@ -944,6 +944,27 @@
         "windows": { "status": "n/a" },
         "gtk": { "status": "n/a" }
       }
+    },
+    {
+      "id": "analytics",
+      "category": "Platform Integration",
+      "title": "Privacy-preserving analytics & crash reporting",
+      "dasher_core_dep": "n/a (frontend-only)",
+      "notes": "Opt-in analytics via self-hosted PostHog (see RFC 0001). No text content ever collected. Windows ships posthog-dotnet SDK. Apple and GTK planned.",
+      "platforms": {
+        "macos": { "status": "planned" },
+        "ios": { "status": "planned" },
+        "visionos": { "status": "planned" },
+        "windows": { "status": "shipped" },
+        "gtk": { "status": "planned" }
+      },
+      "v5": {
+        "macos": { "status": "not-supported" },
+        "ios": { "status": "not-supported" },
+        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
+        "windows": { "status": "not-supported" },
+        "gtk": { "status": "not-supported" }
+      }
     }
   ]
 }
