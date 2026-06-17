@@ -9,7 +9,6 @@ const navItems = [
   { href: '/downloads/', label: 'Downloads' },
   { href: '/docs/', label: 'Docs' },
   { href: '/status/', label: 'Status' },
-  { href: '/developers/', label: 'Developers' },
   { href: '/docs/research/', label: 'Research' },
   { href: '/faq/', label: 'FAQ' },
 ];
@@ -37,7 +36,10 @@ const navItems = [
             {
               navItems.map((item) => {
                 const active =
-                  item.href === '/' ? currentPath === '/' : currentPath.startsWith(item.href);
+                  item.href === '/'
+                    ? currentPath === '/'
+                    : currentPath.startsWith(item.href) ||
+                      (item.href === '/docs/' && currentPath.startsWith('/developers/'));
                 return (
                   <li>
                     <a class={active ? 'active' : undefined} href={item.href}>

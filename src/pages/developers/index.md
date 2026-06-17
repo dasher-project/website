@@ -6,16 +6,21 @@ layout: ../../layouts/DocsLayout.astro
 
 # Developer handbook
 
+> **Dasher v6 and beyond.** This handbook covers the active v6 codebase — the
+> shared DasherCore engine and native frontends (Apple, Windows, GTK). For the
+> stable v5 release, see [Dasher 5.0 downloads](/downloads/) or the
+> [v5 development notes](/docs/development/).
+
 Dasher v6 is **one shared engine** ([DasherCore](https://github.com/dasher-project/DasherCore)) consumed by several **native frontends**. This handbook is the navigation hub for anyone working on Dasher code.
 
 ## The architecture at a glance
 
-| Repository                                                         | Platform                     | UI stack           | DasherCore integration        |
-| :----------------------------------------------------------------- | :--------------------------- | :----------------- | :---------------------------- |
-| [DasherCore](https://github.com/dasher-project/DasherCore)         | All                          | C++ engine + C API | _is_ the engine               |
-| [Dasher-Apple](https://github.com/dasher-project/Dasher-Apple)     | iOS / macOS / visionOS       | SwiftUI            | compiled core + C API header  |
-| [Dasher-Windows](https://github.com/dasher-project/Dasher-Windows) | Windows                      | Avalonia (.NET)    | `dasher.dll` via P/Invoke     |
-| [Dasher-GTK](https://github.com/dasher-project/Dasher-GTK)         | Linux (+ Win/macOS fallback) | GTK4 / gtkmm       | `libdasher.so` linked         |
+| Repository                                                         | Platform                     | UI stack           | DasherCore integration       |
+| :----------------------------------------------------------------- | :--------------------------- | :----------------- | :--------------------------- |
+| [DasherCore](https://github.com/dasher-project/DasherCore)         | All                          | C++ engine + C API | _is_ the engine              |
+| [Dasher-Apple](https://github.com/dasher-project/Dasher-Apple)     | iOS / macOS / visionOS       | SwiftUI            | compiled core + C API header |
+| [Dasher-Windows](https://github.com/dasher-project/Dasher-Windows) | Windows                      | Avalonia (.NET)    | `dasher.dll` via P/Invoke    |
+| [Dasher-GTK](https://github.com/dasher-project/Dasher-GTK)         | Linux (+ Win/macOS fallback) | GTK4 / gtkmm       | `libdasher.so` linked        |
 
 > [dasher-web](https://github.com/dasher-project/dasher-web) is a standalone
 > WASM demo (not a full frontend) — it powers the live demo on the
