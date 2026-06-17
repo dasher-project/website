@@ -46,7 +46,7 @@ The latest release (v1.0 APK) is available for download. The project is open sou
 
 Dasher Mobile is a great example of how the Dasher ecosystem grows through community contributions. Building on the DasherCore library, Ján has created a focused mobile implementation that addresses a specific language community's needs.
 
-If you're interested in building on Dasher for your own platform or language, check out our [development guide](/docs/development/) and [DasherCore on GitHub](https://github.com/dasher-project/dasher).
+If you're interested in building on Dasher for your own platform or language, check out our [development guide](/developers/) and [DasherCore on GitHub](https://github.com/dasher-project/dasher). You can also find more community-built Dasher projects on our [downloads page](/downloads/#community-builds-experiments) and in our [community projects roundup](/blog/community-dasher-projects/).
 
 </div>
 

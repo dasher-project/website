@@ -11,6 +11,18 @@ News, updates, and insights from the Dasher development team and community.
 <div class="blog-list">
   <article class="blog-post-card">
     <div class="blog-meta">
+      <time datetime="2026-06-17">June 17, 2026</time>
+      <span class="blog-tag">Community</span>
+    </div>
+    <h2>
+      <a href="/blog/community-dasher-projects/">Community Dasher Projects</a>
+    </h2>
+    <p class="blog-excerpt">A round-up of community-built Dasher implementations and experiments, from a React word-level writer to a musical Dasher variant and a clean Java reimplementation.</p>
+    <a href="/blog/community-dasher-projects/" class="btn-secondary">Read More</a>
+  </article>
+
+  <article class="blog-post-card">
+    <div class="blog-meta">
       <time datetime="2026-05-19">May 19, 2026</time>
       <span class="blog-tag">Community</span>
     </div>

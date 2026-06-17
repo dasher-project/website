@@ -130,6 +130,96 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <!-- Alphabet Files Section -->
       <section class="download-section">
+        <h2><span class="highlight">Community</span> Builds &amp; Experiments</h2>
+        <p>
+          These independent projects are built by the community &mdash; not official Dasher v6
+          releases, but they showcase the range of what Dasher can do. Have a project to add?
+          <a
+            href="https://github.com/dasher-project/dasher/discussions"
+            target="_blank"
+            rel="noopener noreferrer">Let us know on GitHub Discussions</a
+          >.
+        </p>
+
+        <div class="community-grid">
+          <div class="community-card">
+            <h3>Dasher-JS (React)</h3>
+            <p class="community-author">Jamie Brew</p>
+            <p>
+              Word-level Dasher for constrained writing, built in React. Created by the founder of
+              Botnik (comedy predictive text).
+            </p>
+            <a
+              href="https://frigital.onrender.com/tools/dasher/"
+              target="_blank"
+              rel="noopener noreferrer">Live demo &rarr;</a
+            >
+            <a href="https://github.com/jbrew/dasher-js" target="_blank" rel="noopener noreferrer"
+              >Source code &rarr;</a
+            >
+          </div>
+
+          <div class="community-card">
+            <h3>Jasher (musical Dasher)</h3>
+            <p class="community-author">Jossy Sayir</p>
+            <p>
+              A variant of Dasher for composing and generating live music. Zoom through notes and
+              phrases instead of letters.
+            </p>
+            <a href="https://js851.net/jd/jasher.html" target="_blank" rel="noopener noreferrer"
+              >Try it &rarr;</a
+            >
+            <a href="https://js851.net/jd/" target="_blank" rel="noopener noreferrer"
+              >More experiments &rarr;</a
+            >
+          </div>
+
+          <div class="community-card">
+            <h3>DasherJava</h3>
+            <p class="community-author">Jan Schulte</p>
+            <p>
+              A clean, modern Java reimplementation of Dasher as a master's thesis. PPM language
+              model, ~1,300 LOC, Java Swing GUI.
+            </p>
+            <a
+              href="https://gitfront.io/r/janschu99/JR2GxTjT1wJz/DasherJava/"
+              target="_blank"
+              rel="noopener noreferrer">Code &rarr;</a
+            >
+            <a
+              href="https://github.com/janschu99/SimpleDasherLanguageModel"
+              target="_blank"
+              rel="noopener noreferrer">Language model comparison &rarr;</a
+            >
+          </div>
+
+          <div class="community-card">
+            <h3>Dasher Mobile (Android)</h3>
+            <p class="community-author">J&aacute;n Murin</p>
+            <p>
+              Native Android app built on DasherCore with KenLM integration and Slovak language
+              support. Bachelor's thesis at Masaryk University.
+            </p>
+            <a
+              href="https://github.com/janmurin2/Dasher-Mobile"
+              target="_blank"
+              rel="noopener noreferrer">Source code &rarr;</a
+            >
+            <a
+              href="https://github.com/janmurin2/Dasher-Mobile/releases/tag/v1.0"
+              target="_blank"
+              rel="noopener noreferrer">Download APK &rarr;</a
+            >
+          </div>
+        </div>
+
+        <p>
+          Read more about these projects in our
+          <a href="/blog/community-dasher-projects/">community projects blog post</a>.
+        </p>
+      </section>
+
+      <section class="download-section">
         <h2>Alphabet Files</h2>
 
         <p>
@@ -366,5 +456,42 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       flex-direction: column;
       text-align: center;
     }
+  }
+
+  .community-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-lg);
+    margin: var(--space-lg) 0;
+  }
+
+  .community-card {
+    padding: var(--space-lg);
+    background-color: var(--color-canvas-white);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .community-card h3 {
+    margin: 0;
+  }
+
+  .community-author {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .community-card p {
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  .community-card a {
+    font-size: 0.85rem;
+    font-weight: 500;
   }
 </style>
