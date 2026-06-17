@@ -17,6 +17,21 @@ export const docsNav: NavItem[] = [
     href: '/docs/',
   },
   {
+    title: 'Developers',
+    href: '/developers/',
+    children: [
+      { title: 'Architecture', href: '/developers/architecture/' },
+      { title: 'Contributing', href: '/developers/contributing/' },
+      { title: 'Feature parity', href: '/developers/feature-parity/' },
+      { title: 'RFCs', href: '/developers/rfcs/' },
+      { title: 'Design tokens', href: '/developers/design/' },
+      { title: 'Build: DasherCore', href: '/developers/build-guides/core/' },
+      { title: 'Build: Apple', href: '/developers/build-guides/apple/' },
+      { title: 'Build: Windows', href: '/developers/build-guides/windows/' },
+      { title: 'Build: GTK', href: '/developers/build-guides/gtk/' },
+    ],
+  },
+  {
     title: 'Getting Started',
     href: '/docs/getting-started/',
     children: [

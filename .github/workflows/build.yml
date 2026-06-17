@@ -28,6 +28,9 @@ jobs:
       - name: Run Prettier check
         run: npm run format:check
 
+      - name: Validate feature-status matrix
+        run: npm run validate:status
+
       - name: Type check
         run: npm run typecheck
 

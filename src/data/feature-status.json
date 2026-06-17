@@ -1,0 +1,249 @@
+{
+  "_comment": "Dasher v6 cross-platform capability matrix — THE SINGLE SOURCE OF TRUTH. Rendered at https://dasher.at/status/. How to update: https://dasher.at/developers/feature-parity/. Validated by scripts/validate-feature-status.mjs in CI.",
+  "meta": {
+    "last_updated": "2026-06-17",
+    "v5_baseline": "Dasher v5 shipped native frontends for Windows, Linux/GTK, macOS and iOS (Android was a separate project; Mac/iPhone were unmaintained by the 5.0 beta). Input covered mouse, stylus/tablet, touch, multitouch, tilt, joystick (Linux) and socket input (the conduit for eye/gaze trackers). Notable v5 features: game/training mode, eye-tracker autocalibration, PPM family language models, Kanji/Pinyin conversion, and three TTS backends (SAPI / speech-dispatcher / flite).",
+    "status_legend": {
+      "shipped": "Implemented and released",
+      "beta": "Available but in beta / behind a flag",
+      "planned": "Accepted, on the backlog",
+      "not-supported": "Not available — usually a platform limitation",
+      "n/a": "Not applicable on this platform"
+    }
+  },
+  "platforms": ["apple", "windows", "gtk", "android", "web"],
+  "features": [
+    {
+      "id": "pointer-eye-gaze-input",
+      "category": "Input",
+      "title": "Pointer / eye-gaze input",
+      "dasher_core_dep": "V6 pointer (x, y) event stream",
+      "notes": "Core pointer model. In v5, eye/gaze trackers drove the cursor via UDP socket input with an autocalibration ('eyetracker') mode.",
+      "platforms": {
+        "apple": { "status": "shipped", "version": "1.0" },
+        "windows": { "status": "shipped", "version": "0.1" },
+        "gtk": { "status": "shipped" },
+        "android": { "status": "planned", "issue": "dasher-project/Dasher-Mobile#1" },
+        "web": { "status": "shipped" }
+      }
+    },
+    {
+      "id": "touch-input",
+      "category": "Input",
+      "title": "Direct touch input",
+      "dasher_core_dep": "V6 pointer (x, y) event stream",
+      "notes": "v5 had touch + two-finger multitouch on iPhone.",
+      "platforms": {
+        "apple": { "status": "shipped" },
+        "windows": { "status": "shipped" },
+        "gtk": { "status": "beta" },
+        "android": { "status": "planned" },
+        "web": { "status": "shipped" }
+      }
+    },
+    {
+      "id": "switch-scanning",
+      "category": "Input",
+      "title": "Single / dual switch scanning",
+      "dasher_core_dep": "V6 switch input filter",
+      "notes": "Maps to v5's One-/Two-Button Dynamic and Compass modes.",
+      "platforms": {
+        "apple": { "status": "planned" },
+        "windows": { "status": "beta" },
+        "gtk": { "status": "shipped" },
+        "android": { "status": "n/a" },
+        "web": { "status": "planned" }
+      }
+    },
+    {
+      "id": "joystick-analogue-input",
+      "category": "Input",
+      "title": "Analogue joystick / gamepad pacing",
+      "dasher_core_dep": "V6 input filter",
+      "notes": "v5: Linux only.",
+      "platforms": {
+        "apple": { "status": "not-supported", "reason": "Awaiting RFC on deadzone mapping" },
+        "windows": { "status": "planned" },
+        "gtk": { "status": "shipped" },
+        "android": { "status": "n/a" },
+        "web": { "status": "not-supported", "reason": "Gamepad API only" }
+      }
+    },
+    {
+      "id": "socket-input",
+      "category": "Input",
+      "title": "Socket / external cursor input",
+      "dasher_core_dep": "V6 input (external driver)",
+      "notes": "In v5 this was the primary conduit for eye trackers and external apps (UDP coordinate protocol). v6 status to be confirmed.",
+      "platforms": {
+        "apple": { "status": "planned" },
+        "windows": { "status": "planned" },
+        "gtk": { "status": "planned" },
+        "android": { "status": "n/a" },
+        "web": { "status": "n/a" }
+      }
+    },
+    {
+      "id": "canvas-rendering",
+      "category": "Rendering",
+      "title": "Dasher canvas rendering",
+      "dasher_core_dep": "V6 draw-command buffer",
+      "notes": "Frontend renders the draw-command buffer produced by DasherCore. v5 used native canvas/OpenGL per platform.",
+      "platforms": {
+        "apple": { "status": "shipped" },
+        "windows": { "status": "shipped" },
+        "gtk": { "status": "shipped" },
+        "android": { "status": "planned" },
+        "web": { "status": "shipped" }
+      }
+    },
+    {
+      "id": "dark-mode",
+      "category": "Rendering",
+      "title": "Dark mode / themes",
+      "dasher_core_dep": "Colour palette parameter",
+      "platforms": {
+        "apple": { "status": "shipped" },
+        "windows": { "status": "shipped" },
+        "gtk": { "status": "shipped" },
+        "android": { "status": "planned" },
+        "web": { "status": "shipped" }
+      }
+    },
+    {
+      "id": "ppm-language-model",
+      "category": "Language & Models",
+      "title": "PPM prediction (default model)",
+      "dasher_core_dep": "LMRegistry (PPM, id 0)",
+      "notes": "Provided by DasherCore; inherited by every frontend. v5 also had Word/Mixture/CTW/Japanese and Kanji/Pinyin conversion.",
+      "platforms": {
+        "apple": { "status": "shipped" },
+        "windows": { "status": "shipped" },
+        "gtk": { "status": "shipped" },
+        "android": { "status": "shipped" },
+        "web": { "status": "shipped" }
+      }
+    },
+    {
+      "id": "alphabets-and-languages",
+      "category": "Language & Models",
+      "title": "Alphabet & language selection",
+      "dasher_core_dep": "Alphabet system (WorldAlphabets, 344 languages)",
+      "notes": "v5 carried ~140 alphabet definitions; v6 expands this to 344 via WorldAlphabets.",
+      "platforms": {
+        "apple": { "status": "shipped" },
+        "windows": { "status": "shipped" },
+        "gtk": { "status": "shipped" },
+        "android": { "status": "planned" },
+        "web": { "status": "shipped" }
+      }
+    },
+    {
+      "id": "spoken-output-tts",
+      "category": "Output",
+      "title": "Spoken output (text-to-speech)",
+      "dasher_core_dep": "Output text stream",
+      "notes": "v5: SAPI (Windows), speech-dispatcher (Linux), flite (iOS). v6: swift-tts-wrapper / DotNetTtsWrapper / rust-tts-wrapper.",
+      "platforms": {
+        "apple": { "status": "shipped", "version": "swift-tts-wrapper" },
+        "windows": { "status": "shipped", "version": "DotNetTtsWrapper" },
+        "gtk": { "status": "shipped", "version": "rust-tts-wrapper" },
+        "android": { "status": "n/a" },
+        "web": { "status": "not-supported", "reason": "Browser SpeechSynthesis only" }
+      }
+    },
+    {
+      "id": "copy-to-clipboard",
+      "category": "Output",
+      "title": "Copy text to clipboard on stop",
+      "dasher_core_dep": "Clipboard parameter",
+      "platforms": {
+        "apple": { "status": "shipped" },
+        "windows": { "status": "shipped" },
+        "gtk": { "status": "shipped" },
+        "android": { "status": "planned" },
+        "web": { "status": "shipped" }
+      }
+    },
+    {
+      "id": "grouped-settings-ui",
+      "category": "Settings",
+      "title": "Grouped settings UI (by usage context)",
+      "dasher_core_dep": "settings_manifest.json groups",
+      "notes": "See dasher-design-guide for the normative tab structure (Customization/Input/Language/Output/Game Mode).",
+      "platforms": {
+        "apple": { "status": "planned" },
+        "windows": { "status": "beta" },
+        "gtk": { "status": "planned" },
+        "android": { "status": "planned" },
+        "web": { "status": "planned" }
+      }
+    },
+    {
+      "id": "live-settings-preview",
+      "category": "Settings",
+      "title": "Live mini-canvas preview in settings",
+      "dasher_core_dep": "Multiple render parameters",
+      "platforms": {
+        "apple": { "status": "planned" },
+        "windows": { "status": "planned" },
+        "gtk": { "status": "planned" },
+        "android": { "status": "planned" },
+        "web": { "status": "planned" }
+      }
+    },
+    {
+      "id": "guided-onboarding",
+      "category": "Onboarding & Training",
+      "title": "Guided first-run onboarding",
+      "dasher_core_dep": "V6 (UX layer)",
+      "platforms": {
+        "apple": { "status": "planned" },
+        "windows": { "status": "planned" },
+        "gtk": { "status": "planned" },
+        "android": { "status": "planned" },
+        "web": { "status": "planned" }
+      }
+    },
+    {
+      "id": "game-mode-training",
+      "category": "Onboarding & Training",
+      "title": "Gamified training (Game Mode)",
+      "dasher_core_dep": "GameModule",
+      "notes": "Existed in v5 (GameModule with target text + guiding arrow); being rebuilt for v6.",
+      "platforms": {
+        "apple": { "status": "planned" },
+        "windows": { "status": "planned" },
+        "gtk": { "status": "planned" },
+        "android": { "status": "planned" },
+        "web": { "status": "planned" }
+      }
+    },
+    {
+      "id": "ios-keyboard-extension",
+      "category": "Accessibility",
+      "title": "System-wide iOS keyboard extension",
+      "dasher_core_dep": "V6 low-memory mode",
+      "platforms": {
+        "apple": { "status": "shipped" },
+        "windows": { "status": "n/a" },
+        "gtk": { "status": "n/a" },
+        "android": { "status": "n/a" },
+        "web": { "status": "n/a" }
+      }
+    },
+    {
+      "id": "visionos-app",
+      "category": "Accessibility",
+      "title": "visionOS app",
+      "dasher_core_dep": "V6 pointer event stream",
+      "platforms": {
+        "apple": { "status": "shipped" },
+        "windows": { "status": "n/a" },
+        "gtk": { "status": "n/a" },
+        "android": { "status": "n/a" },
+        "web": { "status": "n/a" }
+      }
+    }
+  ]
+}

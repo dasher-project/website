@@ -8,6 +8,7 @@
     "dev": "astro dev",
     "build": "astro check && astro build && pagefind --site dist",
     "research:sync": "node scripts/sync-related-research.mjs",
+    "validate:status": "node scripts/validate-feature-status.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint .",
