@@ -18,7 +18,7 @@
       "category": "Input",
       "title": "Pointer / eye-gaze input",
       "dasher_core_dep": "V6 pointer (x, y) event stream",
-      "notes": "Core pointer model. In v5, eye/gaze trackers drove the cursor via UDP socket input with an autocalibration ('eyetracker') mode.",
+      "notes": "Core pointer model. Eye-gaze trackers drive the cursor via socket input. On Apple platforms, eyeGaze reuses native hover (visionOS) or pinch gestures.",
       "platforms": {
         "apple": { "status": "shipped", "version": "1.0" },
         "windows": { "status": "shipped", "version": "0.1" },
@@ -40,7 +40,7 @@
       "category": "Input",
       "title": "Direct touch input",
       "dasher_core_dep": "V6 pointer (x, y) event stream",
-      "notes": "v5 had touch + two-finger multitouch on iPhone.",
+      "notes": "Multi-touch supported on touchscreens and trackpads.",
       "platforms": {
         "apple": { "status": "shipped" },
         "windows": { "status": "shipped" },
@@ -58,10 +58,10 @@
       "id": "switch-scanning",
       "category": "Input",
       "title": "Single / dual switch scanning",
-      "dasher_core_dep": "V6 switch input filter",
-      "notes": "Maps to v5's One-/Two-Button Dynamic and Compass modes.",
+      "dasher_core_dep": "V6 switch input filter (One-/Two-Button Dynamic)",
+      "notes": "Apple exposes a dedicated switchesOnly access method with switch profiles (4 slots, key capture, scan rate). GTK supports keyboard-key assignment via remapping.",
       "platforms": {
-        "apple": { "status": "planned" },
+        "apple": { "status": "shipped" },
         "windows": { "status": "beta" },
         "gtk": { "status": "shipped" },
         "web": { "status": "planned" }
@@ -74,15 +74,15 @@
       }
     },
     {
-      "id": "joystick-analogue-input",
+      "id": "joystick-gamepad",
       "category": "Input",
-      "title": "Analogue joystick / gamepad pacing",
+      "title": "Joystick / gamepad input",
       "dasher_core_dep": "V6 input filter",
-      "notes": "v5: Linux only.",
+      "notes": "GTK uses SDL3 for full gamepad support (axes, buttons, haptic/rumble). Apple declares joystick in its access-method enum but the backing service is not yet implemented.",
       "platforms": {
-        "apple": { "status": "not-supported", "reason": "Awaiting RFC on deadzone mapping" },
+        "apple": { "status": "not-supported", "reason": "Declared but not implemented" },
         "windows": { "status": "planned" },
-        "gtk": { "status": "shipped" },
+        "gtk": { "status": "shipped", "version": "SDL3" },
         "web": { "status": "not-supported", "reason": "Gamepad API only" }
       },
       "v5": {
@@ -93,11 +93,30 @@
       }
     },
     {
+      "id": "tilt-input",
+      "category": "Input",
+      "title": "Tilt to steer (device tilt)",
+      "dasher_core_dep": "V6 pointer (x, y) event stream",
+      "notes": "Apple iOS uses CoreMotion accelerometer with deadzone calibration. v5 had this on iPhone.",
+      "platforms": {
+        "apple": { "status": "shipped", "reason": "CoreMotion + calibration (iOS)" },
+        "windows": { "status": "not-supported", "reason": "No accelerometer API" },
+        "gtk": { "status": "not-supported", "reason": "No accelerometer API" },
+        "web": { "status": "not-supported", "reason": "DeviceMotion API unstable" }
+      },
+      "v5": {
+        "apple": { "status": "shipped", "reason": "iPhone accelerometer" },
+        "windows": { "status": "not-supported" },
+        "gtk": { "status": "not-supported" },
+        "web": { "status": "n/a", "reason": "No web frontend in v5" }
+      }
+    },
+    {
       "id": "socket-input",
       "category": "Input",
       "title": "Socket / external cursor input",
       "dasher_core_dep": "V6 input (external driver)",
-      "notes": "In v5 this was the primary conduit for eye trackers and external apps (UDP coordinate protocol). v6 status to be confirmed.",
+      "notes": "Primary conduit for eye trackers and external assistive apps. In v5 this used a UDP coordinate protocol.",
       "platforms": {
         "apple": { "status": "planned" },
         "windows": { "status": "planned" },
@@ -112,8 +131,122 @@
       }
     },
     {
+      "id": "hand-tracking",
+      "category": "Input",
+      "title": "Hand tracking",
+      "dasher_core_dep": "V6 pointer (x, y) event stream",
+      "notes": "Apple declares handTracking in its access-method enum (visionOS) but the backing service is not yet implemented.",
+      "platforms": {
+        "apple": { "status": "not-supported", "reason": "Declared but not implemented" },
+        "windows": { "status": "not-supported" },
+        "gtk": { "status": "not-supported" },
+        "web": { "status": "not-supported" }
+      },
+      "v5": {
+        "apple": { "status": "n/a", "reason": "Hand tracking APIs did not exist" },
+        "windows": { "status": "n/a" },
+        "gtk": { "status": "n/a" },
+        "web": { "status": "n/a" }
+      }
+    },
+    {
+      "id": "continuous-mode",
+      "category": "Input",
+      "title": "Continuous (always moving)",
+      "dasher_core_dep": "V6 default filter behaviour",
+      "notes": "Dasher zooms continuously towards the cursor position. The default Dasher experience on every platform.",
+      "platforms": {
+        "apple": { "status": "shipped" },
+        "windows": { "status": "shipped" },
+        "gtk": { "status": "shipped" },
+        "web": { "status": "shipped" }
+      },
+      "v5": {
+        "apple": { "status": "shipped" },
+        "windows": { "status": "shipped" },
+        "gtk": { "status": "shipped" },
+        "web": { "status": "n/a", "reason": "No web frontend in v5" }
+      }
+    },
+    {
+      "id": "dwell-selection",
+      "category": "Input",
+      "title": "Dwell to select",
+      "dasher_core_dep": "V6 dwell filter",
+      "notes": "Cursor pauses in a zone for a dwell time to select. Apple exposes this as a selection method; GTK does not yet implement it.",
+      "platforms": {
+        "apple": { "status": "shipped" },
+        "windows": { "status": "planned" },
+        "gtk": { "status": "not-supported", "reason": "Not implemented" },
+        "web": { "status": "planned" }
+      },
+      "v5": {
+        "apple": { "status": "shipped", "reason": "macOS" },
+        "windows": { "status": "shipped", "reason": "Dwell mode" },
+        "gtk": { "status": "shipped" },
+        "web": { "status": "n/a", "reason": "No web frontend in v5" }
+      }
+    },
+    {
+      "id": "click-to-zoom",
+      "category": "Input",
+      "title": "Click / tap to zoom",
+      "dasher_core_dep": "V6 click filter",
+      "notes": "Each click advances the zoom one step. Apple exposes pressToMove and clickToZoom selection methods.",
+      "platforms": {
+        "apple": { "status": "shipped" },
+        "windows": { "status": "planned" },
+        "gtk": { "status": "not-supported", "reason": "Not implemented" },
+        "web": { "status": "planned" }
+      },
+      "v5": {
+        "apple": { "status": "shipped", "reason": "macOS" },
+        "windows": { "status": "shipped" },
+        "gtk": { "status": "not-supported" },
+        "web": { "status": "n/a", "reason": "No web frontend in v5" }
+      }
+    },
+    {
+      "id": "direct-mode",
+      "category": "Input",
+      "title": "Direct mode (tap boxes)",
+      "dasher_core_dep": "V6 direct-boxes filter",
+      "notes": "Screen is divided into letter boxes that you tap directly. Apple implements this on macOS via Accessibility API text injection (directBoxes selection method).",
+      "platforms": {
+        "apple": { "status": "shipped", "reason": "macOS Accessibility API" },
+        "windows": { "status": "planned" },
+        "gtk": { "status": "not-supported", "reason": "Not implemented" },
+        "web": { "status": "not-supported" }
+      },
+      "v5": {
+        "apple": { "status": "not-supported" },
+        "windows": { "status": "shipped", "reason": "Direct mode" },
+        "gtk": { "status": "not-supported" },
+        "web": { "status": "n/a", "reason": "No web frontend in v5" }
+      }
+    },
+    {
+      "id": "haptic-feedback",
+      "category": "Input",
+      "title": "Haptic / rumble feedback",
+      "dasher_core_dep": "V6 input haptic event",
+      "notes": "GTK uses SDL3 haptic/rumble for gamepad feedback.",
+      "platforms": {
+        "apple": { "status": "planned" },
+        "windows": { "status": "planned" },
+        "gtk": { "status": "shipped", "reason": "SDL3 haptic/rumble" },
+        "web": { "status": "not-supported" }
+      },
+      "v5": {
+        "apple": { "status": "not-supported" },
+        "windows": { "status": "not-supported" },
+        "gtk": { "status": "not-supported" },
+        "web": { "status": "n/a", "reason": "No web frontend in v5" }
+      }
+    },
+    {
       "id": "canvas-rendering",
-      "category": "Rendering",
+      "category": "Appearance",
       "title": "Dasher canvas rendering",
       "dasher_core_dep": "V6 draw-command buffer",
       "notes": "Frontend renders the draw-command buffer produced by DasherCore. v5 used native canvas/OpenGL per platform.",
@@ -131,8 +264,65 @@
       }
     },
     {
+      "id": "colour-palettes",
+      "category": "Appearance",
+      "title": "Colour palette selection",
+      "dasher_core_dep": "Colour palette system (22 palettes)",
+      "notes": "DasherCore ships 22 colour palettes. Apple exposes a palette picker; GTK exposes SyncedColorDropdown with live swatches.",
+      "platforms": {
+        "apple": { "status": "shipped" },
+        "windows": { "status": "shipped" },
+        "gtk": { "status": "shipped", "reason": "SyncedColorDropdown with live swatches" },
+        "web": { "status": "planned" }
+      },
+      "v5": {
+        "apple": { "status": "shipped", "reason": "Colour schemes" },
+        "windows": { "status": "shipped", "reason": "Colour schemes" },
+        "gtk": { "status": "shipped", "reason": "Colour schemes" },
+        "web": { "status": "n/a", "reason": "No web frontend in v5" }
+      }
+    },
+    {
+      "id": "custom-fonts",
+      "category": "Appearance",
+      "title": "Custom font family & size",
+      "dasher_core_dep": "Font parameter (LP_DASHER_FONTSIZE, SP_DASHER_FONT)",
+      "notes": "Apple offers 10 font families + size slider. GTK uses FontDialogButton (family/style/weight/size).",
+      "platforms": {
+        "apple": { "status": "shipped", "reason": "10 families + size slider" },
+        "windows": { "status": "shipped" },
+        "gtk": { "status": "shipped", "reason": "FontDialogButton" },
+        "web": { "status": "planned" }
+      },
+      "v5": {
+        "apple": { "status": "shipped", "reason": "Font selection" },
+        "windows": { "status": "shipped" },
+        "gtk": { "status": "shipped" },
+        "web": { "status": "n/a", "reason": "No web frontend in v5" }
+      }
+    },
+    {
+      "id": "screen-orientation",
+      "category": "Appearance",
+      "title": "Left / right-handed layout",
+      "dasher_core_dep": "BP_ORIENT_L_R (orientation parameter)",
+      "notes": "Dasher can render left-to-right or right-to-left to suit handedness. Provided by DasherCore.",
+      "platforms": {
+        "apple": { "status": "shipped" },
+        "windows": { "status": "shipped" },
+        "gtk": { "status": "shipped" },
+        "web": { "status": "shipped" }
+      },
+      "v5": {
+        "apple": { "status": "shipped" },
+        "windows": { "status": "shipped" },
+        "gtk": { "status": "shipped" },
+        "web": { "status": "n/a", "reason": "No web frontend in v5" }
+      }
+    },
+    {
       "id": "dark-mode",
-      "category": "Rendering",
+      "category": "Appearance",
       "title": "Dark mode / themes",
       "dasher_core_dep": "Colour palette parameter",
       "platforms": {
@@ -150,15 +340,53 @@
     },
     {
       "id": "ppm-language-model",
-      "category": "Language & Models",
+      "category": "Language & Prediction",
       "title": "PPM prediction (default model)",
       "dasher_core_dep": "LMRegistry (PPM, id 0)",
-      "notes": "Provided by DasherCore; inherited by every frontend. v5 also had Word/Mixture/CTW/Japanese and Kanji/Pinyin conversion.",
+      "notes": "Prediction by Partial Matching — the default language model. Provided by DasherCore to every frontend.",
       "platforms": {
         "apple": { "status": "shipped" },
         "windows": { "status": "shipped" },
         "gtk": { "status": "shipped" },
         "web": { "status": "shipped" }
+      },
+      "v5": {
+        "apple": { "status": "shipped" },
+        "windows": { "status": "shipped" },
+        "gtk": { "status": "shipped" },
+        "web": { "status": "n/a", "reason": "No web frontend in v5" }
+      }
+    },
+    {
+      "id": "alternative-language-models",
+      "category": "Language & Prediction",
+      "title": "Alternative models (Word / Mixture / CTW)",
+      "dasher_core_dep": "LMRegistry (Word id 1, Mixture id 2, CTW id 3)",
+      "notes": "DasherCore registers 4 pluggable language models. Word caches context, Mixture combines PPM + Word, CTW is Context Tree Weighting.",
+      "platforms": {
+        "apple": { "status": "shipped" },
+        "windows": { "status": "shipped" },
+        "gtk": { "status": "shipped" },
+        "web": { "status": "planned" }
+      },
+      "v5": {
+        "apple": { "status": "shipped", "reason": "Word/Mixture/CTW/Japanese" },
+        "windows": { "status": "shipped" },
+        "gtk": { "status": "shipped" },
+        "web": { "status": "n/a", "reason": "No web frontend in v5" }
+      }
+    },
+    {
+      "id": "adaptive-learning",
+      "category": "Language & Prediction",
+      "title": "Adaptive learning (LM adapts as you type)",
+      "dasher_core_dep": "LM adaptive context",
+      "notes": "Language model learns from entered text to improve predictions. GTK exposes an explicit toggle.",
+      "platforms": {
+        "apple": { "status": "shipped" },
+        "windows": { "status": "shipped" },
+        "gtk": { "status": "shipped", "reason": "Explicit toggle in settings" },
+        "web": { "status": "planned" }
       },
       "v5": {
         "apple": { "status": "shipped" },
@@ -169,14 +397,14 @@
     },
     {
       "id": "alphabets-and-languages",
-      "category": "Language & Models",
+      "category": "Language & Prediction",
       "title": "Alphabet & language selection",
-      "dasher_core_dep": "Alphabet system (WorldAlphabets, 344 languages)",
-      "notes": "v5 carried ~140 alphabet definitions; v6 expands this to 344 via WorldAlphabets.",
+      "dasher_core_dep": "WorldAlphabets (622 alphabet files, 344 languages)",
+      "notes": "v5 carried ~140 alphabet definitions; v6 expands to 622 via WorldAlphabets (9 curated + 486 autoConverted + 127 legacy).",
       "platforms": {
         "apple": { "status": "shipped" },
         "windows": { "status": "shipped" },
-        "gtk": { "status": "shipped" },
+        "gtk": { "status": "shipped", "reason": "Alphabet chooser" },
         "web": { "status": "shipped" }
       },
       "v5": {
@@ -187,15 +415,41 @@
       }
     },
     {
+      "id": "cjk-pinyin-conversion",
+      "category": "Language & Prediction",
+      "title": "Pinyin / CJK conversion",
+      "dasher_core_dep": "Japanese/CJK alphabets + special LM",
+      "notes": "DasherCore ships Japanese alphabet files and a dedicated conversion system.",
+      "platforms": {
+        "apple": { "status": "shipped" },
+        "windows": { "status": "shipped" },
+        "gtk": { "status": "shipped" },
+        "web": { "status": "planned" }
+      },
+      "v5": {
+        "apple": { "status": "shipped", "reason": "Kanji/Pinyin conversion" },
+        "windows": { "status": "shipped", "reason": "Kanji/Pinyin conversion" },
+        "gtk": { "status": "shipped", "reason": "Kanji/Pinyin conversion" },
+        "web": { "status": "n/a", "reason": "No web frontend in v5" }
+      }
+    },
+    {
       "id": "spoken-output-tts",
       "category": "Output",
       "title": "Spoken output (text-to-speech)",
       "dasher_core_dep": "Output text stream",
-      "notes": "v5: SAPI (Windows), speech-dispatcher (Linux), flite (iOS). v6: swift-tts-wrapper / DotNetTtsWrapper / rust-tts-wrapper.",
+      "notes": "Apple: swift-tts-wrapper (21 engine backends, voice/rate/pitch/volume). Windows: DotNetTtsWrapper. GTK: rust-tts-wrapper (placeholder, behind HAS_TTS flag). v5: SAPI (Windows), speech-dispatcher (Linux), flite (iOS).",
       "platforms": {
-        "apple": { "status": "shipped", "version": "swift-tts-wrapper" },
+        "apple": {
+          "status": "shipped",
+          "version": "swift-tts-wrapper",
+          "reason": "21 engines, voice/rate/pitch"
+        },
         "windows": { "status": "shipped", "version": "DotNetTtsWrapper" },
-        "gtk": { "status": "shipped", "version": "rust-tts-wrapper" },
+        "gtk": {
+          "status": "not-supported",
+          "reason": "rust-tts-wrapper placeholder (HAS_TTS flag)"
+        },
         "web": { "status": "not-supported", "reason": "Browser SpeechSynthesis only" }
       },
       "v5": {
@@ -206,10 +460,30 @@
       }
     },
     {
+      "id": "speak-on-stop",
+      "category": "Output",
+      "title": "Speak typed text on stop",
+      "dasher_core_dep": "Output text stream + GameModule stop event",
+      "notes": "Reads accumulated text aloud when the user stops Dasher. Part of the Apple Speech settings tab.",
+      "platforms": {
+        "apple": { "status": "shipped", "reason": "Speech settings tab" },
+        "windows": { "status": "planned" },
+        "gtk": { "status": "not-supported", "reason": "TTS not wired" },
+        "web": { "status": "not-supported" }
+      },
+      "v5": {
+        "apple": { "status": "shipped", "reason": "Speak on stop" },
+        "windows": { "status": "shipped", "reason": "Speak on stop" },
+        "gtk": { "status": "shipped" },
+        "web": { "status": "n/a", "reason": "No web frontend in v5" }
+      }
+    },
+    {
       "id": "copy-to-clipboard",
       "category": "Output",
-      "title": "Copy text to clipboard on stop",
+      "title": "Copy text to clipboard",
       "dasher_core_dep": "Clipboard parameter",
+      "notes": "Apple offers Copy and Copy All (iOS). GTK offers Copy and Copy All.",
       "platforms": {
         "apple": { "status": "shipped" },
         "windows": { "status": "shipped" },
@@ -224,15 +498,110 @@
       }
     },
     {
-      "id": "grouped-settings-ui",
-      "category": "Settings",
-      "title": "Grouped settings UI (by usage context)",
-      "dasher_core_dep": "settings_manifest.json groups",
-      "notes": "See dasher-design-guide for the normative tab structure (Customization/Input/Language/Output/Game Mode).",
+      "id": "paste-from-clipboard",
+      "category": "Output",
+      "title": "Paste / insert text",
+      "dasher_core_dep": "Clipboard + training parameter",
+      "notes": "Paste clipboard contents into Dasher's text buffer. GTK has Paste button; Apple has Paste (iOS).",
+      "platforms": {
+        "apple": { "status": "shipped" },
+        "windows": { "status": "planned" },
+        "gtk": { "status": "shipped" },
+        "web": { "status": "planned" }
+      },
+      "v5": {
+        "apple": { "status": "shipped" },
+        "windows": { "status": "shipped" },
+        "gtk": { "status": "shipped" },
+        "web": { "status": "n/a", "reason": "No web frontend in v5" }
+      }
+    },
+    {
+      "id": "direct-text-injection",
+      "category": "Output",
+      "title": "System-wide direct text entry",
+      "dasher_core_dep": "V6 output text stream",
+      "notes": "Injects text directly into other applications. Apple uses the macOS Accessibility API (Direct Mode). Similar to an OS keyboard.",
+      "platforms": {
+        "apple": { "status": "shipped", "reason": "macOS Accessibility API" },
+        "windows": { "status": "planned" },
+        "gtk": { "status": "not-supported", "reason": "Not implemented" },
+        "web": { "status": "not-supported" }
+      },
+      "v5": {
+        "apple": { "status": "not-supported" },
+        "windows": { "status": "not-supported" },
+        "gtk": { "status": "not-supported" },
+        "web": { "status": "n/a", "reason": "No web frontend in v5" }
+      }
+    },
+    {
+      "id": "save-to-file",
+      "category": "Output",
+      "title": "Save output to file",
+      "dasher_core_dep": "V6 output text stream",
+      "notes": "Apple macOS supports Save/Open file. GTK supports PDF screenshot export (F8).",
+      "platforms": {
+        "apple": { "status": "shipped", "reason": "macOS Save/Open" },
+        "windows": { "status": "planned" },
+        "gtk": { "status": "shipped", "reason": "PDF screenshot export (F8)" },
+        "web": { "status": "not-supported", "reason": "Browser download only" }
+      },
+      "v5": {
+        "apple": { "status": "shipped", "reason": "Save/Open file (macOS)" },
+        "windows": { "status": "shipped" },
+        "gtk": { "status": "shipped" },
+        "web": { "status": "n/a", "reason": "No web frontend in v5" }
+      }
+    },
+    {
+      "id": "undo-redo",
+      "category": "Output",
+      "title": "Undo / redo typed text",
+      "dasher_core_dep": "V6 output buffer",
+      "notes": "GTK has Undo/Redo buttons. v5 did not have undo.",
       "platforms": {
         "apple": { "status": "planned" },
+        "windows": { "status": "planned" },
+        "gtk": { "status": "shipped" },
+        "web": { "status": "planned" }
+      },
+      "v5": {
+        "apple": { "status": "not-supported", "reason": "Not available in v5" },
+        "windows": { "status": "not-supported" },
+        "gtk": { "status": "not-supported" },
+        "web": { "status": "n/a", "reason": "No web frontend in v5" }
+      }
+    },
+    {
+      "id": "pdf-screenshot-export",
+      "category": "Output",
+      "title": "PDF / screenshot export",
+      "dasher_core_dep": "V6 draw-command buffer",
+      "notes": "GTK supports PDF screenshot export (F8 key).",
+      "platforms": {
+        "apple": { "status": "not-supported" },
+        "windows": { "status": "planned" },
+        "gtk": { "status": "shipped", "reason": "F8" },
+        "web": { "status": "not-supported" }
+      },
+      "v5": {
+        "apple": { "status": "not-supported" },
+        "windows": { "status": "not-supported" },
+        "gtk": { "status": "shipped" },
+        "web": { "status": "n/a", "reason": "No web frontend in v5" }
+      }
+    },
+    {
+      "id": "grouped-settings-ui",
+      "category": "Customization",
+      "title": "Grouped settings UI (by usage context)",
+      "dasher_core_dep": "settings_manifest.json groups",
+      "notes": "Apple: 6 tabs (Customization/Input/Language/Output/Speech/Game Mode). GTK: PreferencesWindow with StackSidebar + dynamic per-module grids. See dasher-design-guide for the normative structure.",
+      "platforms": {
+        "apple": { "status": "shipped", "reason": "6 tabs" },
         "windows": { "status": "beta" },
-        "gtk": { "status": "planned" },
+        "gtk": { "status": "shipped", "reason": "StackSidebar + dynamic grids" },
         "web": { "status": "planned" }
       },
       "v5": {
@@ -243,8 +612,84 @@
       }
     },
     {
+      "id": "dynamic-settings-discovery",
+      "category": "Customization",
+      "title": "Auto-discover engine parameters",
+      "dasher_core_dep": "settings_manifest.json (86 parameters)",
+      "notes": "GTK auto-discovers all DasherCore parameters at runtime and builds settings UI dynamically with Synced* widgets (7 widget types).",
+      "platforms": {
+        "apple": { "status": "shipped", "reason": "Manual tabs referencing manifest" },
+        "windows": { "status": "beta" },
+        "gtk": { "status": "shipped", "reason": "Synced* widgets, 7 types" },
+        "web": { "status": "planned" }
+      },
+      "v5": {
+        "apple": { "status": "not-supported", "reason": "Hardcoded dialogs" },
+        "windows": { "status": "not-supported", "reason": "Hardcoded dialogs" },
+        "gtk": { "status": "not-supported", "reason": "Hardcoded dialogs" },
+        "web": { "status": "n/a", "reason": "No web frontend in v5" }
+      }
+    },
+    {
+      "id": "settings-persistence",
+      "category": "Customization",
+      "title": "Save / load user settings",
+      "dasher_core_dep": "Settings persistence (XML)",
+      "notes": "DasherCore persists settings as XML. All frontends load/save via the engine.",
+      "platforms": {
+        "apple": { "status": "shipped" },
+        "windows": { "status": "shipped" },
+        "gtk": { "status": "shipped", "reason": "XML persistence" },
+        "web": { "status": "planned" }
+      },
+      "v5": {
+        "apple": { "status": "shipped" },
+        "windows": { "status": "shipped" },
+        "gtk": { "status": "shipped" },
+        "web": { "status": "n/a", "reason": "No web frontend in v5" }
+      }
+    },
+    {
+      "id": "speed-control",
+      "category": "Customization",
+      "title": "User-facing speed control",
+      "dasher_core_dep": "LP_MAX_BITRATE / BP_AUTO_SPEEDCONTROL",
+      "notes": "GTK exposes a dedicated speed slider; Apple has speed in Customization tab. DasherCore also has auto-speed control.",
+      "platforms": {
+        "apple": { "status": "shipped" },
+        "windows": { "status": "shipped" },
+        "gtk": { "status": "shipped", "reason": "Dedicated slider" },
+        "web": { "status": "shipped" }
+      },
+      "v5": {
+        "apple": { "status": "shipped" },
+        "windows": { "status": "shipped" },
+        "gtk": { "status": "shipped" },
+        "web": { "status": "n/a", "reason": "No web frontend in v5" }
+      }
+    },
+    {
+      "id": "button-key-remapping",
+      "category": "Customization",
+      "title": "Button / key remapping",
+      "dasher_core_dep": "V6 input key binding",
+      "notes": "GTK supports live key recording for button assignment. Apple supports switch key capture (4 profiles).",
+      "platforms": {
+        "apple": { "status": "shipped", "reason": "Switch profiles, key capture" },
+        "windows": { "status": "planned" },
+        "gtk": { "status": "shipped", "reason": "Live key recording" },
+        "web": { "status": "not-supported" }
+      },
+      "v5": {
+        "apple": { "status": "shipped", "reason": "Button assignment" },
+        "windows": { "status": "shipped" },
+        "gtk": { "status": "shipped" },
+        "web": { "status": "n/a", "reason": "No web frontend in v5" }
+      }
+    },
+    {
       "id": "live-settings-preview",
-      "category": "Settings",
+      "category": "Customization",
       "title": "Live mini-canvas preview in settings",
       "dasher_core_dep": "Multiple render parameters",
       "platforms": {
@@ -261,8 +706,27 @@
       }
     },
     {
+      "id": "localization",
+      "category": "Customization",
+      "title": "Multiple UI languages",
+      "dasher_core_dep": "DasherCore locale strings (33 locales)",
+      "notes": "Apple ships 9 UI locale translations. DasherCore carries 33 locale string files.",
+      "platforms": {
+        "apple": { "status": "shipped", "reason": "9 UI languages" },
+        "windows": { "status": "planned" },
+        "gtk": { "status": "planned" },
+        "web": { "status": "planned" }
+      },
+      "v5": {
+        "apple": { "status": "shipped", "reason": "Multiple languages" },
+        "windows": { "status": "shipped" },
+        "gtk": { "status": "shipped" },
+        "web": { "status": "n/a", "reason": "No web frontend in v5" }
+      }
+    },
+    {
       "id": "guided-onboarding",
-      "category": "Onboarding & Training",
+      "category": "Training",
       "title": "Guided first-run onboarding",
       "dasher_core_dep": "V6 (UX layer)",
       "platforms": {
@@ -280,14 +744,14 @@
     },
     {
       "id": "game-mode-training",
-      "category": "Onboarding & Training",
+      "category": "Training",
       "title": "Gamified training (Game Mode)",
       "dasher_core_dep": "GameModule",
-      "notes": "Existed in v5 (GameModule with target text + guiding arrow); being rebuilt for v6.",
+      "notes": "DasherCore's GameModule tracks target text, correct/wrong/remaining characters, and a help path. Apple has Game Mode fully wired with custom text file support. GTK has the button but it is not wired.",
       "platforms": {
-        "apple": { "status": "planned" },
+        "apple": { "status": "shipped", "reason": "Custom text file support" },
         "windows": { "status": "planned" },
-        "gtk": { "status": "planned" },
+        "gtk": { "status": "not-supported", "reason": "Button present but not wired" },
         "web": { "status": "planned" }
       },
       "v5": {
@@ -298,10 +762,30 @@
       }
     },
     {
+      "id": "custom-training-text",
+      "category": "Training",
+      "title": "Custom game / training text files",
+      "dasher_core_dep": "GameModule (target text parameter)",
+      "notes": "Apple lets you load custom text files as Game Mode targets.",
+      "platforms": {
+        "apple": { "status": "shipped" },
+        "windows": { "status": "planned" },
+        "gtk": { "status": "not-supported", "reason": "Game Mode not wired" },
+        "web": { "status": "planned" }
+      },
+      "v5": {
+        "apple": { "status": "not-supported" },
+        "windows": { "status": "shipped" },
+        "gtk": { "status": "shipped" },
+        "web": { "status": "n/a", "reason": "No web frontend in v5" }
+      }
+    },
+    {
       "id": "ios-keyboard-extension",
-      "category": "Accessibility",
+      "category": "Platform Integration",
       "title": "System-wide iOS keyboard extension",
       "dasher_core_dep": "V6 low-memory mode",
+      "notes": "Apple ships a keyboard extension on iOS that shares settings with the main app via a shared app group. Low-memory tuning for the extension process.",
       "platforms": {
         "apple": { "status": "shipped" },
         "windows": { "status": "n/a" },
@@ -317,9 +801,29 @@
     },
     {
       "id": "visionos-app",
-      "category": "Accessibility",
+      "category": "Platform Integration",
       "title": "visionOS app",
       "dasher_core_dep": "V6 pointer event stream",
+      "notes": "Apple ships a visionOS app using eye gaze + pinch + dwell indicator.",
+      "platforms": {
+        "apple": { "status": "shipped", "reason": "Eye gaze + pinch + dwell indicator" },
+        "windows": { "status": "n/a" },
+        "gtk": { "status": "n/a" },
+        "web": { "status": "n/a" }
+      },
+      "v5": {
+        "apple": { "status": "n/a", "reason": "visionOS did not exist" },
+        "windows": { "status": "n/a" },
+        "gtk": { "status": "n/a" },
+        "web": { "status": "n/a" }
+      }
+    },
+    {
+      "id": "app-group-sharing",
+      "category": "Platform Integration",
+      "title": "Shared settings (app & keyboard extension)",
+      "dasher_core_dep": "V6 settings persistence",
+      "notes": "Apple uses a shared app group so the iOS keyboard extension and the main app share the same settings and user dictionary.",
       "platforms": {
         "apple": { "status": "shipped" },
         "windows": { "status": "n/a" },
@@ -327,7 +831,7 @@
         "web": { "status": "n/a" }
       },
       "v5": {
-        "apple": { "status": "n/a", "reason": "visionOS did not exist" },
+        "apple": { "status": "not-supported", "reason": "No keyboard extension in v5" },
         "windows": { "status": "n/a" },
         "gtk": { "status": "n/a" },
         "web": { "status": "n/a" }
