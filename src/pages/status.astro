@@ -10,12 +10,13 @@ import {
   statusLegend,
   statusOrder,
   v5Baseline,
+  v5Entry,
 } from '../data/feature-status';
 ---
 
 <BaseLayout
   title="Feature status — Dasher"
-  description="What Dasher v6 supports across Apple, Windows, GTK, Android and the Web."
+  description="What Dasher v6 supports across Apple, Windows, GTK and the Web — with a v5 baseline comparison."
 >
   <section class="status-hero">
     <div class="container">
@@ -39,7 +40,16 @@ import {
     </div>
   </section>
 
-  <section class="container status-body">
+  <section class="container status-body" data-view="v6">
+    <div class="version-toggle" role="tablist" aria-label="Dasher version">
+      <button class="toggle-btn active" data-version="v6" role="tab" aria-selected="true">
+        Dasher v6
+      </button>
+      <button class="toggle-btn" data-version="v5" role="tab" aria-selected="false">
+        Dasher v5 baseline
+      </button>
+    </div>
+
     <div class="legend" aria-label="Status legend">
       {
         statusOrder.map((key) => (
@@ -55,7 +65,10 @@ import {
 
     <div class="table-scroll">
       <table class="status-matrix">
-        <caption class="sr-only"> Dasher v6 feature support by platform </caption>
+        <caption class="sr-only">
+          <span class="caption-v6">Dasher v6 feature support by platform</span>
+          <span class="caption-v5">Dasher v5 feature support by platform</span>
+        </caption>
         <thead>
           <tr>
             <th scope="col" class="col-feature">Feature</th>
@@ -86,18 +99,37 @@ import {
                       )}
                     </th>
                     {platforms.map((p) => {
-                      const entry = feature.platforms[p];
-                      const key = entry?.status ?? 'n/a';
-                      const detail = entryText(entry);
+                      const v6entry = feature.platforms[p];
+                      const v6key = v6entry?.status ?? 'n/a';
+                      const v6detail = entryText(v6entry);
+                      const v5entry = v5Entry(feature, p);
+                      const v5key = v5entry?.status ?? 'n/a';
+                      const v5detail = entryText(v5entry);
                       return (
                         <td class="cell">
-                          <span class={`badge badge-${key}`} title={detail || undefined}>
-                            <span class="sr-only">{statusLegend[key]}.</span>
-                            {detail ? (
-                              <span class="badge-detail">{detail}</span>
+                          <span
+                            class={`badge-v6 badge badge-${v6key}`}
+                            title={v6detail || undefined}
+                          >
+                            <span class="sr-only">{statusLegend[v6key]}.</span>
+                            {v6detail ? (
+                              <span class="badge-detail">{v6detail}</span>
                             ) : (
                               <span class="badge-icon" aria-hidden="true">
-                                {statusIcons[key]}
+                                {statusIcons[v6key]}
+                              </span>
+                            )}
+                          </span>
+                          <span
+                            class={`badge-v5 badge badge-${v5key}`}
+                            title={v5detail || undefined}
+                          >
+                            <span class="sr-only">{statusLegend[v5key]}.</span>
+                            {v5detail ? (
+                              <span class="badge-detail">{v5detail}</span>
+                            ) : (
+                              <span class="badge-icon" aria-hidden="true">
+                                {statusIcons[v5key]}
                               </span>
                             )}
                           </span>
@@ -119,6 +151,28 @@ import {
     </p>
   </section>
 </BaseLayout>
+
+<script>
+  const toggle = document.querySelector('.version-toggle');
+  const body = document.querySelector('.status-body');
+
+  if (toggle && body) {
+    toggle.addEventListener('click', (e) => {
+      const target = e.target;
+      if (!(target instanceof Element)) return;
+      const btn = target.closest('.toggle-btn');
+      if (!btn) return;
+      const version = btn.getAttribute('data-version');
+      if (!version) return;
+      body.setAttribute('data-view', version);
+      toggle.querySelectorAll('.toggle-btn').forEach((b) => {
+        const active = b === btn;
+        b.classList.toggle('active', active);
+        b.setAttribute('aria-selected', String(active));
+      });
+    });
+  }
+</script>
 
 <style>
   .status-hero {
@@ -178,6 +232,42 @@ import {
   .status-body {
     padding-top: var(--space-xl);
     padding-bottom: var(--space-2xl);
+  }
+
+  .version-toggle {
+    display: inline-flex;
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    margin-bottom: var(--space-lg);
+  }
+
+  .toggle-btn {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    background: var(--color-bg-secondary);
+    color: var(--color-text-secondary);
+    border: none;
+    border-right: 1px solid var(--color-border-subtle);
+    cursor: pointer;
+    transition:
+      background 0.15s,
+      color 0.15s;
+  }
+
+  .toggle-btn:last-child {
+    border-right: none;
+  }
+
+  .toggle-btn:hover {
+    background: var(--color-bg-elevated);
+  }
+
+  .toggle-btn.active {
+    background: var(--color-horizon-mint);
+    color: var(--color-deep-ink);
+    font-weight: 600;
   }
 
   .legend {
@@ -262,6 +352,32 @@ import {
 
   .badge-detail {
     font-size: 0.75rem;
+  }
+
+  /* v5 badges hidden by default; shown when data-view=v5 */
+  .badge-v5 {
+    display: none;
+  }
+
+  [data-view='v5'] .badge-v5 {
+    display: inline-flex;
+  }
+
+  [data-view='v5'] .badge-v6 {
+    display: none;
+  }
+
+  /* caption swap */
+  .caption-v5 {
+    display: none;
+  }
+
+  [data-view='v5'] .caption-v5 {
+    display: inline;
+  }
+
+  [data-view='v5'] .caption-v6 {
+    display: none;
   }
 
   /* status colours — light */

@@ -1,6 +1,6 @@
 // Typed access layer for the cross-platform feature matrix.
-// The raw data lives in feature-status.yaml (the SSOT) and is compiled to
-// feature-status.json by scripts/validate-feature-status.mjs at build time.
+// The raw data lives in feature-status.json (the SSOT) and is validated by
+// scripts/validate-feature-status.mjs at build time and in CI.
 // Keeping the logic here keeps the .astro component free of TS-only syntax
 // (the Astro frontmatter is linted as plain JS).
 
@@ -22,10 +22,15 @@ export interface Feature {
   dasher_core_dep?: string;
   notes?: string;
   platforms: Record<string, StatusEntry>;
+  v5?: Record<string, StatusEntry>;
 }
 
 export interface FeatureStatusFile {
-  meta: { last_updated: string; status_legend: Record<string, string> };
+  meta: {
+    last_updated: string;
+    v5_baseline?: string;
+    status_legend: Record<string, string>;
+  };
   platforms: string[];
   features: Feature[];
 }
@@ -38,7 +43,6 @@ export const platformLabels: Record<string, string> = {
   apple: 'Apple',
   windows: 'Windows',
   gtk: 'GTK',
-  android: 'Android',
   web: 'Web',
 };
 
@@ -78,6 +82,11 @@ export function entryText(entry?: StatusEntry): string {
   if (entry.issue) parts.push(entry.issue);
   if (entry.reason) parts.push(entry.reason);
   return parts.join(' · ');
+}
+
+/** Get the v5 status entry for a feature on a given platform. */
+export function v5Entry(feature: Feature, platform: string): StatusEntry | undefined {
+  return feature.v5?.[platform];
 }
 
 export const lastUpdated = featureStatus.meta.last_updated;

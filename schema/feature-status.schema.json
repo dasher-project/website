@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$comment": "Reference schema for src/data/feature-status.yaml. Enforced at CI time by scripts/validate-feature-status.mjs. Editors/IDEs can map this file to the YAML for validation hints.",
+  "$comment": "Reference schema for src/data/feature-status.json. Enforced at CI time by scripts/validate-feature-status.mjs. Editors/IDEs can map this file to the JSON for validation hints.",
   "title": "Dasher feature-status matrix",
   "type": "object",
   "required": ["meta", "platforms", "features"],
@@ -45,6 +45,10 @@
         "dasher_core_dep": { "type": "string" },
         "notes": { "type": "string" },
         "platforms": {
+          "type": "object",
+          "additionalProperties": { "$ref": "#/definitions/entry" }
+        },
+        "v5": {
           "type": "object",
           "additionalProperties": { "$ref": "#/definitions/entry" }
         }

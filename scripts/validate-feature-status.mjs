@@ -22,11 +22,32 @@ const ALLOWED_FEATURE_KEYS = new Set([
   'title',
   'dasher_core_dep',
   'platforms',
+  'v5',
   'notes',
 ]);
 
 function isObject(value) {
   return typeof value === 'object' && value !== null && !Array.isArray(value);
+}
+
+function validateEntry(entry, plat, platformSet, validStatuses, allowedKeys, where, errors) {
+  if (!platformSet.has(plat)) {
+    errors.push(`${where}."${plat}": not declared in top-level platforms list`);
+  }
+  if (!isObject(entry)) {
+    errors.push(`${where}."${plat}": not an object`);
+    return;
+  }
+  for (const key of Object.keys(entry)) {
+    if (!allowedKeys.has(key)) {
+      errors.push(`${where}."${plat}": unknown key "${key}"`);
+    }
+  }
+  if (!validStatuses.includes(entry.status)) {
+    errors.push(
+      `${where}."${plat}".status: "${entry.status}" is not one of ${validStatuses.join(', ')}`
+    );
+  }
 }
 
 function validate(data) {
@@ -112,22 +133,33 @@ function validate(data) {
         return;
       }
       for (const [plat, entry] of Object.entries(f.platforms)) {
-        if (!platformSet.has(plat)) {
-          errors.push(`${where}.platforms."${plat}": not declared in top-level platforms list`);
-        }
-        if (!isObject(entry)) {
-          errors.push(`${where}.platforms."${plat}": not an object`);
-          continue;
-        }
-        for (const key of Object.keys(entry)) {
-          if (!ALLOWED_ENTRY_KEYS.has(key)) {
-            errors.push(`${where}.platforms."${plat}": unknown key "${key}"`);
+        validateEntry(
+          entry,
+          plat,
+          platformSet,
+          VALID_STATUSES,
+          ALLOWED_ENTRY_KEYS,
+          `${where}.platforms`,
+          errors
+        );
+      }
+
+      // v5 (optional, same structure as platforms) ---------------------
+      if (f.v5 !== undefined) {
+        if (!isObject(f.v5)) {
+          errors.push(`${where}.v5: must be an object`);
+        } else {
+          for (const [plat, entry] of Object.entries(f.v5)) {
+            validateEntry(
+              entry,
+              plat,
+              platformSet,
+              VALID_STATUSES,
+              ALLOWED_ENTRY_KEYS,
+              `${where}.v5`,
+              errors
+            );
           }
-        }
-        if (!VALID_STATUSES.includes(entry.status)) {
-          errors.push(
-            `${where}.platforms."${plat}".status: "${entry.status}" is not one of ${VALID_STATUSES.join(', ')}`,
-          );
         }
       }
     });

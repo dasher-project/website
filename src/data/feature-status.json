@@ -11,7 +11,7 @@
       "n/a": "Not applicable on this platform"
     }
   },
-  "platforms": ["apple", "windows", "gtk", "android", "web"],
+  "platforms": ["apple", "windows", "gtk", "web"],
   "features": [
     {
       "id": "pointer-eye-gaze-input",
@@ -23,8 +23,16 @@
         "apple": { "status": "shipped", "version": "1.0" },
         "windows": { "status": "shipped", "version": "0.1" },
         "gtk": { "status": "shipped" },
-        "android": { "status": "planned", "issue": "dasher-project/Dasher-Mobile#1" },
         "web": { "status": "shipped" }
+      },
+      "v5": {
+        "apple": {
+          "status": "shipped",
+          "reason": "Socket input + eyetracker autocalibration (macOS)"
+        },
+        "windows": { "status": "shipped", "reason": "Socket input + eyetracker autocalibration" },
+        "gtk": { "status": "shipped", "reason": "Socket input" },
+        "web": { "status": "n/a", "reason": "No web frontend in v5" }
       }
     },
     {
@@ -37,8 +45,13 @@
         "apple": { "status": "shipped" },
         "windows": { "status": "shipped" },
         "gtk": { "status": "beta" },
-        "android": { "status": "planned" },
         "web": { "status": "shipped" }
+      },
+      "v5": {
+        "apple": { "status": "shipped", "reason": "Touch + two-finger multitouch (iPhone)" },
+        "windows": { "status": "shipped" },
+        "gtk": { "status": "shipped" },
+        "web": { "status": "n/a", "reason": "No web frontend in v5" }
       }
     },
     {
@@ -51,8 +64,13 @@
         "apple": { "status": "planned" },
         "windows": { "status": "beta" },
         "gtk": { "status": "shipped" },
-        "android": { "status": "n/a" },
         "web": { "status": "planned" }
+      },
+      "v5": {
+        "apple": { "status": "shipped", "reason": "Button Dynamic modes (macOS)" },
+        "windows": { "status": "shipped", "reason": "One-/Two-Button Dynamic" },
+        "gtk": { "status": "shipped" },
+        "web": { "status": "n/a", "reason": "No web frontend in v5" }
       }
     },
     {
@@ -65,8 +83,13 @@
         "apple": { "status": "not-supported", "reason": "Awaiting RFC on deadzone mapping" },
         "windows": { "status": "planned" },
         "gtk": { "status": "shipped" },
-        "android": { "status": "n/a" },
         "web": { "status": "not-supported", "reason": "Gamepad API only" }
+      },
+      "v5": {
+        "apple": { "status": "not-supported" },
+        "windows": { "status": "not-supported" },
+        "gtk": { "status": "shipped", "reason": "Linux joystick support" },
+        "web": { "status": "n/a", "reason": "No web frontend in v5" }
       }
     },
     {
@@ -79,8 +102,13 @@
         "apple": { "status": "planned" },
         "windows": { "status": "planned" },
         "gtk": { "status": "planned" },
-        "android": { "status": "n/a" },
         "web": { "status": "n/a" }
+      },
+      "v5": {
+        "apple": { "status": "shipped", "reason": "macOS UDP socket input" },
+        "windows": { "status": "shipped", "reason": "UDP coordinate protocol" },
+        "gtk": { "status": "shipped", "reason": "UDP coordinate protocol" },
+        "web": { "status": "n/a", "reason": "No web frontend in v5" }
       }
     },
     {
@@ -93,8 +121,13 @@
         "apple": { "status": "shipped" },
         "windows": { "status": "shipped" },
         "gtk": { "status": "shipped" },
-        "android": { "status": "planned" },
         "web": { "status": "shipped" }
+      },
+      "v5": {
+        "apple": { "status": "shipped" },
+        "windows": { "status": "shipped" },
+        "gtk": { "status": "shipped" },
+        "web": { "status": "n/a", "reason": "No web frontend in v5" }
       }
     },
     {
@@ -106,8 +139,13 @@
         "apple": { "status": "shipped" },
         "windows": { "status": "shipped" },
         "gtk": { "status": "shipped" },
-        "android": { "status": "planned" },
         "web": { "status": "shipped" }
+      },
+      "v5": {
+        "apple": { "status": "shipped", "reason": "Colour schemes" },
+        "windows": { "status": "shipped", "reason": "Colour schemes" },
+        "gtk": { "status": "shipped", "reason": "Colour schemes" },
+        "web": { "status": "n/a", "reason": "No web frontend in v5" }
       }
     },
     {
@@ -120,8 +158,13 @@
         "apple": { "status": "shipped" },
         "windows": { "status": "shipped" },
         "gtk": { "status": "shipped" },
-        "android": { "status": "shipped" },
         "web": { "status": "shipped" }
+      },
+      "v5": {
+        "apple": { "status": "shipped" },
+        "windows": { "status": "shipped" },
+        "gtk": { "status": "shipped" },
+        "web": { "status": "n/a", "reason": "No web frontend in v5" }
       }
     },
     {
@@ -134,8 +177,13 @@
         "apple": { "status": "shipped" },
         "windows": { "status": "shipped" },
         "gtk": { "status": "shipped" },
-        "android": { "status": "planned" },
         "web": { "status": "shipped" }
+      },
+      "v5": {
+        "apple": { "status": "shipped", "reason": "~140 alphabets" },
+        "windows": { "status": "shipped", "reason": "~140 alphabets" },
+        "gtk": { "status": "shipped", "reason": "~140 alphabets" },
+        "web": { "status": "n/a", "reason": "No web frontend in v5" }
       }
     },
     {
@@ -148,8 +196,13 @@
         "apple": { "status": "shipped", "version": "swift-tts-wrapper" },
         "windows": { "status": "shipped", "version": "DotNetTtsWrapper" },
         "gtk": { "status": "shipped", "version": "rust-tts-wrapper" },
-        "android": { "status": "n/a" },
         "web": { "status": "not-supported", "reason": "Browser SpeechSynthesis only" }
+      },
+      "v5": {
+        "apple": { "status": "shipped", "reason": "flite (iOS), NSSpeechSynthesizer (macOS)" },
+        "windows": { "status": "shipped", "reason": "SAPI" },
+        "gtk": { "status": "shipped", "reason": "speech-dispatcher" },
+        "web": { "status": "n/a", "reason": "No web frontend in v5" }
       }
     },
     {
@@ -161,8 +214,13 @@
         "apple": { "status": "shipped" },
         "windows": { "status": "shipped" },
         "gtk": { "status": "shipped" },
-        "android": { "status": "planned" },
         "web": { "status": "shipped" }
+      },
+      "v5": {
+        "apple": { "status": "shipped" },
+        "windows": { "status": "shipped" },
+        "gtk": { "status": "shipped" },
+        "web": { "status": "n/a", "reason": "No web frontend in v5" }
       }
     },
     {
@@ -175,8 +233,13 @@
         "apple": { "status": "planned" },
         "windows": { "status": "beta" },
         "gtk": { "status": "planned" },
-        "android": { "status": "planned" },
         "web": { "status": "planned" }
+      },
+      "v5": {
+        "apple": { "status": "not-supported", "reason": "Flat settings dialog" },
+        "windows": { "status": "not-supported", "reason": "Flat settings dialog" },
+        "gtk": { "status": "not-supported", "reason": "Flat settings dialog" },
+        "web": { "status": "n/a", "reason": "No web frontend in v5" }
       }
     },
     {
@@ -188,8 +251,13 @@
         "apple": { "status": "planned" },
         "windows": { "status": "planned" },
         "gtk": { "status": "planned" },
-        "android": { "status": "planned" },
         "web": { "status": "planned" }
+      },
+      "v5": {
+        "apple": { "status": "not-supported", "reason": "v6 innovation" },
+        "windows": { "status": "not-supported", "reason": "v6 innovation" },
+        "gtk": { "status": "not-supported", "reason": "v6 innovation" },
+        "web": { "status": "n/a", "reason": "No web frontend in v5" }
       }
     },
     {
@@ -201,8 +269,13 @@
         "apple": { "status": "planned" },
         "windows": { "status": "planned" },
         "gtk": { "status": "planned" },
-        "android": { "status": "planned" },
         "web": { "status": "planned" }
+      },
+      "v5": {
+        "apple": { "status": "not-supported", "reason": "v6 innovation" },
+        "windows": { "status": "not-supported", "reason": "v6 innovation" },
+        "gtk": { "status": "not-supported", "reason": "v6 innovation" },
+        "web": { "status": "n/a", "reason": "No web frontend in v5" }
       }
     },
     {
@@ -215,8 +288,13 @@
         "apple": { "status": "planned" },
         "windows": { "status": "planned" },
         "gtk": { "status": "planned" },
-        "android": { "status": "planned" },
         "web": { "status": "planned" }
+      },
+      "v5": {
+        "apple": { "status": "not-supported" },
+        "windows": { "status": "shipped", "reason": "GameModule (target text + guiding arrow)" },
+        "gtk": { "status": "shipped", "reason": "GameModule" },
+        "web": { "status": "n/a", "reason": "No web frontend in v5" }
       }
     },
     {
@@ -228,7 +306,12 @@
         "apple": { "status": "shipped" },
         "windows": { "status": "n/a" },
         "gtk": { "status": "n/a" },
-        "android": { "status": "n/a" },
+        "web": { "status": "n/a" }
+      },
+      "v5": {
+        "apple": { "status": "not-supported", "reason": "Standalone app only, no extension API" },
+        "windows": { "status": "n/a" },
+        "gtk": { "status": "n/a" },
         "web": { "status": "n/a" }
       }
     },
@@ -241,7 +324,12 @@
         "apple": { "status": "shipped" },
         "windows": { "status": "n/a" },
         "gtk": { "status": "n/a" },
-        "android": { "status": "n/a" },
+        "web": { "status": "n/a" }
+      },
+      "v5": {
+        "apple": { "status": "n/a", "reason": "visionOS did not exist" },
+        "windows": { "status": "n/a" },
+        "gtk": { "status": "n/a" },
         "web": { "status": "n/a" }
       }
     }

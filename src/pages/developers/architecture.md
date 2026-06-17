@@ -22,6 +22,32 @@ Each **frontend** owns only:
 
 ## How each frontend consumes DasherCore
 
+There are **two integration paths** — pick whichever fits your platform:
+
+### 1. C API shared library (recommended)
+
+Build DasherCore with `-DBUILD_CAPI=ON` to produce a shared library
+(`dasher.dll` on Windows, `libdasher.so` on Linux, `libdasher.dylib` on macOS).
+Your frontend links against the flat C API exposed in
+[`dasher.h`](https://github.com/dasher-project/DasherCore/blob/main/Src/dasher.h).
+
+**Pre-built binaries** — DasherCore's [GitHub Releases](https://github.com/dasher-project/DasherCore/releases)
+ship ready-to-use artefacts for each platform:
+
+- The **shared library** (`dasher.dll` / `libdasher.so` / `libdasher.dylib`)
+- The `Data/` directory (alphabets, colour schemes, training text, help files)
+- The `dasher.h` header
+
+You can download these directly instead of building from source. This is the
+fastest way to integrate Dasher into a new application.
+
+### 2. Compile the C++ source directly
+
+Alternatively, compile the DasherCore C++ sources directly into your project
+(as the Apple frontend does today). This gives you full access to the internal
+C++ classes (`CDasherScreen`, `CDasherInput`, etc.) but couples you more tightly
+to the engine internals.
+
 | Frontend    | Model                                                                                                                                           |
 | :---------- | :---------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Apple**   | Compiles DasherCore source directly into a per-platform static library; Swift calls the C API through a bridging header (`#import "dasher.h"`). |
@@ -47,7 +73,7 @@ From `C_API.md`'s "Important notes" — the implicit contract:
 - **Parameters** — [`settings_manifest.json`](https://github.com/dasher-project/DasherCore/blob/main/settings_manifest.json) is code-generated into `Parameters.cpp`. The UI settings tabs render from its `group`/`subgroup`.
 - **Strings / translations** — [`Strings/strings_en.json`](https://github.com/dasher-project/DasherCore/blob/main/Strings/) is the single template for translators.
 - **Design tokens** — [`dasher-design-guide/DESIGN.md`](https://github.com/dasher-project/dasher-design-guide/blob/main/DESIGN.md).
-- **Feature support** — [the status matrix](../status/) (`src/data/feature-status.yaml` in this repo).
+- **Feature support** — [the status matrix](../status/) (`src/data/feature-status.json` in this repo).
 
 ## Diagnostic vs. stable API
 
