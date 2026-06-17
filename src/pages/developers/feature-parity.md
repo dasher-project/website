@@ -6,7 +6,7 @@ layout: ../../layouts/DocsLayout.astro
 
 # Feature parity
 
-The [feature status matrix](../status/) is the **behavioural single source of
+The [feature status matrix](/status/) is the **behavioural single source of
 truth** for Dasher v6: what each platform supports, today. It exists to keep the
 frontends from drifting apart.
 
@@ -14,7 +14,7 @@ frontends from drifting apart.
 
 - **Source:** [`src/data/feature-status.json`](https://github.com/dasher-project/website/blob/astro-build/src/data/feature-status.json) in this repo.
 - **Schema (reference):** [`schema/feature-status.schema.json`](https://github.com/dasher-project/website/blob/astro-build/schema/feature-status.schema.json).
-- **Rendered:** the public [/status/](../status/) page (and used by developers to spot gaps).
+- **Rendered:** the public [/status/](/status/) page (and used by developers to spot gaps).
 
 The JSON is validated on every PR by
 [`scripts/validate-feature-status.mjs`](https://github.com/dasher-project/website/blob/astro-build/scripts/validate-feature-status.mjs).
@@ -33,7 +33,7 @@ A malformed entry **fails CI**.
 ## v5 baseline
 
 Each feature carries an optional `v5` object that records its status in the
-last stable release (Dasher 5.x). The public [status page](../status/) has a
+last stable release (Dasher 5.x). The public [status page](/status/) has a
 **toggle** — "Dasher v6" (default) vs "Dasher v5 baseline" — so anyone can
 compare what changed between generations at a glance.
 

@@ -73,7 +73,7 @@ From `C_API.md`'s "Important notes" — the implicit contract:
 - **Parameters** — [`settings_manifest.json`](https://github.com/dasher-project/DasherCore/blob/main/settings_manifest.json) is code-generated into `Parameters.cpp`. The UI settings tabs render from its `group`/`subgroup`.
 - **Strings / translations** — [`Strings/strings_en.json`](https://github.com/dasher-project/DasherCore/blob/main/Strings/) is the single template for translators.
 - **Design tokens** — [`dasher-design-guide/DESIGN.md`](https://github.com/dasher-project/dasher-design-guide/blob/main/DESIGN.md).
-- **Feature support** — [the status matrix](../status/) (`src/data/feature-status.json` in this repo).
+- **Feature support** — [the status matrix](/status/) (`src/data/feature-status.json` in this repo).
 
 ## Diagnostic vs. stable API
 

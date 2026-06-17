@@ -43,4 +43,4 @@ When a design decision changes (from `DESIGN.md`):
 4. Then update each frontend's mapping.
 
 > Note: this guide is the **visual** SSOT. The **behavioural** SSOT (which
-> features each platform ships) is the [feature matrix](../status/).
+> features each platform ships) is the [feature matrix](/status/).
