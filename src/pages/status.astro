@@ -1,0 +1,445 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import {
+  categories,
+  entryText,
+  lastUpdated,
+  platformLabels,
+  platforms,
+  statusIcons,
+  statusLegend,
+  statusOrder,
+  v5Baseline,
+  v5Entry,
+} from '../data/feature-status';
+---
+
+<BaseLayout
+  title="Feature status — Dasher"
+  description="What Dasher v6 supports across Apple, Windows, GTK and the Web — with a v5 baseline comparison."
+>
+  <section class="status-hero">
+    <div class="container">
+      <p class="eyebrow">Dasher v6</p>
+      <h1>Feature &amp; platform status</h1>
+      <p class="lede">
+        One shared engine (DasherCore), many native frontends. This is the live, single source of
+        truth for what Dasher v6 supports — and where — today.
+      </p>
+      <p class="updated">Last updated: <time datetime={lastUpdated}>{lastUpdated}</time></p>
+      {
+        v5Baseline && (
+          <p class="baseline">
+            <details>
+              <summary>How does this compare to Dasher v5?</summary>
+              <p>{v5Baseline}</p>
+            </details>
+          </p>
+        )
+      }
+    </div>
+  </section>
+
+  <section class="container status-body" data-view="v6">
+    <div class="version-toggle" role="tablist" aria-label="Dasher version">
+      <button class="toggle-btn active" data-version="v6" role="tab" aria-selected="true">
+        Dasher v6
+      </button>
+      <button class="toggle-btn" data-version="v5" role="tab" aria-selected="false">
+        Dasher v5 baseline
+      </button>
+    </div>
+
+    <div class="legend" aria-label="Status legend">
+      {
+        statusOrder.map((key) => (
+          <span class={`badge badge-${key}`}>
+            <span class="badge-icon" aria-hidden="true">
+              {statusIcons[key]}
+            </span>
+            {statusLegend[key]}
+          </span>
+        ))
+      }
+    </div>
+
+    <div class="table-scroll">
+      <table class="status-matrix">
+        <caption class="sr-only">
+          <span class="caption-v6">Dasher v6 feature support by platform</span>
+          <span class="caption-v5">Dasher v5 feature support by platform</span>
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col" class="col-feature">Feature</th>
+            {
+              platforms.map((p) => (
+                <th scope="col" class="col-platform">
+                  {platformLabels[p] ?? p}
+                </th>
+              ))
+            }
+          </tr>
+        </thead>
+        <tbody>
+          {
+            categories.map((group) => (
+              <>
+                <tr class="category-row">
+                  <th scope="rowgroup" colspan={platforms.length + 1}>
+                    {group.name}
+                  </th>
+                </tr>
+                {group.features.map((feature) => (
+                  <tr>
+                    <th scope="row" class="feature-name">
+                      <span class="feature-title">{feature.title}</span>
+                      {feature.dasher_core_dep && (
+                        <span class="feature-dep">{feature.dasher_core_dep}</span>
+                      )}
+                    </th>
+                    {platforms.map((p) => {
+                      const v6entry = feature.platforms[p];
+                      const v6key = v6entry?.status ?? 'n/a';
+                      const v6detail = entryText(v6entry);
+                      const v5entry = v5Entry(feature, p);
+                      const v5key = v5entry?.status ?? 'n/a';
+                      const v5detail = entryText(v5entry);
+                      return (
+                        <td class="cell">
+                          <span
+                            class={`badge-v6 badge badge-${v6key}`}
+                            title={v6detail || undefined}
+                          >
+                            <span class="sr-only">{statusLegend[v6key]}.</span>
+                            {v6detail ? (
+                              <span class="badge-detail">{v6detail}</span>
+                            ) : (
+                              <span class="badge-icon" aria-hidden="true">
+                                {statusIcons[v6key]}
+                              </span>
+                            )}
+                          </span>
+                          <span
+                            class={`badge-v5 badge badge-${v5key}`}
+                            title={v5detail || undefined}
+                          >
+                            <span class="sr-only">{statusLegend[v5key]}.</span>
+                            {v5detail ? (
+                              <span class="badge-detail">{v5detail}</span>
+                            ) : (
+                              <span class="badge-icon" aria-hidden="true">
+                                {statusIcons[v5key]}
+                              </span>
+                            )}
+                          </span>
+                        </td>
+                      );
+                    })}
+                  </tr>
+                ))}
+              </>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+
+    <p class="status-footnote">
+      Building Dasher or want to update this matrix? See the
+      <a href="/developers/feature-parity/">developer handbook</a>.
+    </p>
+  </section>
+</BaseLayout>
+
+<script>
+  const toggle = document.querySelector('.version-toggle');
+  const body = document.querySelector('.status-body');
+
+  if (toggle && body) {
+    toggle.addEventListener('click', (e) => {
+      const target = e.target;
+      if (!(target instanceof Element)) return;
+      const btn = target.closest('.toggle-btn');
+      if (!btn) return;
+      const version = btn.getAttribute('data-version');
+      if (!version) return;
+      body.setAttribute('data-view', version);
+      toggle.querySelectorAll('.toggle-btn').forEach((b) => {
+        const active = b === btn;
+        b.classList.toggle('active', active);
+        b.setAttribute('aria-selected', String(active));
+      });
+    });
+  }
+</script>
+
+<style>
+  .status-hero {
+    background: linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--color-horizon-mint) 45%, transparent),
+      var(--color-bg-primary)
+    );
+    padding: var(--space-2xl) 0 var(--space-xl);
+    border-bottom: 1px solid var(--color-border-subtle);
+  }
+
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.8rem;
+    color: var(--color-deep-ink);
+    margin: 0 0 var(--space-xs);
+    font-weight: 600;
+  }
+
+  .status-hero h1 {
+    font-family: var(--font-display);
+    margin: 0 0 var(--space-sm);
+  }
+
+  .lede {
+    max-width: 60ch;
+    color: var(--color-text-secondary);
+    margin: 0;
+  }
+
+  .updated {
+    margin: var(--space-sm) 0 0;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+  }
+
+  .baseline {
+    margin: var(--space-sm) 0 0;
+    max-width: 70ch;
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+  }
+
+  .baseline summary {
+    cursor: pointer;
+    color: var(--color-link);
+    font-weight: 500;
+  }
+
+  .baseline p {
+    margin: var(--space-sm) 0 0;
+    line-height: 1.5;
+  }
+
+  .status-body {
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-2xl);
+  }
+
+  .version-toggle {
+    display: inline-flex;
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    margin-bottom: var(--space-lg);
+  }
+
+  .toggle-btn {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    background: var(--color-bg-secondary);
+    color: var(--color-text-secondary);
+    border: none;
+    border-right: 1px solid var(--color-border-subtle);
+    cursor: pointer;
+    transition:
+      background 0.15s,
+      color 0.15s;
+  }
+
+  .toggle-btn:last-child {
+    border-right: none;
+  }
+
+  .toggle-btn:hover {
+    background: var(--color-bg-elevated);
+  }
+
+  .toggle-btn.active {
+    background: var(--color-horizon-mint);
+    color: var(--color-deep-ink);
+    font-weight: 600;
+  }
+
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+  }
+
+  .table-scroll {
+    overflow-x: auto;
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-md);
+    background: var(--color-bg-secondary);
+  }
+
+  .status-matrix {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 640px;
+  }
+
+  .status-matrix th,
+  .status-matrix td {
+    padding: var(--space-sm) var(--space-md);
+    text-align: left;
+    border-bottom: 1px solid var(--color-border-subtle);
+  }
+
+  .status-matrix thead th {
+    background: var(--color-bg-elevated);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-text-secondary);
+  }
+
+  .col-platform {
+    text-align: center !important;
+    white-space: nowrap;
+  }
+
+  .category-row th {
+    background: color-mix(in srgb, var(--color-horizon-mint) 30%, var(--color-bg-secondary));
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--color-deep-ink);
+  }
+
+  .feature-name {
+    font-weight: 600;
+    vertical-align: top;
+  }
+
+  .feature-title {
+    display: block;
+  }
+
+  .feature-dep {
+    display: block;
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+  }
+
+  .cell {
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    font-size: 0.8rem;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    line-height: 1.4;
+    white-space: nowrap;
+    border: 1px solid transparent;
+  }
+
+  .badge-detail {
+    font-size: 0.75rem;
+  }
+
+  /* v5 badges hidden by default; shown when data-view=v5 */
+  .badge-v5 {
+    display: none;
+  }
+
+  [data-view='v5'] .badge-v5 {
+    display: inline-flex;
+  }
+
+  [data-view='v5'] .badge-v6 {
+    display: none;
+  }
+
+  /* caption swap */
+  .caption-v5 {
+    display: none;
+  }
+
+  [data-view='v5'] .caption-v5 {
+    display: inline;
+  }
+
+  [data-view='v5'] .caption-v6 {
+    display: none;
+  }
+
+  /* status colours — light */
+  .badge-shipped {
+    background: #e3f4ec;
+    color: #1f6b46;
+    border-color: #bfe3d0;
+  }
+  .badge-beta {
+    background: #e4eef6;
+    color: var(--color-deep-ink);
+    border-color: #c4d8e8;
+  }
+  .badge-planned {
+    background: #fbf3cf;
+    color: #7a5b12;
+    border-color: #f0e0a0;
+  }
+  .badge-not-supported {
+    background: #f8e3e3;
+    color: #9a3a3a;
+    border-color: #eec4c4;
+  }
+  .badge-na {
+    background: var(--color-bg-elevated);
+    color: var(--color-text-muted);
+    border-color: var(--color-border-subtle);
+  }
+
+  /* dark overrides */
+  html.dark .badge-shipped {
+    background: #1f3a2e;
+    color: #7fd6a8;
+    border-color: #2f5a44;
+  }
+  html.dark .badge-beta {
+    background: #1e2d3a;
+    color: #8fbfe0;
+    border-color: #2e4254;
+  }
+  html.dark .badge-planned {
+    background: #3a321a;
+    color: #e8cf7a;
+    border-color: #4a4030;
+  }
+  html.dark .badge-not-supported {
+    background: #3a2222;
+    color: #e6a0a0;
+    border-color: #4a3030;
+  }
+  html.dark .category-row th {
+    color: var(--color-deep-ink);
+  }
+
+  .status-footnote {
+    margin-top: var(--space-lg);
+    color: var(--color-text-secondary);
+  }
+
+  @media (max-width: 600px) {
+    .feature-dep {
+      display: none;
+    }
+  }
+</style>

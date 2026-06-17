@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$comment": "Reference schema for src/data/feature-status.json. Enforced at CI time by scripts/validate-feature-status.mjs. Editors/IDEs can map this file to the JSON for validation hints.",
+  "title": "Dasher feature-status matrix",
+  "type": "object",
+  "required": ["meta", "platforms", "features"],
+  "additionalProperties": false,
+  "properties": {
+    "_comment": { "type": "string" },
+    "meta": {
+      "type": "object",
+      "required": ["last_updated", "status_legend"],
+      "additionalProperties": false,
+      "properties": {
+        "_comment": { "type": "string" },
+        "v5_baseline": { "type": "string" },
+        "last_updated": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+        "status_legend": {
+          "type": "object",
+          "required": ["shipped", "beta", "planned", "not-supported", "n/a"],
+          "additionalProperties": { "type": "string" }
+        }
+      }
+    },
+    "platforms": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "features": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/feature" }
+    }
+  },
+  "definitions": {
+    "feature": {
+      "type": "object",
+      "required": ["id", "category", "title", "platforms"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+        "category": { "type": "string" },
+        "title": { "type": "string" },
+        "dasher_core_dep": { "type": "string" },
+        "notes": { "type": "string" },
+        "platforms": {
+          "type": "object",
+          "additionalProperties": { "$ref": "#/definitions/entry" }
+        },
+        "v5": {
+          "type": "object",
+          "additionalProperties": { "$ref": "#/definitions/entry" }
+        }
+      }
+    },
+    "entry": {
+      "type": "object",
+      "required": ["status"],
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["shipped", "beta", "planned", "not-supported", "n/a"]
+        },
+        "version": { "type": "string" },
+        "issue": { "type": "string" },
+        "reason": { "type": "string" }
+      }
+    }
+  }
+}
