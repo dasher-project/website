@@ -654,6 +654,27 @@
       }
     },
     {
+      "id": "control-mode",
+      "category": "Output",
+      "title": "Control mode (text editing via Dasher nodes)",
+      "dasher_core_dep": "BP_CONTROL_MODE + ControlManager",
+      "notes": "Special control nodes appear in the zooming interface for text editing actions: select all, copy, move cursor, delete, etc. Lets you edit without leaving Dasher. Was a v5 feature; Windows is the first v6 frontend to wire it.",
+      "platforms": {
+        "macos": { "status": "planned" },
+        "ios": { "status": "planned" },
+        "visionos": { "status": "planned" },
+        "windows": { "status": "shipped" },
+        "gtk": { "status": "planned" }
+      },
+      "v5": {
+        "macos": { "status": "shipped", "reason": "Control mode" },
+        "ios": { "status": "shipped", "reason": "Control mode" },
+        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
+        "windows": { "status": "shipped", "reason": "Control mode" },
+        "gtk": { "status": "shipped", "reason": "Control mode" }
+      }
+    },
+    {
       "id": "grouped-settings-ui",
       "category": "Customization",
       "title": "Grouped settings UI (by usage context)",
