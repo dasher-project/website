@@ -40,10 +40,11 @@ export const featureStatus = featureStatusRaw as unknown as FeatureStatusFile;
 export const platforms = featureStatus.platforms;
 
 export const platformLabels: Record<string, string> = {
-  apple: 'Apple',
+  macos: 'macOS',
+  ios: 'iOS',
+  visionos: 'visionOS',
   windows: 'Windows',
   gtk: 'GTK',
-  web: 'Web',
 };
 
 export const statusOrder: StatusValue[] = ['shipped', 'beta', 'planned', 'not-supported', 'n/a'];
