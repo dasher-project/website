@@ -20,41 +20,32 @@ Each **frontend** owns only:
 2. **Rendering** — drawing the engine's draw-command buffer onto a canvas (text measuring is the frontend's job).
 3. **UI chrome** — toolbars, settings UI, onboarding, platform integration (clipboard, TTS, keyboard extensions).
 
-## How each frontend consumes DasherCore
+## How frontends consume DasherCore
 
-There are **two integration paths** — pick whichever fits your platform:
+All three v6 frontends currently include DasherCore as a **git submodule** and
+build the C API from source as part of their own build process. This is useful
+while the C API is still evolving — you get the latest changes, can step into
+the engine from a debugger, and can test against unreleased DasherCore commits.
 
-### 1. C API shared library (recommended)
+| Frontend    | Build integration                                                                                                                            |
+| :---------- | :------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Apple**   | XcodeGen compiles DasherCore sources into a per-platform static library; Swift calls the C API via a bridging header (`#import "dasher.h"`). |
+| **Windows** | CMake builds DasherCore into `dasher.dll`; C# calls through P/Invoke.                                                                        |
+| **GTK**     | CMake builds DasherCore into `libdasher.so` and links it into the GTK executable.                                                            |
 
-Build DasherCore with `-DBUILD_CAPI=ON` to produce a shared library
-(`dasher.dll` on Windows, `libdasher.so` on Linux, `libdasher.dylib` on macOS).
-Your frontend links against the flat C API exposed in
-[`dasher.h`](https://github.com/dasher-project/DasherCore/blob/main/Src/dasher.h).
+### Alternative: consume a pinned binary
 
-**Pre-built binaries** — DasherCore's [GitHub Releases](https://github.com/dasher-project/DasherCore/releases)
-ship ready-to-use artefacts for each platform:
+You don't have to build from source. DasherCore's
+[GitHub Releases](https://github.com/dasher-project/DasherCore/releases) ship
+ready-to-use artefacts for each platform:
 
 - The **shared library** (`dasher.dll` / `libdasher.so` / `libdasher.dylib`)
-- The `Data/` directory (alphabets, colour schemes, training text, help files)
+- The `Data/` directory (alphabets, colour schemes, training text)
 - The `dasher.h` header
 
-You can download these directly instead of building from source. This is the
-fastest way to integrate Dasher into a new application.
-
-### 2. Compile the C++ source directly
-
-Alternatively, compile the DasherCore C++ sources directly into your project
-(as the Apple frontend does today). This gives you full access to the internal
-C++ classes (`CDasherScreen`, `CDasherInput`, etc.) but couples you more tightly
-to the engine internals.
-
-| Frontend    | Model                                                                                                                                           |
-| :---------- | :---------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Apple**   | Compiles DasherCore source directly into a per-platform static library; Swift calls the C API through a bridging header (`#import "dasher.h"`). |
-| **Windows** | Builds the C API into `dasher.dll` via CMake, consumed by C# through P/Invoke.                                                                  |
-| **GTK**     | Builds the C API into `libdasher.so` and links it directly into the GTK executable.                                                             |
-
-> Apple is the outlier (direct source compilation rather than the shared-library boundary). Aligning on the CAPI shared library is a future task.
+This is a sensible approach for new integrations — **`main` will fluctuate**,
+so pinning to a tagged release protects you from breaking changes. The
+frontends will likely move to this model once the C API stabilises.
 
 ## Contracts every frontend must honour
 

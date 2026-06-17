@@ -15,12 +15,12 @@ Dasher v6 is **one shared engine** ([DasherCore](https://github.com/dasher-proje
 
 ## The architecture at a glance
 
-| Repository                                                         | Platform                     | UI stack           | DasherCore integration       |
-| :----------------------------------------------------------------- | :--------------------------- | :----------------- | :--------------------------- |
-| [DasherCore](https://github.com/dasher-project/DasherCore)         | All                          | C++ engine + C API | _is_ the engine              |
-| [Dasher-Apple](https://github.com/dasher-project/Dasher-Apple)     | iOS / macOS / visionOS       | SwiftUI            | compiled core + C API header |
-| [Dasher-Windows](https://github.com/dasher-project/Dasher-Windows) | Windows                      | Avalonia (.NET)    | `dasher.dll` via P/Invoke    |
-| [Dasher-GTK](https://github.com/dasher-project/Dasher-GTK)         | Linux (+ Win/macOS fallback) | GTK4 / gtkmm       | `libdasher.so` linked        |
+| Repository                                                         | Platform                     | UI stack           | DasherCore integration                |
+| :----------------------------------------------------------------- | :--------------------------- | :----------------- | :------------------------------------ |
+| [DasherCore](https://github.com/dasher-project/DasherCore)         | All                          | C++ engine + C API | _is_ the engine                       |
+| [Dasher-Apple](https://github.com/dasher-project/Dasher-Apple)     | iOS / macOS / visionOS       | SwiftUI            | submodule (C API via bridging header) |
+| [Dasher-Windows](https://github.com/dasher-project/Dasher-Windows) | Windows                      | Avalonia (.NET)    | submodule (C API via P/Invoke)        |
+| [Dasher-GTK](https://github.com/dasher-project/Dasher-GTK)         | Linux (+ Win/macOS fallback) | GTK4 / gtkmm       | submodule (C API via CMake)           |
 
 > [dasher-web](https://github.com/dasher-project/dasher-web) is a standalone
 > WASM demo (not a full frontend) — it powers the live demo on the
