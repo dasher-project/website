@@ -986,6 +986,27 @@
         "windows": { "status": "not-supported", "reason": "Mixed MaterialDesignIcons / custom" },
         "gtk": { "status": "not-supported", "reason": "GTK stock icons" }
       }
+    },
+    {
+      "id": "v5-migration",
+      "category": "Platform Integration",
+      "title": "v5 to v6 settings migration",
+      "dasher_core_dep": "settings_manifest.json parameter mapping",
+      "notes": "One-shot migration: detects v5 data, translates registry/XML preferences to v6 equivalents, copies custom alphabets/colours/control/training files. See RFC 0005. Shipped on Windows and macOS.",
+      "platforms": {
+        "macos": { "status": "shipped" },
+        "ios": { "status": "not-supported", "reason": "No v5 iOS app to migrate from" },
+        "visionos": { "status": "not-supported", "reason": "No v5 visionOS app to migrate from" },
+        "windows": { "status": "shipped" },
+        "gtk": { "status": "planned" }
+      },
+      "v5": {
+        "macos": { "status": "n/a", "reason": "Migration is a v6 feature" },
+        "ios": { "status": "n/a", "reason": "Migration is a v6 feature" },
+        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
+        "windows": { "status": "n/a", "reason": "Migration is a v6 feature" },
+        "gtk": { "status": "n/a", "reason": "Migration is a v6 feature" }
+      }
     }
   ]
 }
