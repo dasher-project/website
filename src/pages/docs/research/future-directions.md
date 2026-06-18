@@ -12,8 +12,8 @@ The Dasher project continues to evolve with active research and development. Thi
 
 Dasher v6 represents a complete rewrite of the Dasher codebase with modern software architecture. The main development repositories are:
 
-- **[dasher-core](https://github.com/dasher-project/dasher-core)** - Core engine and algorithms
-- **[dasher-gtk](https://github.com/dasher-project/dasher-gtk)** - GTK user interface
+- **[dasher-core](https://github.com/dasher-project-core)** - Core engine and algorithms
+- **[dasher-gtk](https://github.com/dasher-project-gtk)** - GTK user interface
 
 > **Note:** Dasher v6 is under active development but is not yet ready for end users. For production use, please download [Dasher 5.0](/downloads/).
 
@@ -111,7 +111,7 @@ Automatic calibration and tuning of eyetracking systems to work seamlessly with 
 
 Dasher welcomes contributions in all these areas. If you're interested in working on:
 
-- **Core development** - Join us on GitHub: [dasher-core](https://github.com/dasher-project/dasher-core), [dasher-gtk](https://github.com/dasher-project/dasher-gtk)
+- **Core development** - Join us on GitHub: [dasher-core](https://github.com/dasher-project-core), [dasher-gtk](https://github.com/dasher-project-gtk)
 - **Language support** - Create alphabet files and training texts
 - **Accessibility** - Test with different input devices and user groups
 - **Research** - Conduct experiments and publish results
@@ -141,7 +141,7 @@ We collaborate with researchers worldwide. If you're interested in:
 
 - **Using Dasher in research** - We're happy to provide guidance and support
 - **Publishing Dasher-related research** - Please cite our [publications](/docs/research/publications/)
-- **Joint research projects** - Contact us through [GitHub Discussions](https://github.com/dasher-project/dasher/discussions)
+- **Joint research projects** - Contact us through [GitHub Discussions](https://github.com/dasher-project)
 
 ## Funding and Support
 
@@ -168,8 +168,8 @@ The future of Dasher depends on community involvement. Whether you're a:
   <h2>Ready to contribute?</h2>
   <p>
     Join our <a href="https://matrix.to/#/#dasher:matrix.org">Matrix chat room</a> or check out
-    <a href="https://github.com/dasher-project/dasher-core">dasher-core</a> and
-    <a href="https://github.com/dasher-project/dasher-gtk">dasher-gtk</a> on GitHub.
+    <a href="https://github.com/dasher-project-core">dasher-core</a> and
+    <a href="https://github.com/dasher-project-gtk">dasher-gtk</a> on GitHub.
   </p>
   <a href="/about/#community" class="btn-primary">Join the Community</a>
 </div>

@@ -87,8 +87,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <li><strong>Linux</strong> - Version 4.11 from your distribution package manager</li>
           </ul>
           <p>
-            Note: Dasher v6 is currently under active development but is not yet ready for end
-            users. See the <a href="/docs/research/">research section</a> for more information on v6 development.
+            A <strong>Dasher v6 preview beta</strong> is now available for Windows, iOS, macOS and visionOS,
+            with Linux/GTK on the way &mdash;
+            <a href="/blog/preview-beta-windows-apple/"
+              >see the download links and how to get the apps</a
+            >. The v5 builds above remain the recommended stable option until v6 is fully released.
           </p>
         </div>
 
@@ -187,12 +190,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </li>
             <li>
               <strong>GitHub Discussions</strong> - Ask questions on <a
-                href="https://github.com/dasher-project/dasher/discussions">GitHub Discussions</a
+                href="https://github.com/dasher-project">GitHub Discussions</a
               >
             </li>
             <li>
               <strong>Report Bugs</strong> - File issues on <a
-                href="https://github.com/dasher-project/dasher/issues">GitHub Issues</a
+                href="https://github.com/dasher-project">GitHub Issues</a
               >
             </li>
           </ul>
@@ -211,10 +214,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <li><strong>Support</strong> - Help other users in the community</li>
           </ul>
           <p>
-            The main development repositories are <a
-              href="https://github.com/dasher-project/dasher-core">dasher-core</a
+            The main development repositories are <a href="https://github.com/dasher-project-core"
+              >dasher-core</a
             >
-            and <a href="https://github.com/dasher-project/dasher-gtk">dasher-gtk</a> on GitHub.
+            and <a href="https://github.com/dasher-project-gtk">dasher-gtk</a> on GitHub.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h2>Who makes Dasher?</h2>
+          <p>
+            Dasher has been built by a community of researchers, developers, translators and users
+            over more than twenty-five years, beginning with the Cambridge Inference Group led by
+            David MacKay. For the full story &mdash; founders, maintainers, funders and the hundreds
+            of people in the commit history &mdash; see our
+            <a href="/credits/">Credits &amp; thanks</a> page.
           </p>
         </div>
 
@@ -228,13 +242,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <strong>Version 5.0</strong> - Latest stable release (2016), maintained by Ada Majorek.
           </p>
           <p>
-            <strong>Version 6</strong> - Complete rewrite in progress (announced 2020). Currently under
-            active development in the <a href="https://github.com/dasher-project/dasher-core"
-              >dasher-core</a
-            > and
-            <a href="https://github.com/dasher-project/dasher-gtk">dasher-gtk</a> repositories. Not yet
-            ready for end users, but promises improved performance, modern architecture, and better platform
-            support.
+            <strong>Version 6</strong> - A complete rewrite (announced 2020) built around one shared
+            <a href="https://github.com/dasher-project-core">DasherCore</a> engine that powers many native
+            frontends &mdash; Apple (iOS, macOS, visionOS), Windows, and GTK/Linux &mdash; so the experience
+            is consistent across every platform. A preview beta is now open: see
+            <a href="/blog/preview-beta-windows-apple/">how to get the apps</a>, and the
+            <a href="/status/">feature status matrix</a> for what each platform supports today.
           </p>
         </div>
 

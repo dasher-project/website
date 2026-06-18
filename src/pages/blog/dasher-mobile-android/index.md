@@ -23,7 +23,7 @@ We're pleased to highlight **Dasher Mobile**, a new Android implementation of th
 
 ## About the Project
 
-Dasher Mobile builds on [DasherCore](https://github.com/dasher-project/dasher) and extends it with **KenLM language model integration**, with a focus on Slovak language support. The result is a native Android app that brings Dasher's predictive zooming interface to mobile devices with improved language prediction.
+Dasher Mobile builds on [DasherCore](https://github.com/dasher-project/DasherCore) and extends it with **KenLM language model integration**, with a focus on Slovak language support. The result is a native Android app that brings Dasher's predictive zooming interface to mobile devices with improved language prediction.
 
 ## Key Features
 
@@ -46,7 +46,7 @@ The latest release (v1.0 APK) is available for download. The project is open sou
 
 Dasher Mobile is a great example of how the Dasher ecosystem grows through community contributions. Building on the DasherCore library, Ján has created a focused mobile implementation that addresses a specific language community's needs.
 
-If you're interested in building on Dasher for your own platform or language, check out our [development guide](/developers/) and [DasherCore on GitHub](https://github.com/dasher-project/dasher). You can also find more community-built Dasher projects on our [downloads page](/downloads/#community-builds-experiments) and in our [community projects roundup](/blog/community-dasher-projects/).
+If you're interested in building on Dasher for your own platform or language, check out our [development guide](/developers/) and [DasherCore on GitHub](https://github.com/dasher-project/DasherCore). You can also find more community-built Dasher projects on our [downloads page](/downloads/#community-builds-experiments) and in our [community projects roundup](/blog/community-dasher-projects/).
 
 </div>
 

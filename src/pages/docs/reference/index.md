@@ -22,7 +22,7 @@ Reference documentation for Dasher configuration and parameters.
     <p>Additional resources and downloads.</p>
     <ul>
       <li><a href="/downloads/">Downloads</a> - Alphabet files and training texts</li>
-      <li><a href="https://github.com/dasher-project/dasher" target="_blank" rel="noopener noreferrer">Source Code</a> - GitHub repository</li>
+      <li><a href="https://github.com/dasher-project" target="_blank" rel="noopener noreferrer">Source Code</a> - GitHub repository</li>
     </ul>
   </section>
 </div>

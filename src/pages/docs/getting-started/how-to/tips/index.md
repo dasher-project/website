@@ -53,6 +53,6 @@ Dasher has many settings you can adjust to make it more comfortable:
 - Watch the <a href="/about/#demonstrations">demonstrations</a> to see Dasher in action
 - Read the <a href="/docs/getting-started/how-to/manual/">user manual</a> for detailed instructions
 - Join our <a href="https://matrix.to/#/#dasher:matrix.org" target="_blank" rel="noopener noreferrer">Matrix chat</a> to ask questions
-- Check out the <a href="https://github.com/dasher-project/dasher/discussions" target="_blank" rel="noopener noreferrer">GitHub discussions</a>
+- Check out the <a href="https://github.com/dasher-project" target="_blank" rel="noopener noreferrer">GitHub discussions</a>
 
 Remember: **practice makes perfect!** The more you use Dasher, the easier and faster it becomes.

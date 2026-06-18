@@ -146,7 +146,7 @@ Your settings are automatically saved. To reset to defaults:
 
 - Visit the [Community](/about/#community) page for support
 - Check the [Documentation](/docs/) for more guides
-- Report issues on [GitHub](https://github.com/dasher-project/dasher/issues)
+- Report issues on [GitHub](https://github.com/dasher-project)
 
 <div class="cta-box">
   <h2>Ready to Try?</h2>

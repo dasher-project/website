@@ -111,4 +111,4 @@ Your training data and settings will be removed. If you want to keep them, back 
 - [Main Installation Guide](/) - Other platforms
 - [FAQ](/faq/) - Common questions
 - [Matrix Chat](https://matrix.to/#/#dasher:matrix.org) - Get help from the community
-- [GitHub Issues](https://github.com/dasher-project/dasher/issues) - Report bugs
+- [GitHub Issues](https://github.com/janmurin2/Dasher-Mobile/issues) - Report bugs

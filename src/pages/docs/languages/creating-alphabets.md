@@ -214,7 +214,7 @@ it to the Dasher project!
   <div class="resource">
     <h4>Alphabet Examples</h4>
     <p>
-      <a href="https://github.com/dasher-project/dasher" target="_blank" rel="noopener noreferrer">Dasher GitHub</a> -
+      <a href="https://github.com/dasher-project" target="_blank" rel="noopener noreferrer">Dasher GitHub</a> -
       View existing alphabet files in the repository
     </p>
   </div>
@@ -242,7 +242,7 @@ it to the Dasher project!
   <h2>Need Help?</h2>
   <p>
     If you need help creating an alphabet or want to contribute one you've made,
-    please <a href="https://github.com/dasher-project/dasher/discussions" target="_blank" rel="noopener noreferrer">
+    please <a href="https://github.com/dasher-project" target="_blank" rel="noopener noreferrer">
     contact us on GitHub Discussions</a>.
   </p>
 </div>

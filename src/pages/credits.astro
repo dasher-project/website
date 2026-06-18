@@ -1,0 +1,502 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import contributorData from '../data/contributors.json';
+
+// Named individuals & curated groups (not exhaustively present in git)
+const inMemoriam = [
+  {
+    name: 'David MacKay',
+    years: '1967 – 2016',
+    role: 'Creator & original project lead',
+    note: 'Professor of Physics at the University of Cambridge. David created the first Dasher prototype in 1997 and led the Inference Group that turned it into a research project and then free software. Dasher still stands on the information theory he brought to it.',
+  },
+];
+
+const foundingTeam = [
+  {
+    name: 'David Ward',
+    role: 'Lead developer (1998–2002)',
+    note: 'Developed the research version of Dasher for his PhD; created the Eye-Dasher and Pocket PC versions.',
+  },
+  {
+    name: 'Alan Blackwell',
+    role: 'Research advisor',
+    note: 'Lecturer in the Cambridge Computer Laboratory; helped design the original experiments.',
+  },
+  {
+    name: 'Iain Murray',
+    role: 'Open source release (2002)',
+    note: 'Prepared Dasher for its first open source release.',
+  },
+  {
+    name: 'Phil Cowans',
+    role: 'Developer & project manager',
+    note: 'Created Dasher v3 for GNU/Linux; project manager from 2006. A driving force for many years.',
+  },
+  {
+    name: 'Hanna Wallach',
+    role: 'Mobile developer',
+    note: 'Worked on v3 for the iPAQ running Linux.',
+  },
+  {
+    name: 'Matthew Garrett',
+    role: 'Project manager (2002–2003)',
+    note: 'Supported by the Gatsby Foundation.',
+  },
+  {
+    name: 'Chris Ball',
+    role: 'Project manager (2003–2005)',
+    note: 'Maintainer and developer during the v4 era.',
+  },
+  {
+    name: 'Keith Vertanen',
+    role: 'Speech-Dasher developer (2003–2007)',
+    note: 'Developed the Speech-Dasher prototype.',
+  },
+  {
+    name: 'Piotr Zielinski',
+    role: 'Developer (2005–2006)',
+    note: 'Two-dimensional Dasher, gaze/head/gesture tracking.',
+  },
+  {
+    name: 'Ada Majorek',
+    role: 'Dasher v5',
+    note: 'Developed the v5 update and the modern macOS compatibility work.',
+  },
+];
+
+const specialThanks = [
+  {
+    name: 'Sebastian Pape',
+    role: 'The architect of the v6 split',
+    note: 'Sebastian carried out the large refactoring effort that broke the old monolithic Dasher apart into a shared DasherCore engine and its separate native frontends. That split is the foundation of modern v6 — every Apple, Windows and GTK build today stands on the work he did.',
+  },
+];
+
+const currentMaintainers = [
+  { name: 'Will Wade', role: 'v6 maintainer & project lead' },
+  { name: 'Alan Lawrence', role: 'Engine & frontends' },
+  { name: 'Patrick Welche', role: 'Core engineering' },
+  { name: 'Jim Hawkins', role: 'worked on a JavaScript version of Dasher' },
+  { name: 'Gavin Henderson', role: 'Governance and licencing' },
+];
+
+// Supporters not captured in git history
+const industrySupporters = [
+  {
+    name: 'Brian Roark',
+    note: 'Google — a long-standing champion of the project and its accessibility mission.',
+  },
+  {
+    name: 'Alexander Gutkin (Sasha)',
+    note: 'a key ally of the project, working alongside Brian Roark.',
+  },
+  {
+    name: 'Lissie Lillanfield',
+    note: 'Product Manager for a spell, helping guide the support and direction of the project.',
+  },
+  {
+    name: 'Jen Spatz',
+    note: 'UX work that shaped the current v6 logo and design, and engagement with end users to steer the future direction.',
+  },
+  {
+    name: 'Ace Centre',
+    href: 'https://acecentre.org.uk',
+    note: 'helped maintain Dasher over the past six years, in particular the Dasher iOS project.',
+  },
+];
+
+const usersAdvocates = ['Steve Saling', 'Owen Kent', 'Stefan Zecevic', 'Darren Gabbert', 'Yvette'];
+
+const funders = [
+  {
+    name: 'Gatsby Charitable Foundation',
+    note: 'Original research funding at the Cambridge Inference Group.',
+  },
+  {
+    name: 'AEGIS project (European Commission)',
+    note: 'Open accessibility: groundwork, infrastructure, standards.',
+  },
+  { name: 'NLnet Foundation', note: 'Supported the v6 rewrite.' },
+  { name: 'University of Cambridge Inference Group', note: "Dasher's birthplace." },
+];
+
+const contributors = contributorData.contributors;
+---
+
+<BaseLayout
+  title="Credits & thanks — Dasher"
+  description="The people behind more than twenty-five years of Dasher — founders, researchers, developers, translators, supporters and users."
+>
+  <section class="credits-hero">
+    <div class="container">
+      <p class="eyebrow">Community</p>
+      <h1>Credits &amp; thanks</h1>
+      <p class="lede">
+        Dasher has been built, broken, fixed, translated, tested and championed by hundreds of
+        people across more than a quarter of a century. This page is our attempt to thank as many of
+        them as we can. If we&rsquo;ve missed you, please
+        <a
+          href="https://github.com/dasher-project/governance/issues"
+          target="_blank"
+          rel="noopener noreferrer">tell us</a
+        >
+        &mdash; omissions are never intentional.
+      </p>
+    </div>
+  </section>
+
+  <section class="container credits-body">
+    <!-- In memoriam -->
+    <div class="credits-block">
+      <h2>In memoriam</h2>
+      <div class="memorial-cards">
+        {
+          inMemoriam.map((person) => (
+            <article class="memorial-card">
+              <h3>
+                {person.name} <span class="years">{person.years}</span>
+              </h3>
+              <p class="role">{person.role}</p>
+              <p>{person.note}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+
+    <!-- Founding & research team -->
+    <div class="credits-block">
+      <h2>Founding &amp; research team</h2>
+      <p class="block-intro">
+        Dasher began in 1997 in the
+        <a href="https://www.inference.org.uk/" target="_blank" rel="noopener noreferrer"
+          >Inference Group</a
+        >
+        at the University of Cambridge. These people took it from a prototype to a widely-used, multi-platform,
+        open source project.
+      </p>
+      <div class="team-grid">
+        {
+          foundingTeam.map((person) => (
+            <div class="team-member">
+              <h3>{person.name}</h3>
+              <p class="role">{person.role}</p>
+              <p>{person.note}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <!-- Special thanks -->
+    <div class="credits-block">
+      <h2>Special thanks</h2>
+      <div class="thanks-cards">
+        {
+          specialThanks.map((person) => (
+            <article class="thanks-card">
+              <h3>{person.name}</h3>
+              <p class="role">{person.role}</p>
+              <p>{person.note}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+
+    <!-- Current maintainers -->
+    <div class="credits-block">
+      <h2>v6 maintainers &amp; core contributors</h2>
+      <p class="block-intro">
+        The current rewrite is carried by an active core of contributors across the shared
+        DasherCore engine and its native frontends.
+      </p>
+      <ul class="name-grid">
+        {
+          currentMaintainers.map((person) => (
+            <li>
+              <strong>{person.name}</strong> <span class="muted">&mdash; {person.role}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <!-- Industry supporters -->
+    <div class="credits-block">
+      <h2>Friends of the project</h2>
+      <p class="block-intro">
+        People and organisations who championed Dasher, opened doors, and supported its users
+        &mdash; not all of whom show up in a git log. Far more have given their time, expertise and
+        guidance over the years than we could ever list here; if we&rsquo;ve missed you, it is not
+        for lack of gratitude.
+      </p>
+      <ul class="name-grid">
+        {
+          industrySupporters.map((person) => (
+            <li>
+              {person.href ? (
+                <a href={person.href} target="_blank" rel="noopener noreferrer">
+                  <strong>{person.name}</strong>
+                </a>
+              ) : (
+                <strong>{person.name}</strong>
+              )}{' '}
+              <span class="muted">&mdash; {person.note}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <!-- Users & advocates -->
+    <div class="credits-block">
+      <h2>Users &amp; advocates</h2>
+      <p class="block-intro">
+        Dasher exists for the people who rely on it. We&rsquo;re especially grateful to the users
+        and advocates who&rsquo;ve shown the world what eyes-free, switch and gaze-driven
+        communication makes possible &mdash; and who push us to make it better. Naming just a few of
+        the many:
+      </p>
+      <ul class="name-grid">
+        {
+          usersAdvocates.map((name) => (
+            <li>
+              <strong>{name}</strong>
+            </li>
+          ))
+        }
+        <li>
+          <span class="muted">&hellip;and the many more we haven&rsquo;t yet named here.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Funders -->
+    <div class="credits-block">
+      <h2>Funders &amp; institutions</h2>
+      <p class="block-intro">
+        Dasher would not exist without sustained financial and institutional support.
+      </p>
+      <div class="team-grid">
+        {
+          funders.map((f) => (
+            <div class="team-member">
+              <h3>{f.name}</h3>
+              <p>{f.note}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <!-- All contributors from git -->
+    <div class="credits-block">
+      <h2>Everyone in the code</h2>
+      <p class="block-intro">
+        The names below were extracted automatically from the commit history of the Dasher
+        repositories &mdash; the main <code>dasher</code> archive going back to 1997, plus
+        <code>dasher-web</code>, the Apple, Windows, GTK and Mobile frontends,
+        <code>DasherCore</code>, and this website. It includes developers, translators and packagers
+        across every era of the project. {contributors.length} people, and counting.
+      </p>
+      <ul class="contributor-cloud" aria-label="All contributors from git history">
+        {contributors.map((name) => <li>{name}</li>)}
+      </ul>
+      <p class="contributor-note">
+        Generated {contributorData.generated}. Names are deduplicated from git history; some
+        encoding variants or duplicate identities may remain. If your name is missing or
+        mis-spelled, please
+        <a
+          href="https://github.com/dasher-project/governance/issues"
+          target="_blank"
+          rel="noopener noreferrer">let us know</a
+        >.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .credits-hero {
+    background: linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--color-horizon-mint) 45%, transparent),
+      var(--color-bg-primary)
+    );
+    padding: var(--space-2xl) 0 var(--space-xl);
+    border-bottom: 1px solid var(--color-border-subtle);
+  }
+
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.8rem;
+    color: var(--color-deep-ink);
+    margin: 0 0 var(--space-xs);
+    font-weight: 600;
+  }
+
+  .credits-hero h1 {
+    font-family: var(--font-display);
+    margin: 0 0 var(--space-sm);
+  }
+
+  .lede {
+    max-width: 65ch;
+    color: var(--color-text-secondary);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .credits-body {
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-2xl);
+  }
+
+  .credits-block {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .credits-block h2 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    margin: 0 0 var(--space-sm);
+    padding-bottom: var(--space-xs);
+    border-bottom: 1px solid var(--color-border-subtle);
+  }
+
+  .block-intro {
+    max-width: 70ch;
+    color: var(--color-text-secondary);
+    margin: 0 0 var(--space-md);
+    line-height: 1.6;
+  }
+
+  .memorial-cards {
+    display: grid;
+    gap: var(--space-md);
+  }
+
+  .memorial-card {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border-subtle);
+    border-left: 4px solid var(--color-horizon-mint);
+    border-radius: var(--radius-md);
+    padding: var(--space-md) var(--space-lg);
+  }
+
+  .memorial-card h3 {
+    font-family: var(--font-display);
+    margin: 0 0 var(--space-xs);
+    font-size: 1.25rem;
+  }
+
+  .memorial-card .years {
+    color: var(--color-text-muted);
+    font-weight: 400;
+    font-size: 0.95rem;
+  }
+
+  .thanks-cards {
+    display: grid;
+    gap: var(--space-md);
+  }
+
+  .thanks-card {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border-subtle);
+    border-left: 4px solid var(--color-target-coral, var(--color-horizon-mint));
+    border-radius: var(--radius-md);
+    padding: var(--space-md) var(--space-lg);
+  }
+
+  .thanks-card h3 {
+    font-family: var(--font-display);
+    margin: 0 0 var(--space-xs);
+    font-size: 1.2rem;
+  }
+
+  .role {
+    color: var(--color-deep-ink);
+    font-weight: 600;
+    margin: 0 0 var(--space-xs);
+    font-size: 0.9rem;
+  }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: var(--space-md);
+  }
+
+  .team-member {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-md);
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .team-member h3 {
+    font-size: 1.05rem;
+    margin: 0 0 0.15rem;
+  }
+
+  .team-member p {
+    margin: 0.25rem 0 0;
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+  }
+
+  .name-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-xs) var(--space-md);
+  }
+
+  .name-grid li {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .muted {
+    color: var(--color-text-secondary);
+  }
+
+  .contributor-cloud {
+    list-style: none;
+    margin: 0;
+    padding: var(--space-md);
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.75rem;
+  }
+
+  .contributor-cloud li {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    line-height: 1.4;
+  }
+
+  .contributor-note {
+    margin: var(--space-md) 0 0;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    max-width: 70ch;
+  }
+
+  code {
+    background: var(--color-bg-elevated);
+    padding: 0.1rem 0.35rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.85em;
+  }
+</style>

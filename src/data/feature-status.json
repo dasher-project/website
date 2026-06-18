@@ -1,7 +1,7 @@
 {
   "_comment": "Dasher v6 cross-platform capability matrix — THE SINGLE SOURCE OF TRUTH. Rendered at https://dasher.at/status/. How to update: https://dasher.at/developers/feature-parity/. Validated by scripts/validate-feature-status.mjs in CI.",
   "meta": {
-    "last_updated": "2026-06-17",
+    "last_updated": "2026-06-18",
     "v5_baseline": "Dasher v5 shipped native frontends for Windows, Linux/GTK, macOS and iOS (Android was a separate project; Mac/iPhone were unmaintained by the 5.0 beta). Input covered mouse, stylus/tablet, touch, multitouch, tilt, joystick (Linux) and socket input (the conduit for eye/gaze trackers). Notable v5 features: game/training mode, eye-tracker autocalibration, PPM family language models, Kanji/Pinyin conversion, and three TTS backends (SAPI / speech-dispatcher / flite).",
     "status_legend": {
       "shipped": "Implemented and released",
@@ -144,11 +144,11 @@
       "category": "Input",
       "title": "Hand tracking",
       "dasher_core_dep": "V6 pointer (x, y) event stream",
-      "notes": "Apple declares handTracking in its access-method enum (visionOS) but the backing service is not yet implemented.",
+      "notes": "visionOS drives the pointer natively from pinch + hand position. Other platforms do not expose a hand-tracking pointer source.",
       "platforms": {
         "macos": { "status": "not-supported" },
         "ios": { "status": "not-supported" },
-        "visionos": { "status": "not-supported", "reason": "Declared but not implemented" },
+        "visionos": { "status": "shipped", "reason": "Native pinch + hand position" },
         "windows": { "status": "not-supported" },
         "gtk": { "status": "not-supported" }
       },

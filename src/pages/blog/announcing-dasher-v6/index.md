@@ -57,7 +57,7 @@ We're particularly interested in hearing from users about their experiences with
 
 Dasher is an open-source project, and we welcome contributions from everyone. Whether you're interested in writing code, improving documentation, reporting bugs, or just providing feedback, there's a place for you in our community.
 
-Join us on [Matrix](https://matrix.to/#/#dasher:matrix.org), check out our [GitHub repository](https://github.com/dasher-project/dasher), and follow our progress as we continue to improve Dasher.
+Join us on [Matrix](https://matrix.to/#/#dasher:matrix.org), check out our [GitHub repository](https://github.com/dasher-project), and follow our progress as we continue to improve Dasher.
 
 </div>
 

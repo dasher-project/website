@@ -234,7 +234,7 @@ If your language is not already supported, you can create a custom alphabet by:
   <div class="resource">
     <h3>Existing Alphabets</h3>
     <p>
-      <a href="https://github.com/dasher-project/dasher" target="_blank" rel="noopener noreferrer">
+      <a href="https://github.com/dasher-project" target="_blank" rel="noopener noreferrer">
         Dasher on GitHub
       </a> -
       View and download existing alphabet files from the repository.
@@ -254,7 +254,7 @@ If your language is not already supported, you can create a custom alphabet by:
   <h2>Need Help?</h2>
   <p>
     If you need help with a specific language or want to contribute an alphabet file,
-    please <a href="https://github.com/dasher-project/dasher/discussions" target="_blank" rel="noopener noreferrer">
+    please <a href="https://github.com/dasher-project" target="_blank" rel="noopener noreferrer">
     contact us on GitHub Discussions</a>.
   </p>
 </div>

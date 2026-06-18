@@ -11,6 +11,18 @@ News, updates, and insights from the Dasher development team and community.
 <div class="blog-list">
   <article class="blog-post-card">
     <div class="blog-meta">
+      <time datetime="2026-06-18">June 18, 2026</time>
+      <span class="blog-tag">Beta</span>
+    </div>
+    <h2>
+      <a href="/blog/preview-beta-windows-apple/">Dasher v6 Preview Beta: Windows &amp; Apple apps now available</a>
+    </h2>
+    <p class="blog-excerpt">The Dasher v6 preview beta is now open for Windows, iOS, macOS and visionOS &mdash; with Linux/GTK on the way. Here's how to get the apps and how to send us feedback.</p>
+    <a href="/blog/preview-beta-windows-apple/" class="btn-secondary">Read More</a>
+  </article>
+
+  <article class="blog-post-card">
+    <div class="blog-meta">
       <time datetime="2026-06-17">June 17, 2026</time>
       <span class="blog-tag">Community</span>
     </div>

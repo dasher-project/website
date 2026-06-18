@@ -19,7 +19,7 @@ layout: ../../../layouts/BaseLayout.astro
 
 <div class="blog-content">
 
-One of the most exciting things about Dasher is how it inspires people to build their own variants, ports, and experiments. Over the years we've seen implementations in languages from C++ to JavaScript, aimed at purposes from assistive technology to live music composition. Here's a round-up of notable community projects we know about &mdash; if you've built something with Dasher, [let us know](https://github.com/dasher-project/dasher/discussions)!
+One of the most exciting things about Dasher is how it inspires people to build their own variants, ports, and experiments. Over the years we've seen implementations in languages from C++ to JavaScript, aimed at purposes from assistive technology to live music composition. Here's a round-up of notable community projects we know about &mdash; if you've built something with Dasher, [let us know](https://github.com/dasher-project)!
 
 ## Dasher-JS (React) &mdash; Jamie Brew
 
@@ -57,11 +57,11 @@ We previously [covered this project](/blog/dasher-mobile-android/) in detail. JÃ
 
 All of these projects demonstrate how the Dasher concept &mdash; zooming through a probabilistic prediction tree &mdash; can be adapted to new platforms, languages, and even entirely different domains like music. If you're interested in building your own, check out:
 
-- [DasherCore on GitHub](https://github.com/dasher-project/dasher) &mdash; the shared engine that powers the official v6 frontends
+- [DasherCore on GitHub](https://github.com/dasher-project/DasherCore) &mdash; the shared engine that powers the official v6 frontends
 - [Developer handbook](/developers/) &mdash; architecture, build guides, and the C API reference
 - [Feature parity matrix](/status/) &mdash; see what each platform supports today
 
-We'd love to hear what you're building. Share your projects on [GitHub Discussions](https://github.com/dasher-project/dasher/discussions)!
+We'd love to hear what you're building. Share your projects on [GitHub Discussions](https://github.com/dasher-project)!
 
 </div>
 
