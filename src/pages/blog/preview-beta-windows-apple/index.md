@@ -44,10 +44,19 @@ breakdown of what each platform supports.)
 
 ### Windows
 
-The Windows build is built on [Avalonia](https://avaloniaui.net/) and ships as a
-release on GitHub:
+The Windows build is built on [Avalonia](https://avaloniaui.net/) and ships as an MSI
+installer on GitHub:
 
 - **Windows:** [download the latest release](https://github.com/dasher-project/Dasher-Windows/releases/latest)
+  &mdash; grab the **`.msi`** file.
+
+Because the installer isn't yet signed with a Microsoft certificate, Windows will show
+a security warning. Click **"More info"** then **"Run anyway"** (or **"Allow"**) to
+proceed. We plan to publish through the **Microsoft Store** as well as direct download
+in the future, which will make this step go away.
+
+After installation Dasher won't open automatically &mdash; find it in your
+**Start menu under "Dasher"**.
 
 ### Linux / GTK
 
@@ -58,17 +67,49 @@ for updates.
 ## What's in this beta
 
 Because every frontend shares a single DasherCore engine, the experience &mdash; the
-zooming interface, the PPM prediction, the 600+ alphabets and 300+ languages, the
-colour palettes and switch access &mdash; is consistent wherever you run it. Highlights
-in this preview:
+zooming interface, the PPM prediction, the colour palettes and switch access &mdash;
+is consistent wherever you run it. But v6 isn't just about reaching feature parity
+with v5; some long-requested features and entirely new capabilities are here too.
 
-- **Continuous, click-to-zoom, dwell and switch** input methods
-- **Eye-gaze** works wherever the platform exposes a pointer (and natively on visionOS)
+### New and returning features
+
+- **v5 migration tool** &mdash; bring your existing Dasher settings across automatically,
+  so you don't start from scratch.
+- **On-screen keyboard on iOS** &mdash; the overlay keyboard that macOS and Windows users
+  have long enjoyed is now available on iPhone and iPad too.
+- **Speed mode** &mdash; the classic high-speed input mode is back, for experienced users
+  who want maximum words per minute.
+- **Window transparency** &mdash; adjustable transparency returns as an option, letting
+  you see through Dasher to what's behind it.
+- **Integrated eye-gaze on Windows** &mdash; native eye-tracker support built right into
+  the Windows app, something that was never really achievable under v5.
 - **Game / training mode** with custom text on the Apple apps
 - **Control mode** (edit text without leaving Dasher) on Windows
-- **Text-to-speech** output on Apple and Windows
-- **Privacy-preserving, opt-in analytics** (no text is ever collected &mdash; see
-  [RFC 0001](https://github.com/dasher-project/governance/blob/main/rfcs/0001-analytics.md))
+- **visionOS, built from the ground up** &mdash; we've put special effort into Apple
+  Vision Pro because we believe Dasher is naturally suited to eye-driven text entry on
+  this kind of device. It's early days and there's more work to do, but the potential is
+  genuinely exciting.
+
+### Language and prediction
+
+- **More alphabets than ever** &mdash; we now support even more languages than v5, though
+  not all have full training data yet (alphabets are universal; training data is
+  incremental).
+- **Better training data** &mdash; improved language models thanks to
+  [Keith Vertanen's](https://www.keithv.com/) word-prediction datasets.
+
+### Text-to-speech
+
+- **31 TTS engines, 1,100+ languages, fully offline** &mdash; using our TTS-wrapper code,
+  Dasher can speak your text in an extraordinary range of voices and languages without
+  needing a network connection.
+
+### Analytics
+
+- **Privacy-preserving, opt-in analytics** &mdash; no text is ever collected. We use
+  aggregate, anonymised data to understand the sheer variety of devices, input methods
+  and configurations we need to support in the future. See
+  [RFC 0001](https://github.com/dasher-project/governance/blob/main/rfcs/0001-analytics.md).
 
 ## We need your feedback
 
