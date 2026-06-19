@@ -41,7 +41,7 @@ Download and install Dasher for your platform.
   <p><strong>Windows:</strong> <a href="https://github.com/dasher-project/dasher/releases" target="_blank" rel="noopener noreferrer">Download from GitHub Releases</a></p>
   <p><strong>macOS:</strong> <a href="https://github.com/dasher-project/dasher/releases" target="_blank" rel="noopener noreferrer">Download v5.14 DMG</a></p>
   <p><strong>Linux:</strong> <code>sudo apt-get install dasher</code> (Debian/Ubuntu) or check your distribution</p>
-  <p><strong>Android:</strong> <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer">Google Play Store</a></p>
+  <p><strong>Android:</strong> <a href="https://github.com/dasher-project/Dasher-Android/releases/latest" target="_blank" rel="noopener noreferrer">Download APK (v6 beta)</a></p>
   <p><strong>iOS:</strong> <a href="https://apps.apple.com/app/dasher" target="_blank" rel="noopener noreferrer">App Store</a></p>
 </div>
 
@@ -104,10 +104,10 @@ sudo pacman -S dasher
 
 **Download from:**
 
-- <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer">Google Play Store</a>
-- <a href="https://f-droid.org/" target="_blank" rel="noopener noreferrer">F-Droid</a>
+- <a href="https://github.com/dasher-project/Dasher-Android/releases/latest" target="_blank" rel="noopener noreferrer">Dasher-Android (v6 beta APK)</a>
+- <a href="https://github.com/janmurin2/Dasher-Mobile/releases/tag/v1.0" target="_blank" rel="noopener noreferrer">Dasher Mobile (community)</a>
 
-Supports touch, tilt, and button input methods.
+Supports touch and tilt input. System keyboard (IME) mode available.
 
 **[View full Android installation guide →](android/)**
 

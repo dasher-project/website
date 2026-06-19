@@ -45,6 +45,7 @@ export const platformLabels: Record<string, string> = {
   visionos: 'visionOS',
   windows: 'Windows',
   gtk: 'GTK',
+  android: 'Android',
 };
 
 export const statusOrder: StatusValue[] = ['shipped', 'beta', 'planned', 'not-supported', 'n/a'];

@@ -39,9 +39,13 @@ compare what changed between generations at a glance.
 
 The v5 data is grounded in the legacy
 [dasher-project/dasher](https://github.com/dasher-project/dasher) repository
-and the 5.0 beta release notes. Android is omitted because there is no v6
-Android frontend yet (the legacy Android project lives separately at
-[acl33/AndroidDasher](https://github.com/acl33/AndroidDasher)).
+and the 5.0 beta release notes. Android now has an official v6 frontend
+([Dasher-Android](https://github.com/dasher-project/Dasher-Android)), built on
+the DasherCore C API. The legacy Android project
+([acl33/AndroidDasher](https://github.com/acl33/AndroidDasher)) was a separate
+community effort; a second community project,
+[Dasher Mobile](https://github.com/janmurin2/Dasher-Mobile), predates the
+official frontend.
 
 ## How to update it
 

@@ -1,8 +1,8 @@
 {
   "_comment": "Dasher v6 cross-platform capability matrix — THE SINGLE SOURCE OF TRUTH. Rendered at https://dasher.at/status/. How to update: https://dasher.at/developers/feature-parity/. Validated by scripts/validate-feature-status.mjs in CI.",
   "meta": {
-    "last_updated": "2026-06-18",
-    "v5_baseline": "Dasher v5 shipped native frontends for Windows, Linux/GTK, macOS and iOS (Android was a separate project; Mac/iPhone were unmaintained by the 5.0 beta). Input covered mouse, stylus/tablet, touch, multitouch, tilt, joystick (Linux) and socket input (the conduit for eye/gaze trackers). Notable v5 features: game/training mode, eye-tracker autocalibration, PPM family language models, Kanji/Pinyin conversion, and three TTS backends (SAPI / speech-dispatcher / flite).",
+    "last_updated": "2026-06-19",
+    "v5_baseline": "Dasher v5 shipped native frontends for Windows, Linux/GTK, macOS and iOS (Android had a separate community project (acl33/AndroidDasher); Mac/iPhone were unmaintained by the 5.0 beta). Input covered mouse, stylus/tablet, touch, multitouch, tilt, joystick (Linux) and socket input (the conduit for eye/gaze trackers). Notable v5 features: game/training mode, eye-tracker autocalibration, PPM family language models, Kanji/Pinyin conversion, and three TTS backends (SAPI / speech-dispatcher / flite).",
     "status_legend": {
       "shipped": "Implemented and released",
       "beta": "Available but in beta / behind a flag",
@@ -11,7 +11,7 @@
       "n/a": "Not applicable on this platform"
     }
   },
-  "platforms": ["macos", "ios", "visionos", "windows", "gtk"],
+  "platforms": ["macos", "ios", "visionos", "windows", "gtk", "android"],
   "features": [
     {
       "id": "pointer-eye-gaze-input",
@@ -20,18 +20,54 @@
       "dasher_core_dep": "V6 pointer (x, y) event stream",
       "notes": "Core pointer model. Eye-gaze trackers drive the cursor via socket input. visionOS uses native eye gaze + pinch.",
       "platforms": {
-        "macos": { "status": "shipped", "version": "1.0" },
-        "ios": { "status": "shipped" },
-        "visionos": { "status": "shipped", "reason": "Eye gaze + pinch" },
-        "windows": { "status": "shipped", "version": "0.1" },
-        "gtk": { "status": "shipped" }
+        "macos": {
+          "status": "shipped",
+          "version": "1.0"
+        },
+        "ios": {
+          "status": "shipped"
+        },
+        "visionos": {
+          "status": "shipped",
+          "reason": "Eye gaze + pinch"
+        },
+        "windows": {
+          "status": "shipped",
+          "version": "0.1"
+        },
+        "gtk": {
+          "status": "shipped"
+        },
+        "android": {
+          "status": "not-supported",
+          "reason": "No eye-gaze support planned"
+        }
       },
       "v5": {
-        "macos": { "status": "shipped", "reason": "Socket input + eyetracker autocalibration" },
-        "ios": { "status": "shipped", "reason": "Touch-driven pointer" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "shipped", "reason": "Socket input + eyetracker autocalibration" },
-        "gtk": { "status": "shipped", "reason": "Socket input" }
+        "macos": {
+          "status": "shipped",
+          "reason": "Socket input + eyetracker autocalibration"
+        },
+        "ios": {
+          "status": "shipped",
+          "reason": "Touch-driven pointer"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "shipped",
+          "reason": "Socket input + eyetracker autocalibration"
+        },
+        "gtk": {
+          "status": "shipped",
+          "reason": "Socket input"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -41,18 +77,49 @@
       "dasher_core_dep": "V6 pointer (x, y) event stream",
       "notes": "Multi-touch on touchscreens and trackpads.",
       "platforms": {
-        "macos": { "status": "shipped", "reason": "Trackpad" },
-        "ios": { "status": "shipped" },
-        "visionos": { "status": "not-supported", "reason": "No touch surface" },
-        "windows": { "status": "shipped" },
-        "gtk": { "status": "beta" }
+        "macos": {
+          "status": "shipped",
+          "reason": "Trackpad"
+        },
+        "ios": {
+          "status": "shipped"
+        },
+        "visionos": {
+          "status": "not-supported",
+          "reason": "No touch surface"
+        },
+        "windows": {
+          "status": "shipped"
+        },
+        "gtk": {
+          "status": "beta"
+        },
+        "android": {
+          "status": "beta"
+        }
       },
       "v5": {
-        "macos": { "status": "shipped" },
-        "ios": { "status": "shipped", "reason": "Touch + two-finger multitouch" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "shipped" },
-        "gtk": { "status": "shipped" }
+        "macos": {
+          "status": "shipped"
+        },
+        "ios": {
+          "status": "shipped",
+          "reason": "Touch + two-finger multitouch"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "shipped"
+        },
+        "gtk": {
+          "status": "shipped"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -62,18 +129,50 @@
       "dasher_core_dep": "V6 switch input filter (One-/Two-Button Dynamic)",
       "notes": "Apple exposes a dedicated switchesOnly access method with switch profiles (4 slots, key capture, scan rate). GTK supports keyboard-key assignment via remapping.",
       "platforms": {
-        "macos": { "status": "shipped" },
-        "ios": { "status": "shipped" },
-        "visionos": { "status": "planned" },
-        "windows": { "status": "beta" },
-        "gtk": { "status": "shipped" }
+        "macos": {
+          "status": "shipped"
+        },
+        "ios": {
+          "status": "shipped"
+        },
+        "visionos": {
+          "status": "planned"
+        },
+        "windows": {
+          "status": "beta"
+        },
+        "gtk": {
+          "status": "shipped"
+        },
+        "android": {
+          "status": "planned",
+          "reason": "Not yet implemented"
+        }
       },
       "v5": {
-        "macos": { "status": "shipped", "reason": "Button Dynamic modes" },
-        "ios": { "status": "shipped", "reason": "Button Dynamic modes" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "shipped", "reason": "One-/Two-Button Dynamic" },
-        "gtk": { "status": "shipped" }
+        "macos": {
+          "status": "shipped",
+          "reason": "Button Dynamic modes"
+        },
+        "ios": {
+          "status": "shipped",
+          "reason": "Button Dynamic modes"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "shipped",
+          "reason": "One-/Two-Button Dynamic"
+        },
+        "gtk": {
+          "status": "shipped"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -83,18 +182,50 @@
       "dasher_core_dep": "V6 input filter",
       "notes": "GTK uses SDL3 for full gamepad support (axes, buttons, haptic/rumble). Apple declares joystick in its access-method enum but the backing service is not yet implemented.",
       "platforms": {
-        "macos": { "status": "not-supported", "reason": "Declared but not implemented" },
-        "ios": { "status": "not-supported", "reason": "Declared but not implemented" },
-        "visionos": { "status": "not-supported" },
-        "windows": { "status": "planned" },
-        "gtk": { "status": "shipped", "version": "SDL3" }
+        "macos": {
+          "status": "not-supported",
+          "reason": "Declared but not implemented"
+        },
+        "ios": {
+          "status": "not-supported",
+          "reason": "Declared but not implemented"
+        },
+        "visionos": {
+          "status": "not-supported"
+        },
+        "windows": {
+          "status": "planned"
+        },
+        "gtk": {
+          "status": "shipped",
+          "version": "SDL3"
+        },
+        "android": {
+          "status": "planned"
+        }
       },
       "v5": {
-        "macos": { "status": "not-supported" },
-        "ios": { "status": "not-supported" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "not-supported" },
-        "gtk": { "status": "shipped", "reason": "Linux joystick support" }
+        "macos": {
+          "status": "not-supported"
+        },
+        "ios": {
+          "status": "not-supported"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "not-supported"
+        },
+        "gtk": {
+          "status": "shipped",
+          "reason": "Linux joystick support"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -104,18 +235,53 @@
       "dasher_core_dep": "V6 pointer (x, y) event stream",
       "notes": "iOS uses CoreMotion accelerometer with deadzone calibration. v5 had this on iPhone.",
       "platforms": {
-        "macos": { "status": "not-supported", "reason": "No accelerometer" },
-        "ios": { "status": "shipped", "reason": "CoreMotion + calibration" },
-        "visionos": { "status": "not-supported", "reason": "No accelerometer" },
-        "windows": { "status": "not-supported", "reason": "No accelerometer" },
-        "gtk": { "status": "not-supported", "reason": "No accelerometer" }
+        "macos": {
+          "status": "not-supported",
+          "reason": "No accelerometer"
+        },
+        "ios": {
+          "status": "shipped",
+          "reason": "CoreMotion + calibration"
+        },
+        "visionos": {
+          "status": "not-supported",
+          "reason": "No accelerometer"
+        },
+        "windows": {
+          "status": "not-supported",
+          "reason": "No accelerometer"
+        },
+        "gtk": {
+          "status": "not-supported",
+          "reason": "No accelerometer"
+        },
+        "android": {
+          "status": "beta",
+          "reason": "Game-rotation-vector sensor"
+        }
       },
       "v5": {
-        "macos": { "status": "not-supported" },
-        "ios": { "status": "shipped", "reason": "iPhone accelerometer" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "not-supported" },
-        "gtk": { "status": "not-supported" }
+        "macos": {
+          "status": "not-supported"
+        },
+        "ios": {
+          "status": "shipped",
+          "reason": "iPhone accelerometer"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "not-supported"
+        },
+        "gtk": {
+          "status": "not-supported"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -125,18 +291,50 @@
       "dasher_core_dep": "V6 input (external driver)",
       "notes": "Primary conduit for eye trackers and external assistive apps. In v5 this used a UDP coordinate protocol.",
       "platforms": {
-        "macos": { "status": "planned" },
-        "ios": { "status": "planned" },
-        "visionos": { "status": "planned" },
-        "windows": { "status": "planned" },
-        "gtk": { "status": "planned" }
+        "macos": {
+          "status": "planned"
+        },
+        "ios": {
+          "status": "planned"
+        },
+        "visionos": {
+          "status": "planned"
+        },
+        "windows": {
+          "status": "planned"
+        },
+        "gtk": {
+          "status": "planned"
+        },
+        "android": {
+          "status": "planned"
+        }
       },
       "v5": {
-        "macos": { "status": "shipped", "reason": "UDP socket input" },
-        "ios": { "status": "shipped", "reason": "UDP socket input" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "shipped", "reason": "UDP coordinate protocol" },
-        "gtk": { "status": "shipped", "reason": "UDP coordinate protocol" }
+        "macos": {
+          "status": "shipped",
+          "reason": "UDP socket input"
+        },
+        "ios": {
+          "status": "shipped",
+          "reason": "UDP socket input"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "shipped",
+          "reason": "UDP coordinate protocol"
+        },
+        "gtk": {
+          "status": "shipped",
+          "reason": "UDP coordinate protocol"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -146,18 +344,49 @@
       "dasher_core_dep": "V6 pointer (x, y) event stream",
       "notes": "visionOS drives the pointer natively from pinch + hand position. Other platforms do not expose a hand-tracking pointer source.",
       "platforms": {
-        "macos": { "status": "not-supported" },
-        "ios": { "status": "not-supported" },
-        "visionos": { "status": "shipped", "reason": "Native pinch + hand position" },
-        "windows": { "status": "not-supported" },
-        "gtk": { "status": "not-supported" }
+        "macos": {
+          "status": "not-supported"
+        },
+        "ios": {
+          "status": "not-supported"
+        },
+        "visionos": {
+          "status": "shipped",
+          "reason": "Native pinch + hand position"
+        },
+        "windows": {
+          "status": "not-supported"
+        },
+        "gtk": {
+          "status": "not-supported"
+        },
+        "android": {
+          "status": "not-supported"
+        }
       },
       "v5": {
-        "macos": { "status": "n/a", "reason": "Hand tracking APIs did not exist" },
-        "ios": { "status": "n/a", "reason": "Hand tracking APIs did not exist" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "n/a" },
-        "gtk": { "status": "n/a" }
+        "macos": {
+          "status": "n/a",
+          "reason": "Hand tracking APIs did not exist"
+        },
+        "ios": {
+          "status": "n/a",
+          "reason": "Hand tracking APIs did not exist"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "n/a"
+        },
+        "gtk": {
+          "status": "n/a"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -167,18 +396,46 @@
       "dasher_core_dep": "V6 default filter behaviour",
       "notes": "Dasher zooms continuously towards the cursor position. The default Dasher experience on every platform.",
       "platforms": {
-        "macos": { "status": "shipped" },
-        "ios": { "status": "shipped" },
-        "visionos": { "status": "shipped" },
-        "windows": { "status": "shipped" },
-        "gtk": { "status": "shipped" }
+        "macos": {
+          "status": "shipped"
+        },
+        "ios": {
+          "status": "shipped"
+        },
+        "visionos": {
+          "status": "shipped"
+        },
+        "windows": {
+          "status": "shipped"
+        },
+        "gtk": {
+          "status": "shipped"
+        },
+        "android": {
+          "status": "beta"
+        }
       },
       "v5": {
-        "macos": { "status": "shipped" },
-        "ios": { "status": "shipped" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "shipped" },
-        "gtk": { "status": "shipped" }
+        "macos": {
+          "status": "shipped"
+        },
+        "ios": {
+          "status": "shipped"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "shipped"
+        },
+        "gtk": {
+          "status": "shipped"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -188,18 +445,49 @@
       "dasher_core_dep": "V6 dwell filter",
       "notes": "Cursor pauses in a zone for a dwell time to select. visionOS has a dwell indicator.",
       "platforms": {
-        "macos": { "status": "shipped" },
-        "ios": { "status": "shipped" },
-        "visionos": { "status": "shipped", "reason": "Dwell indicator" },
-        "windows": { "status": "planned" },
-        "gtk": { "status": "not-supported", "reason": "Not implemented" }
+        "macos": {
+          "status": "shipped"
+        },
+        "ios": {
+          "status": "shipped"
+        },
+        "visionos": {
+          "status": "shipped",
+          "reason": "Dwell indicator"
+        },
+        "windows": {
+          "status": "planned"
+        },
+        "gtk": {
+          "status": "not-supported",
+          "reason": "Not implemented"
+        },
+        "android": {
+          "status": "planned"
+        }
       },
       "v5": {
-        "macos": { "status": "shipped" },
-        "ios": { "status": "shipped" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "shipped", "reason": "Dwell mode" },
-        "gtk": { "status": "shipped" }
+        "macos": {
+          "status": "shipped"
+        },
+        "ios": {
+          "status": "shipped"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "shipped",
+          "reason": "Dwell mode"
+        },
+        "gtk": {
+          "status": "shipped"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -209,18 +497,47 @@
       "dasher_core_dep": "V6 click filter",
       "notes": "Each click advances the zoom one step. Apple exposes pressToMove and clickToZoom selection methods.",
       "platforms": {
-        "macos": { "status": "shipped" },
-        "ios": { "status": "shipped" },
-        "visionos": { "status": "planned" },
-        "windows": { "status": "planned" },
-        "gtk": { "status": "not-supported", "reason": "Not implemented" }
+        "macos": {
+          "status": "shipped"
+        },
+        "ios": {
+          "status": "shipped"
+        },
+        "visionos": {
+          "status": "planned"
+        },
+        "windows": {
+          "status": "planned"
+        },
+        "gtk": {
+          "status": "not-supported",
+          "reason": "Not implemented"
+        },
+        "android": {
+          "status": "planned"
+        }
       },
       "v5": {
-        "macos": { "status": "shipped" },
-        "ios": { "status": "shipped" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "shipped" },
-        "gtk": { "status": "not-supported" }
+        "macos": {
+          "status": "shipped"
+        },
+        "ios": {
+          "status": "shipped"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "shipped"
+        },
+        "gtk": {
+          "status": "not-supported"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -230,18 +547,50 @@
       "dasher_core_dep": "V6 direct-boxes filter",
       "notes": "Screen is divided into letter boxes that you tap directly. macOS implements this via Accessibility API text injection (directBoxes selection method).",
       "platforms": {
-        "macos": { "status": "shipped", "reason": "Accessibility API" },
-        "ios": { "status": "not-supported", "reason": "No Accessibility API for text injection" },
-        "visionos": { "status": "not-supported" },
-        "windows": { "status": "planned" },
-        "gtk": { "status": "not-supported", "reason": "Not implemented" }
+        "macos": {
+          "status": "shipped",
+          "reason": "Accessibility API"
+        },
+        "ios": {
+          "status": "not-supported",
+          "reason": "No Accessibility API for text injection"
+        },
+        "visionos": {
+          "status": "not-supported"
+        },
+        "windows": {
+          "status": "planned"
+        },
+        "gtk": {
+          "status": "not-supported",
+          "reason": "Not implemented"
+        },
+        "android": {
+          "status": "planned"
+        }
       },
       "v5": {
-        "macos": { "status": "not-supported" },
-        "ios": { "status": "not-supported" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "shipped", "reason": "Direct mode" },
-        "gtk": { "status": "not-supported" }
+        "macos": {
+          "status": "not-supported"
+        },
+        "ios": {
+          "status": "not-supported"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "shipped",
+          "reason": "Direct mode"
+        },
+        "gtk": {
+          "status": "not-supported"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -251,18 +600,47 @@
       "dasher_core_dep": "V6 input haptic event",
       "notes": "GTK uses SDL3 haptic/rumble for gamepad feedback.",
       "platforms": {
-        "macos": { "status": "planned" },
-        "ios": { "status": "planned" },
-        "visionos": { "status": "planned" },
-        "windows": { "status": "planned" },
-        "gtk": { "status": "shipped", "reason": "SDL3 haptic/rumble" }
+        "macos": {
+          "status": "planned"
+        },
+        "ios": {
+          "status": "planned"
+        },
+        "visionos": {
+          "status": "planned"
+        },
+        "windows": {
+          "status": "planned"
+        },
+        "gtk": {
+          "status": "shipped",
+          "reason": "SDL3 haptic/rumble"
+        },
+        "android": {
+          "status": "planned"
+        }
       },
       "v5": {
-        "macos": { "status": "not-supported" },
-        "ios": { "status": "not-supported" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "not-supported" },
-        "gtk": { "status": "not-supported" }
+        "macos": {
+          "status": "not-supported"
+        },
+        "ios": {
+          "status": "not-supported"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "not-supported"
+        },
+        "gtk": {
+          "status": "not-supported"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -272,18 +650,47 @@
       "dasher_core_dep": "V6 draw-command buffer",
       "notes": "Frontend renders the draw-command buffer produced by DasherCore. v5 used native canvas/OpenGL per platform.",
       "platforms": {
-        "macos": { "status": "shipped" },
-        "ios": { "status": "shipped" },
-        "visionos": { "status": "shipped" },
-        "windows": { "status": "shipped" },
-        "gtk": { "status": "shipped" }
+        "macos": {
+          "status": "shipped"
+        },
+        "ios": {
+          "status": "shipped"
+        },
+        "visionos": {
+          "status": "shipped"
+        },
+        "windows": {
+          "status": "shipped"
+        },
+        "gtk": {
+          "status": "shipped"
+        },
+        "android": {
+          "status": "beta",
+          "reason": "C-API frame buffer + Canvas renderer"
+        }
       },
       "v5": {
-        "macos": { "status": "shipped" },
-        "ios": { "status": "shipped" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "shipped" },
-        "gtk": { "status": "shipped" }
+        "macos": {
+          "status": "shipped"
+        },
+        "ios": {
+          "status": "shipped"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "shipped"
+        },
+        "gtk": {
+          "status": "shipped"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -293,18 +700,51 @@
       "dasher_core_dep": "Colour palette system (22 palettes)",
       "notes": "DasherCore ships 22 colour palettes. Apple exposes a palette picker; GTK exposes SyncedColorDropdown with live swatches.",
       "platforms": {
-        "macos": { "status": "shipped" },
-        "ios": { "status": "shipped" },
-        "visionos": { "status": "shipped" },
-        "windows": { "status": "shipped" },
-        "gtk": { "status": "shipped", "reason": "SyncedColorDropdown with live swatches" }
+        "macos": {
+          "status": "shipped"
+        },
+        "ios": {
+          "status": "shipped"
+        },
+        "visionos": {
+          "status": "shipped"
+        },
+        "windows": {
+          "status": "shipped"
+        },
+        "gtk": {
+          "status": "shipped",
+          "reason": "SyncedColorDropdown with live swatches"
+        },
+        "android": {
+          "status": "beta"
+        }
       },
       "v5": {
-        "macos": { "status": "shipped", "reason": "Colour schemes" },
-        "ios": { "status": "shipped", "reason": "Colour schemes" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "shipped", "reason": "Colour schemes" },
-        "gtk": { "status": "shipped", "reason": "Colour schemes" }
+        "macos": {
+          "status": "shipped",
+          "reason": "Colour schemes"
+        },
+        "ios": {
+          "status": "shipped",
+          "reason": "Colour schemes"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "shipped",
+          "reason": "Colour schemes"
+        },
+        "gtk": {
+          "status": "shipped",
+          "reason": "Colour schemes"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -314,18 +754,50 @@
       "dasher_core_dep": "Font parameter (LP_DASHER_FONTSIZE, SP_DASHER_FONT)",
       "notes": "Apple offers 10 font families + size slider. GTK uses FontDialogButton (family/style/weight/size).",
       "platforms": {
-        "macos": { "status": "shipped", "reason": "10 families + size slider" },
-        "ios": { "status": "shipped", "reason": "10 families + size slider" },
-        "visionos": { "status": "shipped" },
-        "windows": { "status": "shipped" },
-        "gtk": { "status": "shipped", "reason": "FontDialogButton" }
+        "macos": {
+          "status": "shipped",
+          "reason": "10 families + size slider"
+        },
+        "ios": {
+          "status": "shipped",
+          "reason": "10 families + size slider"
+        },
+        "visionos": {
+          "status": "shipped"
+        },
+        "windows": {
+          "status": "shipped"
+        },
+        "gtk": {
+          "status": "shipped",
+          "reason": "FontDialogButton"
+        },
+        "android": {
+          "status": "beta"
+        }
       },
       "v5": {
-        "macos": { "status": "shipped", "reason": "Font selection" },
-        "ios": { "status": "shipped" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "shipped" },
-        "gtk": { "status": "shipped" }
+        "macos": {
+          "status": "shipped",
+          "reason": "Font selection"
+        },
+        "ios": {
+          "status": "shipped"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "shipped"
+        },
+        "gtk": {
+          "status": "shipped"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -335,18 +807,46 @@
       "dasher_core_dep": "BP_ORIENT_L_R (orientation parameter)",
       "notes": "Dasher can render left-to-right or right-to-left to suit handedness. Provided by DasherCore.",
       "platforms": {
-        "macos": { "status": "shipped" },
-        "ios": { "status": "shipped" },
-        "visionos": { "status": "shipped" },
-        "windows": { "status": "shipped" },
-        "gtk": { "status": "shipped" }
+        "macos": {
+          "status": "shipped"
+        },
+        "ios": {
+          "status": "shipped"
+        },
+        "visionos": {
+          "status": "shipped"
+        },
+        "windows": {
+          "status": "shipped"
+        },
+        "gtk": {
+          "status": "shipped"
+        },
+        "android": {
+          "status": "beta"
+        }
       },
       "v5": {
-        "macos": { "status": "shipped" },
-        "ios": { "status": "shipped" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "shipped" },
-        "gtk": { "status": "shipped" }
+        "macos": {
+          "status": "shipped"
+        },
+        "ios": {
+          "status": "shipped"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "shipped"
+        },
+        "gtk": {
+          "status": "shipped"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -355,18 +855,51 @@
       "title": "Dark mode / themes",
       "dasher_core_dep": "Colour palette parameter",
       "platforms": {
-        "macos": { "status": "shipped" },
-        "ios": { "status": "shipped" },
-        "visionos": { "status": "shipped" },
-        "windows": { "status": "shipped" },
-        "gtk": { "status": "shipped" }
+        "macos": {
+          "status": "shipped"
+        },
+        "ios": {
+          "status": "shipped"
+        },
+        "visionos": {
+          "status": "shipped"
+        },
+        "windows": {
+          "status": "shipped"
+        },
+        "gtk": {
+          "status": "shipped"
+        },
+        "android": {
+          "status": "beta",
+          "reason": "Material3 night theme"
+        }
       },
       "v5": {
-        "macos": { "status": "shipped", "reason": "Colour schemes" },
-        "ios": { "status": "shipped", "reason": "Colour schemes" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "shipped", "reason": "Colour schemes" },
-        "gtk": { "status": "shipped", "reason": "Colour schemes" }
+        "macos": {
+          "status": "shipped",
+          "reason": "Colour schemes"
+        },
+        "ios": {
+          "status": "shipped",
+          "reason": "Colour schemes"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "shipped",
+          "reason": "Colour schemes"
+        },
+        "gtk": {
+          "status": "shipped",
+          "reason": "Colour schemes"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -376,18 +909,46 @@
       "dasher_core_dep": "LMRegistry (PPM, id 0)",
       "notes": "Prediction by Partial Matching — the default language model. Provided by DasherCore to every frontend.",
       "platforms": {
-        "macos": { "status": "shipped" },
-        "ios": { "status": "shipped" },
-        "visionos": { "status": "shipped" },
-        "windows": { "status": "shipped" },
-        "gtk": { "status": "shipped" }
+        "macos": {
+          "status": "shipped"
+        },
+        "ios": {
+          "status": "shipped"
+        },
+        "visionos": {
+          "status": "shipped"
+        },
+        "windows": {
+          "status": "shipped"
+        },
+        "gtk": {
+          "status": "shipped"
+        },
+        "android": {
+          "status": "beta"
+        }
       },
       "v5": {
-        "macos": { "status": "shipped" },
-        "ios": { "status": "shipped" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "shipped" },
-        "gtk": { "status": "shipped" }
+        "macos": {
+          "status": "shipped"
+        },
+        "ios": {
+          "status": "shipped"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "shipped"
+        },
+        "gtk": {
+          "status": "shipped"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -397,18 +958,48 @@
       "dasher_core_dep": "LMRegistry (Word id 1, Mixture id 2, CTW id 3)",
       "notes": "DasherCore registers 4 pluggable language models. Word caches context, Mixture combines PPM + Word, CTW is Context Tree Weighting.",
       "platforms": {
-        "macos": { "status": "shipped" },
-        "ios": { "status": "shipped" },
-        "visionos": { "status": "shipped" },
-        "windows": { "status": "shipped" },
-        "gtk": { "status": "shipped" }
+        "macos": {
+          "status": "shipped"
+        },
+        "ios": {
+          "status": "shipped"
+        },
+        "visionos": {
+          "status": "shipped"
+        },
+        "windows": {
+          "status": "shipped"
+        },
+        "gtk": {
+          "status": "shipped"
+        },
+        "android": {
+          "status": "beta",
+          "reason": "KenLM support"
+        }
       },
       "v5": {
-        "macos": { "status": "shipped", "reason": "Word/Mixture/CTW/Japanese" },
-        "ios": { "status": "shipped" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "shipped" },
-        "gtk": { "status": "shipped" }
+        "macos": {
+          "status": "shipped",
+          "reason": "Word/Mixture/CTW/Japanese"
+        },
+        "ios": {
+          "status": "shipped"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "shipped"
+        },
+        "gtk": {
+          "status": "shipped"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -418,18 +1009,47 @@
       "dasher_core_dep": "LM adaptive context",
       "notes": "Language model learns from entered text to improve predictions. GTK exposes an explicit toggle.",
       "platforms": {
-        "macos": { "status": "shipped" },
-        "ios": { "status": "shipped" },
-        "visionos": { "status": "shipped" },
-        "windows": { "status": "shipped" },
-        "gtk": { "status": "shipped", "reason": "Explicit toggle in settings" }
+        "macos": {
+          "status": "shipped"
+        },
+        "ios": {
+          "status": "shipped"
+        },
+        "visionos": {
+          "status": "shipped"
+        },
+        "windows": {
+          "status": "shipped"
+        },
+        "gtk": {
+          "status": "shipped",
+          "reason": "Explicit toggle in settings"
+        },
+        "android": {
+          "status": "beta"
+        }
       },
       "v5": {
-        "macos": { "status": "shipped" },
-        "ios": { "status": "shipped" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "shipped" },
-        "gtk": { "status": "shipped" }
+        "macos": {
+          "status": "shipped"
+        },
+        "ios": {
+          "status": "shipped"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "shipped"
+        },
+        "gtk": {
+          "status": "shipped"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -439,18 +1059,51 @@
       "dasher_core_dep": "WorldAlphabets (622 alphabet files, 344 languages)",
       "notes": "v5 carried ~140 alphabet definitions; v6 expands to 622 via WorldAlphabets (9 curated + 486 autoConverted + 127 legacy).",
       "platforms": {
-        "macos": { "status": "shipped" },
-        "ios": { "status": "shipped" },
-        "visionos": { "status": "shipped" },
-        "windows": { "status": "shipped" },
-        "gtk": { "status": "shipped", "reason": "Alphabet chooser" }
+        "macos": {
+          "status": "shipped"
+        },
+        "ios": {
+          "status": "shipped"
+        },
+        "visionos": {
+          "status": "shipped"
+        },
+        "windows": {
+          "status": "shipped"
+        },
+        "gtk": {
+          "status": "shipped",
+          "reason": "Alphabet chooser"
+        },
+        "android": {
+          "status": "beta"
+        }
       },
       "v5": {
-        "macos": { "status": "shipped", "reason": "~140 alphabets" },
-        "ios": { "status": "shipped", "reason": "~140 alphabets" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "shipped", "reason": "~140 alphabets" },
-        "gtk": { "status": "shipped", "reason": "~140 alphabets" }
+        "macos": {
+          "status": "shipped",
+          "reason": "~140 alphabets"
+        },
+        "ios": {
+          "status": "shipped",
+          "reason": "~140 alphabets"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "shipped",
+          "reason": "~140 alphabets"
+        },
+        "gtk": {
+          "status": "shipped",
+          "reason": "~140 alphabets"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -460,18 +1113,50 @@
       "dasher_core_dep": "Japanese/CJK alphabets + special LM",
       "notes": "DasherCore ships Japanese alphabet files and a dedicated conversion system.",
       "platforms": {
-        "macos": { "status": "shipped" },
-        "ios": { "status": "shipped" },
-        "visionos": { "status": "shipped" },
-        "windows": { "status": "shipped" },
-        "gtk": { "status": "shipped" }
+        "macos": {
+          "status": "shipped"
+        },
+        "ios": {
+          "status": "shipped"
+        },
+        "visionos": {
+          "status": "shipped"
+        },
+        "windows": {
+          "status": "shipped"
+        },
+        "gtk": {
+          "status": "shipped"
+        },
+        "android": {
+          "status": "beta"
+        }
       },
       "v5": {
-        "macos": { "status": "shipped", "reason": "Kanji/Pinyin conversion" },
-        "ios": { "status": "shipped", "reason": "Kanji/Pinyin conversion" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "shipped", "reason": "Kanji/Pinyin conversion" },
-        "gtk": { "status": "shipped", "reason": "Kanji/Pinyin conversion" }
+        "macos": {
+          "status": "shipped",
+          "reason": "Kanji/Pinyin conversion"
+        },
+        "ios": {
+          "status": "shipped",
+          "reason": "Kanji/Pinyin conversion"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "shipped",
+          "reason": "Kanji/Pinyin conversion"
+        },
+        "gtk": {
+          "status": "shipped",
+          "reason": "Kanji/Pinyin conversion"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -491,19 +1176,47 @@
           "version": "swift-tts-wrapper",
           "reason": "21 engines, voice/rate/pitch"
         },
-        "visionos": { "status": "planned" },
-        "windows": { "status": "shipped", "version": "DotNetTtsWrapper" },
+        "visionos": {
+          "status": "planned"
+        },
+        "windows": {
+          "status": "shipped",
+          "version": "DotNetTtsWrapper"
+        },
         "gtk": {
           "status": "not-supported",
           "reason": "rust-tts-wrapper placeholder (HAS_TTS flag)"
+        },
+        "android": {
+          "status": "beta",
+          "reason": "System TTS via Android TextToSpeech"
         }
       },
       "v5": {
-        "macos": { "status": "shipped", "reason": "NSSpeechSynthesizer" },
-        "ios": { "status": "shipped", "reason": "flite" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "shipped", "reason": "SAPI" },
-        "gtk": { "status": "shipped", "reason": "speech-dispatcher" }
+        "macos": {
+          "status": "shipped",
+          "reason": "NSSpeechSynthesizer"
+        },
+        "ios": {
+          "status": "shipped",
+          "reason": "flite"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "shipped",
+          "reason": "SAPI"
+        },
+        "gtk": {
+          "status": "shipped",
+          "reason": "speech-dispatcher"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -513,18 +1226,52 @@
       "dasher_core_dep": "Output text stream + GameModule stop event",
       "notes": "Reads accumulated text aloud when the user stops Dasher. Part of the Apple Speech settings tab.",
       "platforms": {
-        "macos": { "status": "shipped", "reason": "Speech settings tab" },
-        "ios": { "status": "shipped", "reason": "Speech settings tab" },
-        "visionos": { "status": "planned" },
-        "windows": { "status": "planned" },
-        "gtk": { "status": "not-supported", "reason": "TTS not wired" }
+        "macos": {
+          "status": "shipped",
+          "reason": "Speech settings tab"
+        },
+        "ios": {
+          "status": "shipped",
+          "reason": "Speech settings tab"
+        },
+        "visionos": {
+          "status": "planned"
+        },
+        "windows": {
+          "status": "planned"
+        },
+        "gtk": {
+          "status": "not-supported",
+          "reason": "TTS not wired"
+        },
+        "android": {
+          "status": "beta"
+        }
       },
       "v5": {
-        "macos": { "status": "shipped", "reason": "Speak on stop" },
-        "ios": { "status": "shipped", "reason": "Speak on stop" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "shipped", "reason": "Speak on stop" },
-        "gtk": { "status": "shipped" }
+        "macos": {
+          "status": "shipped",
+          "reason": "Speak on stop"
+        },
+        "ios": {
+          "status": "shipped",
+          "reason": "Speak on stop"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "shipped",
+          "reason": "Speak on stop"
+        },
+        "gtk": {
+          "status": "shipped"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -534,18 +1281,46 @@
       "dasher_core_dep": "Clipboard parameter",
       "notes": "Apple offers Copy and Copy All. GTK offers Copy and Copy All.",
       "platforms": {
-        "macos": { "status": "shipped" },
-        "ios": { "status": "shipped" },
-        "visionos": { "status": "planned" },
-        "windows": { "status": "shipped" },
-        "gtk": { "status": "shipped" }
+        "macos": {
+          "status": "shipped"
+        },
+        "ios": {
+          "status": "shipped"
+        },
+        "visionos": {
+          "status": "planned"
+        },
+        "windows": {
+          "status": "shipped"
+        },
+        "gtk": {
+          "status": "shipped"
+        },
+        "android": {
+          "status": "beta"
+        }
       },
       "v5": {
-        "macos": { "status": "shipped" },
-        "ios": { "status": "shipped" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "shipped" },
-        "gtk": { "status": "shipped" }
+        "macos": {
+          "status": "shipped"
+        },
+        "ios": {
+          "status": "shipped"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "shipped"
+        },
+        "gtk": {
+          "status": "shipped"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -555,18 +1330,46 @@
       "dasher_core_dep": "Clipboard + training parameter",
       "notes": "Paste clipboard contents into Dasher's text buffer. GTK has Paste button; Apple has Paste (iOS).",
       "platforms": {
-        "macos": { "status": "shipped" },
-        "ios": { "status": "shipped" },
-        "visionos": { "status": "planned" },
-        "windows": { "status": "planned" },
-        "gtk": { "status": "shipped" }
+        "macos": {
+          "status": "shipped"
+        },
+        "ios": {
+          "status": "shipped"
+        },
+        "visionos": {
+          "status": "planned"
+        },
+        "windows": {
+          "status": "planned"
+        },
+        "gtk": {
+          "status": "shipped"
+        },
+        "android": {
+          "status": "beta"
+        }
       },
       "v5": {
-        "macos": { "status": "shipped" },
-        "ios": { "status": "shipped" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "shipped" },
-        "gtk": { "status": "shipped" }
+        "macos": {
+          "status": "shipped"
+        },
+        "ios": {
+          "status": "shipped"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "shipped"
+        },
+        "gtk": {
+          "status": "shipped"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -576,18 +1379,50 @@
       "dasher_core_dep": "V6 output text stream",
       "notes": "Injects text directly into other applications. macOS uses the Accessibility API (Direct Mode). Similar to an OS keyboard.",
       "platforms": {
-        "macos": { "status": "shipped", "reason": "Accessibility API" },
-        "ios": { "status": "not-supported", "reason": "No Accessibility API for text injection" },
-        "visionos": { "status": "not-supported" },
-        "windows": { "status": "planned" },
-        "gtk": { "status": "not-supported", "reason": "Not implemented" }
+        "macos": {
+          "status": "shipped",
+          "reason": "Accessibility API"
+        },
+        "ios": {
+          "status": "not-supported",
+          "reason": "No Accessibility API for text injection"
+        },
+        "visionos": {
+          "status": "not-supported"
+        },
+        "windows": {
+          "status": "planned"
+        },
+        "gtk": {
+          "status": "not-supported",
+          "reason": "Not implemented"
+        },
+        "android": {
+          "status": "beta",
+          "reason": "IME service (system keyboard)"
+        }
       },
       "v5": {
-        "macos": { "status": "not-supported" },
-        "ios": { "status": "not-supported" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "not-supported" },
-        "gtk": { "status": "not-supported" }
+        "macos": {
+          "status": "not-supported"
+        },
+        "ios": {
+          "status": "not-supported"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "not-supported"
+        },
+        "gtk": {
+          "status": "not-supported"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -597,18 +1432,50 @@
       "dasher_core_dep": "V6 output text stream",
       "notes": "macOS supports Save/Open file. GTK supports PDF screenshot export (F8).",
       "platforms": {
-        "macos": { "status": "shipped", "reason": "Save/Open" },
-        "ios": { "status": "not-supported", "reason": "Use share sheet instead" },
-        "visionos": { "status": "not-supported" },
-        "windows": { "status": "planned" },
-        "gtk": { "status": "shipped", "reason": "PDF screenshot export (F8)" }
+        "macos": {
+          "status": "shipped",
+          "reason": "Save/Open"
+        },
+        "ios": {
+          "status": "not-supported",
+          "reason": "Use share sheet instead"
+        },
+        "visionos": {
+          "status": "not-supported"
+        },
+        "windows": {
+          "status": "planned"
+        },
+        "gtk": {
+          "status": "shipped",
+          "reason": "PDF screenshot export (F8)"
+        },
+        "android": {
+          "status": "beta"
+        }
       },
       "v5": {
-        "macos": { "status": "shipped", "reason": "Save/Open file" },
-        "ios": { "status": "not-supported" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "shipped" },
-        "gtk": { "status": "shipped" }
+        "macos": {
+          "status": "shipped",
+          "reason": "Save/Open file"
+        },
+        "ios": {
+          "status": "not-supported"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "shipped"
+        },
+        "gtk": {
+          "status": "shipped"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -618,18 +1485,47 @@
       "dasher_core_dep": "V6 output buffer",
       "notes": "GTK has Undo/Redo buttons. v5 did not have undo.",
       "platforms": {
-        "macos": { "status": "planned" },
-        "ios": { "status": "planned" },
-        "visionos": { "status": "planned" },
-        "windows": { "status": "planned" },
-        "gtk": { "status": "shipped" }
+        "macos": {
+          "status": "planned"
+        },
+        "ios": {
+          "status": "planned"
+        },
+        "visionos": {
+          "status": "planned"
+        },
+        "windows": {
+          "status": "planned"
+        },
+        "gtk": {
+          "status": "shipped"
+        },
+        "android": {
+          "status": "planned"
+        }
       },
       "v5": {
-        "macos": { "status": "not-supported", "reason": "Not available in v5" },
-        "ios": { "status": "not-supported" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "not-supported" },
-        "gtk": { "status": "not-supported" }
+        "macos": {
+          "status": "not-supported",
+          "reason": "Not available in v5"
+        },
+        "ios": {
+          "status": "not-supported"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "not-supported"
+        },
+        "gtk": {
+          "status": "not-supported"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -639,18 +1535,48 @@
       "dasher_core_dep": "V6 draw-command buffer",
       "notes": "GTK supports PDF screenshot export (F8 key).",
       "platforms": {
-        "macos": { "status": "not-supported" },
-        "ios": { "status": "not-supported" },
-        "visionos": { "status": "not-supported" },
-        "windows": { "status": "planned" },
-        "gtk": { "status": "shipped", "reason": "F8" }
+        "macos": {
+          "status": "not-supported"
+        },
+        "ios": {
+          "status": "not-supported"
+        },
+        "visionos": {
+          "status": "not-supported"
+        },
+        "windows": {
+          "status": "planned"
+        },
+        "gtk": {
+          "status": "shipped",
+          "reason": "F8"
+        },
+        "android": {
+          "status": "planned",
+          "reason": "Low priority; share-sheet instead"
+        }
       },
       "v5": {
-        "macos": { "status": "not-supported" },
-        "ios": { "status": "not-supported" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "not-supported" },
-        "gtk": { "status": "shipped" }
+        "macos": {
+          "status": "not-supported"
+        },
+        "ios": {
+          "status": "not-supported"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "not-supported"
+        },
+        "gtk": {
+          "status": "shipped"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -660,18 +1586,50 @@
       "dasher_core_dep": "BP_CONTROL_MODE + ControlManager",
       "notes": "Special control nodes appear in the zooming interface for text editing actions: select all, copy, move cursor, delete, etc. Lets you edit without leaving Dasher. Was a v5 feature; Windows is the first v6 frontend to wire it.",
       "platforms": {
-        "macos": { "status": "planned" },
-        "ios": { "status": "planned" },
-        "visionos": { "status": "planned" },
-        "windows": { "status": "shipped" },
-        "gtk": { "status": "planned" }
+        "macos": {
+          "status": "planned"
+        },
+        "ios": {
+          "status": "planned"
+        },
+        "visionos": {
+          "status": "planned"
+        },
+        "windows": {
+          "status": "shipped"
+        },
+        "gtk": {
+          "status": "planned"
+        },
+        "android": {
+          "status": "beta"
+        }
       },
       "v5": {
-        "macos": { "status": "shipped", "reason": "Control mode" },
-        "ios": { "status": "shipped", "reason": "Control mode" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "shipped", "reason": "Control mode" },
-        "gtk": { "status": "shipped", "reason": "Control mode" }
+        "macos": {
+          "status": "shipped",
+          "reason": "Control mode"
+        },
+        "ios": {
+          "status": "shipped",
+          "reason": "Control mode"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "shipped",
+          "reason": "Control mode"
+        },
+        "gtk": {
+          "status": "shipped",
+          "reason": "Control mode"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -681,18 +1639,53 @@
       "dasher_core_dep": "settings_manifest.json groups",
       "notes": "Apple: 6 tabs (Customization/Input/Language/Output/Speech/Game Mode). GTK: PreferencesWindow with StackSidebar + dynamic per-module grids. See dasher-design-guide for the normative structure.",
       "platforms": {
-        "macos": { "status": "shipped", "reason": "6 tabs" },
-        "ios": { "status": "shipped", "reason": "6 tabs" },
-        "visionos": { "status": "shipped" },
-        "windows": { "status": "beta" },
-        "gtk": { "status": "shipped", "reason": "StackSidebar + dynamic grids" }
+        "macos": {
+          "status": "shipped",
+          "reason": "6 tabs"
+        },
+        "ios": {
+          "status": "shipped",
+          "reason": "6 tabs"
+        },
+        "visionos": {
+          "status": "shipped"
+        },
+        "windows": {
+          "status": "beta"
+        },
+        "gtk": {
+          "status": "shipped",
+          "reason": "StackSidebar + dynamic grids"
+        },
+        "android": {
+          "status": "beta"
+        }
       },
       "v5": {
-        "macos": { "status": "not-supported", "reason": "Flat settings dialog" },
-        "ios": { "status": "not-supported", "reason": "Flat settings dialog" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "not-supported", "reason": "Flat settings dialog" },
-        "gtk": { "status": "not-supported", "reason": "Flat settings dialog" }
+        "macos": {
+          "status": "not-supported",
+          "reason": "Flat settings dialog"
+        },
+        "ios": {
+          "status": "not-supported",
+          "reason": "Flat settings dialog"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "not-supported",
+          "reason": "Flat settings dialog"
+        },
+        "gtk": {
+          "status": "not-supported",
+          "reason": "Flat settings dialog"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -702,18 +1695,53 @@
       "dasher_core_dep": "settings_manifest.json (86 parameters)",
       "notes": "GTK auto-discovers all DasherCore parameters at runtime and builds settings UI dynamically with Synced* widgets (7 widget types).",
       "platforms": {
-        "macos": { "status": "shipped", "reason": "Manual tabs referencing manifest" },
-        "ios": { "status": "shipped", "reason": "Manual tabs referencing manifest" },
-        "visionos": { "status": "shipped" },
-        "windows": { "status": "beta" },
-        "gtk": { "status": "shipped", "reason": "Synced* widgets, 7 types" }
+        "macos": {
+          "status": "shipped",
+          "reason": "Manual tabs referencing manifest"
+        },
+        "ios": {
+          "status": "shipped",
+          "reason": "Manual tabs referencing manifest"
+        },
+        "visionos": {
+          "status": "shipped"
+        },
+        "windows": {
+          "status": "beta"
+        },
+        "gtk": {
+          "status": "shipped",
+          "reason": "Synced* widgets, 7 types"
+        },
+        "android": {
+          "status": "beta"
+        }
       },
       "v5": {
-        "macos": { "status": "not-supported", "reason": "Hardcoded dialogs" },
-        "ios": { "status": "not-supported", "reason": "Hardcoded dialogs" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "not-supported", "reason": "Hardcoded dialogs" },
-        "gtk": { "status": "not-supported", "reason": "Hardcoded dialogs" }
+        "macos": {
+          "status": "not-supported",
+          "reason": "Hardcoded dialogs"
+        },
+        "ios": {
+          "status": "not-supported",
+          "reason": "Hardcoded dialogs"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "not-supported",
+          "reason": "Hardcoded dialogs"
+        },
+        "gtk": {
+          "status": "not-supported",
+          "reason": "Hardcoded dialogs"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -723,18 +1751,47 @@
       "dasher_core_dep": "Settings persistence (XML)",
       "notes": "DasherCore persists settings as XML. All frontends load/save via the engine.",
       "platforms": {
-        "macos": { "status": "shipped" },
-        "ios": { "status": "shipped" },
-        "visionos": { "status": "shipped" },
-        "windows": { "status": "shipped" },
-        "gtk": { "status": "shipped", "reason": "XML persistence" }
+        "macos": {
+          "status": "shipped"
+        },
+        "ios": {
+          "status": "shipped"
+        },
+        "visionos": {
+          "status": "shipped"
+        },
+        "windows": {
+          "status": "shipped"
+        },
+        "gtk": {
+          "status": "shipped",
+          "reason": "XML persistence"
+        },
+        "android": {
+          "status": "beta"
+        }
       },
       "v5": {
-        "macos": { "status": "shipped" },
-        "ios": { "status": "shipped" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "shipped" },
-        "gtk": { "status": "shipped" }
+        "macos": {
+          "status": "shipped"
+        },
+        "ios": {
+          "status": "shipped"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "shipped"
+        },
+        "gtk": {
+          "status": "shipped"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -744,18 +1801,47 @@
       "dasher_core_dep": "LP_MAX_BITRATE / BP_AUTO_SPEEDCONTROL",
       "notes": "GTK exposes a dedicated speed slider; Apple has speed in Customization tab. DasherCore also has auto-speed control.",
       "platforms": {
-        "macos": { "status": "shipped" },
-        "ios": { "status": "shipped" },
-        "visionos": { "status": "shipped" },
-        "windows": { "status": "shipped" },
-        "gtk": { "status": "shipped", "reason": "Dedicated slider" }
+        "macos": {
+          "status": "shipped"
+        },
+        "ios": {
+          "status": "shipped"
+        },
+        "visionos": {
+          "status": "shipped"
+        },
+        "windows": {
+          "status": "shipped"
+        },
+        "gtk": {
+          "status": "shipped",
+          "reason": "Dedicated slider"
+        },
+        "android": {
+          "status": "beta"
+        }
       },
       "v5": {
-        "macos": { "status": "shipped" },
-        "ios": { "status": "shipped" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "shipped" },
-        "gtk": { "status": "shipped" }
+        "macos": {
+          "status": "shipped"
+        },
+        "ios": {
+          "status": "shipped"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "shipped"
+        },
+        "gtk": {
+          "status": "shipped"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -765,18 +1851,51 @@
       "dasher_core_dep": "V6 input key binding",
       "notes": "GTK supports live key recording for button assignment. Apple supports switch key capture (4 profiles).",
       "platforms": {
-        "macos": { "status": "shipped", "reason": "Switch profiles, key capture" },
-        "ios": { "status": "shipped", "reason": "Switch profiles, key capture" },
-        "visionos": { "status": "planned" },
-        "windows": { "status": "planned" },
-        "gtk": { "status": "shipped", "reason": "Live key recording" }
+        "macos": {
+          "status": "shipped",
+          "reason": "Switch profiles, key capture"
+        },
+        "ios": {
+          "status": "shipped",
+          "reason": "Switch profiles, key capture"
+        },
+        "visionos": {
+          "status": "planned"
+        },
+        "windows": {
+          "status": "planned"
+        },
+        "gtk": {
+          "status": "shipped",
+          "reason": "Live key recording"
+        },
+        "android": {
+          "status": "planned"
+        }
       },
       "v5": {
-        "macos": { "status": "shipped", "reason": "Button assignment" },
-        "ios": { "status": "shipped", "reason": "Button assignment" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "shipped" },
-        "gtk": { "status": "shipped" }
+        "macos": {
+          "status": "shipped",
+          "reason": "Button assignment"
+        },
+        "ios": {
+          "status": "shipped",
+          "reason": "Button assignment"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "shipped"
+        },
+        "gtk": {
+          "status": "shipped"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -785,18 +1904,50 @@
       "title": "Live mini-canvas preview in settings",
       "dasher_core_dep": "Multiple render parameters",
       "platforms": {
-        "macos": { "status": "planned" },
-        "ios": { "status": "planned" },
-        "visionos": { "status": "planned" },
-        "windows": { "status": "planned" },
-        "gtk": { "status": "planned" }
+        "macos": {
+          "status": "planned"
+        },
+        "ios": {
+          "status": "planned"
+        },
+        "visionos": {
+          "status": "planned"
+        },
+        "windows": {
+          "status": "planned"
+        },
+        "gtk": {
+          "status": "planned"
+        },
+        "android": {
+          "status": "planned"
+        }
       },
       "v5": {
-        "macos": { "status": "not-supported", "reason": "v6 innovation" },
-        "ios": { "status": "not-supported", "reason": "v6 innovation" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "not-supported", "reason": "v6 innovation" },
-        "gtk": { "status": "not-supported", "reason": "v6 innovation" }
+        "macos": {
+          "status": "not-supported",
+          "reason": "v6 innovation"
+        },
+        "ios": {
+          "status": "not-supported",
+          "reason": "v6 innovation"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "not-supported",
+          "reason": "v6 innovation"
+        },
+        "gtk": {
+          "status": "not-supported",
+          "reason": "v6 innovation"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -806,18 +1957,51 @@
       "dasher_core_dep": "DasherCore locale strings (33 locales)",
       "notes": "Apple ships 9 UI locale translations. DasherCore carries 33 locale string files.",
       "platforms": {
-        "macos": { "status": "shipped", "reason": "9 UI languages" },
-        "ios": { "status": "shipped", "reason": "9 UI languages" },
-        "visionos": { "status": "shipped" },
-        "windows": { "status": "planned" },
-        "gtk": { "status": "planned" }
+        "macos": {
+          "status": "shipped",
+          "reason": "9 UI languages"
+        },
+        "ios": {
+          "status": "shipped",
+          "reason": "9 UI languages"
+        },
+        "visionos": {
+          "status": "shipped"
+        },
+        "windows": {
+          "status": "planned"
+        },
+        "gtk": {
+          "status": "planned"
+        },
+        "android": {
+          "status": "beta",
+          "reason": "9 locales"
+        }
       },
       "v5": {
-        "macos": { "status": "shipped", "reason": "Multiple languages" },
-        "ios": { "status": "shipped", "reason": "Multiple languages" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "shipped" },
-        "gtk": { "status": "shipped" }
+        "macos": {
+          "status": "shipped",
+          "reason": "Multiple languages"
+        },
+        "ios": {
+          "status": "shipped",
+          "reason": "Multiple languages"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "shipped"
+        },
+        "gtk": {
+          "status": "shipped"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -826,18 +2010,50 @@
       "title": "Guided first-run onboarding",
       "dasher_core_dep": "V6 (UX layer)",
       "platforms": {
-        "macos": { "status": "planned" },
-        "ios": { "status": "planned" },
-        "visionos": { "status": "planned" },
-        "windows": { "status": "planned" },
-        "gtk": { "status": "planned" }
+        "macos": {
+          "status": "planned"
+        },
+        "ios": {
+          "status": "planned"
+        },
+        "visionos": {
+          "status": "planned"
+        },
+        "windows": {
+          "status": "planned"
+        },
+        "gtk": {
+          "status": "planned"
+        },
+        "android": {
+          "status": "planned"
+        }
       },
       "v5": {
-        "macos": { "status": "not-supported", "reason": "v6 innovation" },
-        "ios": { "status": "not-supported", "reason": "v6 innovation" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "not-supported", "reason": "v6 innovation" },
-        "gtk": { "status": "not-supported", "reason": "v6 innovation" }
+        "macos": {
+          "status": "not-supported",
+          "reason": "v6 innovation"
+        },
+        "ios": {
+          "status": "not-supported",
+          "reason": "v6 innovation"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "not-supported",
+          "reason": "v6 innovation"
+        },
+        "gtk": {
+          "status": "not-supported",
+          "reason": "v6 innovation"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -847,18 +2063,51 @@
       "dasher_core_dep": "GameModule",
       "notes": "DasherCore's GameModule tracks target text, correct/wrong/remaining characters, and a help path. Apple has Game Mode fully wired with custom text file support. GTK has the button but it is not wired.",
       "platforms": {
-        "macos": { "status": "shipped", "reason": "Custom text file support" },
-        "ios": { "status": "shipped", "reason": "Custom text file support" },
-        "visionos": { "status": "planned" },
-        "windows": { "status": "planned" },
-        "gtk": { "status": "not-supported", "reason": "Button present but not wired" }
+        "macos": {
+          "status": "shipped",
+          "reason": "Custom text file support"
+        },
+        "ios": {
+          "status": "shipped",
+          "reason": "Custom text file support"
+        },
+        "visionos": {
+          "status": "planned"
+        },
+        "windows": {
+          "status": "planned"
+        },
+        "gtk": {
+          "status": "not-supported",
+          "reason": "Button present but not wired"
+        },
+        "android": {
+          "status": "beta"
+        }
       },
       "v5": {
-        "macos": { "status": "not-supported" },
-        "ios": { "status": "not-supported" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "shipped", "reason": "GameModule (target text + guiding arrow)" },
-        "gtk": { "status": "shipped", "reason": "GameModule" }
+        "macos": {
+          "status": "not-supported"
+        },
+        "ios": {
+          "status": "not-supported"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "shipped",
+          "reason": "GameModule (target text + guiding arrow)"
+        },
+        "gtk": {
+          "status": "shipped",
+          "reason": "GameModule"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -868,18 +2117,47 @@
       "dasher_core_dep": "GameModule (target text parameter)",
       "notes": "Apple lets you load custom text files as Game Mode targets.",
       "platforms": {
-        "macos": { "status": "shipped" },
-        "ios": { "status": "shipped" },
-        "visionos": { "status": "planned" },
-        "windows": { "status": "planned" },
-        "gtk": { "status": "not-supported", "reason": "Game Mode not wired" }
+        "macos": {
+          "status": "shipped"
+        },
+        "ios": {
+          "status": "shipped"
+        },
+        "visionos": {
+          "status": "planned"
+        },
+        "windows": {
+          "status": "planned"
+        },
+        "gtk": {
+          "status": "not-supported",
+          "reason": "Game Mode not wired"
+        },
+        "android": {
+          "status": "planned"
+        }
       },
       "v5": {
-        "macos": { "status": "not-supported" },
-        "ios": { "status": "not-supported" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "shipped" },
-        "gtk": { "status": "shipped" }
+        "macos": {
+          "status": "not-supported"
+        },
+        "ios": {
+          "status": "not-supported"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "shipped"
+        },
+        "gtk": {
+          "status": "shipped"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -889,18 +2167,48 @@
       "dasher_core_dep": "V6 low-memory mode",
       "notes": "Apple ships a keyboard extension on iOS that shares settings with the main app via a shared app group. Low-memory tuning for the extension process.",
       "platforms": {
-        "macos": { "status": "n/a" },
-        "ios": { "status": "shipped" },
-        "visionos": { "status": "n/a" },
-        "windows": { "status": "n/a" },
-        "gtk": { "status": "n/a" }
+        "macos": {
+          "status": "n/a"
+        },
+        "ios": {
+          "status": "shipped"
+        },
+        "visionos": {
+          "status": "n/a"
+        },
+        "windows": {
+          "status": "n/a"
+        },
+        "gtk": {
+          "status": "n/a"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Android uses IME; see direct-text-injection"
+        }
       },
       "v5": {
-        "macos": { "status": "n/a" },
-        "ios": { "status": "not-supported", "reason": "Standalone app only, no extension API" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "n/a" },
-        "gtk": { "status": "n/a" }
+        "macos": {
+          "status": "n/a"
+        },
+        "ios": {
+          "status": "not-supported",
+          "reason": "Standalone app only, no extension API"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "n/a"
+        },
+        "gtk": {
+          "status": "n/a"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -910,18 +2218,47 @@
       "dasher_core_dep": "V6 pointer event stream",
       "notes": "Apple ships a visionOS app using eye gaze + pinch + dwell indicator.",
       "platforms": {
-        "macos": { "status": "n/a" },
-        "ios": { "status": "n/a" },
-        "visionos": { "status": "shipped", "reason": "Eye gaze + pinch + dwell indicator" },
-        "windows": { "status": "n/a" },
-        "gtk": { "status": "n/a" }
+        "macos": {
+          "status": "n/a"
+        },
+        "ios": {
+          "status": "n/a"
+        },
+        "visionos": {
+          "status": "shipped",
+          "reason": "Eye gaze + pinch + dwell indicator"
+        },
+        "windows": {
+          "status": "n/a"
+        },
+        "gtk": {
+          "status": "n/a"
+        },
+        "android": {
+          "status": "n/a"
+        }
       },
       "v5": {
-        "macos": { "status": "n/a" },
-        "ios": { "status": "n/a" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "n/a" },
-        "gtk": { "status": "n/a" }
+        "macos": {
+          "status": "n/a"
+        },
+        "ios": {
+          "status": "n/a"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "n/a"
+        },
+        "gtk": {
+          "status": "n/a"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -931,18 +2268,48 @@
       "dasher_core_dep": "V6 settings persistence",
       "notes": "Apple uses a shared app group so the iOS keyboard extension and the main app share the same settings and user dictionary.",
       "platforms": {
-        "macos": { "status": "n/a" },
-        "ios": { "status": "shipped" },
-        "visionos": { "status": "n/a" },
-        "windows": { "status": "n/a" },
-        "gtk": { "status": "n/a" }
+        "macos": {
+          "status": "n/a"
+        },
+        "ios": {
+          "status": "shipped"
+        },
+        "visionos": {
+          "status": "n/a"
+        },
+        "windows": {
+          "status": "n/a"
+        },
+        "gtk": {
+          "status": "n/a"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "IME shares filesDir with app"
+        }
       },
       "v5": {
-        "macos": { "status": "n/a" },
-        "ios": { "status": "not-supported", "reason": "No keyboard extension in v5" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "n/a" },
-        "gtk": { "status": "n/a" }
+        "macos": {
+          "status": "n/a"
+        },
+        "ios": {
+          "status": "not-supported",
+          "reason": "No keyboard extension in v5"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "n/a"
+        },
+        "gtk": {
+          "status": "n/a"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -952,18 +2319,46 @@
       "dasher_core_dep": "n/a (frontend-only)",
       "notes": "Opt-in analytics via self-hosted PostHog (see RFC 0001). No text content ever collected. Windows ships posthog-dotnet SDK. Apple ships posthog-ios. GTK planned.",
       "platforms": {
-        "macos": { "status": "shipped" },
-        "ios": { "status": "shipped" },
-        "visionos": { "status": "shipped" },
-        "windows": { "status": "shipped" },
-        "gtk": { "status": "planned" }
+        "macos": {
+          "status": "shipped"
+        },
+        "ios": {
+          "status": "shipped"
+        },
+        "visionos": {
+          "status": "shipped"
+        },
+        "windows": {
+          "status": "shipped"
+        },
+        "gtk": {
+          "status": "planned"
+        },
+        "android": {
+          "status": "planned"
+        }
       },
       "v5": {
-        "macos": { "status": "not-supported" },
-        "ios": { "status": "not-supported" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "not-supported" },
-        "gtk": { "status": "not-supported" }
+        "macos": {
+          "status": "not-supported"
+        },
+        "ios": {
+          "status": "not-supported"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "not-supported"
+        },
+        "gtk": {
+          "status": "not-supported"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -973,18 +2368,50 @@
       "dasher_core_dep": "n/a (frontend-only)",
       "notes": "Unified cross-platform icon library (see RFC 0002). Apple uses lucide-icons-swift, Windows uses Lucide.Avalonia, GTK will use the Lucide TTF font.",
       "platforms": {
-        "macos": { "status": "shipped" },
-        "ios": { "status": "shipped" },
-        "visionos": { "status": "shipped" },
-        "windows": { "status": "shipped" },
-        "gtk": { "status": "planned" }
+        "macos": {
+          "status": "shipped"
+        },
+        "ios": {
+          "status": "shipped"
+        },
+        "visionos": {
+          "status": "shipped"
+        },
+        "windows": {
+          "status": "shipped"
+        },
+        "gtk": {
+          "status": "planned"
+        },
+        "android": {
+          "status": "beta"
+        }
       },
       "v5": {
-        "macos": { "status": "not-supported", "reason": "Platform-native icons (SF Symbols)" },
-        "ios": { "status": "not-supported", "reason": "Platform-native icons (SF Symbols)" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "not-supported", "reason": "Mixed MaterialDesignIcons / custom" },
-        "gtk": { "status": "not-supported", "reason": "GTK stock icons" }
+        "macos": {
+          "status": "not-supported",
+          "reason": "Platform-native icons (SF Symbols)"
+        },
+        "ios": {
+          "status": "not-supported",
+          "reason": "Platform-native icons (SF Symbols)"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "not-supported",
+          "reason": "Mixed MaterialDesignIcons / custom"
+        },
+        "gtk": {
+          "status": "not-supported",
+          "reason": "GTK stock icons"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     },
     {
@@ -994,18 +2421,53 @@
       "dasher_core_dep": "settings_manifest.json parameter mapping",
       "notes": "One-shot migration: detects v5 data, translates registry/XML preferences to v6 equivalents, copies custom alphabets/colours/control/training files. See RFC 0005. Shipped on Windows and macOS.",
       "platforms": {
-        "macos": { "status": "shipped" },
-        "ios": { "status": "not-supported", "reason": "No v5 iOS app to migrate from" },
-        "visionos": { "status": "not-supported", "reason": "No v5 visionOS app to migrate from" },
-        "windows": { "status": "shipped" },
-        "gtk": { "status": "planned" }
+        "macos": {
+          "status": "shipped"
+        },
+        "ios": {
+          "status": "not-supported",
+          "reason": "No v5 iOS app to migrate from"
+        },
+        "visionos": {
+          "status": "not-supported",
+          "reason": "No v5 visionOS app to migrate from"
+        },
+        "windows": {
+          "status": "shipped"
+        },
+        "gtk": {
+          "status": "planned"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "No v5 Android app in this lineage"
+        }
       },
       "v5": {
-        "macos": { "status": "n/a", "reason": "Migration is a v6 feature" },
-        "ios": { "status": "n/a", "reason": "Migration is a v6 feature" },
-        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
-        "windows": { "status": "n/a", "reason": "Migration is a v6 feature" },
-        "gtk": { "status": "n/a", "reason": "Migration is a v6 feature" }
+        "macos": {
+          "status": "n/a",
+          "reason": "Migration is a v6 feature"
+        },
+        "ios": {
+          "status": "n/a",
+          "reason": "Migration is a v6 feature"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "n/a",
+          "reason": "Migration is a v6 feature"
+        },
+        "gtk": {
+          "status": "n/a",
+          "reason": "Migration is a v6 feature"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
       }
     }
   ]

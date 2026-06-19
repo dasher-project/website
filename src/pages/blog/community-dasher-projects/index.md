@@ -51,6 +51,10 @@ The code is not yet fully public while licensing is sorted out, but a snapshot i
 
 We previously [covered this project](/blog/dasher-mobile-android/) in detail. Ján Murin built a native Android implementation of Dasher as his bachelor's thesis at Masaryk University, with KenLM language model integration and a focus on Slovak language support.
 
+> **Note:** Dasher Mobile is a community project, separate from the official
+> [Dasher-Android](https://github.com/dasher-project/Dasher-Android) frontend. Both are built on
+> DasherCore but take different architectural approaches.
+
 **Source:** [Dasher-Mobile on GitHub](https://github.com/janmurin2/Dasher-Mobile) · [Download APK](https://github.com/janmurin2/Dasher-Mobile/releases/tag/v1.0)
 
 ## Build Your Own
