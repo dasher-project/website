@@ -31,16 +31,13 @@ We want you to break it and tell us &mdash; that's the whole point of opening th
 
 ### Apple &mdash; iOS, macOS &amp; visionOS
 
-The Apple apps (iPhone, iPad, Mac, and Apple Vision Pro) are distributed through
+The Apple apps (iPhone, iPad and Apple Vision Pro) are distributed through
 TestFlight:
 
 - **iPhone &amp; iPad (iOS):** [join the iOS TestFlight](https://testflight.apple.com/join/wJfmTtHT)
-- **macOS:** [join the macOS TestFlight](https://testflight.apple.com/join/gUwkzEEn)
+- **macOS:** [Download the DMG and drag to your Applications folder.](https://github.com/dasher-project/Dasher-Apple/releases/latest)
+- **visionOS** [join the iOS TestFlight](https://testflight.apple.com/join/fd2AQpKC)
 
-visionOS is part of the same Apple beta programme &mdash; on Vision Pro, Dasher drives
-the pointer from your eyes and from a native **pinch + hand position** gesture, with a
-dwell indicator for selection. (See the [feature status matrix](/status/) for the full
-breakdown of what each platform supports.)
 
 ### Windows
 
@@ -57,6 +54,10 @@ in the future, which will make this step go away.
 
 After installation Dasher won't open automatically &mdash; find it in your
 **Start menu under "Dasher"**.
+
+### Android
+
+Find the [APK here](https://github.com/dasher-project/Dasher-Android/releases/latest)
 
 ### Linux / GTK
 
