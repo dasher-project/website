@@ -82,7 +82,7 @@ npm run preview
 ├── .github/workflows/     # GitHub Actions CI/CD
 │   ├── build.yml          # Lint and build
 │   └── deploy.yml         # Deploy to GitHub Pages
-└── eslint.config.mjs      # ESLint configuration
+└── eslint.config.js       # ESLint configuration
 ```
 
 ## Updating Content
@@ -123,7 +123,7 @@ To add a page to the documentation sidebar, edit `src/utils/nav.ts`:
 
 Alphabet XML files and training texts are stored in `public/download/`:
 
-- `/public/download/alphabets/` - 144 alphabet XML files
+- `/public/download/alphabets/` - 143 alphabet XML files
 - `/public/download/training.html` - Training text downloads
 
 ### Legacy Mirror Content
