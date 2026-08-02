@@ -38,7 +38,6 @@ TestFlight:
 - **macOS:** [Download the DMG and drag to your Applications folder.](https://github.com/dasher-project/Dasher-Apple/releases/latest)
 - **visionOS** [join the iOS TestFlight](https://testflight.apple.com/join/fd2AQpKC)
 
-
 ### Windows
 
 The Windows build is built on [Avalonia](https://avaloniaui.net/) and ships as an MSI
