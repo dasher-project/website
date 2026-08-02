@@ -94,6 +94,15 @@ import {
                   <tr>
                     <th scope="row" class="feature-name">
                       <span class="feature-title">{feature.title}</span>
+                      {feature.rfc && (
+                        <a
+                          class="feature-rfc"
+                          href={`https://github.com/dasher-project/governance/blob/main/rfcs/${feature.rfc}.md`}
+                          title={`RFC ${feature.rfc.slice(0, 4)}`}
+                        >
+                          RFC {feature.rfc.slice(0, 4)}
+                        </a>
+                      )}
                     </th>
                     {platforms.map((p) => {
                       const v6entry = feature.platforms[p];
@@ -309,6 +318,19 @@ import {
 
   .feature-title {
     display: block;
+  }
+
+  .feature-rfc {
+    display: block;
+    margin-top: 0.15rem;
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--color-link);
+    text-decoration: none;
+  }
+
+  .feature-rfc:hover {
+    text-decoration: underline;
   }
 
   .status-matrix .cell {
