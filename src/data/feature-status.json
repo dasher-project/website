@@ -1,7 +1,7 @@
 {
   "_comment": "Dasher v6 cross-platform capability matrix — THE SINGLE SOURCE OF TRUTH. Rendered at https://dasher.at/status/. How to update: https://dasher.at/developers/feature-parity/. Validated by scripts/validate-feature-status.mjs in CI.",
   "meta": {
-    "last_updated": "2026-06-19",
+    "last_updated": "2026-08-02",
     "v5_baseline": "Dasher v5 shipped native frontends for Windows, Linux/GTK, macOS and iOS (Android had a separate community project (acl33/AndroidDasher); Mac/iPhone were unmaintained by the 5.0 beta). Input covered mouse, stylus/tablet, touch, multitouch, tilt, joystick (Linux) and socket input (the conduit for eye/gaze trackers). Notable v5 features: game/training mode, eye-tracker autocalibration, PPM family language models, Kanji/Pinyin conversion, and three TTS backends (SAPI / speech-dispatcher / flite).",
     "status_legend": {
       "shipped": "Implemented and released",
@@ -868,7 +868,8 @@
           "status": "shipped"
         },
         "gtk": {
-          "status": "shipped"
+          "status": "beta",
+          "reason": "Canvas follows OS; window chrome does not yet"
         },
         "android": {
           "status": "beta",
@@ -900,7 +901,8 @@
           "status": "n/a",
           "reason": "Separate community project"
         }
-      }
+      },
+      "rfc": "0007-dark-mode-palettes"
     },
     {
       "id": "ppm-language-model",
@@ -1651,7 +1653,7 @@
           "status": "shipped"
         },
         "windows": {
-          "status": "beta"
+          "status": "shipped"
         },
         "gtk": {
           "status": "shipped",
@@ -1686,7 +1688,8 @@
           "status": "n/a",
           "reason": "Separate community project"
         }
-      }
+      },
+      "rfc": "0006-settings-ia"
     },
     {
       "id": "dynamic-settings-discovery",
@@ -1707,7 +1710,7 @@
           "status": "shipped"
         },
         "windows": {
-          "status": "beta"
+          "status": "shipped"
         },
         "gtk": {
           "status": "shipped",
@@ -1742,7 +1745,8 @@
           "status": "n/a",
           "reason": "Separate community project"
         }
-      }
+      },
+      "rfc": "0006-settings-ia"
     },
     {
       "id": "settings-persistence",
@@ -1958,25 +1962,27 @@
       "notes": "Apple ships 9 UI locale translations. DasherCore carries 33 locale string files.",
       "platforms": {
         "macos": {
-          "status": "shipped",
-          "reason": "9 UI languages"
+          "status": "beta",
+          "reason": "Engine strings localised; UI chrome still English"
         },
         "ios": {
-          "status": "shipped",
-          "reason": "9 UI languages"
+          "status": "beta",
+          "reason": "Engine strings localised; UI chrome still English"
         },
         "visionos": {
-          "status": "shipped"
+          "status": "beta",
+          "reason": "Engine strings localised; UI chrome still English"
         },
         "windows": {
-          "status": "planned"
+          "status": "beta",
+          "reason": "Engine strings localised; UI chrome still English"
         },
         "gtk": {
           "status": "planned"
         },
         "android": {
           "status": "beta",
-          "reason": "9 locales"
+          "reason": "Engine partial; UI chrome English"
         }
       },
       "v5": {
@@ -2002,7 +2008,8 @@
           "status": "n/a",
           "reason": "Separate community project"
         }
-      }
+      },
+      "rfc": "0003-multilingual-ui"
     },
     {
       "id": "guided-onboarding",
@@ -2054,7 +2061,8 @@
           "status": "n/a",
           "reason": "Separate community project"
         }
-      }
+      },
+      "rfc": "0004-onboarding"
     },
     {
       "id": "game-mode-training",
@@ -2326,7 +2334,8 @@
           "status": "shipped"
         },
         "visionos": {
-          "status": "shipped"
+          "status": "beta",
+          "reason": "SDK linked; opt-in prompt not yet shown"
         },
         "windows": {
           "status": "shipped"
@@ -2359,7 +2368,8 @@
           "status": "n/a",
           "reason": "Separate community project"
         }
-      }
+      },
+      "rfc": "0001-analytics"
     },
     {
       "id": "lucide-icons",
@@ -2384,7 +2394,8 @@
           "status": "planned"
         },
         "android": {
-          "status": "beta"
+          "status": "not-supported",
+          "reason": "Uses Material Symbols"
         }
       },
       "v5": {
@@ -2412,7 +2423,8 @@
           "status": "n/a",
           "reason": "Separate community project"
         }
-      }
+      },
+      "rfc": "0002-lucide-icons"
     },
     {
       "id": "v5-migration",
@@ -2463,6 +2475,176 @@
         "gtk": {
           "status": "n/a",
           "reason": "Migration is a v6 feature"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
+      },
+      "rfc": "0005-v5-migration"
+    },
+    {
+      "id": "typing-rate",
+      "category": "Output",
+      "title": "Typing rate display (WPM / CPS)",
+      "dasher_core_dep": "dasher_get_wpm / dasher_get_cps (engine)",
+      "rfc": "0012-typing-rate",
+      "notes": "Live typing speed over a rolling window, computed engine-side (RFC 0012). Apple shows WPM, max, and average; web shows WPM and accuracy from its own engine.",
+      "platforms": {
+        "macos": {
+          "status": "shipped",
+          "reason": "Live WPM, max, avg + toggle"
+        },
+        "ios": {
+          "status": "shipped"
+        },
+        "visionos": {
+          "status": "planned"
+        },
+        "windows": {
+          "status": "planned"
+        },
+        "gtk": {
+          "status": "planned",
+          "reason": "Bundled DasherCore predates dasher_get_wpm"
+        },
+        "android": {
+          "status": "planned"
+        }
+      },
+      "v5": {
+        "macos": {
+          "status": "not-supported"
+        },
+        "ios": {
+          "status": "not-supported"
+        },
+        "windows": {
+          "status": "not-supported"
+        },
+        "gtk": {
+          "status": "not-supported"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
+      }
+    },
+    {
+      "id": "node-tree-rendering",
+      "category": "Appearance",
+      "title": "Node-tree (custom) rendering",
+      "dasher_core_dep": "dasher_get_visible_nodes + dasher_node_info (engine)",
+      "rfc": "0013-custom-rendering",
+      "notes": "A second rendering path that exposes the live node tree so a frontend can draw 3D / VR / custom views (RFC 0013). The engine API is implemented and tested; no production frontend uses it. The DasherMac cube branch is experimental and buggy. Future hope: a spatial eye-tracked port (e.g. Meta Quest). Not planned for every platform.",
+      "platforms": {
+        "macos": {
+          "status": "planned",
+          "reason": "Engine ready; experimental cube branch (buggy, unmerged)"
+        },
+        "ios": {
+          "status": "not-supported",
+          "reason": "Uses command-buffer rendering"
+        },
+        "visionos": {
+          "status": "not-supported",
+          "reason": "Uses command-buffer rendering"
+        },
+        "windows": {
+          "status": "not-supported",
+          "reason": "Uses command-buffer rendering"
+        },
+        "gtk": {
+          "status": "not-supported",
+          "reason": "Uses command-buffer rendering"
+        },
+        "android": {
+          "status": "not-supported",
+          "reason": "Uses command-buffer rendering"
+        }
+      },
+      "v5": {
+        "macos": {
+          "status": "n/a",
+          "reason": "v6 API"
+        },
+        "ios": {
+          "status": "n/a",
+          "reason": "v6 API"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "n/a",
+          "reason": "v6 API"
+        },
+        "gtk": {
+          "status": "n/a",
+          "reason": "v6 API"
+        },
+        "android": {
+          "status": "n/a",
+          "reason": "Separate community project"
+        }
+      }
+    },
+    {
+      "id": "image-labels",
+      "category": "Language & Prediction",
+      "title": "Image labels for alphabet symbols",
+      "dasher_core_dep": "dasher_get_alphabet_symbol_image (engine)",
+      "rfc": "0014-image-labels",
+      "notes": "Optional image= attribute on alphabet symbols (RFC 0014). Engine + macOS frontend ready, but dynamic image sizing is hard and no bundled alphabet uses images yet. The phoneme-symbol use case is experimental. Not planned for every platform.",
+      "platforms": {
+        "macos": {
+          "status": "beta",
+          "reason": "Engine + frontend ready; no alphabet ships images yet"
+        },
+        "ios": {
+          "status": "not-supported",
+          "reason": "Frontend does not consume the API"
+        },
+        "visionos": {
+          "status": "not-supported",
+          "reason": "Frontend does not consume the API"
+        },
+        "windows": {
+          "status": "not-supported",
+          "reason": "Not implemented"
+        },
+        "gtk": {
+          "status": "not-supported",
+          "reason": "Not implemented"
+        },
+        "android": {
+          "status": "not-supported",
+          "reason": "Not implemented"
+        }
+      },
+      "v5": {
+        "macos": {
+          "status": "not-supported",
+          "reason": "v6 feature"
+        },
+        "ios": {
+          "status": "not-supported"
+        },
+        "visionos": {
+          "status": "n/a",
+          "reason": "visionOS did not exist"
+        },
+        "windows": {
+          "status": "not-supported"
+        },
+        "gtk": {
+          "status": "not-supported"
         },
         "android": {
           "status": "n/a",

@@ -21,6 +21,7 @@ const ALLOWED_FEATURE_KEYS = new Set([
   'category',
   'title',
   'dasher_core_dep',
+  'rfc',
   'platforms',
   'v5',
   'notes',

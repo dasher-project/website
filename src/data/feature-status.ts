@@ -20,6 +20,8 @@ export interface Feature {
   category: string;
   title: string;
   dasher_core_dep?: string;
+  /** RFC slug, e.g. "0014-image-labels". Linked from the status page. */
+  rfc?: string;
   notes?: string;
   platforms: Record<string, StatusEntry>;
   v5?: Record<string, StatusEntry>;
