@@ -31,10 +31,16 @@ jobs:
       - name: Run lychee
         uses: lycheeverse/lychee-action@v2
         with:
+          # dist/download/ and dist/locales/ are verbatim mirrors of the
+          # pre-2020 dasher.at site kept for archival purposes; their internal
+          # links reference files that were never carried over. Exclude them
+          # so the check tracks the modern site only.
           args: >-
             --no-progress
             --max-retries 3
             --exclude 'localhost'
             --exclude '127\.0\.0\.1'
+            --exclude 'dist/download/'
+            --exclude 'dist/locales/'
             dist/
           fail: true
