@@ -139,11 +139,6 @@
           "id": "3_-Na9x4EGs",
           "title": "Dasher: Information-Efficient Text Entry",
           "source": "GeekVideo"
-        },
-        {
-          "id": "QOzmX2WpPZY",
-          "title": "Dasher 30 sec Preview",
-          "source": "Ace Centre"
         }
       ]
     },
@@ -219,7 +214,7 @@
     {
       "id": "non-english",
       "title": "Non-English Videos",
-      "description": "Dasher introductions and tutorials in Spanish, Polish, Dutch, and German.",
+      "description": "Dasher introductions and tutorials in Spanish and German.",
       "videos": [
         {
           "id": "RsmZi5ni_eE",
@@ -236,22 +231,6 @@
           "id": "rRuuunQgwHc",
           "title": "Tarea explicativa: rampa digital Dasher",
           "language": "es"
-        },
-        {
-          "id": "xLoLXycd108",
-          "title": "Jak pisać bez klawiatury",
-          "language": "pl"
-        },
-        {
-          "id": "Vl-cb0uk6B0",
-          "title": "STUGTECH: pisanie bez klawiatury",
-          "language": "pl"
-        },
-        {
-          "id": "lIotcbMlwkY",
-          "title": "Oog zien",
-          "source": "Dasher - Topic",
-          "language": "nl"
         }
       ]
     },
@@ -263,11 +242,6 @@
         {
           "id": "VeaIsPN4Kco",
           "title": "Dasher (software) Wikipedia audio article"
-        },
-        {
-          "id": "ZQ1OK8YqVKU",
-          "title": "A New Tool for Writing: The Eyes",
-          "source": "Wall Street Journal"
         }
       ]
     }
