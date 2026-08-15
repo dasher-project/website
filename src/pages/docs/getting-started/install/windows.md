@@ -124,7 +124,7 @@ Dasher can speak entered text using Windows Speech API.
 
 1. Ensure Windows Speech API is installed:
    - **Windows 10/11:** Usually installed by default
-   - **Windows 7/8:** May need [Microsoft Speech SDK 5.1](http://www.microsoft.com/speech/download/sdk51/)
+   - **Windows 7/8:** May need [Microsoft Speech SDK 5.1](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/ms723627(v=vs.85))
 
 2. In Dasher, go to **Settings → Speech**
 3. Check "Enable speech"
@@ -162,7 +162,7 @@ Windows 10/11:
 
 **Solution:**
 
-- Install [Microsoft Speech SDK 5.1](http://www.microsoft.com/speech/download/sdk51/) if on Windows 7 or earlier
+- Install [Microsoft Speech SDK 5.1](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/ms723627(v=vs.85)) if on Windows 7 or earlier
 - Check Windows is not muted
 - Test in Control Panel → Speech Recognition
 - Try a different voice in Dasher settings

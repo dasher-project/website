@@ -40,9 +40,9 @@ David MacKay and David Ward plan to develop Dasher as an `Open Source' software 
   <h3>Notes for Editors</h3>
   <p>'Fast hands-free writing by gaze direction', by David J. Ward and David J.C. MacKay, will be published in Nature on 22 August 2002.</p>
 
-  <p>For more information about Dasher, including video demonstrations, and images look at: <a href="https://www.inference.phy.cam.ac.uk/dasher/" target="_blank" rel="noopener noreferrer">https://www.inference.phy.cam.ac.uk/dasher/</a></p>
+  <p>For more information about Dasher, including video demonstrations, and images look at: <a href="https://www.inference.org.uk/dasher/" target="_blank" rel="noopener noreferrer">https://www.inference.org.uk/dasher/</a></p>
 
-  <p><a href="https://www.inference.phy.cam.ac.uk/dasher/QA.html" target="_blank" rel="noopener noreferrer">Further information for the press is available online</a>.</p>
+  <p><a href="https://www.inference.org.uk/dasher/QA.html" target="_blank" rel="noopener noreferrer">Further information for the press is available online</a>.</p>
 </div>
 
 <div class="contacts">
@@ -53,5 +53,5 @@ David MacKay and David Ward plan to develop Dasher as an `Open Source' software 
   <p><strong>Alison McFarquhar</strong>, Press and Publications Office, University of Cambridge.<br />
     Tel: 01223 332300; email: am353@cam.ac.uk</p>
 
-  <p><a href="http://www.admin.cam.ac.uk/news/press/index.cgi" target="_blank" rel="noopener noreferrer">Cambridge University's press office</a></p>
+  <p><a href="https://www.cam.ac.uk/" target="_blank" rel="noopener noreferrer">University of Cambridge</a></p>
 </div>
