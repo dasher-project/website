@@ -1,0 +1,46 @@
+name: Link Check
+
+on:
+  schedule:
+    # Weekly, Monday 04:23 UTC (off-peak to avoid GitHub Actions congestion)
+    - cron: '23 4 * * 1'
+  workflow_dispatch:
+
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build
+
+      - name: Check YouTube videos
+        run: npm run check:videos
+
+      - name: Run lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # dist/download/ and dist/locales/ are verbatim mirrors of the
+          # pre-2020 dasher.at site kept for archival purposes; their internal
+          # links reference files that were never carried over. Exclude them
+          # so the check tracks the modern site only.
+          args: >-
+            --no-progress
+            --max-retries 3
+            --exclude 'localhost'
+            --exclude '127\.0\.0\.1'
+            --exclude 'dist/download/'
+            --exclude 'dist/locales/'
+            dist/
+          fail: true

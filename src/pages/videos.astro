@@ -1,0 +1,366 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import videoLibrary from '../data/videos.json';
+
+const library = videoLibrary;
+const totalVideos = library.categories.reduce(
+  (count, category) => count + category.videos.length,
+  0
+);
+---
+
+<BaseLayout
+  title="Dasher Videos"
+  description={`Watch Dasher in action: ${totalVideos} community videos of demos, talks, tutorials, and novel input setups.`}
+>
+  <div class="container">
+    <section class="section">
+      <h1>Videos</h1>
+      <p class="lead">
+        Watch Dasher in action: {totalVideos} videos from end users, conference talks, tutorials, and
+        research demos, collected from across the community.
+      </p>
+      <p class="lead">
+        Videos play from YouTube and only load when you press play. Prefer a playlist? Browse the
+        channels below or the
+        <a
+          href="https://www.youtube.com/playlist?list=PLG22wrzFpavafCF-5u9jh6kS-UAIGkPbw"
+          target="_blank"
+          rel="noopener noreferrer">project playlist</a
+        >.
+      </p>
+
+      <nav class="category-jump" aria-label="Jump to video category">
+        <ul>
+          {
+            library.categories.map((category) => (
+              <li>
+                <a href={`#${category.id}`}>{category.title}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+    </section>
+
+    <section class="section" id="channels" aria-label="YouTube channels and playlists">
+      <div class="playlist-grid">
+        {
+          library.playlists.map((playlist) => (
+            <a class="playlist-card" href={playlist.url} target="_blank" rel="noopener noreferrer">
+              <h2>{playlist.title}</h2>
+              <p>{playlist.description}</p>
+              <span class="playlist-link">Open on YouTube</span>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+
+    {
+      library.categories.map((category) => (
+        <section class="section" id={category.id}>
+          <h2>{category.title}</h2>
+          <p class="category-description">{category.description}</p>
+          <div class="video-grid">
+            {category.videos.map((video) => (
+              <article class="video-card">
+                {video.embedDisabled ? (
+                  <a
+                    class="video-facade"
+                    href={`https://www.youtube.com/watch?v=${video.id}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Watch on YouTube: ${video.title}`}
+                  >
+                    <img
+                      src={`https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`}
+                      alt=""
+                      width="480"
+                      height="360"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <span class="facade-badge" aria-hidden="true">
+                      Watch on YouTube
+                    </span>
+                  </a>
+                ) : (
+                  <button
+                    class="video-facade"
+                    type="button"
+                    data-video-id={video.id}
+                    data-title={video.title}
+                    aria-label={`Play video: ${video.title}`}
+                  >
+                    <img
+                      src={`https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`}
+                      alt=""
+                      width="480"
+                      height="360"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <span class="facade-badge" aria-hidden="true">
+                      Play
+                    </span>
+                  </button>
+                )}
+                <div class="video-card-body">
+                  <h3>{video.title}</h3>
+                  <p class="video-meta">
+                    {video.source && <span class="video-source">{video.source}</span>}
+                    {video.language && (
+                      <span class="language-badge">{video.language.toUpperCase()}</span>
+                    )}
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      ))
+    }
+
+    <section class="section video-notes">
+      <h2>About these videos</h2>
+      <p>
+        All videos are hosted on YouTube and remain the property of their respective uploaders.
+        Embedding availability is controlled by each uploader; a few videos can only be watched on
+        YouTube itself.
+      </p>
+      <p>
+        Spot a broken or missing video?
+        <a
+          href="https://github.com/dasher-project/dasher-web/issues"
+          target="_blank"
+          rel="noopener noreferrer">Let us know</a
+        >.
+      </p>
+    </section>
+  </div>
+</BaseLayout>
+
+<script>
+  document.addEventListener('click', (event) => {
+    const target = event.target;
+    if (!(target instanceof Element)) return;
+    const facade = target.closest('.video-facade');
+    if (!(facade instanceof HTMLElement) || !facade.hasAttribute('data-video-id')) return;
+
+    const videoId = facade.getAttribute('data-video-id');
+    if (!videoId) return;
+
+    const iframe = document.createElement('iframe');
+    iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`;
+    iframe.title = facade.getAttribute('data-title') ?? 'YouTube video player';
+    iframe.allow =
+      'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+    iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+    iframe.allowFullscreen = true;
+    facade.replaceWith(iframe);
+    iframe.focus();
+  });
+</script>
+
+<style>
+  .lead {
+    max-width: 70ch;
+    color: var(--color-text-secondary);
+    margin: 0 0 var(--space-md);
+  }
+
+  .category-jump ul {
+    list-style: none;
+    margin: var(--space-lg) 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs) var(--space-sm);
+  }
+
+  .category-jump a {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 0.875rem;
+    color: var(--color-text-primary);
+    transition: var(--transition-smooth);
+  }
+
+  .category-jump a:hover {
+    border-color: var(--color-horizon-mint);
+    color: var(--color-link-hover);
+  }
+
+  .playlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-md);
+  }
+
+  .playlist-card {
+    display: block;
+    padding: var(--space-md);
+    background-color: var(--color-canvas-white);
+    border: 2px solid var(--color-horizon-mint);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: var(--transition-smooth);
+  }
+
+  .playlist-card:hover {
+    border-color: var(--color-link-hover);
+  }
+
+  .playlist-card h2 {
+    margin: 0 0 var(--space-xs);
+    font-size: 1.125rem;
+    color: var(--color-text-primary);
+  }
+
+  .playlist-card p {
+    margin: 0 0 var(--space-sm);
+    color: var(--color-text-secondary);
+    font-size: 0.9375rem;
+  }
+
+  .playlist-link {
+    font-weight: 600;
+    color: var(--color-link);
+    font-size: 0.875rem;
+  }
+
+  .category-description {
+    max-width: 70ch;
+    color: var(--color-text-secondary);
+    margin-top: calc(-1 * var(--space-sm));
+  }
+
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-md);
+    margin: var(--space-md) 0;
+  }
+
+  .video-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-canvas-white);
+    border: 2px solid var(--color-horizon-mint);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+  }
+
+  .video-facade {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: #000;
+    cursor: pointer;
+  }
+
+  .video-facade img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .facade-badge {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    background: color-mix(in srgb, #000 65%, transparent);
+    color: #fff;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+  }
+
+  .video-facade:hover .facade-badge,
+  .video-facade:focus-visible .facade-badge {
+    background: var(--color-horizon-mint);
+    color: var(--color-deep-ink);
+  }
+
+  .video-facade:focus-visible {
+    outline: 3px solid var(--color-horizon-mint);
+    outline-offset: -3px;
+  }
+
+  /* iframe is created at runtime, so it needs a global selector */
+  .video-card :global(iframe) {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    display: block;
+  }
+
+  .video-card-body {
+    padding: var(--space-sm) var(--space-md) var(--space-md);
+  }
+
+  .video-card-body h3 {
+    margin: 0 0 var(--space-xs);
+    font-size: 1rem;
+    color: var(--color-text-primary);
+  }
+
+  .video-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-xs) var(--space-sm);
+    margin: 0;
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+  }
+
+  .language-badge {
+    padding: 0.1rem 0.5rem;
+    border-radius: 999px;
+    border: 1px solid var(--color-border);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+
+  .video-notes {
+    border-top: 1px solid var(--color-border-subtle);
+    color: var(--color-text-secondary);
+    font-size: 0.9375rem;
+  }
+
+  .video-notes h2 {
+    font-size: 1.125rem;
+    color: var(--color-text-primary);
+  }
+
+  html.dark .playlist-card,
+  html.dark .video-card {
+    background-color: var(--color-bg-elevated);
+    border-color: var(--color-border);
+  }
+
+  html.dark .video-facade:hover .facade-badge,
+  html.dark .video-facade:focus-visible .facade-badge {
+    background: var(--color-bg-elevated);
+    color: var(--color-text-primary);
+  }
+
+  html.dark .video-facade:focus-visible {
+    outline-color: var(--color-bg-elevated);
+  }
+</style>

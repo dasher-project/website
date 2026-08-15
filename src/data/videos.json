@@ -1,0 +1,287 @@
+{
+  "categories": [
+    {
+      "id": "end-users",
+      "title": "End Users",
+      "description": "Dasher in daily use: real people writing with Dasher using head tracking, eye tracking, touch, and more.",
+      "videos": [
+        {
+          "id": "NaQsp_qpPAo",
+          "title": "Stuart Turner (quadriplegic) writes with head",
+          "source": "Robots and Cake"
+        },
+        {
+          "id": "DpJ0EHHUKkU",
+          "title": "Steve Saling (ALS) on Dasher",
+          "source": "Dasher AAC"
+        },
+        {
+          "id": "LvHQ83pMLQQ",
+          "title": "Ada Majorek on Dasher",
+          "source": "Dasher AAC"
+        },
+        {
+          "id": "SvsSrClBwPM",
+          "title": "Ada Majorek Introduction",
+          "source": "CSUN Dasher"
+        },
+        {
+          "id": "nr3s4613DX8",
+          "title": "Demonstration of Typing with Dasher",
+          "source": "CanAssist"
+        },
+        {
+          "id": "_vQ42u7LZD0",
+          "title": "Schreiben mit dem DASHER",
+          "source": "#Duchennemetal",
+          "language": "de"
+        },
+        {
+          "id": "krOm8OLHlVc",
+          "title": "Dasher Demonstration (German)",
+          "source": "#Duchennemetal",
+          "language": "de"
+        },
+        {
+          "id": "bEefp3sB_8w",
+          "title": "Yvette writes at ~31 WPM",
+          "source": "Ace Centre"
+        },
+        {
+          "id": "QxFEUk3J89Q",
+          "title": "How Dasher has touched lives",
+          "source": "Alan Blackwell talk"
+        },
+        {
+          "id": "LBPFca_gAb8",
+          "title": "Programming using your eyes (RSI user, Dasher-like)"
+        }
+      ]
+    },
+    {
+      "id": "talks-tutorials",
+      "title": "Talks & Tutorials",
+      "description": "Conference talks, developer deep-dives, and step-by-step tutorials from the community.",
+      "videos": [
+        {
+          "id": "wpOxbesRNBc",
+          "title": "Dasher: information-efficient text entry",
+          "source": "Google TechTalks"
+        },
+        {
+          "id": "ie9Se7FneXE",
+          "title": "Dasher: Informationseffiziente Texteingabe",
+          "source": "Google Talks",
+          "language": "de"
+        },
+        {
+          "id": "qFlkM_e-sDg",
+          "title": "Dasher: CSUN 2016 full session (38:49)"
+        },
+        {
+          "id": "sp4TA4uxOyc",
+          "title": "Dasher: Software for Accessibility",
+          "source": "Ability Powered"
+        },
+        {
+          "id": "3nvdNPLkPhc",
+          "title": "Tutorial zu Dasher",
+          "language": "de"
+        },
+        {
+          "id": "0d6yIquOKQ0",
+          "title": "Dasher Demonstration",
+          "source": "UnreasonableMan (111k views)"
+        },
+        {
+          "id": "2Z7fr4pZhmQ",
+          "title": "Dasher review/how-to",
+          "source": "CyberSERT",
+          "embedDisabled": true
+        },
+        {
+          "id": "ouDQ5NdGe9M",
+          "title": "Dasher Introduction",
+          "source": "William Quortrup"
+        },
+        {
+          "id": "tp9OOoREVSI",
+          "title": "Assistive Technology: Dasher",
+          "source": "Alyssa Pagel"
+        },
+        {
+          "id": "G15gRDq3TwQ",
+          "title": "Dashing with Dasher 4.11",
+          "source": "Melanie Ulrich"
+        },
+        {
+          "id": "K6jnY2bNIzw",
+          "title": "Dasher Word Prediction Software AT Part V",
+          "source": "Christy Abernethy"
+        },
+        {
+          "id": "jG6CIU3B8xU",
+          "title": "Dasher text input demo",
+          "source": "Mace Ojala"
+        },
+        {
+          "id": "GsCL5lvOW5U",
+          "title": "Dasher Demonstration",
+          "source": "bobyllon"
+        },
+        {
+          "id": "quw_Kci4fUg",
+          "title": "Dasher Alternative Text Input Example",
+          "source": "Christoph Burgdorfer",
+          "language": "de"
+        },
+        {
+          "id": "3_-Na9x4EGs",
+          "title": "Dasher: Information-Efficient Text Entry",
+          "source": "GeekVideo"
+        },
+        {
+          "id": "QOzmX2WpPZY",
+          "title": "Dasher 30 sec Preview",
+          "source": "Ace Centre"
+        }
+      ]
+    },
+    {
+      "id": "novel-input",
+      "title": "Novel Input Demos",
+      "description": "Dasher paired with unusual input hardware: webcams, headsets, PDAs, and voice control.",
+      "videos": [
+        {
+          "id": "YSSADq6rCu0",
+          "title": "Dasher + hand tracking webcam",
+          "source": "cvgvideos"
+        },
+        {
+          "id": "cIsK4wj8yh4",
+          "title": "Dasher + PUPIL headset eye tracking",
+          "source": "Nachi"
+        },
+        {
+          "id": "qXFrzCIFtcY",
+          "title": "Eye tracking test using Dasher",
+          "source": "christian gabriel gomez"
+        },
+        {
+          "id": "4jxhJjkwleo",
+          "title": "Dasher on an iPAQ",
+          "source": "Staffan Lincoln"
+        },
+        {
+          "id": "N5Pl4dBtun0",
+          "title": "Dasher + Tux Paint",
+          "source": "Bill Kendrick"
+        },
+        {
+          "id": "x-WLiY2p1LQ",
+          "title": "Dasher Poem",
+          "source": "sumnerd"
+        },
+        {
+          "id": "3D-tqJ0HRxk",
+          "title": "Dasher + VoiceAttack voice control",
+          "source": "Voiced Gaming"
+        }
+      ]
+    },
+    {
+      "id": "speech-dasher",
+      "title": "Speech Dasher Research",
+      "description": "Research prototypes combining speech recognition with Dasher for efficient correction and composition.",
+      "videos": [
+        {
+          "id": "HrGDmbUyZKU",
+          "title": "Speech Dasher: writing with speech and gaze"
+        },
+        {
+          "id": "Fa7tVUS7yY0",
+          "title": "Speech Dasher: speech recognition correction"
+        },
+        {
+          "id": "cCF6a00Bcoo",
+          "title": "Speech Dasher: correction interface"
+        },
+        {
+          "id": "-3mb4lNW6zg",
+          "title": "Speech Dasher short demo"
+        },
+        {
+          "id": "FsaXlDX9Zc8",
+          "title": "Speech Dasher: selective correction"
+        }
+      ]
+    },
+    {
+      "id": "non-english",
+      "title": "Non-English Videos",
+      "description": "Dasher introductions and tutorials in Spanish, Polish, Dutch, and German.",
+      "videos": [
+        {
+          "id": "RsmZi5ni_eE",
+          "title": "Dasher en MAX",
+          "source": "Madrid Linux TV",
+          "language": "es"
+        },
+        {
+          "id": "2OXRKeSdGQ0",
+          "title": "Uso de Dasher",
+          "language": "es"
+        },
+        {
+          "id": "rRuuunQgwHc",
+          "title": "Tarea explicativa: rampa digital Dasher",
+          "language": "es"
+        },
+        {
+          "id": "xLoLXycd108",
+          "title": "Jak pisać bez klawiatury",
+          "language": "pl"
+        },
+        {
+          "id": "Vl-cb0uk6B0",
+          "title": "STUGTECH: pisanie bez klawiatury",
+          "language": "pl"
+        },
+        {
+          "id": "lIotcbMlwkY",
+          "title": "Oog zien",
+          "source": "Dasher - Topic",
+          "language": "nl"
+        }
+      ]
+    },
+    {
+      "id": "reference",
+      "title": "Reference",
+      "description": "Background material about Dasher from around the web.",
+      "videos": [
+        {
+          "id": "VeaIsPN4Kco",
+          "title": "Dasher (software) Wikipedia audio article"
+        },
+        {
+          "id": "ZQ1OK8YqVKU",
+          "title": "A New Tool for Writing: The Eyes",
+          "source": "Wall Street Journal"
+        }
+      ]
+    }
+  ],
+  "playlists": [
+    {
+      "title": "Dasher AAC channel",
+      "url": "https://www.youtube.com/@dasheraac1537",
+      "description": "CSUN conference talks and tutorials from the Dasher community."
+    },
+    {
+      "title": "Robots and Cake: Dasher playlist",
+      "url": "https://www.youtube.com/playlist?list=PLP-fqPorDB_zXS_CBYzWqOgTa2IkcFRaw",
+      "description": "A curated 20-video collection of Dasher in the wild: end-user stories (Steve Saling, Stuart Turner and others) alongside interesting HCI research demos."
+    }
+  ]
+}

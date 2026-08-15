@@ -50,6 +50,7 @@ The best way to understand Dasher is to see it in motion. We have several types 
     <p>Current long-form demos are now hosted on YouTube.</p>
     <ul>
       <li><a href="https://www.youtube.com/playlist?list=PLG22wrzFpavafCF-5u9jh6kS-UAIGkPbw" target="_blank" rel="noopener noreferrer">Dasher YouTube Playlist</a></li>
+      <li><a href="/videos/">Full Dasher video library</a></li>
       <li><a href="https://youtu.be/-96VfRFS7tw" target="_blank" rel="noopener noreferrer">Eye-tracker demo (Nov 2001)</a></li>
       <li><a href="https://youtu.be/KwpGpCSK2Pk" target="_blank" rel="noopener noreferrer">Control Mode</a></li>
       <li><a href="https://youtu.be/qW2-Qvj_p7k" target="_blank" rel="noopener noreferrer">Dasher Eyetracker</a></li>
