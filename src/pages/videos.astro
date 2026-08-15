@@ -71,6 +71,7 @@ const totalVideos = library.categories.reduce(
                     href={`https://www.youtube.com/watch?v=${video.id}`}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`Watch on YouTube: ${video.title}`}
                   >
                     <img
                       src={`https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`}
@@ -154,7 +155,7 @@ const totalVideos = library.categories.reduce(
     iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`;
     iframe.title = facade.getAttribute('data-title') ?? 'YouTube video player';
     iframe.allow =
-      'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
     iframe.referrerPolicy = 'strict-origin-when-cross-origin';
     iframe.allowFullscreen = true;
     facade.replaceWith(iframe);
@@ -228,7 +229,7 @@ const totalVideos = library.categories.reduce(
 
   .playlist-link {
     font-weight: 600;
-    color: var(--color-link-hover);
+    color: var(--color-link);
     font-size: 0.875rem;
   }
 
