@@ -43,7 +43,10 @@
       "dasher_core_dep": "V6 pointer (x, y) event stream",
       "notes": "An eye tracker that controls the OS pointer drives Dasher — no tracker SDK involved, Dasher just consumes pointer events. Works today on any platform whose tracker moves the system cursor; not tested with real eye-gaze users yet outside Windows.",
       "platforms": {
-        "macos": { "status": "beta", "reason": "Works via pointer; no tracker integration, untested" },
+        "macos": {
+          "status": "beta",
+          "reason": "Works via pointer; no tracker integration, untested"
+        },
         "ios": { "status": "planned", "reason": "Needs iOS 18 eye-tracking pointer handoff" },
         "visionos": { "status": "shipped", "reason": "Native eye gaze is the system pointer" },
         "windows": { "status": "shipped", "reason": "Windows-native gaze input option" },
@@ -69,7 +72,10 @@
         "macos": { "status": "planned", "reason": "Outside chance — needs tracker SDK work" },
         "ios": { "status": "not-supported", "reason": "No raw tracker data access on iOS" },
         "visionos": { "status": "n/a", "reason": "System provides gaze already" },
-        "windows": { "status": "shipped", "reason": "Tobii Stream Engine, eyetuitive, UDP gaze + tracker picker" },
+        "windows": {
+          "status": "shipped",
+          "reason": "Tobii Stream Engine, eyetuitive, UDP gaze + tracker picker"
+        },
         "gtk": { "status": "planned", "reason": "Outside chance — needs socket/UDP input path" },
         "android": { "status": "not-supported", "reason": "No raw tracker access" }
       },
@@ -112,7 +118,10 @@
       "dasher_core_dep": "One-/Two-Button Dynamic filters (engine)",
       "notes": "The engine filters exist and each frontend wires them, but none have been tested with real switch users or switch hardware — treat all v6 entries as unvalidated. Apple: switchesOnly access method + 4 switch profiles with key capture and scan rate. Windows: 1/2-switch selection methods map to the engine filters. GTK: input filter selectable in Settings → Input; keys 1–4/F1–4/space fixed (no remapping UI). Scanning (auto-scan boxes) exists as an Apple selection method; also untested.",
       "platforms": {
-        "macos": { "status": "beta", "reason": "Wired (profiles, key capture); untested with hardware" },
+        "macos": {
+          "status": "beta",
+          "reason": "Wired (profiles, key capture); untested with hardware"
+        },
         "ios": { "status": "beta", "reason": "Wired; untested with hardware" },
         "visionos": { "status": "planned" },
         "windows": { "status": "beta", "reason": "1/2-switch methods wired; untested" },
@@ -369,7 +378,10 @@
         "macos": { "status": "planned", "reason": "Native renderer already measured correctly" },
         "ios": { "status": "planned", "reason": "Native renderer already measured correctly" },
         "visionos": { "status": "planned" },
-        "windows": { "status": "planned", "reason": "Dasher-Windows #28 — the affected user reports" },
+        "windows": {
+          "status": "planned",
+          "reason": "Dasher-Windows #28 — the affected user reports"
+        },
         "gtk": { "status": "planned", "reason": "PR open (Cairo metrics)" },
         "android": { "status": "shipped", "reason": "Paint metrics, app + IME (v0.1.8+)" }
       },
@@ -483,7 +495,10 @@
       "rfc": "0013-custom-rendering",
       "notes": "A second rendering path exposing the live node tree for 3D / VR / custom views (RFC 0013). Engine API implemented and tested; no production frontend uses it yet. Future hope: a spatial eye-tracked port (e.g. Meta Quest).",
       "platforms": {
-        "macos": { "status": "planned", "reason": "Engine ready; experimental cube branch unmerged" },
+        "macos": {
+          "status": "planned",
+          "reason": "Engine ready; experimental cube branch unmerged"
+        },
         "ios": { "status": "not-supported", "reason": "Uses command-buffer rendering" },
         "visionos": { "status": "not-supported", "reason": "Uses command-buffer rendering" },
         "windows": { "status": "not-supported", "reason": "Uses command-buffer rendering" },
@@ -622,7 +637,10 @@
       "rfc": "0014-image-labels",
       "notes": "Optional image= attribute on alphabet symbols (RFC 0014). Engine + macOS frontend ready; no bundled alphabet uses images yet.",
       "platforms": {
-        "macos": { "status": "beta", "reason": "Engine + frontend ready; no alphabet ships images" },
+        "macos": {
+          "status": "beta",
+          "reason": "Engine + frontend ready; no alphabet ships images"
+        },
         "ios": { "status": "not-supported", "reason": "Does not consume the API" },
         "visionos": { "status": "not-supported", "reason": "Does not consume the API" },
         "windows": { "status": "not-supported", "reason": "Not implemented" },
@@ -1044,7 +1062,10 @@
       "platforms": {
         "macos": { "status": "beta", "reason": "Engine strings localised; chrome still English" },
         "ios": { "status": "beta", "reason": "Engine strings localised; chrome still English" },
-        "visionos": { "status": "beta", "reason": "Engine strings localised; chrome still English" },
+        "visionos": {
+          "status": "beta",
+          "reason": "Engine strings localised; chrome still English"
+        },
         "windows": { "status": "beta", "reason": "Engine strings localised; chrome still English" },
         "gtk": { "status": "beta", "reason": "Engine locale follows system language" },
         "android": { "status": "beta", "reason": "Engine partial; chrome English" }
