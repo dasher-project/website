@@ -229,18 +229,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </section>
 
       <section class="download-section">
-        <h2>Alphabet Files</h2>
+        <h2>Alphabets</h2>
 
         <p>
-          Dasher supports over 60 languages through alphabet XML files. These files define the
-          characters, ordering, and display properties for each language.
+          Every Dasher v6 app ships with all 474 alphabets built in — 456 languages across 48
+          writing systems, including right-to-left sets. There is nothing to download: pick your
+          alphabet from the app's settings.
         </p>
 
         <div class="download-options">
-          <a href="/download/alphabets/all.zip" class="download-card">
-            <h3>All Alphabets</h3>
-            <p>Complete package with all alphabet files</p>
-            <span class="file-size">~410KB</span>
+          <a href="/alphabets" class="download-card">
+            <h3>Browse all alphabets</h3>
+            <p>Filter by language, writing system and direction</p>
+            <span class="file-size">474 alphabets</span>
           </a>
 
           <a href="/download/training.html" class="download-card">
@@ -250,132 +251,52 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </a>
         </div>
 
-        <div class="alphabet-list">
-          <h3>Individual Alphabet Files</h3>
-          <p class="note">
-            Browse individual alphabet files by language. These files can be placed in Dasher's
-            alphabet directory to add language support.
-          </p>
-
-          <div class="language-groups">
-            <div class="group">
-              <h4>European Languages</h4>
-              <div class="files">
-                <a href="/download/alphabets/alphabet.english.xml">English</a>
-                <a href="/download/alphabets/alphabet.french.xml">French</a>
-                <a href="/download/alphabets/alphabet.german.xml">German</a>
-                <a href="/download/alphabets/alphabet.spanish.xml">Spanish</a>
-                <a href="/download/alphabets/alphabet.italian.xml">Italian</a>
-                <a href="/download/alphabets/alphabet.portuguese.xml">Portuguese</a>
-                <a href="/download/alphabets/alphabet.dutch.xml">Dutch</a>
-                <a href="/download/alphabets/alphabet.swedish.xml">Swedish</a>
-                <a href="/download/alphabets/alphabet.danish.xml">Danish</a>
-                <a href="/download/alphabets/alphabet.norwegian.xml">Norwegian</a>
-                <a href="/download/alphabets/alphabet.finnish.xml">Finnish</a>
-                <a href="/download/alphabets/alphabet.polish.xml">Polish</a>
-                <a href="/download/alphabets/alphabet.czech.xml">Czech</a>
-                <a href="/download/alphabets/alphabet.hungarian.xml">Hungarian</a>
-                <a href="/download/alphabets/alphabet.Greek.xml">Greek</a>
-                <a href="/download/alphabets/alphabet.russian.xml">Russian</a>
-                <a href="/download/alphabets/alphabet.Bulgarian.xml">Bulgarian</a>
-              </div>
-            </div>
-
-            <div class="group">
-              <h4>Middle-Eastern Languages</h4>
-              <div class="files">
-                <a href="/download/alphabets/alphabet.arabic.xml">Arabic</a>
-                <a href="/download/alphabets/alphabet.Hebrew.xml">Hebrew</a>
-                <a href="/download/alphabets/alphabet.persian.xml">Persian (Farsi)</a>
-              </div>
-            </div>
-
-            <div class="group">
-              <h4>Indian Languages</h4>
-              <div class="files">
-                <a href="/download/alphabets/alphabet.Hindi.xml">Hindi</a>
-                <a href="/download/alphabets/alphabet.bengali.xml">Bengali</a>
-                <a href="/download/alphabets/alphabet.Tamil.xml">Tamil</a>
-                <a href="/download/alphabets/alphabet.Telugu.xml">Telugu</a>
-                <a href="/download/alphabets/alphabet.Kannada.xml">Kannada</a>
-                <a href="/download/alphabets/alphabet.Malayalam.xml">Malayalam</a>
-                <a href="/download/alphabets/alphabet.Gujarati.xml">Gujarati</a>
-                <a href="/download/alphabets/alphabet.Punjabi.xml">Punjabi</a>
-                <a href="/download/alphabets/alphabet.Marathi.xml">Marathi</a>
-                <a href="/download/alphabets/alphabet.Oriya.xml">Oriya</a>
-                <a href="/download/alphabets/alphabet.Assamese.xml">Assamese</a>
-                <a href="/download/alphabets/alphabet.Urdu.xml">Urdu</a>
-              </div>
-            </div>
-
-            <div class="group">
-              <h4>Asian Languages</h4>
-              <div class="files">
-                <a href="/download/alphabets/alphabet.hiragana.xml">Japanese (Hiragana)</a>
-                <a href="/download/alphabets/alphabet.Katakana.xml">Japanese (Katakana)</a>
-                <a href="/download/alphabets/alphabet.korean.xml">Korean</a>
-                <a href="/download/alphabets/alphabet.Thai.xml">Thai</a>
-                <a href="/download/alphabets/alphabet.mongolian.xml">Mongolian</a>
-                <a href="/download/alphabets/alphabet.chinese.xml">Chinese (Simplified)</a>
-              </div>
-            </div>
-
-            <div class="group">
-              <h4>African Languages</h4>
-              <div class="files">
-                <a href="/download/alphabets/alphabet.swahili.xml">Swahili</a>
-                <a href="/download/alphabets/alphabet.afrikaans.xml">Afrikaans</a>
-                <a href="/download/alphabets/alphabet.Zulu.xml">Zulu</a>
-                <a href="/download/alphabets/alphabet.Xhosa.xml">Xhosa</a>
-              </div>
-            </div>
-
-            <div class="group">
-              <h4>Other Languages</h4>
-              <div class="files">
-                <a href="/download/alphabets/alphabet.Esperanto.xml">Esperanto</a>
-                <a href="/download/alphabets/alphabet.Turkish.xml">Turkish</a>
-                <a href="/download/alphabets/alphabet.Icelandic.xml">Icelandic</a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <p class="note">
+          Writing your own alphabet? Custom alphabet files still work — see the
+          <a href="/docs/languages/creating-alphabets/">guide to creating custom alphabets</a>.
+          The <a href="/download/alphabets/all.zip">alphabet file archive</a> remains available
+          for Dasher 5 users.
+        </p>
       </section>
 
       <section class="download-section">
-        <h2>How to Install Alphabet Files</h2>
+        <h2>Custom Alphabet Files</h2>
+
+        <p>
+          Dasher v6 already includes every alphabet we publish, but you can still add your own —
+          a language we don't cover, a specialist symbol set, or an adapted layout. See the
+          <a href="/docs/languages/creating-alphabets/">creating custom alphabets</a> guide, then
+          place your file in the alphabet directory for your platform:
+        </p>
 
         <div class="platform-instructions">
           <div class="platform">
             <h4>Windows</h4>
             <ol>
-              <li>Download the alphabet file</li>
-              <li>Place it in: <code>C:\Program Files\Dasher\alphabets\</code></li>
+              <li>Copy your <code>alphabet.*.xml</code> file</li>
+              <li>Place it in: <code>%APPDATA%\dasher\alphabets\</code></li>
               <li>Restart Dasher</li>
-              <li>Select <strong>Options → Alphabet</strong> to choose your language</li>
+              <li>Select <strong>Settings → Alphabet</strong> to choose it</li>
             </ol>
           </div>
 
           <div class="platform">
-            <h4>Linux</h4>
+            <h4>Linux (GTK)</h4>
             <ol>
-              <li>Download the alphabet file</li>
-              <li>Place it in: <code>/usr/share/dasher/alphabets/</code></li>
-              <li>Or use <code>~/.dasher/alphabets/</code> for user-specific files</li>
+              <li>Copy your <code>alphabet.*.xml</code> file</li>
+              <li>Place it in: <code>~/.local/share/dasher/alphabets/</code></li>
               <li>Restart Dasher</li>
-              <li>Select <strong>Options → Alphabet</strong> to choose your language</li>
+              <li>Select <strong>Settings → Alphabet</strong> to choose it</li>
             </ol>
           </div>
 
           <div class="platform">
-            <h4>macOS</h4>
+            <h4>macOS / iOS / visionOS</h4>
             <ol>
-              <li>Download the alphabet file</li>
-              <li>Right-click Dasher.app and select "Show Package Contents"</li>
-              <li>Navigate to <code>Contents/Resources/alphabets/</code></li>
-              <li>Copy the file there</li>
+              <li>Copy your <code>alphabet.*.xml</code> file</li>
+              <li>Place it in Dasher's application-support alphabet directory</li>
               <li>Restart Dasher</li>
-              <li>Select <strong>Options → Alphabet</strong> to choose your language</li>
+              <li>Select <strong>Settings → Alphabet</strong> to choose it</li>
             </ol>
           </div>
         </div>
