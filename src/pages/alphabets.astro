@@ -2,24 +2,20 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import index from '../data/alphabets.json';
 
-type AlphabetEntry = {
-  id: string;
-  file: string;
-  orientation: string;
-  lang?: string | null;
-  script?: string | null;
-  script_name?: string | null;
-  training?: string;
-  palette?: string;
-  conversion?: string;
-  chars: number;
-  groups?: string[];
-  source: string;
-  variants?: string[];
-  flags?: string[];
-};
-
-const alphabets = index.alphabets as AlphabetEntry[];
+// Normalize the JSON's union shape into one plain structure (the ESLint
+// astro plugin parses frontmatter as plain JS — no TS syntax allowed here).
+const alphabets = index.alphabets.map((a) => ({
+  id: a.id,
+  file: a.file,
+  orientation: a.orientation ?? 'ltr',
+  lang: a.lang ?? null,
+  script: a.script ?? null,
+  script_name: a.script_name ?? null,
+  chars: a.chars ?? 0,
+  source: a.source ?? 'legacy',
+  variants: a.variants ?? [],
+  flags: a.flags ?? [],
+}));
 const byScript = index.summaries.by_script;
 const scriptCount = Object.keys(byScript).length;
 const langCount = index.summaries.with_lang_code;
