@@ -100,8 +100,13 @@ const scripts = Object.entries(byScript);
         >
           <div class="card-head">
             <span class="name" title={a.id}>{a.id}</span>
-            {(a.flags ?? []).includes('orientation-mismatch') && (
-              <span class="warn" title="Declared direction contradicts the script — known data issue">⚠</span>
+            {(a.flags ?? []).length > 0 && (
+              <span
+                class="warn"
+                title={`Known data issue${(a.flags ?? []).length > 1 ? 's' : ''}: ${(a.flags ?? []).join(', ')} — the engine tolerates these; the data will be fixed upstream`}
+              >
+                ⚠
+              </span>
             )}
           </div>
           <div class="card-meta">
