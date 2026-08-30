@@ -1,0 +1,311 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import index from '../data/alphabets.json';
+
+// Normalize the JSON's union shape into one plain structure (the ESLint
+// astro plugin parses frontmatter as plain JS — no TS syntax allowed here).
+const alphabets = index.alphabets.map((a) => ({
+  id: a.id,
+  file: a.file,
+  orientation: a.orientation ?? 'ltr',
+  lang: a.lang ?? null,
+  script: a.script ?? null,
+  script_name: a.script_name ?? null,
+  chars: a.chars ?? 0,
+  source: a.source ?? 'legacy',
+  variants: a.variants ?? [],
+  flags: a.flags ?? [],
+}));
+const byScript = index.summaries.by_script;
+const scriptCount = Object.keys(byScript).length;
+const langCount = index.summaries.with_lang_code;
+const rtlCount = index.summaries.by_orientation.rtl ?? 0;
+const scripts = Object.entries(byScript);
+---
+
+<BaseLayout
+  title="Alphabets — Dasher"
+  description={`Every alphabet Dasher ships — ${index.count} across ${scriptCount} writing systems, right-to-left included. All built in; nothing to download.`}
+>
+  <section class="status-hero">
+    <div class="container">
+      <p class="eyebrow">Built in</p>
+      <h1>Dasher alphabets</h1>
+      <p class="lede">
+        Every Dasher v6 app ships with all {index.count} alphabets — {langCount} languages across
+        {scriptCount} writing systems, including {rtlCount} right-to-left sets. Nothing to download, nothing
+        to install: switch alphabet from the app's settings.
+      </p>
+      <p class="updated">
+        Catalogue generated from the
+        <a href="https://github.com/dasher-project/DasherCore/tree/main/Data/alphabets"
+          >alphabet sources</a
+        >
+        on <time datetime={index.generated_utc}>{index.generated_utc.slice(0, 10)}</time>.
+      </p>
+    </div>
+  </section>
+
+  <section class="container alphabets-body">
+    <div class="filters" role="search">
+      <input
+        type="search"
+        id="alpha-search"
+        placeholder="Search alphabets (name, language, script…)"
+        aria-label="Search alphabets"
+      />
+      <select id="alpha-script" aria-label="Filter by writing system">
+        <option value="">All writing systems</option>
+        {
+          scripts.map(([code, n]) => (
+            <option value={code}>
+              {code} ({n})
+            </option>
+          ))
+        }
+      </select>
+      <select id="alpha-direction" aria-label="Filter by direction">
+        <option value="">All directions</option>
+        <option value="ltr">Left to right</option>
+        <option value="rtl">Right to left</option>
+        <option value="ttb">Top to bottom</option>
+        <option value="btt">Bottom to top</option>
+      </select>
+      <select id="alpha-source" aria-label="Filter by corpus tier">
+        <option value="">All sources</option>
+        <option value="maintained">Maintained</option>
+        <option value="worldalphabets">WorldAlphabets</option>
+        <option value="legacy">Legacy</option>
+      </select>
+      <span id="alpha-count" class="count" aria-live="polite">{alphabets.length} alphabets</span>
+    </div>
+
+    <div class="legend">
+      <span class="badge rtl">RTL</span> right-to-left
+      <span class="sep">·</span>
+      <span class="badge src-maintained">M</span> maintained
+      <span class="sep">·</span>
+      <span class="badge src-worldalphabets">WA</span> WorldAlphabets
+      <span class="sep">·</span>
+      <span class="badge src-legacy">L</span> legacy
+      <span class="sep">·</span>
+      flagged entries have known data issues
+    </div>
+
+    <ul class="alphabet-grid" id="alpha-grid">
+      {
+        alphabets.map((a) => (
+          <li
+            class="alphabet-card"
+            data-search={`${a.id} ${(a.lang ?? '').toLowerCase()} ${(a.script ?? '').toLowerCase()} ${(a.script_name ?? '').toLowerCase()}`.toLowerCase()}
+            data-script={a.script ?? 'unknown'}
+            data-direction={a.orientation}
+            data-source={a.source}
+          >
+            <div class="card-head">
+              <span class="name" title={a.id}>
+                {a.id}
+              </span>
+              {(a.flags ?? []).length > 0 && (
+                <span
+                  class="warn"
+                  title={`Known data issue${(a.flags ?? []).length > 1 ? 's' : ''}: ${(a.flags ?? []).join(', ')} — the engine tolerates these; the data will be fixed upstream`}
+                >
+                  ⚠
+                </span>
+              )}
+            </div>
+            <div class="card-meta">
+              {a.script && (
+                <span class="badge script" title={a.script_name ?? a.script}>
+                  {a.script}
+                </span>
+              )}
+              {a.orientation !== 'ltr' && (
+                <span class={`badge dir-${a.orientation}`}>{a.orientation.toUpperCase()}</span>
+              )}
+              {a.lang && <span class="lang">{a.lang}</span>}
+              <span class="chars" title="Symbols in the alphabet">
+                {a.chars} chars
+              </span>
+              <span class={`badge src-${a.source}`}>
+                {a.source === 'worldalphabets' ? 'WA' : a.source === 'maintained' ? 'M' : 'L'}
+              </span>
+            </div>
+            {a.variants && a.variants.length > 0 && (
+              <div class="variants">
+                +{a.variants.length} variant{a.variants.length > 1 ? 's' : ''} in other corpora
+              </div>
+            )}
+          </li>
+        ))
+      }
+    </ul>
+
+    <p class="note">
+      Missing a language, or want to write one yourself? See the
+      <a href="/docs/languages/creating-alphabets/">guide to creating custom alphabets</a> — custom alphabet
+      files still work: drop them in Dasher's alphabet directory.
+    </p>
+  </section>
+
+  <style>
+    .alphabets-body {
+      padding-block: 2rem;
+    }
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+    .filters input[type='search'] {
+      flex: 1 1 240px;
+      min-width: 200px;
+      padding: 0.55rem 0.8rem;
+      border: 1px solid var(--border, #ccc);
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    .filters select {
+      padding: 0.55rem 0.6rem;
+      border: 1px solid var(--border, #ccc);
+      border-radius: 8px;
+      font-size: 0.95rem;
+      background: var(--bg, #fff);
+      color: inherit;
+    }
+    .count {
+      font-size: 0.9rem;
+      opacity: 0.75;
+      margin-left: auto;
+      white-space: nowrap;
+    }
+    .legend {
+      font-size: 0.85rem;
+      opacity: 0.8;
+      margin-bottom: 1.2rem;
+    }
+    .legend .sep {
+      margin: 0 0.4rem;
+    }
+    .alphabet-grid {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 0.8rem;
+    }
+    .alphabet-card {
+      border: 1px solid var(--border, #ddd);
+      border-radius: 10px;
+      padding: 0.7rem 0.9rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+    .alphabet-card[hidden] {
+      display: none;
+    }
+    .card-head {
+      display: flex;
+      align-items: baseline;
+      gap: 0.4rem;
+    }
+    .card-head .name {
+      font-weight: 600;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .warn {
+      cursor: help;
+    }
+    .card-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.82rem;
+    }
+    .badge {
+      border-radius: 999px;
+      padding: 0.1rem 0.55rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border: 1px solid var(--border, #ccc);
+    }
+    .badge.script {
+      background: color-mix(in srgb, currentColor 6%, transparent);
+    }
+    .badge.rtl,
+    .badge.dir-rtl {
+      background: rgba(180, 40, 40, 0.12);
+      border-color: rgba(180, 40, 40, 0.35);
+    }
+    .badge.dir-ttb,
+    .badge.dir-btt {
+      background: rgba(40, 90, 180, 0.12);
+      border-color: rgba(40, 90, 180, 0.35);
+    }
+    .badge.src-maintained {
+      background: rgba(40, 140, 60, 0.12);
+      border-color: rgba(40, 140, 60, 0.35);
+    }
+    .badge.src-worldalphabets {
+      background: rgba(120, 90, 200, 0.12);
+      border-color: rgba(120, 90, 200, 0.35);
+    }
+    .badge.src-legacy {
+      opacity: 0.6;
+    }
+    .lang {
+      font-family: monospace;
+    }
+    .chars {
+      opacity: 0.6;
+    }
+    .variants {
+      font-size: 0.75rem;
+      opacity: 0.55;
+    }
+    .note {
+      margin-top: 1.6rem;
+      font-size: 0.95rem;
+      opacity: 0.85;
+    }
+  </style>
+
+  <script>
+    const search = document.getElementById('alpha-search') as HTMLInputElement;
+    const scriptSel = document.getElementById('alpha-script') as HTMLSelectElement;
+    const dirSel = document.getElementById('alpha-direction') as HTMLSelectElement;
+    const srcSel = document.getElementById('alpha-source') as HTMLSelectElement;
+    const count = document.getElementById('alpha-count');
+    const cards = Array.from(document.querySelectorAll<HTMLLIElement>('.alphabet-card'));
+
+    function apply() {
+      const q = search.value.trim().toLowerCase();
+      const sc = scriptSel.value;
+      const dir = dirSel.value;
+      const src = srcSel.value;
+      let visible = 0;
+      for (const card of cards) {
+        const ok =
+          (!q || card.dataset.search!.includes(q)) &&
+          (!sc || card.dataset.script === sc) &&
+          (!dir || card.dataset.direction === dir) &&
+          (!src || card.dataset.source === src);
+        card.hidden = !ok;
+        if (ok) visible++;
+      }
+      if (count) count.textContent = `${visible} alphabet${visible === 1 ? '' : 's'}`;
+    }
+    search?.addEventListener('input', apply);
+    scriptSel?.addEventListener('change', apply);
+    dirSel?.addEventListener('change', apply);
+    srcSel?.addEventListener('change', apply);
+  </script>
+</BaseLayout>
