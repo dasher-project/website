@@ -33,13 +33,14 @@ const scripts = Object.entries(byScript);
       <h1>Dasher alphabets</h1>
       <p class="lede">
         Every Dasher v6 app ships with all {index.count} alphabets — {langCount} languages across
-        {scriptCount} writing systems, including {rtlCount} right-to-left sets. Nothing to download,
-        nothing to install: switch alphabet from the app's settings.
+        {scriptCount} writing systems, including {rtlCount} right-to-left sets. Nothing to download, nothing
+        to install: switch alphabet from the app's settings.
       </p>
       <p class="updated">
         Catalogue generated from the
-        <a href="https://github.com/dasher-project/DasherCore/tree/main/Data/alphabets">alphabet
-        sources</a>
+        <a href="https://github.com/dasher-project/DasherCore/tree/main/Data/alphabets"
+          >alphabet sources</a
+        >
         on <time datetime={index.generated_utc}>{index.generated_utc.slice(0, 10)}</time>.
       </p>
     </div>
@@ -55,7 +56,13 @@ const scripts = Object.entries(byScript);
       />
       <select id="alpha-script" aria-label="Filter by writing system">
         <option value="">All writing systems</option>
-        {scripts.map(([code, n]) => <option value={code}>{code} ({n})</option>)}
+        {
+          scripts.map(([code, n]) => (
+            <option value={code}>
+              {code} ({n})
+            </option>
+          ))
+        }
       </select>
       <select id="alpha-direction" aria-label="Filter by direction">
         <option value="">All directions</option>
@@ -86,43 +93,59 @@ const scripts = Object.entries(byScript);
     </div>
 
     <ul class="alphabet-grid" id="alpha-grid">
-      {alphabets.map((a) => (
-        <li
-          class="alphabet-card"
-          data-search={`${a.id} ${(a.lang ?? '').toLowerCase()} ${(a.script ?? '').toLowerCase()} ${(a.script_name ?? '').toLowerCase()}`.toLowerCase()}
-          data-script={a.script ?? 'unknown'}
-          data-direction={a.orientation}
-          data-source={a.source}
-        >
-          <div class="card-head">
-            <span class="name" title={a.id}>{a.id}</span>
-            {(a.flags ?? []).length > 0 && (
-              <span
-                class="warn"
-                title={`Known data issue${(a.flags ?? []).length > 1 ? 's' : ''}: ${(a.flags ?? []).join(', ')} — the engine tolerates these; the data will be fixed upstream`}
-              >
-                ⚠
+      {
+        alphabets.map((a) => (
+          <li
+            class="alphabet-card"
+            data-search={`${a.id} ${(a.lang ?? '').toLowerCase()} ${(a.script ?? '').toLowerCase()} ${(a.script_name ?? '').toLowerCase()}`.toLowerCase()}
+            data-script={a.script ?? 'unknown'}
+            data-direction={a.orientation}
+            data-source={a.source}
+          >
+            <div class="card-head">
+              <span class="name" title={a.id}>
+                {a.id}
               </span>
+              {(a.flags ?? []).length > 0 && (
+                <span
+                  class="warn"
+                  title={`Known data issue${(a.flags ?? []).length > 1 ? 's' : ''}: ${(a.flags ?? []).join(', ')} — the engine tolerates these; the data will be fixed upstream`}
+                >
+                  ⚠
+                </span>
+              )}
+            </div>
+            <div class="card-meta">
+              {a.script && (
+                <span class="badge script" title={a.script_name ?? a.script}>
+                  {a.script}
+                </span>
+              )}
+              {a.orientation !== 'ltr' && (
+                <span class={`badge dir-${a.orientation}`}>{a.orientation.toUpperCase()}</span>
+              )}
+              {a.lang && <span class="lang">{a.lang}</span>}
+              <span class="chars" title="Symbols in the alphabet">
+                {a.chars} chars
+              </span>
+              <span class={`badge src-${a.source}`}>
+                {a.source === 'worldalphabets' ? 'WA' : a.source === 'maintained' ? 'M' : 'L'}
+              </span>
+            </div>
+            {a.variants && a.variants.length > 0 && (
+              <div class="variants">
+                +{a.variants.length} variant{a.variants.length > 1 ? 's' : ''} in other corpora
+              </div>
             )}
-          </div>
-          <div class="card-meta">
-            {a.script && <span class="badge script" title={a.script_name ?? a.script}>{a.script}</span>}
-            {a.orientation !== 'ltr' && <span class={`badge dir-${a.orientation}`}>{a.orientation.toUpperCase()}</span>}
-            {a.lang && <span class="lang">{a.lang}</span>}
-            <span class="chars" title="Symbols in the alphabet">{a.chars} chars</span>
-            <span class={`badge src-${a.source}`}>{a.source === 'worldalphabets' ? 'WA' : a.source === 'maintained' ? 'M' : 'L'}</span>
-          </div>
-          {a.variants && a.variants.length > 0 && (
-            <div class="variants">+{a.variants.length} variant{a.variants.length > 1 ? 's' : ''} in other corpora</div>
-          )}
-        </li>
-      ))}
+          </li>
+        ))
+      }
     </ul>
 
     <p class="note">
       Missing a language, or want to write one yourself? See the
-      <a href="/docs/languages/creating-alphabets/">guide to creating custom alphabets</a> —
-      custom alphabet files still work: drop them in Dasher's alphabet directory.
+      <a href="/docs/languages/creating-alphabets/">guide to creating custom alphabets</a> — custom alphabet
+      files still work: drop them in Dasher's alphabet directory.
     </p>
   </section>
 
