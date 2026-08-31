@@ -12,7 +12,7 @@ import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
-const version = process.env.DASHER_DEMO_VERSION || 'v0.2.2';
+const version = process.env.DASHER_DEMO_VERSION || 'v0.2.8';
 const outDir = path.join(root, 'public', 'demo');
 const marker = path.join(outDir, 'VERSION');
 
