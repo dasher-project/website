@@ -33,3 +33,7 @@ public/legacy/
 
 # Logs
 *.log
+
+# fetched dasher demo release artifact
+public/demo/
+.cache/
