@@ -68,7 +68,7 @@ The NLnet grant funds the engineering to turn them into Dasher:
   the browser, where iteration is fastest), and then ship consistently across
   every platform.
 - **Targeted eye-gaze support.** The community has asked &mdash; loudly and
-  reasonably &mdash; for eye-gaze to work *really* well. We have a dedicated
+  reasonably &mdash; for eye-gaze to work _really_ well. We have a dedicated
   work stream to evaluate the whole eye-gaze path end to end: pointer
   smoothing, zoom dynamics under continuous gaze, dwell behaviour and latency,
   plus a calibration and profile workflow so your gaze setup survives restarts
