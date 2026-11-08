@@ -11,6 +11,18 @@ News, updates, and insights from the Dasher development team and community.
 <div class="blog-list">
   <article class="blog-post-card">
     <div class="blog-meta">
+      <time datetime="2026-11-08">November 8, 2026</time>
+      <span class="blog-tag">Funding</span>
+    </div>
+    <h2>
+      <a href="/blog/nlnet-funding/">NLnet funds Dasher v6 &mdash; our UX research becomes reality</a>
+    </h2>
+    <p class="blog-excerpt">We're delighted to announce NLnet Foundation funding for Dasher v6 through the NGI0 Commons Fund &mdash; turning our eleven-strong volunteer UX research programme into shipped features, with dedicated eye-gaze work and a path out of beta.</p>
+    <a href="/blog/nlnet-funding/" class="btn-secondary">Read More</a>
+  </article>
+
+  <article class="blog-post-card">
+    <div class="blog-meta">
       <time datetime="2026-06-18">June 18, 2026</time>
       <span class="blog-tag">Beta</span>
     </div>

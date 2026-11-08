@@ -34,9 +34,8 @@ We want you to break it and tell us &mdash; that's the whole point of opening th
 The Apple apps (iPhone, iPad and Apple Vision Pro) are distributed through
 TestFlight:
 
-- **iPhone &amp; iPad (iOS):** [join the iOS TestFlight](https://testflight.apple.com/join/wJfmTtHT)
+- **iPhone &amp; iPad (iOS) &amp; Apple Vision Pro (visionOS):** [join the TestFlight](https://testflight.apple.com/join/bVSF1KHu)
 - **macOS:** [Download the DMG and drag to your Applications folder.](https://github.com/dasher-project/Dasher-Apple/releases/latest)
-- **visionOS** [join the iOS TestFlight](https://testflight.apple.com/join/fd2AQpKC)
 
 ### Windows
 
