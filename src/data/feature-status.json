@@ -1,7 +1,7 @@
 {
   "_comment": "Dasher v6 cross-platform capability matrix — THE SINGLE SOURCE OF TRUTH. Rendered at https://dasher.at/status/. How to update: https://dasher.at/developers/feature-parity/. Validated by scripts/validate-feature-status.mjs in CI. August 2026 audit: every row re-verified against the shipped code of each frontend; 'beta' on this pass often means 'implemented but not yet tested with real assistive hardware/users'.",
   "meta": {
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-11-18",
     "v5_baseline": "Dasher v5 shipped native frontends for Windows, Linux/GTK, macOS and iOS (Android had a separate community project, acl33/AndroidDasher; Mac/iPhone were unmaintained by the 5.0 beta). Input covered mouse, stylus/tablet, touch, multitouch, tilt, joystick (Linux) and socket input — the UDP socket was the eye-tracker conduit, and Linux/Windows v5 also had direct-entry keyboard modes. Notable v5 features: game/training mode, eye-tracker autocalibration, PPM family language models, Kanji/Pinyin conversion, PDF screenshot export and three TTS backends (SAPI / speech-dispatcher / flite).",
     "status_legend": {
       "shipped": "Implemented and released",
@@ -590,7 +590,11 @@
       "dasher_core_dep": "WorldAlphabets (622 alphabet files, 344 languages)",
       "notes": "v5 carried ~140 alphabet definitions; v6 expands to 622 via WorldAlphabets (9 curated + 486 autoConverted + 127 legacy), including native v5-format XML support.",
       "platforms": {
-        "macos": { "status": "shipped" },
+        "macos": {
+          "status": "shipped",
+          "version": "6.0.2",
+          "reason": "477 alphabets; 194 indexed entries have training data. Locale filter and Show All Languages."
+        },
         "ios": { "status": "shipped" },
         "visionos": { "status": "shipped" },
         "windows": { "status": "shipped" },
@@ -661,10 +665,17 @@
       "category": "Output",
       "title": "Spoken output (text-to-speech)",
       "dasher_core_dep": "Output text stream",
-      "notes": "Apple: swift-tts-wrapper (21 engines). Windows: DotNetTtsWrapper (SAPI + cloud). GTK: rust-tts-wrapper — speech-dispatcher on from-source Linux builds, cloud engines in the Flatpak/AppImage. Android: system TextToSpeech with speak-last-word toggle.",
+      "notes": "Apple: system, Sherpa-ONNX offline voices, and cloud speech through rust-tts-wrapper. Windows: DotNetTtsWrapper (SAPI + cloud). GTK: rust-tts-wrapper — speech-dispatcher on from-source Linux builds, cloud engines in the Flatpak/AppImage. Android: system TextToSpeech with speak-last-word toggle.",
       "platforms": {
-        "macos": { "status": "shipped", "reason": "swift-tts-wrapper" },
-        "ios": { "status": "shipped", "reason": "swift-tts-wrapper" },
+        "macos": {
+          "status": "shipped",
+          "version": "6.0.2",
+          "reason": "Voice search and language, gender, and type filters; Sherpa model downloads and progress."
+        },
+        "ios": {
+          "status": "shipped",
+          "reason": "System, Sherpa-ONNX offline voices, and cloud speech"
+        },
         "visionos": { "status": "planned" },
         "windows": { "status": "shipped", "reason": "DotNetTtsWrapper" },
         "gtk": { "status": "shipped", "reason": "rust-tts-wrapper: speech-dispatcher / cloud" },
