@@ -1,7 +1,7 @@
 {
   "_comment": "Dasher v6 cross-platform capability matrix — THE SINGLE SOURCE OF TRUTH. Rendered at https://dasher.at/status/. How to update: https://dasher.at/developers/feature-parity/. Validated by scripts/validate-feature-status.mjs in CI. August 2026 audit: every row re-verified against the shipped code of each frontend; 'beta' on this pass often means 'implemented but not yet tested with real assistive hardware/users'.",
   "meta": {
-    "last_updated": "2026-11-18",
+    "last_updated": "2026-11-20",
     "v5_baseline": "Dasher v5 shipped native frontends for Windows, Linux/GTK, macOS and iOS (Android had a separate community project, acl33/AndroidDasher; Mac/iPhone were unmaintained by the 5.0 beta). Input covered mouse, stylus/tablet, touch, multitouch, tilt, joystick (Linux) and socket input — the UDP socket was the eye-tracker conduit, and Linux/Windows v5 also had direct-entry keyboard modes. Notable v5 features: game/training mode, eye-tracker autocalibration, PPM family language models, Kanji/Pinyin conversion, PDF screenshot export and three TTS backends (SAPI / speech-dispatcher / flite).",
     "status_legend": {
       "shipped": "Implemented and released",
@@ -687,6 +687,49 @@
         "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
         "windows": { "status": "shipped", "reason": "SAPI" },
         "gtk": { "status": "shipped", "reason": "speech-dispatcher" },
+        "android": { "status": "n/a", "reason": "Separate community project" }
+      }
+    },
+    {
+      "id": "user-pronunciation-overrides",
+      "category": "Output",
+      "title": "User pronunciation overrides",
+      "dasher_core_dep": "Output text stream",
+      "notes": "A plain-text file (word = respell, or word = /IPA/) applied before synthesis on every engine. Apple: settings editor with add form, per-row preview/remove, wrapper dry-run check and parse warnings; the Apple system engine gets the same respell substitutions app-side. Wrapper support in rust-tts-wrapper 1.15/1.16 (BOM-tolerant parse, dry-run + stats ABI); Windows uses DotNetTtsWrapper.",
+      "platforms": {
+        "macos": {
+          "status": "shipped",
+          "version": "6.0.3",
+          "reason": "Settings editor (add form + list with preview/remove); wrapper-side on Sherpa/cloud, app-side respell for system voices."
+        },
+        "ios": {
+          "status": "shipped",
+          "version": "6.0.3",
+          "reason": "Same editor and engines as macOS"
+        },
+        "visionos": {
+          "status": "beta",
+          "reason": "App-side respell on system voices + editor UI; no Rust wrapper, so no Sherpa/cloud overrides"
+        },
+        "windows": {
+          "status": "beta",
+          "reason": "Wrapper support shipped; frontend editor in progress (Dasher-Windows #130)"
+        },
+        "gtk": {
+          "status": "planned",
+          "reason": "rust-tts-wrapper applies the file on every engine; frontend editor not yet"
+        },
+        "android": {
+          "status": "planned",
+          "reason": "System TextToSpeech; no wrapper-side overrides yet"
+        }
+      },
+      "v5": {
+        "macos": { "status": "n/a", "reason": "Did not exist in v5" },
+        "ios": { "status": "n/a", "reason": "Did not exist in v5" },
+        "visionos": { "status": "n/a", "reason": "visionOS did not exist" },
+        "windows": { "status": "n/a", "reason": "Did not exist in v5" },
+        "gtk": { "status": "n/a", "reason": "Did not exist in v5" },
         "android": { "status": "n/a", "reason": "Separate community project" }
       }
     },
