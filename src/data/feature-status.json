@@ -707,10 +707,22 @@
           "version": "6.0.3",
           "reason": "Same editor and engines as macOS"
         },
-        "visionos": { "status": "beta", "reason": "App-side respell on system voices + editor UI; no Rust wrapper, so no Sherpa/cloud overrides" },
-        "windows": { "status": "beta", "reason": "Wrapper support shipped; frontend editor in progress (Dasher-Windows #130)" },
-        "gtk": { "status": "planned", "reason": "rust-tts-wrapper applies the file on every engine; frontend editor not yet" },
-        "android": { "status": "planned", "reason": "System TextToSpeech; no wrapper-side overrides yet" }
+        "visionos": {
+          "status": "beta",
+          "reason": "App-side respell on system voices + editor UI; no Rust wrapper, so no Sherpa/cloud overrides"
+        },
+        "windows": {
+          "status": "beta",
+          "reason": "Wrapper support shipped; frontend editor in progress (Dasher-Windows #130)"
+        },
+        "gtk": {
+          "status": "planned",
+          "reason": "rust-tts-wrapper applies the file on every engine; frontend editor not yet"
+        },
+        "android": {
+          "status": "planned",
+          "reason": "System TextToSpeech; no wrapper-side overrides yet"
+        }
       },
       "v5": {
         "macos": { "status": "n/a", "reason": "Did not exist in v5" },
