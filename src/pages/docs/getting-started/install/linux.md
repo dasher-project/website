@@ -135,7 +135,7 @@ What to expect:
 
 If the install stops with `requires the runtime org.gnome.Platform ... which was not found`, Flathub is not set up for your user account. Run the command in step 2, then repeat step 3.
 
-The [Dasher-GTK README](https://github.com/dasher-project/Dasher-GTK#install) installs the runtime by name first (`flatpak install flathub org.gnome.Platform//50`). That works too. Step 2 above lets Flatpak choose the runtime version that matches the bundle, and makes it easier to [clean up old runtimes](#clean-up-old-runtimes) later.
+The [Dasher-GTK README](https://github.com/dasher-project/Dasher-GTK#install) installs the GNOME runtime by name first (`flatpak install flathub org.gnome.Platform//` and the version number), then the bundle with `--user` as here. That works too, also when the runtime ends up installed system-wide. Step 2 above lets Flatpak choose the runtime version that matches the bundle, and makes it easier to [clean up old runtimes](#clean-up-old-runtimes) later.
 
 ### Run Dasher
 
@@ -259,7 +259,7 @@ Afterwards, `flatpak uninstall --unused` removes the GNOME runtime if no other a
 The Flatpak runs Dasher in a sandbox, which cuts it off from parts of your computer. In the current release (6.0.2) that means:
 
 - **Speech cannot be set up.** The Flatpak has no network access, so it cannot download voices and cannot use cloud speech services. System speech through `speech-dispatcher` is not included in it either. That leaves no way to set up a voice from inside the Flatpak.
-- **Keyboard mode is not available.** Keyboard mode types what you write in Dasher into other applications. In the Flatpak, clicking the Keyboard button shows `Keyboard mode isn't available in this build`.
+- **Keyboard mode is not available.** Keyboard mode types what you write in Dasher into other applications. In the Flatpak, choosing **Keyboard** in the layout menu on the toolbar (the button that shows where the text pane is, such as **Right side**) shows `Keyboard mode isn't available in this build`.
 
 If you need speech or Keyboard mode, use the [AppImage](#appimage-alternative), or [build Dasher-GTK from source](https://github.com/dasher-project/Dasher-GTK#build).
 
@@ -275,7 +275,7 @@ chmod +x ~/Downloads/Dasher-x86_64.AppImage
 The AppImage is not sandboxed, so the [Flatpak limitations](#flatpak-limitations) do not apply to it:
 
 - **Speech:** under **Preferences → Speech** you can download offline voices or set up a cloud speech service. Downloading a voice and using a cloud service both need an internet connection. The AppImage can also use system speech if `speech-dispatcher` is installed on your computer (see [Installing Speech Dispatcher](#installing-speech-dispatcher)).
-- **Keyboard mode:** it needs the `ydotool` program on your computer. If `ydotool` is not set up, clicking the Keyboard button shows the commands that install it.
+- **Keyboard mode:** it needs the `ydotool` program on your computer. If `ydotool` is not set up, choosing **Keyboard** in the layout menu shows the commands that install it.
 
 The AppImage does not update itself either. To update, download the newer file and use it in place of the old one. Unlike the Flatpak, it checks for a newer release when you start it (at most once a week) and shows a notice with a link when there is one. You can turn this off under **Preferences → Privacy**.
 
