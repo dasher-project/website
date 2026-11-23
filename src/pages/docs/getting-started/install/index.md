@@ -98,6 +98,8 @@ sudo dnf install dasher
 sudo pacman -S dasher
 ```
 
+**Dasher v6:** published as a Flatpak bundle and an AppImage on GitHub. See [how to install and update the Flatpak](linux/#flatpak-dasher-v6).
+
 **[View full Linux installation guide →](linux/)**
 
 ### Android
