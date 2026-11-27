@@ -665,7 +665,7 @@
       "category": "Output",
       "title": "Spoken output (text-to-speech)",
       "dasher_core_dep": "Output text stream",
-      "notes": "Apple: system, Sherpa-ONNX offline voices, and cloud speech through rust-tts-wrapper. Windows: DotNetTtsWrapper (SAPI + cloud). GTK: rust-tts-wrapper — speech-dispatcher on from-source Linux builds, cloud engines in the Flatpak/AppImage. Android: system TextToSpeech with speak-last-word toggle.",
+      "notes": "Apple: system, Sherpa-ONNX offline voices, and cloud speech through rust-tts-wrapper. Windows: DotNetTtsWrapper (SAPI + cloud). GTK: rust-tts-wrapper, with speech-dispatcher, Sherpa-ONNX offline voices, and cloud engines in from-source Linux builds and the AppImage. The Flatpak has Sherpa-ONNX offline voices and cloud engines but not speech-dispatcher (from 6.0.3; the 6.0.2 Flatpak had no network access). Android: system TextToSpeech with speak-last-word toggle.",
       "platforms": {
         "macos": {
           "status": "shipped",
