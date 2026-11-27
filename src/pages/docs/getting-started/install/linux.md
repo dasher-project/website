@@ -86,7 +86,7 @@ The v6 Linux version is still in development. See the [feature status matrix](/s
 ### Before You Start
 
 - **Flatpak must be installed.** Many distributions include it. If typing `flatpak --version` in a terminal gives an error, follow the [Flatpak setup guide](https://flatpak.org/setup/) for your distribution first.
-- **Check that the Flatpak does what you need.** In the current Flatpak you cannot set up speech, and Keyboard mode is not available. If you need either of them, use the [AppImage](#appimage-alternative) instead. See [Flatpak Limitations](#flatpak-limitations).
+- **Check that the Flatpak does what you need.** Offline voices and cloud speech services work in the Flatpak, but system speech through `speech-dispatcher` and Keyboard mode do not. If you need either of those, use the [AppImage](#appimage-alternative) instead. See [Flatpak Limitations](#flatpak-limitations).
 - **Pick the file for your computer.** Run `flatpak --default-arch` in a terminal. If it prints `x86_64` (most PCs and laptops), you need `Dasher-x86_64.flatpak`. If it prints `aarch64` (64-bit ARM devices, such as a Raspberry Pi running a 64-bit system), you need `Dasher-aarch64.flatpak`. Anything else, such as `arm` or `i386`, means a 32-bit system, and there is no Dasher Flatpak for those. Use this command and not `uname -m`, which can print `aarch64` on a 32-bit Raspberry Pi OS.
 
 The commands below use the `x86_64` file name and assume your browser saves downloads in `~/Downloads`. Change the file name or the path if yours is different.
@@ -129,7 +129,7 @@ Then follow [Install the Flatpak](#install-the-flatpak). If you would rather kee
 
 What to expect:
 
-- If the runtime is not on your computer yet, Flatpak says `Required runtime for org.alternativeinterface.dasher ... found in remote flathub` and asks `Do you want to install it?`. Answer `y`. This is a one-off download of several hundred MB (the GNOME 50 runtime at the time of writing).
+- If the runtime is not on your computer yet, Flatpak says `Required runtime for org.alternativeinterface.dasher ... found in remote flathub` and asks `Do you want to install it?`. Answer `y`. This is a one-off download of several hundred MB (the GNOME 51 runtime at the time of writing).
 - Flatpak then lists what it is about to install and asks you to confirm. Answer `y` again.
 - You are not asked for an administrator password, because `--user` installs Dasher for your account only.
 
@@ -181,7 +181,7 @@ What to expect:
 
 ### Clean Up Old Runtimes
 
-Each Dasher release is built for one version of the GNOME runtime. When a release moves to a newer one (early releases used GNOME 48, current releases use GNOME 50), installing it brings in the new runtime but leaves the old one on your computer. Once Flathub stops supporting the old runtime, `flatpak update` prints messages like this:
+Each Dasher release is built for one version of the GNOME runtime. When a release moves to a newer one (early releases used GNOME 48, later ones GNOME 50, and 6.0.3 uses GNOME 51), installing it brings in the new runtime but leaves the old one on your computer. Once Flathub stops supporting the old runtime, `flatpak update` prints messages like this:
 
 ```text
 Info: runtime org.gnome.Platform branch 48 is end-of-life, with reason:
@@ -256,12 +256,12 @@ Afterwards, `flatpak uninstall --unused` removes the GNOME runtime if no other a
 
 ### Flatpak Limitations
 
-The Flatpak runs Dasher in a sandbox, which cuts it off from parts of your computer. In the current release (6.0.2) that means:
+The Flatpak runs Dasher in a sandbox, which cuts it off from parts of your computer. In the current release (6.0.3) that means:
 
-- **Speech cannot be set up.** The Flatpak has no network access, so it cannot download voices and cannot use cloud speech services. System speech through `speech-dispatcher` is not included in it either. That leaves no way to set up a voice from inside the Flatpak.
+- **No system speech.** Speech through `speech-dispatcher` is not included in the Flatpak. Offline voices and cloud speech services do work: set them up under **Preferences → Speech**. Downloading a voice and using a cloud service both need an internet connection. The 6.0.2 Flatpak had no network access, so speech could not be set up in it at all. If you have 6.0.2 or older, [update](#update-the-flatpak).
 - **Keyboard mode is not available.** Keyboard mode types what you write in Dasher into other applications. In the Flatpak, choosing **Keyboard** in the layout menu on the toolbar (the button that shows where the text pane is, such as **Right side**) shows `Keyboard mode isn't available in this build`.
 
-If you need speech or Keyboard mode, use the [AppImage](#appimage-alternative), or [build Dasher-GTK from source](https://github.com/dasher-project/Dasher-GTK#build).
+If you need system speech or Keyboard mode, use the [AppImage](#appimage-alternative), or [build Dasher-GTK from source](https://github.com/dasher-project/Dasher-GTK#build).
 
 ### AppImage Alternative
 
